@@ -1,7 +1,12 @@
 {
-  "registry_id": "ADND1E_DL1_RULES_CAPABILITIES_V1",
-  "engine_version": "0.2.1",
-  "statuses": ["implemented", "partial", "stubbed", "unsupported"],
+  "registry_id": "ADND1E_DL1_RULES_CAPABILITIES_V04",
+  "engine_version": "0.4.0",
+  "statuses": [
+    "implemented",
+    "partial",
+    "stubbed",
+    "unsupported"
+  ],
   "capabilities": {
     "melee_attacks": {
       "status": "implemented",
@@ -10,46 +15,46 @@
       "notes": "Supports main-path melee attacks, HP mutation, and defeat status."
     },
     "missile_attacks": {
-      "status": "partial",
+      "status": "implemented",
       "layer": "layer6_resolution.combat",
       "public_name": "Missile attacks",
-      "notes": "Supports simplified main-path missile attacks; full range/cover modifiers remain incomplete."
+      "notes": "Supports range bands, ammunition expenditure, and attack resolution through v0.4 compact rules."
     },
     "initiative_segments": {
       "status": "partial",
       "layer": "layer4_procedure.combat",
       "public_name": "Initiative and segments",
-      "notes": "Simplified round order is used for most main-path scenes."
+      "notes": "Side/actor initiative, surprise segments, and spell-casting interruption hooks are implemented; exhaustive segment edge cases remain partial."
     },
     "spell_casting": {
       "status": "partial",
       "layer": "layer6_resolution.spells",
       "public_name": "Spell casting",
-      "notes": "Supports selected spells used by the main path: magic missile, sleep, web, cure light wounds, and darkness-like scripted effects."
+      "notes": "v0.4 compact spell engine supports DL1-relevant magic missile, sleep, web, cure light wounds, and darkness-style effects."
     },
     "spell_interruption": {
       "status": "partial",
       "layer": "layer6_resolution.spells",
       "public_name": "Spell interruption",
-      "notes": "Helper exists for main-path cases; full AD&D segment timing is not complete."
+      "notes": "Damage-before-completion interruption helper is implemented; exact full segment timing remains partial."
     },
     "turn_undead": {
-      "status": "partial",
+      "status": "implemented",
       "layer": "layer6_resolution.spells",
       "public_name": "Turning undead",
-      "notes": "Compact facade for supported tests and selected encounters."
+      "notes": "Compact turning matrix for common undead categories is implemented."
     },
     "morale_reaction": {
-      "status": "partial",
+      "status": "implemented",
       "layer": "layer6_resolution.morale",
       "public_name": "Morale and reaction",
-      "notes": "Main-path morale helpers exist; exhaustive DMG morale procedures are not complete."
+      "notes": "2d6 morale and 2d10 reaction helpers are implemented for encounter scripting."
     },
     "dragon_fear_breath": {
       "status": "partial",
       "layer": "layer6_resolution.combat",
       "public_name": "Dragon fear and breath weapons",
-      "notes": "Khisanth main-path scripting is supported; generic dragon handling is partial."
+      "notes": "Dragon fear/breath saving throw helpers exist; Khisanth scripted behavior remains the principal supported dragon case."
     },
     "staff_of_mishakal": {
       "status": "implemented",
@@ -82,16 +87,46 @@
       "notes": "Not implemented for v0.2 complete."
     },
     "item_saving_throws": {
-      "status": "stubbed",
+      "status": "partial",
       "layer": "rules.rule_queries",
       "public_name": "Item saving throws",
-      "notes": "Recognized as a rule capability but not resolved in play."
+      "notes": "Compact item saving throw helper is implemented for common material/attack forms."
     },
     "xp_training": {
       "status": "partial",
       "layer": "rules.rule_queries",
       "public_name": "XP and training",
-      "notes": "Helper-level XP/treasure support only; full training economy is not complete."
+      "notes": "XP award helper exists; full training-time economy remains partial."
+    },
+    "surprise": {
+      "status": "implemented",
+      "layer": "rules.adnd1e_v04",
+      "public_name": "Surprise",
+      "notes": "d6 surprise helper with segments-lost metadata."
+    },
+    "saving_throws_core": {
+      "status": "implemented",
+      "layer": "rules.adnd1e_v04",
+      "public_name": "Core saving throws",
+      "notes": "Class-group/level saving throw targets for death, wand, paralysis, breath, and spell categories."
+    },
+    "encumbrance_movement": {
+      "status": "partial",
+      "layer": "rules.adnd1e_v04",
+      "public_name": "Encumbrance and movement",
+      "notes": "Compact GP-weight movement reduction helper; detailed item weights remain data-dependent."
+    },
+    "reaction_checks": {
+      "status": "implemented",
+      "layer": "rules.adnd1e_v04",
+      "public_name": "Reaction checks",
+      "notes": "2d10 reaction bands exposed for NPC behavior."
+    },
+    "xp_treasure": {
+      "status": "partial",
+      "layer": "rules.adnd1e_v04",
+      "public_name": "XP and treasure awards",
+      "notes": "Compact share calculation; training and class bonus details remain future work."
     }
   }
 }

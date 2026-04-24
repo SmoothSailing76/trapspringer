@@ -1,6 +1,9 @@
+from __future__ import annotations
+
 from trapspringer.schemas.resolution import ResolutionRequest, ResolutionResult, PublicOutcome, PrivateOutcome
 from trapspringer.services.random_service import RandomService
-from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait
+from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait, resolve_missile_attack, resolve_initiative, resolve_surprise
+from trapspringer.layers.layer6_resolution.spells import resolve_spell
 from trapspringer.layers.layer6_resolution import module_scripts as scripts
 
 
@@ -16,11 +19,24 @@ class ResolutionService:
             return ResolutionResult(request.resolution_id, "no_effect", public_outcome=PublicOutcome("No action resolved."))
         if action.action_type == "melee_attack":
             return resolve_melee_attack(action, state, self.rng)
+        if action.action_type == "missile_attack":
+            return resolve_missile_attack(action, state, self.rng)
+        if action.action_type == "cast_spell":
+            return resolve_spell({"actor_id": action.actor_id, "target_id": action.target.id if action.target else None, "spell": action.extra.get("spell") or action.method}, state, self.rng)
         if action.action_type == "move":
             return resolve_move(action, state, map_service, self.rng)
         if action.action_type == "wait":
             return resolve_wait(action, state, self.rng)
         return ResolutionResult(request.resolution_id, "no_effect", PrivateOutcome({"unknown_action": action.action_type}))
+
+    def resolve_initiative(self) -> dict:
+        return resolve_initiative(self.rng)
+
+    def resolve_surprise(self, side: str = "party", threshold: int = 2):
+        return resolve_surprise(side, self.rng, threshold)
+
+    def resolve_spell_effect(self, request: dict, state: dict | None = None) -> ResolutionResult:
+        return resolve_spell(request, state or request.get("state", {}), self.rng)
 
     def resolve_toede_escape(self, state: dict, map_service=None) -> ResolutionResult:
         return scripts.resolve_toede_escape(state, map_service)
@@ -34,7 +50,6 @@ class ResolutionService:
     def resolve_khisanth_surface_arrival(self, state: dict) -> ResolutionResult:
         return scripts.resolve_khisanth_surface_arrival(state)
 
-    # v0.2.0 main-path scripted resolutions
     def resolve_mishakal_audience_and_recharge(self, state: dict) -> ResolutionResult:
         return scripts.resolve_mishakal_audience_and_recharge(state)
 

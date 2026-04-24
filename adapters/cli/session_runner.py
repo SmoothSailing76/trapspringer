@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any
 
@@ -195,3 +195,49 @@ def run_v030_spatial_demo() -> V030SpatialRun:
     lines.append("")
     lines.append(f"Level 4 encounter areas indexed: {len(level4.get('encounter_areas', []))}")
     return V030SpatialRun(output="\n".join(lines), summary=summary, validation=validation)
+
+@dataclass(slots=True)
+class V040RulesRun:
+    output: str
+    summary: dict[str, Any]
+
+
+def run_v040_rules_demo() -> V040RulesRun:
+    """Demonstrate v0.4 AD&D rules facade without requiring a full campaign run."""
+    from types import SimpleNamespace
+    from trapspringer.rules import adnd1e_v04
+    from trapspringer.rules.capabilities import default_rules_capability_registry
+    from trapspringer.layers.layer6_resolution.service import ResolutionService
+    from trapspringer.layers.layer6_resolution.morale import resolve_morale, resolve_reaction
+    from trapspringer.layers.layer6_resolution.items import resolve_item_save
+    from trapspringer.services.random_service import RandomService
+
+    rng = RandomService(seed=4)
+    tanis = SimpleNamespace(actor_id="PC_TANIS", name="Tanis", character_class="fighter", level=5, ac=4, team="party", current_hp=35, max_hp=35, conditions=[], inventory=["sword", "longbow"])
+    bozak = SimpleNamespace(actor_id="BOZAK_1", name="Bozak", character_class="monster", level=4, ac=2, team="enemy", current_hp=18, max_hp=18, conditions=[], inventory=[], damage="1d8")
+    checks = {
+        "attack_target": asdict(adnd1e_v04.attack_target(tanis, bozak)),
+        "saving_throw_spell": asdict(adnd1e_v04.roll_saving_throw(tanis, "spell", rng)),
+        "initiative": {"party": asdict(adnd1e_v04.initiative(rng, "party")), "enemy": asdict(adnd1e_v04.initiative(rng, "enemy"))},
+        "surprise": asdict(adnd1e_v04.surprise(rng, "party")),
+        "turn_undead": asdict(adnd1e_v04.turn_undead(SimpleNamespace(actor_id="PC_GOLDMOON", character_class="cleric", level=5, team="party"), "ghoul", rng)),
+        "encumbrance": asdict(adnd1e_v04.encumbrance_move(12, 900, strength=16)),
+        "morale": resolve_morale({"morale_score": 8, "group_id": "bozak_guard"}, rng),
+        "reaction": resolve_reaction({"npc_id": "aghar", "modifier": 1}, rng),
+        "item_save": resolve_item_save({"material": "wood", "attack_form": "fire"}, rng),
+    }
+    state = {"characters": {"PC_TANIS": tanis, "BOZAK_1": bozak}}
+    spell_result = ResolutionService(rng).resolve_spell_effect({"actor_id": "PC_TANIS", "target_id": "BOZAK_1", "spell": "magic_missile"}, state)
+    checks["spell_result"] = {"status": spell_result.status, "private": spell_result.private_outcome.summary, "public": spell_result.public_outcome.narration}
+    caps = default_rules_capability_registry().summary()
+    lines = ["Trapspringer v0.4 AD&D rules facade demo", f"Capability summary: {caps}"]
+    lines.append(f"Attack target vs AC 2: {checks['attack_target']['target']}")
+    lines.append(f"Saving throw vs spell: {checks['saving_throw_spell']['result']}")
+    lines.append(f"Initiative winner roll totals: party={checks['initiative']['party']['result']}, enemy={checks['initiative']['enemy']['result']}")
+    lines.append(f"Surprise: {checks['surprise']['result']}")
+    lines.append(f"Turn undead: {checks['turn_undead']['result']}")
+    lines.append(f"Encumbrance: {checks['encumbrance']['result']} move {checks['encumbrance']['target']}")
+    lines.append(f"Morale: {checks['morale']['result']}; reaction: {checks['reaction']['result']}")
+    lines.append(f"Item save: {checks['item_save']['result']}")
+    lines.append(str(checks["spell_result"]["public"]))
+    return V040RulesRun(output="\n".join(lines), summary=checks)

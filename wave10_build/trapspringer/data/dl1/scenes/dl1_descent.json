@@ -1,0 +1,15 @@
+{
+  "scene_id": "DL1_DESCENT",
+  "type": "exploration",
+  "area_id": "45-52",
+  "checkpoint": "descent_started",
+  "read_aloud": "The Great Well breathes foul air from the dark. Beyond the temple, fallen floors, crypts, an Aghar elevator, and slick sewer passages offer dangerous ways down into the buried city.",
+  "visible_exits": [
+    "great_well",
+    "hall_of_ancestors",
+    "elevator_47c",
+    "sewer_route_48_52"
+  ],
+  "script": "begin_descent_to_lower_city",
+  "map_template_id": "DESCENT_MAP"
+}

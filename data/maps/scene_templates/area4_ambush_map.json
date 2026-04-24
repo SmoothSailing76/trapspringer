@@ -1,0 +1,28 @@
+{
+  "template_id": "AREA4_AMBUSH_MAP",
+  "zones": [
+    "road_bridge",
+    "north_treeline",
+    "south_treeline",
+    "solace_retreat",
+    "east_road"
+  ],
+  "connections": [
+    {"from": "road_bridge", "to": "north_treeline", "distance_ft": 30, "passable": true},
+    {"from": "road_bridge", "to": "south_treeline", "distance_ft": 30, "passable": true},
+    {"from": "road_bridge", "to": "solace_retreat", "distance_ft": 60, "passable": true},
+    {"from": "road_bridge", "to": "east_road", "distance_ft": 60, "passable": true}
+  ],
+  "line_of_sight": {
+    "road_bridge": ["north_treeline", "south_treeline", "solace_retreat", "east_road"],
+    "north_treeline": ["road_bridge"],
+    "south_treeline": ["road_bridge"],
+    "solace_retreat": ["road_bridge"],
+    "east_road": ["road_bridge"]
+  },
+  "initial_entities": [
+    {"entity_id": "PC_TANIS", "zone": "road_bridge"},
+    {"entity_id": "AREA4_BAAZ_1", "zone": "north_treeline", "concealed": true},
+    {"entity_id": "AREA4_BAAZ_2", "zone": "south_treeline", "concealed": true}
+  ]
+}

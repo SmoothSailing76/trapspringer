@@ -1,0 +1,64 @@
+{
+  "template_id": "DRAGON_LAIR_70K_MAP",
+  "zones": [
+    "north_entry",
+    "center_hoard",
+    "airspace",
+    "secret_grate",
+    "collapsing_dome"
+  ],
+  "connections": [
+    {
+      "from": "north_entry",
+      "to": "center_hoard",
+      "distance_ft": 30
+    },
+    {
+      "from": "center_hoard",
+      "to": "airspace",
+      "distance_ft": 30
+    },
+    {
+      "from": "airspace",
+      "to": "secret_grate",
+      "distance_ft": 30
+    },
+    {
+      "from": "secret_grate",
+      "to": "collapsing_dome",
+      "distance_ft": 30
+    }
+  ],
+  "line_of_sight": {
+    "north_entry": [
+      "center_hoard",
+      "airspace",
+      "secret_grate",
+      "collapsing_dome"
+    ],
+    "center_hoard": [
+      "north_entry",
+      "airspace",
+      "secret_grate",
+      "collapsing_dome"
+    ],
+    "airspace": [
+      "north_entry",
+      "center_hoard",
+      "secret_grate",
+      "collapsing_dome"
+    ],
+    "secret_grate": [
+      "north_entry",
+      "center_hoard",
+      "airspace",
+      "collapsing_dome"
+    ],
+    "collapsing_dome": [
+      "north_entry",
+      "center_hoard",
+      "airspace",
+      "secret_grate"
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "template_id": "TEMPLE_MISHAKAL_MAP",
+  "zones": [
+    "entrance_46a",
+    "statue_46b",
+    "south_room_46c",
+    "north_room_46d",
+    "holy_circle_46e",
+    "paths_46g"
+  ],
+  "connections": [
+    {
+      "from": "entrance_46a",
+      "to": "statue_46b",
+      "distance_ft": 30
+    },
+    {
+      "from": "statue_46b",
+      "to": "south_room_46c",
+      "distance_ft": 30
+    },
+    {
+      "from": "south_room_46c",
+      "to": "north_room_46d",
+      "distance_ft": 30
+    },
+    {
+      "from": "north_room_46d",
+      "to": "holy_circle_46e",
+      "distance_ft": 30
+    },
+    {
+      "from": "holy_circle_46e",
+      "to": "paths_46g",
+      "distance_ft": 30
+    }
+  ],
+  "line_of_sight": {
+    "entrance_46a": [
+      "statue_46b",
+      "south_room_46c",
+      "north_room_46d",
+      "holy_circle_46e",
+      "paths_46g"
+    ],
+    "statue_46b": [
+      "entrance_46a",
+      "south_room_46c",
+      "north_room_46d",
+      "holy_circle_46e",
+      "paths_46g"
+    ],
+    "south_room_46c": [
+      "entrance_46a",
+      "statue_46b",
+      "north_room_46d",
+      "holy_circle_46e",
+      "paths_46g"
+    ],
+    "north_room_46d": [
+      "entrance_46a",
+      "statue_46b",
+      "south_room_46c",
+      "holy_circle_46e",
+      "paths_46g"
+    ],
+    "holy_circle_46e": [
+      "entrance_46a",
+      "statue_46b",
+      "south_room_46c",
+      "north_room_46d",
+      "paths_46g"
+    ],
+    "paths_46g": [
+      "entrance_46a",
+      "statue_46b",
+      "south_room_46c",
+      "north_room_46d",
+      "holy_circle_46e"
+    ]
+  }
+}

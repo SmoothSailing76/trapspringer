@@ -1,0 +1,18 @@
+{
+  "scene_id": "DL1_TEMPLE_MISHAKAL",
+  "type": "exploration",
+  "area_id": "46",
+  "checkpoint": "temple_mishakal_entered",
+  "read_aloud": "The gold doors swing open into a windowless temple of blue arches and cold green marble. A radiant statue of Mishakal stands within, its empty arms curved as if waiting for the blue crystal staff.",
+  "visible_exits": [
+    "south_worship_room",
+    "north_worship_room",
+    "paths_of_the_dead"
+  ],
+  "script": "mishakal_audience_and_staff_recharge",
+  "hidden_facts": [
+    "The statue can recharge the Blue Crystal Staff.",
+    "Mishakal can reveal the quest for the Disks."
+  ],
+  "map_template_id": "TEMPLE_MISHAKAL_MAP"
+}

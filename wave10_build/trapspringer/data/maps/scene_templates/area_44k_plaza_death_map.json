@@ -1,0 +1,48 @@
+{
+  "template_id": "AREA_44K_PLAZA_DEATH_MAP",
+  "zones": [
+    "swamp_entry",
+    "plaza_center",
+    "great_well",
+    "temple_doors",
+    "airspace_above_plaza"
+  ],
+  "connections": [
+    {
+      "from": "swamp_entry",
+      "to": "plaza_center",
+      "distance_ft": 30
+    },
+    {
+      "from": "plaza_center",
+      "to": "great_well",
+      "distance_ft": 20
+    },
+    {
+      "from": "plaza_center",
+      "to": "temple_doors",
+      "distance_ft": 40
+    },
+    {
+      "from": "great_well",
+      "to": "airspace_above_plaza",
+      "distance_ft": 60
+    }
+  ],
+  "line_of_sight": {
+    "swamp_entry": [
+      "plaza_center",
+      "great_well",
+      "temple_doors"
+    ],
+    "plaza_center": [
+      "great_well",
+      "temple_doors",
+      "airspace_above_plaza"
+    ],
+    "great_well": [
+      "plaza_center",
+      "airspace_above_plaza"
+    ]
+  }
+}

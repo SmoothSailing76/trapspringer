@@ -1,0 +1,16 @@
+{
+  "scene_id": "DL1_AREA_44K",
+  "type": "combat_opening",
+  "area_id": "44k",
+  "name": "Plaza of Death",
+  "read_aloud": "A broad cobblestone plaza opens ahead. Four free-standing columns rise near a huge well plunging into blackness. North of the well, a windowless temple stands whole, its gold doors shut against the swamp gloom.",
+  "trigger": "enter_plaza",
+  "map_template_id": "AREA_44K_PLAZA_DEATH_MAP",
+  "obvious_exits": [
+    "temple_north",
+    "great_well",
+    "swamp_path_back"
+  ],
+  "khisanth_arrival": "With a rush of dead-cold air, a huge black dragon erupts from the well and spreads her wings over the plaza.",
+  "post_scene_location": "XAK_TSAROTH_SURFACE"
+}

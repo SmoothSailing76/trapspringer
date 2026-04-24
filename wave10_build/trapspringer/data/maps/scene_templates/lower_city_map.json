@@ -1,0 +1,64 @@
+{
+  "template_id": "LOWER_CITY_MAP",
+  "zones": [
+    "bakery_53",
+    "treasury_57",
+    "aghar_guildhall_68",
+    "secret_way_69",
+    "hall_justice_70"
+  ],
+  "connections": [
+    {
+      "from": "bakery_53",
+      "to": "treasury_57",
+      "distance_ft": 30
+    },
+    {
+      "from": "treasury_57",
+      "to": "aghar_guildhall_68",
+      "distance_ft": 30
+    },
+    {
+      "from": "aghar_guildhall_68",
+      "to": "secret_way_69",
+      "distance_ft": 30
+    },
+    {
+      "from": "secret_way_69",
+      "to": "hall_justice_70",
+      "distance_ft": 30
+    }
+  ],
+  "line_of_sight": {
+    "bakery_53": [
+      "treasury_57",
+      "aghar_guildhall_68",
+      "secret_way_69",
+      "hall_justice_70"
+    ],
+    "treasury_57": [
+      "bakery_53",
+      "aghar_guildhall_68",
+      "secret_way_69",
+      "hall_justice_70"
+    ],
+    "aghar_guildhall_68": [
+      "bakery_53",
+      "treasury_57",
+      "secret_way_69",
+      "hall_justice_70"
+    ],
+    "secret_way_69": [
+      "bakery_53",
+      "treasury_57",
+      "aghar_guildhall_68",
+      "hall_justice_70"
+    ],
+    "hall_justice_70": [
+      "bakery_53",
+      "treasury_57",
+      "aghar_guildhall_68",
+      "secret_way_69"
+    ]
+  }
+}

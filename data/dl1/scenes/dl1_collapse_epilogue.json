@@ -1,0 +1,12 @@
+{
+  "scene_id": "DL1_COLLAPSE_EPILOGUE",
+  "type": "escape",
+  "area_id": "46b",
+  "checkpoint": "epilogue_complete",
+  "read_aloud": "The cavern\u2019s roar fades behind you. In the temple of Mishakal, the statue now holds a perfect likeness of the blue crystal staff. At its feet, the one who broke the staff stirs unharmed.",
+  "visible_exits": [
+    "return_westward"
+  ],
+  "script": "epilogue_medallion_of_faith",
+  "map_template_id": "COLLAPSE_EPILOGUE_MAP"
+}

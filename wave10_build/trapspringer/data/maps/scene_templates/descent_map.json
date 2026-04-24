@@ -1,0 +1,64 @@
+{
+  "template_id": "DESCENT_MAP",
+  "zones": [
+    "great_well_45",
+    "hall_47a",
+    "elevator_47c",
+    "sewer_48",
+    "chimney_52"
+  ],
+  "connections": [
+    {
+      "from": "great_well_45",
+      "to": "hall_47a",
+      "distance_ft": 30
+    },
+    {
+      "from": "hall_47a",
+      "to": "elevator_47c",
+      "distance_ft": 30
+    },
+    {
+      "from": "elevator_47c",
+      "to": "sewer_48",
+      "distance_ft": 30
+    },
+    {
+      "from": "sewer_48",
+      "to": "chimney_52",
+      "distance_ft": 30
+    }
+  ],
+  "line_of_sight": {
+    "great_well_45": [
+      "hall_47a",
+      "elevator_47c",
+      "sewer_48",
+      "chimney_52"
+    ],
+    "hall_47a": [
+      "great_well_45",
+      "elevator_47c",
+      "sewer_48",
+      "chimney_52"
+    ],
+    "elevator_47c": [
+      "great_well_45",
+      "hall_47a",
+      "sewer_48",
+      "chimney_52"
+    ],
+    "sewer_48": [
+      "great_well_45",
+      "hall_47a",
+      "elevator_47c",
+      "chimney_52"
+    ],
+    "chimney_52": [
+      "great_well_45",
+      "hall_47a",
+      "elevator_47c",
+      "sewer_48"
+    ]
+  }
+}

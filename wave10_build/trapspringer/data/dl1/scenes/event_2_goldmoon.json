@@ -1,0 +1,18 @@
+{
+  "scene_id": "DL1_EVENT_2_GOLDMOON",
+  "type": "conversation",
+  "trigger": "after_event1_or_travel",
+  "area_id": "ROAD_EAST_OF_SOLACE",
+  "read_aloud": "Soft music drifts across the road. A slim young woman plays a lyre while a tall plainsman answers with a flute. The woman carries a blue crystal staff that catches the firelight.",
+  "goldmoon_opening_line": "We mean no harm. We seek the truth of this staff and the road to Xak Tsaroth.",
+  "npc_scripts": {
+    "GOLDMOON": "join_party_if_accepted",
+    "RIVERWIND": "guard_goldmoon"
+  },
+  "new_party_members": [
+    "PC_GOLDMOON",
+    "NPC_RIVERWIND"
+  ],
+  "map_template_id": "EVENT_2_ROADSIDE_MAP",
+  "post_scene_location": "ROAD_EAST_OF_SOLACE"
+}

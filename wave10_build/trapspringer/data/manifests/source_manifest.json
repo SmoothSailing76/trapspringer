@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "source_id": "PHB",
+      "path": "phb/"
+    },
+    {
+      "source_id": "DMG",
+      "path": "dmg/"
+    },
+    {
+      "source_id": "MM",
+      "path": "mm/"
+    },
+    {
+      "source_id": "DL1",
+      "path": "dl1/"
+    }
+  ]
+}

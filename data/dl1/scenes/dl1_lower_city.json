@@ -1,0 +1,14 @@
+{
+  "scene_id": "DL1_LOWER_CITY",
+  "type": "exploration",
+  "area_id": "53-70",
+  "checkpoint": "lower_city_reached",
+  "read_aloud": "Far below Xak Tsaroth, broken streets lie sideways under a cavern roof. Water thunders through ancient plazas while gully dwarves scurry among the ruins and draconian patrols guard the hidden truth of the gods.",
+  "visible_exits": [
+    "treasury_court",
+    "aghar_guildhall",
+    "hall_of_justice"
+  ],
+  "script": "discover_secret_route_to_lair",
+  "map_template_id": "LOWER_CITY_MAP"
+}

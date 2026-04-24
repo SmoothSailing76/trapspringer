@@ -1,0 +1,13 @@
+{
+  "scene_id": "DL1_DRAGON_LAIR_70K",
+  "type": "combat",
+  "area_id": "70k",
+  "checkpoint": "before_70k",
+  "read_aloud": "The tunnel opens into a vast rotunda beneath a cracked translucent dome. At the center, a glossy black dragon straddles a hoard of jewels, steel weapons, and platinum disks.",
+  "visible_exits": [
+    "north_doors",
+    "secret_grate"
+  ],
+  "script": "dragon_lair_finale",
+  "map_template_id": "DRAGON_LAIR_70K_MAP"
+}

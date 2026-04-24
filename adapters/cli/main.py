@@ -5,12 +5,12 @@ from pathlib import Path
 
 from trapspringer.adapters.cli.product_views import render_map_panel, render_party_panel, render_replay_view, render_save_list
 from trapspringer.adapters.cli.renderers import render_turn_result, render_status
-from trapspringer.adapters.cli.session_runner import run_event1_demo, run_wave6_story_demo, run_wave9_party_demo, run_wave11_quality_demo, run_v020_main_path_demo, run_v030_spatial_demo, run_v040_rules_demo, run_v050_open_ended_demo, run_v060_content_dsl_demo, run_v070_map_visibility_demo, run_v080_party_maturity_demo, run_v090_hardening_demo
+from trapspringer.adapters.cli.session_runner import run_event1_demo, run_wave6_story_demo, run_wave9_party_demo, run_wave11_quality_demo, run_v020_main_path_demo, run_v030_spatial_demo, run_v040_rules_demo, run_v050_open_ended_demo, run_v060_content_dsl_demo, run_v070_map_visibility_demo, run_v080_party_maturity_demo, run_v090_hardening_demo, run_v100_release_demo
 from trapspringer.services.persistence_service import SessionPersistenceService, SaveLoadError
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="trapspringer", description="Trapspringer vertical-slice demos and Wave 10 product tools")
+    parser = argparse.ArgumentParser(prog="trapspringer", description="Trapspringer DL1 simulator CLI")
     parser.add_argument("--character", default="PC_TANIS", help="Human-controlled actor id, default PC_TANIS")
     parser.add_argument("--action", default="I attack the nearest hobgoblin", help="One round-one user declaration")
     parser.add_argument("--no-recap", action="store_true", help="Do not print audit recap")
@@ -25,6 +25,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--v070", action="store_true", help="Run the v0.7 map and visibility demo")
     parser.add_argument("--v080", action="store_true", help="Run the v0.8 party simulation maturity demo")
     parser.add_argument("--v090", action="store_true", help="Run the v0.9 hardening/release-confidence demo")
+    parser.add_argument("--v100", action="store_true", help="Run the v1.0 release/readiness gate")
     parser.add_argument("--campaign", choices=["dl1"], default=None, help="Run the named campaign runner")
     parser.add_argument("--demo-main-path", action="store_true", help="Run the complete DL1 v0.2 main path through epilogue")
     parser.add_argument("--status", action="store_true", help="Print campaign status after the run")
@@ -85,6 +86,11 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.v080:
         demo = run_v080_party_maturity_demo(user_character_id=args.character)
+        print(demo.output)
+        return 0
+
+    if args.v100:
+        demo = run_v100_release_demo()
         print(demo.output)
         return 0
 

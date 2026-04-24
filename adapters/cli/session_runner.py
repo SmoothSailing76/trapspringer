@@ -384,3 +384,20 @@ def run_v090_hardening_demo() -> V090HardeningRun:
     for check in report.checks:
         lines.append(f"- {check.name}: {check.status.upper()} — {check.detail}")
     return V090HardeningRun(output="\n".join(lines), report=report.to_dict(), status=report.status)
+
+
+@dataclass(slots=True)
+class V100ReleaseRun:
+    output: str
+    report: dict[str, Any]
+    status: str
+
+
+def run_v100_release_demo() -> V100ReleaseRun:
+    """Run the v1.0 release gate."""
+    from trapspringer.services.v100_release_service import V100ReleaseService
+    report = V100ReleaseService().run()
+    lines = [report.summary]
+    for check in report.checks:
+        lines.append(f"- {check.name}: {check.status.upper()} — {check.detail}")
+    return V100ReleaseRun(output="\n".join(lines), report=report.to_dict(), status=report.status)

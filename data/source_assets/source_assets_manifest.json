@@ -1,0 +1,47 @@
+{
+  "artifact": "trapspringer_v1_source_assets_manifest",
+  "version": "1.0.0",
+  "notes": "Records external source images and legends used to derive structured runtime map manifests.",
+  "assets": [
+    {
+      "id": "dl1_wilderness_encounter_area_map",
+      "file": "encounter_area_map.png",
+      "role": "wilderness encounter-zone source image"
+    },
+    {
+      "id": "dl1_swamp_map",
+      "file": "DL1_Swamp_Map.jpg",
+      "role": "swamp/Xak Tsaroth surface map source image"
+    },
+    {
+      "id": "dl1_overland_map",
+      "file": "DL1_overland.jpg",
+      "role": "chapter 1-2 overland map source image"
+    },
+    {
+      "id": "dl1_cavern_level_1_dm",
+      "file": "DL1_Cavern_Level_1_DM.png",
+      "role": "Xak Tsaroth level 1 true-map source image"
+    },
+    {
+      "id": "dl1_cavern_level_2_dm",
+      "file": "DL1_Cavern_Level_2_DM.png",
+      "role": "Xak Tsaroth level 2 true-map source image"
+    },
+    {
+      "id": "dl1_cavern_level_3_dm",
+      "file": "DL1_Cavern_Level_3_DM.png",
+      "role": "Xak Tsaroth level 3 true-map source image"
+    },
+    {
+      "id": "dl1_cavern_level_4_dm",
+      "file": "DL1_Cavern_Level_4_DM.png",
+      "role": "Xak Tsaroth level 4 true-map source image"
+    },
+    {
+      "id": "level4_rgb_legend",
+      "file": "hourglass_dm_map_color_source_of_truth_v1_0_1.json",
+      "role": "authoritative RGB feature legend for level 4 DM map"
+    }
+  ]
+}

@@ -1,46 +1,88 @@
 {
   "pack_id": "dl1_dragons_of_despair",
   "title": "DL1: Dragons of Despair",
-  "version": "0.2.1",
+  "version": "0.6.0",
   "system": "ADND_1E",
   "module_id": "DL1_DRAGONS_OF_DESPAIR",
   "entry_scene_id": "DL1_EVENT_1_AMBUSH",
   "main_path_registry": "dl1_main_path_registry",
   "rules_capabilities": "rules_capabilities",
   "metadata": {
-    "status": "main_path_complete",
+    "status": "scenario_dsl_mature_main_path",
     "notes": "Content pack facade for the existing bundled DL1 data. Resources currently reference legacy data files during migration."
   },
   "resources": {
     "module_manifest": {
       "kind": "manifest",
       "path": "../../data/manifests/module_manifest_dl1.json",
-      "tags": ["dl1", "module"]
+      "tags": [
+        "dl1",
+        "module"
+      ]
     },
     "source_manifest": {
       "kind": "manifest",
       "path": "../../data/manifests/source_manifest.json",
-      "tags": ["sources"]
+      "tags": [
+        "sources"
+      ]
     },
     "rules_capabilities": {
       "kind": "rules_capabilities",
       "path": "../../data/manifests/rules_capabilities.json",
-      "tags": ["rules", "coverage"]
+      "tags": [
+        "rules",
+        "coverage"
+      ]
     },
     "dl1_main_path_registry": {
       "kind": "main_path_registry",
       "path": "../../data/dl1/main_path_registry.json",
-      "tags": ["dl1", "main_path"]
+      "tags": [
+        "dl1",
+        "main_path"
+      ]
     },
     "event_1_scene": {
       "kind": "scene",
       "path": "../../data/dl1/scenes/event_1_ambush.json",
-      "tags": ["event1", "opening"]
+      "tags": [
+        "event1",
+        "opening"
+      ]
     },
     "event_1_map": {
       "kind": "map_template",
       "path": "../../data/maps/scene_templates/event_1_ambush_map.json",
-      "tags": ["event1", "map"]
+      "tags": [
+        "event1",
+        "map"
+      ]
+    },
+    "scenario_scripts": {
+      "kind": "scenario_script",
+      "path": "scripts",
+      "tags": [
+        "scenario",
+        "dsl",
+        "v060"
+      ]
+    },
+    "scenario_manifest": {
+      "kind": "scenario_manifest",
+      "path": "scenario_manifest.json",
+      "tags": [
+        "scenario",
+        "manifest"
+      ]
+    },
+    "content_pack_test_scene": {
+      "kind": "scene",
+      "path": "scenes/test_mishakal_scene.json",
+      "tags": [
+        "scenario",
+        "test"
+      ]
     }
   }
 }

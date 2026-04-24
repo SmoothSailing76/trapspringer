@@ -1,0 +1,50 @@
+{
+  "id": "dl1_staff_strike_v060",
+  "scene_id": "DL1_AREA_70K_STAFF_STRIKE",
+  "description": "Declarative staff strike, Khisanth defeat, and collapse transition.",
+  "metadata": {
+    "tone": "urgent_heroic",
+    "one_shot": true
+  },
+  "on_resolution": [
+    {
+      "op": "set_flag",
+      "flag": "disks_recovered"
+    },
+    {
+      "op": "set_flag",
+      "flag": "staff_shattered"
+    },
+    {
+      "op": "set_flag",
+      "flag": "khisanth_defeated"
+    },
+    {
+      "op": "reveal",
+      "fact_id": "DL1_DISKS_RECOVERED",
+      "scope": "party_known"
+    },
+    {
+      "op": "checkpoint",
+      "label": "staff_shattered"
+    },
+    {
+      "op": "start_escape_mode",
+      "mode": "collapse_escape"
+    },
+    {
+      "op": "transition",
+      "milestone_id": "collapse_escape"
+    },
+    {
+      "op": "narrate",
+      "text": "The staff shatters in blue fire; Khisanth is destroyed and the cavern begins to collapse."
+    }
+  ],
+  "on_milestone": [
+    {
+      "op": "checkpoint",
+      "label": "collapse_escape"
+    }
+  ]
+}

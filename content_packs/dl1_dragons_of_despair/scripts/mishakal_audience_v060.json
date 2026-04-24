@@ -1,0 +1,42 @@
+{
+  "id": "dl1_mishakal_audience_v060",
+  "scene_id": "DL1_AREA_46B_MISHAKAL_FORM",
+  "description": "Declarative Mishakal audience and staff recharge sequence.",
+  "metadata": {
+    "tone": "sacred_wondrous",
+    "one_shot": true
+  },
+  "on_enter": [
+    {
+      "op": "narrate",
+      "text": "The statue of Mishakal seems to shine from within as the Blue Crystal Staff answers its presence."
+    },
+    {
+      "op": "set_flag",
+      "flag": "mishakal_audience_complete"
+    },
+    {
+      "op": "set_flag",
+      "flag": "staff_recharged"
+    },
+    {
+      "op": "reveal",
+      "fact_id": "DL1_MISHAKAL_RESTORATION_PATH",
+      "scope": "party_known"
+    },
+    {
+      "op": "checkpoint",
+      "label": "staff_recharged"
+    },
+    {
+      "op": "transition",
+      "milestone_id": "staff_recharged"
+    }
+  ],
+  "on_exit": [
+    {
+      "op": "narrate",
+      "text": "The sacred chamber grows quiet behind you."
+    }
+  ]
+}

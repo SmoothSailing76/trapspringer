@@ -1,0 +1,22 @@
+{
+  "scenario_manifest_id": "dl1_scenario_manifest_v060",
+  "content_pack_id": "dl1_dragons_of_despair",
+  "version": "0.6.0",
+  "scripts": [
+    {
+      "id": "dl1_mishakal_audience_v060",
+      "path": "scripts/mishakal_audience_v060.json",
+      "scene_id": "DL1_AREA_46B_MISHAKAL_FORM"
+    },
+    {
+      "id": "dl1_staff_strike_v060",
+      "path": "scripts/staff_strike_v060.json",
+      "scene_id": "DL1_AREA_70K_STAFF_STRIKE"
+    }
+  ],
+  "supported_hooks": [
+    "on_enter",
+    "on_resolution",
+    "on_milestone"
+  ]
+}

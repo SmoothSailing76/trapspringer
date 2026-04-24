@@ -263,3 +263,44 @@ def run_v050_open_ended_demo(user_character_id: str = "PC_TANIS") -> V050OpenEnd
         state=orchestrator.layer3.read_state(),
         orchestrator=orchestrator,
     )
+
+@dataclass(slots=True)
+class V060ContentDslRun:
+    output: str
+    report: dict[str, Any]
+
+
+def run_v060_content_dsl_demo() -> V060ContentDslRun:
+    """Demonstrate v0.6 content-pack validation and scenario DSL execution."""
+    from pathlib import Path
+    from trapspringer.content_packs.validator import validate_content_pack
+    from trapspringer.scenario_dsl.executor import ScenarioScriptExecutor
+    from trapspringer.scenario_dsl.loader import load_scenario_script
+
+    root = Path(__file__).resolve().parents[2]
+    pack_root = root / "content_packs"
+    script_root = pack_root / "dl1_dragons_of_despair" / "scripts"
+    pack_report = validate_content_pack("dl1_dragons_of_despair", pack_root).to_dict()
+    state = {"flags": {"staff_in_party_possession": True}}
+    executor = ScenarioScriptExecutor()
+    mishakal = executor.execute(load_scenario_script(script_root / "mishakal_audience_v060.json"), state, "on_enter")
+    strike = executor.execute(load_scenario_script(script_root / "staff_strike_v060.json"), state, "on_resolution")
+    report = {
+        "ok": pack_report["ok"] and mishakal.ok and strike.ok,
+        "pack_report": pack_report,
+        "mishakal_steps": mishakal.executed_steps,
+        "staff_strike_steps": strike.executed_steps,
+        "checkpoints": mishakal.checkpoints + strike.checkpoints,
+        "transitions": mishakal.transitions + strike.transitions,
+        "flags": state["flags"],
+    }
+    lines = [
+        "Trapspringer v0.6 Content Pack + Scenario DSL demo",
+        f"Content pack valid: {pack_report['ok']}",
+        f"Resources: {pack_report['resource_count']} | scripts checked: {pack_report['script_count']}",
+        f"Mishakal executed: {', '.join(mishakal.executed_steps)}",
+        f"Staff strike executed: {', '.join(strike.executed_steps)}",
+        f"Checkpoints: {', '.join(report['checkpoints'])}",
+        f"Transitions: {', '.join(report['transitions'])}",
+    ]
+    return V060ContentDslRun(output="\n".join(lines), report=report)

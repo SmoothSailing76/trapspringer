@@ -5,7 +5,7 @@ from pathlib import Path
 
 from trapspringer.adapters.cli.product_views import render_map_panel, render_party_panel, render_replay_view, render_save_list
 from trapspringer.adapters.cli.renderers import render_turn_result, render_status
-from trapspringer.adapters.cli.session_runner import run_event1_demo, run_wave6_story_demo, run_wave9_party_demo, run_wave11_quality_demo, run_v020_main_path_demo
+from trapspringer.adapters.cli.session_runner import run_event1_demo, run_wave6_story_demo, run_wave9_party_demo, run_wave11_quality_demo, run_v020_main_path_demo, run_v030_spatial_demo
 from trapspringer.services.persistence_service import SessionPersistenceService, SaveLoadError
 
 
@@ -18,6 +18,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--wave9", action="store_true", help="Run the Wave 9 deep party-simulation demo")
     parser.add_argument("--wave11", action="store_true", help="Run Wave 11 hardening/regression quality gates")
     parser.add_argument("--v020", action="store_true", help="Run the v0.2.0 playable DL1 main-path demo")
+    parser.add_argument("--v030", action="store_true", help="Run the v0.3 DL1 spatial asset validation demo")
     parser.add_argument("--campaign", choices=["dl1"], default=None, help="Run the named campaign runner")
     parser.add_argument("--demo-main-path", action="store_true", help="Run the complete DL1 v0.2 main path through epilogue")
     parser.add_argument("--status", action="store_true", help="Print campaign status after the run")
@@ -73,6 +74,10 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.wave11:
         demo = run_wave11_quality_demo()
+        print(demo.output)
+        return 0
+    if args.v030:
+        demo = run_v030_spatial_demo()
         print(demo.output)
         return 0
     if args.campaign == "dl1" and args.demo_main_path:

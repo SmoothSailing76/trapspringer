@@ -6,6 +6,7 @@ from trapspringer.layers.layer9_map.true_map_store import TrueMapStore
 from trapspringer.layers.layer9_map.scene_graph import RuntimeSceneGraph
 from trapspringer.layers.layer9_map.reveals import reveal_area_entry, reveal_hidden_feature
 from trapspringer.layers.layer9_map.los import query_los
+from trapspringer.layers.layer9_map.dl1_spatial import DL1SpatialRegistry
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[2]
 
@@ -27,6 +28,7 @@ class MapVisibilityService:
         self.true_maps = TrueMapStore()
         self.public_maps = PublicMapStore()
         self.scene_graphs: dict[str, RuntimeSceneGraph] = {}
+        self.dl1_spatial = DL1SpatialRegistry()
 
     def load_scene_template(self, template_id: str) -> dict:
         filename = _TEMPLATE_FILES.get(template_id)
@@ -122,3 +124,15 @@ class MapVisibilityService:
             "player_annotations": list(m.player_annotations),
             "uncertain_features": list(m.uncertain_features),
         }
+
+    def dl1_spatial_summary(self) -> dict[str, object]:
+        return self.dl1_spatial.spatial_summary()
+
+    def load_xak_tsaroth_level(self, level: int) -> dict:
+        return self.dl1_spatial.load_xak_level(level)
+
+    def load_wilderness_spatial_manifest(self) -> dict:
+        return self.dl1_spatial.load_wilderness_manifest()
+
+    def validate_dl1_spatial_assets(self) -> dict[str, object]:
+        return self.dl1_spatial.validate_assets_present()

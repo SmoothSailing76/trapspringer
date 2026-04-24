@@ -1,0 +1,21 @@
+{
+  "registry_id": "DL1_FULL_SPATIAL_REGISTRY_V030",
+  "version": "0.3.0",
+  "content_pack_id": "dl1_dragons_of_despair",
+  "assets": {
+    "wilderness": "wilderness/wilderness_spatial_manifest.json",
+    "xak_tsaroth": "xak_tsaroth/xak_tsaroth_map_stack_manifest.json",
+    "xak_tsaroth_transitions": "xak_tsaroth/xak_tsaroth_transitions.json",
+    "level4_color_source": "xak_tsaroth/level4_color_source_of_truth.json"
+  },
+  "runtime_policy": {
+    "true_maps_loaded_by_layer9": true,
+    "public_maps_generated_by_layer9": true,
+    "player_and_tas_static_maps_ignored": true,
+    "map_assets_are_source_controlled": true
+  },
+  "build_notes": [
+    "Created for v0.3 Full Spatial DL1 Build.",
+    "Includes overland, encounter-zone, swamp surface, and Xak Tsaroth Levels 1-4 DM maps."
+  ]
+}

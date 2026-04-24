@@ -171,3 +171,27 @@ def run_v020_main_path_demo(
         state=orchestrator.layer3.read_state(),
         orchestrator=orchestrator,
     )
+
+@dataclass(slots=True)
+class V030SpatialRun:
+    output: str
+    summary: dict[str, Any]
+    validation: dict[str, Any]
+
+
+def run_v030_spatial_demo() -> V030SpatialRun:
+    from trapspringer.layers.layer9_map.service import MapVisibilityService
+    from trapspringer.adapters.cli.renderers import render_v030_spatial_summary
+
+    layer9 = MapVisibilityService()
+    summary = layer9.dl1_spatial_summary()
+    validation = layer9.validate_dl1_spatial_assets()
+    lines = [render_v030_spatial_summary(summary), "", "Asset validation:", f"  ok: {validation.get('ok')}"]
+    missing = validation.get("missing") or []
+    if missing:
+        lines.append("  missing:")
+        lines.extend(f"    {item}" for item in missing)
+    level4 = layer9.load_xak_tsaroth_level(4)
+    lines.append("")
+    lines.append(f"Level 4 encounter areas indexed: {len(level4.get('encounter_areas', []))}")
+    return V030SpatialRun(output="\n".join(lines), summary=summary, validation=validation)

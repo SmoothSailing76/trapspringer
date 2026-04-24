@@ -1,0 +1,92 @@
+{
+  "spatial_pack_id": "DL1_WILDERNESS_SPATIAL_V030",
+  "content_pack_id": "dl1_dragons_of_despair",
+  "version": "0.3.0",
+  "source_images": {
+    "overland_base": {
+      "file": "DL1_overland.jpg",
+      "width": 2048,
+      "height": 1336,
+      "mode": "RGB",
+      "sha256": "e67f4ba37364b2df240a5e92447adaae31593279fd213ceb5c45e1c702d80df1"
+    },
+    "overland_encounter_zones": {
+      "file": "encounter_area_map.png",
+      "width": 2048,
+      "height": 1348,
+      "mode": "RGBA",
+      "sha256": "5d90d2e32650fc9983ed9d6f328df7d6a395706b2a9fdf45178fa7b87211621a"
+    },
+    "swamp_surface": {
+      "file": "DL1_Swamp_Map.jpg",
+      "width": 577,
+      "height": 674,
+      "mode": "RGB",
+      "sha256": "440cd031b01015189fd7c4eec467b3381361b5d4946e52f1be2613934d3e5a2b"
+    }
+  },
+  "authority_policy": {
+    "overland_encounter_zone_map": "canonical encounter zoning authority",
+    "overland_base_map": "canonical terrain/settlement/route authority",
+    "swamp_surface_map": "canonical Xak Tsaroth surface approach geometry"
+  },
+  "hex_coordinate_model": {
+    "type": "printed_hex_coordinates",
+    "coordinate_format": "column,row as printed on encounter_area_map",
+    "hex_size": "derived from source image",
+    "origin": "source map printed grid",
+    "notes": [
+      "Encounter area map includes printed per-hex coordinate labels and colored encounter regions."
+    ]
+  },
+  "named_locations": [
+    {
+      "id": "solace",
+      "label": "Solace"
+    },
+    {
+      "id": "haven",
+      "label": "Haven"
+    },
+    {
+      "id": "gateway",
+      "label": "Gateway"
+    },
+    {
+      "id": "que_shu",
+      "label": "Que-Shu"
+    },
+    {
+      "id": "que_kiri",
+      "label": "Que-Kiri"
+    },
+    {
+      "id": "que_teh",
+      "label": "Que-Teh"
+    },
+    {
+      "id": "xak_tsaroth",
+      "label": "Xak Tsaroth"
+    },
+    {
+      "id": "darken_wood",
+      "label": "Darken Wood"
+    },
+    {
+      "id": "white_rage_river",
+      "label": "White-Rage River"
+    }
+  ],
+  "runtime_systems_enabled": {
+    "hex_travel": true,
+    "encounter_zone_lookup": true,
+    "terrain_costs": true,
+    "event_clock_integration": true,
+    "public_overland_map_reveal": true
+  },
+  "coverage_notes": [
+    "This manifest records spatial authority from uploaded map assets.",
+    "Automated per-hex OCR is not used; hex coordinates remain source-image authoritative until a vectorized hex table is loaded.",
+    "Encounter zone colors are preserved by the source PNG and should be converted with a dedicated map-ingestion pass."
+  ]
+}

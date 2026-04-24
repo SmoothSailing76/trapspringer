@@ -1,0 +1,68 @@
+{
+  "transition_manifest_id": "DL1_XAK_TSAROTH_VERTICAL_TRANSITIONS_V030",
+  "authority": "module_text_plus_dm_maps",
+  "levels": [
+    "DL1_XAK_TSAROTH_LEVEL_1_TRUE_MAP",
+    "DL1_XAK_TSAROTH_LEVEL_2_TRUE_MAP",
+    "DL1_XAK_TSAROTH_LEVEL_3_TRUE_MAP",
+    "DL1_XAK_TSAROTH_LEVEL_4_TRUE_MAP"
+  ],
+  "transition_types": [
+    "stairs",
+    "shaft",
+    "well",
+    "elevator",
+    "sewer_route",
+    "secret_way",
+    "collapse_escape_route"
+  ],
+  "known_transitions": [
+    {
+      "id": "xak_surface_to_level1",
+      "from": "DL1_XAK_TSAROTH_SURFACE",
+      "to": "DL1_XAK_TSAROTH_LEVEL_1_TRUE_MAP",
+      "type": "entry_descent",
+      "status": "known_main_path"
+    },
+    {
+      "id": "level1_to_level2",
+      "from": "DL1_XAK_TSAROTH_LEVEL_1_TRUE_MAP",
+      "to": "DL1_XAK_TSAROTH_LEVEL_2_TRUE_MAP",
+      "type": "vertical_connection",
+      "status": "requires_keyed_confirmation"
+    },
+    {
+      "id": "level2_to_level3",
+      "from": "DL1_XAK_TSAROTH_LEVEL_2_TRUE_MAP",
+      "to": "DL1_XAK_TSAROTH_LEVEL_3_TRUE_MAP",
+      "type": "vertical_connection",
+      "status": "requires_keyed_confirmation"
+    },
+    {
+      "id": "level3_to_level4",
+      "from": "DL1_XAK_TSAROTH_LEVEL_3_TRUE_MAP",
+      "to": "DL1_XAK_TSAROTH_LEVEL_4_TRUE_MAP",
+      "type": "vertical_connection",
+      "status": "requires_keyed_confirmation"
+    },
+    {
+      "id": "secret_way_69b_to_70k",
+      "from": "69b",
+      "to": "70k_secret_grate",
+      "type": "secret_way",
+      "status": "canonical_main_path_hidden_until_discovered"
+    },
+    {
+      "id": "collapse_escape_70k_to_temple",
+      "from": "70k",
+      "to": "DL1_AREA_46_TEMPLE_OF_MISHAKAL",
+      "type": "scripted_escape_epilogue",
+      "status": "triggered_by_staff_shatter"
+    }
+  ],
+  "runtime_rules": {
+    "party_can_retrace_known_path": true,
+    "secret_connections_hidden_until_layer2_reveal": true,
+    "collapse_can_change_passability": true
+  }
+}

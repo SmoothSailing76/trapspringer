@@ -1,0 +1,50 @@
+{
+  "spatial_pack_id": "DL1_XAK_TSAROTH_COMPLETE_SPATIAL_V030",
+  "content_pack_id": "dl1_dragons_of_despair",
+  "version": "0.3.0",
+  "authority_policy": {
+    "dm_maps": "canonical_true_geometry",
+    "player_maps": "discarded",
+    "tas_maps": "discarded",
+    "public_maps": "generated_by_layer9"
+  },
+  "levels": [
+    {
+      "level": 1,
+      "map_file": "levels/level1_true_map.json",
+      "source_image": "DL1_Cavern_Level_1_DM.png",
+      "label": "Temple / upper cavern entry"
+    },
+    {
+      "level": 2,
+      "map_file": "levels/level2_true_map.json",
+      "source_image": "DL1_Cavern_Level_2_DM.png",
+      "label": "Hall and causeway level"
+    },
+    {
+      "level": 3,
+      "map_file": "levels/level3_true_map.json",
+      "source_image": "DL1_Cavern_Level_3_DM.png",
+      "label": "River descent / intermediate level"
+    },
+    {
+      "level": 4,
+      "map_file": "levels/level4_true_map.json",
+      "source_image": "DL1_Cavern_Level_4_DM.png",
+      "label": "Cavern city / lower city / dragon lair level"
+    }
+  ],
+  "vertical_transitions": "xak_tsaroth_transitions.json",
+  "coverage": {
+    "dungeon_levels": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "level4_encounter_areas": "59b-70k",
+    "public_map_generation": "supported",
+    "pixel_precise_geometry": "source_images_available",
+    "semantic_room_labels": "level4_complete_from_color_source; levels1-3 pending keyed legend confirmation"
+  }
+}

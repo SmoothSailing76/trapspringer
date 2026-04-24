@@ -1,0 +1,32 @@
+{
+  "export_date": "2026-04-24",
+  "file_count": 26,
+  "files": [
+    "00_INDEX.md",
+    "01_layer_specs/layer_01_canon_authority.md",
+    "01_layer_specs/layer_02_knowledge_boundary.md",
+    "01_layer_specs/layer_03_session_state.md",
+    "01_layer_specs/layer_04_table_procedure.md",
+    "01_layer_specs/layer_05_action_validation.md",
+    "01_layer_specs/layer_06_resolution_engine.md",
+    "01_layer_specs/layer_07_narration.md",
+    "01_layer_specs/layer_08_party_simulation.md",
+    "01_layer_specs/layer_09_map_visibility.md",
+    "01_layer_specs/layer_10_audit_replay.md",
+    "01_layer_specs/v0_2_1_layer_spec_updates.md",
+    "02_runtime_architecture/engine_manifest_modules_and_files.md",
+    "02_runtime_architecture/integration_contract_and_execution_pipeline.md",
+    "02_runtime_architecture/layer_enforcement.md",
+    "02_runtime_architecture/public_api_facade_contract.md",
+    "03_implementation_plans/implementation_waves_summary.md",
+    "03_implementation_plans/v0_2_completion_backlog.md",
+    "03_implementation_plans/v0_2_playable_dl1_main_path_plan.md",
+    "04_release_and_operations/install_and_run.md",
+    "04_release_and_operations/known_limitations.md",
+    "04_release_and_operations/release_checklist.md",
+    "04_release_and_operations/repository_workflow.md",
+    "04_release_and_operations/rules_coverage.md",
+    "05_reference/remaining_work.md",
+    "05_reference/runtime_state_and_layers.md"
+  ]
+}

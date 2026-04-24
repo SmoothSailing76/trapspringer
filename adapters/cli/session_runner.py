@@ -304,3 +304,27 @@ def run_v060_content_dsl_demo() -> V060ContentDslRun:
         f"Transitions: {', '.join(report['transitions'])}",
     ]
     return V060ContentDslRun(output="\n".join(lines), report=report)
+
+@dataclass(slots=True)
+class V070MapVisibilityRun:
+    output: str
+    report: dict[str, Any]
+
+
+def run_v070_map_visibility_demo() -> V070MapVisibilityRun:
+    """Demonstrate v0.7 map/visibility upgrade: fog of war, light, concealed reveal."""
+    from trapspringer.layers.layer9_map.service import MapVisibilityService
+    from trapspringer.layers.layer9_map.map_renderer import render_public_map_snapshot, render_visibility_trace
+
+    layer9 = MapVisibilityService()
+    report = layer9.v070_visibility_demo_state()
+    lines = [
+        "Trapspringer v0.7 Map & Visibility demo",
+        "Before reveal: " + render_visibility_trace(report["hidden_trace"]),
+        "Reveal event: " + str(report["reveal"]),
+        "After reveal: " + render_visibility_trace(report["revealed_trace"]),
+        "Map diff: " + str(report["map_diff"]),
+        "",
+        render_public_map_snapshot(report["fog"]),
+    ]
+    return V070MapVisibilityRun(output="\n".join(lines), report=report)

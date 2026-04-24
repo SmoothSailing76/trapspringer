@@ -241,3 +241,25 @@ def run_v040_rules_demo() -> V040RulesRun:
     lines.append(f"Item save: {checks['item_save']['result']}")
     lines.append(str(checks["spell_result"]["public"]))
     return V040RulesRun(output="\n".join(lines), summary=checks)
+
+@dataclass(slots=True)
+class V050OpenEndedRun:
+    outputs: list[EngineTurnResult]
+    recap: str | None = None
+    integrity: dict | None = None
+    state: dict[str, Any] | None = None
+    orchestrator: Orchestrator | None = None
+
+
+def run_v050_open_ended_demo(user_character_id: str = "PC_TANIS") -> V050OpenEndedRun:
+    """Demonstrate v0.5 open-ended branch/failure-state handling."""
+    orchestrator = Orchestrator()
+    session = orchestrator.start_campaign("CLI-V050-OPEN-ENDED", user_character_id=user_character_id)
+    outputs = orchestrator.run_v050_open_ended_demo(session)
+    return V050OpenEndedRun(
+        outputs=outputs,
+        recap=orchestrator.layer10.recap(limit=60),
+        integrity=orchestrator.layer10.check_integrity(),
+        state=orchestrator.layer3.read_state(),
+        orchestrator=orchestrator,
+    )

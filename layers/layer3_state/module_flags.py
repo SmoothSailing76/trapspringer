@@ -37,9 +37,28 @@ V020_MAIN_PATH_FLAGS = {
     "current_milestone": "start_of_event_1",
 }
 
+V050_OPEN_ENDED_FLAGS = {
+    "branch_refused_main_hook": False,
+    "party_retreating": False,
+    "last_retreat_from": None,
+    "party_split_active": False,
+    "party_split_origin": None,
+    "prisoner_taken": False,
+    "prisoner_source_scene": None,
+    "prisoner_interrogated": False,
+    "prisoner_info_unlocked": None,
+    "key_item_risk_pending": False,
+    "key_item_risk_item": None,
+    "alternate_route_search_active": False,
+    "party_resting_or_delaying": False,
+    "human_ruling_required": False,
+}
+
 
 def initialize_v020_flags() -> dict[str, object]:
-    return dict(V020_MAIN_PATH_FLAGS)
+    flags = dict(V020_MAIN_PATH_FLAGS)
+    flags.update(V050_OPEN_ENDED_FLAGS)
+    return flags
 
 
 def _set_flag(module_state, flag: str, value: bool = True) -> None:

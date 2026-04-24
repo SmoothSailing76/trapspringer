@@ -335,3 +335,37 @@ class Orchestrator:
             return EngineTurnResult(narration=narration.spoken_text, prompt=narration.prompt, events=self.layer10.event_log.events)
         self._append("input_received", "orchestrator", {"user_input": user_input})
         return self._combat_round(user_input)
+
+# ---- v0.5 open-ended interaction extension ---------------------------------
+def _v050_handle_open_ended_action(self, text: str, actor_id: str | None = None) -> EngineTurnResult:
+    from trapspringer.layers.layer4_procedure.open_ended import classify_open_ended_intent, open_ended_policy_response
+
+    actor_id = actor_id or self._user_actor_id()
+    state = self.layer3.read_state()
+    scene_id = getattr(state.get("campaign"), "active_scene_id", None)
+    intent = classify_open_ended_intent(text, actor_id=actor_id, scene_id=scene_id)
+    policy = open_ended_policy_response(intent, state)
+    self._append("open_ended_intent", "layer4", {"intent": intent, "policy": policy}, visibility="public_table")
+    result = self.layer6.resolve_open_ended_intent(intent, state)
+    self._commit_resolution_result(result)
+    narration = self.layer7.narrate_resolution(result, prompt="How does the party proceed?")
+    self._append("narration_event", "layer7", {"spoken_text": narration.spoken_text, "prompt": narration.prompt})
+    self.layer10.create_snapshot(f"v050_{intent.intent_type}", state=self.layer3.read_state())
+    return EngineTurnResult(narration=narration.spoken_text, prompt=narration.prompt, events=self.layer10.event_log.events, resolutions=[_plain(result)])
+
+
+def _v050_run_open_ended_demo(self, session: RuntimeSession) -> list[EngineTurnResult]:
+    outputs: list[EngineTurnResult] = []
+    outputs.append(self.step(session))
+    outputs.append(self.handle_open_ended_action("We retreat from the ambush and regroup."))
+    outputs.append(self.handle_open_ended_action("We take a hobgoblin prisoner."))
+    outputs.append(self.handle_open_ended_action("Tasslehoff scouts ahead, splitting from the main group."))
+    outputs.append(self.handle_open_ended_action("Goldmoon throws away the blue crystal staff."))
+    outputs.append(self.handle_open_ended_action("We search for another route into Xak Tsaroth."))
+    outputs.append(self.handle_open_ended_action("We do something extremely specific that the engine cannot model yet."))
+    self._append("module_event", "orchestrator", {"event": "v0.5_open_ended_demo_complete"}, visibility="dm_private")
+    return outputs
+
+
+Orchestrator.handle_open_ended_action = _v050_handle_open_ended_action
+Orchestrator.run_v050_open_ended_demo = _v050_run_open_ended_demo

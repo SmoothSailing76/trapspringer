@@ -5,6 +5,7 @@ from trapspringer.services.random_service import RandomService
 from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait, resolve_missile_attack, resolve_initiative, resolve_surprise
 from trapspringer.layers.layer6_resolution.spells import resolve_spell
 from trapspringer.layers.layer6_resolution import module_scripts as scripts
+from trapspringer.layers.layer6_resolution.open_ended import resolve_open_ended_intent
 
 
 class ResolutionService:
@@ -64,3 +65,10 @@ class ResolutionService:
 
     def resolve_collapse_escape_and_epilogue(self, state: dict, breaker: str = "PC_GOLDMOON") -> ResolutionResult:
         return scripts.resolve_collapse_escape_and_epilogue(state, breaker=breaker)
+
+# v0.5 facade extension: bind as an instance method without disturbing the
+# existing v0.4 class body above.
+def _v050_resolve_open_ended_intent(self, intent, state: dict) -> ResolutionResult:
+    return resolve_open_ended_intent(intent, state)
+
+ResolutionService.resolve_open_ended_intent = _v050_resolve_open_ended_intent

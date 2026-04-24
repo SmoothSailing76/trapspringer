@@ -1,0 +1,26 @@
+{
+  "policy_id": "DL1_OPEN_ENDED_V050",
+  "version": "0.5.0",
+  "supported_branches": [
+    "refuse_hook",
+    "retreat",
+    "split_party",
+    "take_prisoner",
+    "interrogate_prisoner",
+    "key_item_risk",
+    "search_alternate_route",
+    "rest_or_delay"
+  ],
+  "hard_rules": {
+    "do_not_silently_destroy_key_items": true,
+    "preserve_public_private_knowledge_when_party_splits": true,
+    "advance_event_clocks_on_delay": true,
+    "route_unmodeled_actions_to_human_ruling": true
+  },
+  "failure_states": {
+    "blue_crystal_staff_lost": "requires_human_ruling_or_recovery_branch",
+    "party_avoids_xak_tsaroth": "dragonarmy_clock_advances_and_campaign_enters_alternate_route_state",
+    "party_retreats_from_lair": "khisanth_alert_state_increases",
+    "party_splits": "separate_knowledge_scopes_are_required"
+  }
+}

@@ -9,12 +9,14 @@ from trapspringer.layers.layer1_authority.precedence import choose_source_for_do
 from trapspringer.layers.layer1_authority.registry import build_default_registry
 from trapspringer.layers.layer1_authority.ruling_ledger import RulingLedger
 from trapspringer.rules.rule_queries import query_rule, RuleQueryResult
+from trapspringer.rules.capabilities import default_rules_capability_registry
 
 
 class AuthorityService:
     def __init__(self) -> None:
         self.registry = build_default_registry()
         self.rulings = RulingLedger()
+        self.capabilities = default_rules_capability_registry()
 
     def query_authority(self, canon_query: CanonQuery) -> CanonAnswer:
         domain = classify_question(canon_query.question, canon_query.domain)
@@ -33,6 +35,12 @@ class AuthorityService:
             citations=[],
             requires_ruling=needs_ruling,
         )
+
+    def capability_status(self, capability_id: str) -> str:
+        return self.capabilities.status(capability_id)
+
+    def require_capability(self, capability_id: str, *, allow_partial: bool = True):
+        return self.capabilities.require(capability_id, allow_partial=allow_partial)
 
     def query_rule(self, name: str, **kwargs: Any) -> RuleQueryResult:
         """Event 1 MVP rule/query endpoint used by validation and resolution.

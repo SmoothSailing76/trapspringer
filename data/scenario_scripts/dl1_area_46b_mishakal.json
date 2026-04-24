@@ -1,0 +1,29 @@
+{
+  "id": "DL1_AREA_46B_MISHAKAL_SCRIPT",
+  "scene_id": "DL1_AREA_46B_MISHAKAL_FORM",
+  "description": "Declarative version of the Mishakal audience and staff recharge trigger.",
+  "on_enter": [
+    {
+      "op": "narrate",
+      "text": "The statue's warmth fills the chamber as Mishakal's presence answers the staff.",
+      "when": {"flags": {"staff_in_party_possession": true}}
+    },
+    {
+      "op": "set_flag",
+      "flag": "mishakal_audience_complete",
+      "value": true,
+      "when": {"flags": {"staff_in_party_possession": true}}
+    },
+    {
+      "op": "set_flag",
+      "flag": "staff_recharged",
+      "value": true,
+      "when": {"flags": {"staff_in_party_possession": true}}
+    },
+    {
+      "op": "checkpoint",
+      "label": "staff_recharged",
+      "when": {"flags": {"staff_in_party_possession": true}}
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "registry_id": "ADND1E_DL1_RULES_CAPABILITIES_V1",
+  "engine_version": "0.2.1",
+  "statuses": ["implemented", "partial", "stubbed", "unsupported"],
+  "capabilities": {
+    "melee_attacks": {
+      "status": "implemented",
+      "layer": "layer6_resolution.combat",
+      "public_name": "Melee attacks",
+      "notes": "Supports main-path melee attacks, HP mutation, and defeat status."
+    },
+    "missile_attacks": {
+      "status": "partial",
+      "layer": "layer6_resolution.combat",
+      "public_name": "Missile attacks",
+      "notes": "Supports simplified main-path missile attacks; full range/cover modifiers remain incomplete."
+    },
+    "initiative_segments": {
+      "status": "partial",
+      "layer": "layer4_procedure.combat",
+      "public_name": "Initiative and segments",
+      "notes": "Simplified round order is used for most main-path scenes."
+    },
+    "spell_casting": {
+      "status": "partial",
+      "layer": "layer6_resolution.spells",
+      "public_name": "Spell casting",
+      "notes": "Supports selected spells used by the main path: magic missile, sleep, web, cure light wounds, and darkness-like scripted effects."
+    },
+    "spell_interruption": {
+      "status": "partial",
+      "layer": "layer6_resolution.spells",
+      "public_name": "Spell interruption",
+      "notes": "Helper exists for main-path cases; full AD&D segment timing is not complete."
+    },
+    "turn_undead": {
+      "status": "partial",
+      "layer": "layer6_resolution.spells",
+      "public_name": "Turning undead",
+      "notes": "Compact facade for supported tests and selected encounters."
+    },
+    "morale_reaction": {
+      "status": "partial",
+      "layer": "layer6_resolution.morale",
+      "public_name": "Morale and reaction",
+      "notes": "Main-path morale helpers exist; exhaustive DMG morale procedures are not complete."
+    },
+    "dragon_fear_breath": {
+      "status": "partial",
+      "layer": "layer6_resolution.combat",
+      "public_name": "Dragon fear and breath weapons",
+      "notes": "Khisanth main-path scripting is supported; generic dragon handling is partial."
+    },
+    "staff_of_mishakal": {
+      "status": "implemented",
+      "layer": "layer6_resolution.items",
+      "public_name": "Blue Crystal Staff",
+      "notes": "Supports party possession, recharge, and finale shatter."
+    },
+    "dl1_main_path": {
+      "status": "implemented",
+      "layer": "layer6_resolution.module_scripts",
+      "public_name": "DL1 main path",
+      "notes": "Event 1 through Epilogue main spine is implemented."
+    },
+    "dl1_optional_branches": {
+      "status": "partial",
+      "layer": "content_pack.dl1_dragons_of_despair",
+      "public_name": "DL1 optional branches",
+      "notes": "Several scenes have content stubs, but full open-ended branch play remains future work."
+    },
+    "psionics": {
+      "status": "unsupported",
+      "layer": null,
+      "public_name": "Psionics",
+      "notes": "Not implemented."
+    },
+    "hirelings_henchmen": {
+      "status": "unsupported",
+      "layer": null,
+      "public_name": "Hirelings and henchmen",
+      "notes": "Not implemented for v0.2 complete."
+    },
+    "item_saving_throws": {
+      "status": "stubbed",
+      "layer": "rules.rule_queries",
+      "public_name": "Item saving throws",
+      "notes": "Recognized as a rule capability but not resolved in play."
+    },
+    "xp_training": {
+      "status": "partial",
+      "layer": "rules.rule_queries",
+      "public_name": "XP and training",
+      "notes": "Helper-level XP/treasure support only; full training economy is not complete."
+    }
+  }
+}

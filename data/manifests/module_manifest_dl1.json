@@ -16,6 +16,7 @@
     "collapse_escape",
     "epilogue_complete"
   ],
+  "content_pack_id": "dl1_dragons_of_despair",
   "main_path": [
     "DL1_EVENT_1_AMBUSH",
     "DL1_EVENT_2_GOLDMOON",
@@ -51,6 +52,10 @@
       "DL1_AREA_44F",
       "DL1_AREA_44K"
     ]
+  },
+  "rules_capabilities": "data/manifests/rules_capabilities.json",
+  "scenario_scripts": {
+    "DL1_AREA_46B_MISHAKAL_FORM": "data/scenario_scripts/dl1_area_46b_mishakal.json"
   },
   "scene_files": {
     "DL1_AREA_44F": "data/dl1/scenes/area_44f_temple_of_baaz.json",

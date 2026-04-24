@@ -1,3 +1,3 @@
 def test_imports():
     import trapspringer
-    assert trapspringer.__version__ == "0.2.0"
+    assert trapspringer.__version__ == "0.2.1"

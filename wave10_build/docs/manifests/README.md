@@ -1,1 +1,0 @@
-Manifest docs placeholder.

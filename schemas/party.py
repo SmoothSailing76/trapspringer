@@ -83,3 +83,5 @@ class PartyDiscussionBundle:
     dissent: list[str] = field(default_factory=list)
     mapper_notes: list[dict[str, object]] = field(default_factory=list)
     emotional_tone: str = "focused"
+    caller_state: dict[str, object] = field(default_factory=dict)
+    memory_state: dict[str, object] = field(default_factory=dict)

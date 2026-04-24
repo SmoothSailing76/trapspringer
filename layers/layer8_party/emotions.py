@@ -28,6 +28,12 @@ class EmotionStore:
         elif scene_id == "DL1_EVENT_2_GOLDMOON":
             for actor_id in actor_ids:
                 self.set(actor_id, "curious")
+        elif scene_id == "DL1_AREA_46B_MISHAKAL_FORM":
+            for actor_id in actor_ids:
+                self.set(actor_id, "awed")
+        elif scene_id == "DL1_COLLAPSE_ESCAPE":
+            for actor_id in actor_ids:
+                self.set(actor_id, "urgent")
 
     def table_tone(self, actor_ids: list[str]) -> str:
         values = [self.get(actor_id) for actor_id in actor_ids]
@@ -35,6 +41,8 @@ class EmotionStore:
             return "urgent"
         if values.count("tense") >= 3:
             return "tense"
+        if "awed" in values:
+            return "awed"
         if "curious" in values:
             return "curious"
         return "focused"

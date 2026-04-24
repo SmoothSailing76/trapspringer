@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from trapspringer.layers.layer8_party.caller import summarize_for_caller
 from trapspringer.layers.layer8_party.mapper import mapper_clarification
+from trapspringer.layers.layer8_party.memory import PartyMemoryStore
 from trapspringer.layers.layer8_party.personas import build_default_persona_for_actor, display_name_for_actor
 from trapspringer.layers.layer8_party.proposals import generate_scene_proposals
 from trapspringer.layers.layer8_party.relationships import RelationshipStore
@@ -19,6 +20,13 @@ STYLE_LINES = {
     "NPC_RIVERWIND": "We do not linger where the enemy has chosen the ground.",
 }
 
+SCENE_MEMORY_TAGS = {
+    "DL1_AREA_44K": ["xak_surface", "dragon"],
+    "DL1_AREA_70K": ["dragon", "secret_route", "staff"],
+    "DL1_COLLAPSE_ESCAPE": ["escape", "route"],
+    "DL1_AREA_46B_MISHAKAL_FORM": ["sacred", "staff"],
+}
+
 
 def event1_opening_discussion(simulated_actor_ids: list[str]) -> list[DiscussionLine]:
     lines = []
@@ -34,7 +42,6 @@ def build_discussion_from_proposals(proposals: list[Proposal], max_lines: int = 
     for proposal in proposals:
         actor_guess = proposal.player_id.replace("PLY-", "").replace("-SEAT", "").title()
         speaker = actor_guess + "'s Player" if "'s Player" not in actor_guess else actor_guess
-        # Keep it from becoming one player monologue unless very high priority.
         if speaker in seen_speakers and proposal.priority < 0.78:
             continue
         seen_speakers.add(speaker)
@@ -42,6 +49,21 @@ def build_discussion_from_proposals(proposals: list[Proposal], max_lines: int = 
         if "mission" in proposal.intent_tags or "guard_goldmoon" in proposal.intent_tags:
             channel = "in_character_speech"
         lines.append(DiscussionLine(speaker, proposal.spoken_text, channel=channel, tags=proposal.intent_tags))
+        if len(lines) >= max_lines:
+            break
+    return lines
+
+
+def _memory_lines(scene_id: str, simulated_actor_ids: list[str], memory: PartyMemoryStore | None, max_lines: int = 2) -> list[DiscussionLine]:
+    if memory is None:
+        return []
+    tags = SCENE_MEMORY_TAGS.get(scene_id, [])
+    lines: list[DiscussionLine] = []
+    for actor_id in simulated_actor_ids:
+        persona = build_default_persona_for_actor(actor_id)
+        recalled = memory.imperfect_recall_line(actor_id, scene_id, tags=tags, memory_reliability=persona.memory_reliability)
+        if recalled:
+            lines.append(DiscussionLine(display_name_for_actor(actor_id) + "'s Player", recalled, tags=["memory", "recall"] + tags))
         if len(lines) >= max_lines:
             break
     return lines
@@ -64,15 +86,18 @@ def discuss_scene(
     user_action: str | None = None,
     relationships: RelationshipStore | None = None,
     emotions: EmotionStore | None = None,
+    memory: PartyMemoryStore | None = None,
+    max_lines: int = 6,
 ) -> tuple[list[DiscussionLine], str, list[Proposal], list[str]]:
     emotions = emotions or EmotionStore()
     relationships = relationships or RelationshipStore()
     emotions.apply_scene_pressure(simulated_actor_ids, scene_id)
     proposals = generate_scene_proposals(scene_id, simulated_actor_ids, available_public_information, user_action, relationships, emotions)
-    lines = build_discussion_from_proposals(proposals)
+    memory_lines = _memory_lines(scene_id, simulated_actor_ids, memory)
+    proposal_lines = build_discussion_from_proposals(proposals, max_lines=max(1, max_lines - len(memory_lines)))
+    lines = memory_lines + proposal_lines
 
     dissent: list[str] = []
-    # Cautious/risky conflict marker.
     tags = [tag for p in proposals for tag in p.intent_tags]
     if "risk" in tags and "caution" in tags:
         dissent.append("Tasslehoff wants a closer look; Flint wants a guard line before anyone advances.")
@@ -83,6 +108,6 @@ def discuss_scene(
 
     summary = summarize_for_caller(lines, proposals) or "Caller summary: proceed with caution and keep the party together."
     mapper_question = mapper_clarification(scene_id)
-    if mapper_question:
+    if mapper_question and len(lines) < max_lines + 1:
         lines.append(DiscussionLine("Tasslehoff's Player", mapper_question, tags=["mapper", "clarification"]))
     return lines, summary, proposals, dissent

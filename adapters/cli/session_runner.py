@@ -328,3 +328,41 @@ def run_v070_map_visibility_demo() -> V070MapVisibilityRun:
         render_public_map_snapshot(report["fog"]),
     ]
     return V070MapVisibilityRun(output="\n".join(lines), report=report)
+
+@dataclass(slots=True)
+class V080PartyMaturityRun:
+    output: str
+    report: dict[str, Any]
+
+
+def run_v080_party_maturity_demo(user_character_id: str = "PC_TANIS") -> V080PartyMaturityRun:
+    """Demonstrate v0.8 long-play party simulation maturity."""
+    orchestrator = Orchestrator()
+    session = orchestrator.start_campaign("CLI-V080-PARTY-MATURITY", user_character_id=user_character_id)
+    orchestrator.step(session)
+    actor_ids = orchestrator.layer8._simulated_actor_ids()
+    # Seed memories through the public-fact API so the demo remains knowledge-boundary safe.
+    orchestrator.layer8.record_public_fact("wicker_dragon_fake", "The camp dragon was wicker, not alive; someone here stages fear very deliberately.", "DL1_AREA_44F", tags=["dragon", "deception"])
+    orchestrator.layer8.record_public_fact("secret_route_to_lair", "The secret route to the lair matters; the obvious halls may be watched.", "DL1_AGHAR_ROUTE_DISCOVERY", tags=["secret_route", "dragon"])
+    scenes = [
+        ("DL1_AREA_44K", ["temple_visible_north", "well_visible_center"], ["mystery"]),
+        ("DL1_AREA_46B_MISHAKAL_FORM", ["staff_in_party", "statue_visible"], ["sacred"]),
+        ("DL1_AREA_70K", ["secret_route_known", "dragon_lair_entry"], ["combat", "dragon"]),
+        ("DL1_COLLAPSE_ESCAPE", ["collapse_active", "exit_routes_known"], ["escape", "collapse"]),
+    ]
+    chunks: list[str] = ["Trapspringer v0.8 Party Simulation Maturity demo"]
+    for scene_id, public_info, tags in scenes:
+        bundle = orchestrator.layer8.simulate_discussion({"scene_id": scene_id, "available_public_information": public_info, "scene_tags": tags})
+        chunks.append(f"\n[{scene_id}] tone={bundle.emotional_tone}")
+        for line in bundle.discussion:
+            chunks.append(f"- {line.speaker} ({line.channel}): {line.text}")
+        if bundle.dissent:
+            chunks.append("  dissent: " + "; ".join(bundle.dissent))
+        if bundle.mapper_notes:
+            chunks.append("  mapper: " + "; ".join(note.get("note", "") for note in bundle.mapper_notes))
+        chunks.append("  " + (bundle.caller_summary or "No caller summary."))
+    report = orchestrator.layer8.v080_party_state_report()
+    chunks.append("\nCaller state: " + str(report["caller"]))
+    chunks.append("Mapper notes recorded: " + str(len(report["mapper_notes"])))
+    chunks.append("Memory actors tracked: " + str(len(report["memory"])))
+    return V080PartyMaturityRun(output="\n".join(chunks), report=report)

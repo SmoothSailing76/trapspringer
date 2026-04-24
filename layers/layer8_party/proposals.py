@@ -38,6 +38,23 @@ def generate_scene_proposals(
         rel_notes = relationships.summary_for(actor_id)
         priority = 0.45 + (pp.assertiveness * 0.25) + (pp.tactical_focus * 0.15)
 
+        if scene_id == "DL1_COLLAPSE_ESCAPE":
+            if actor_id in {"PC_TANIS", "PC_STURM"}:
+                proposals.append(_proposal(actor_id, "escape_coordination", "Move now. Front and rear guards keep the wounded between you; no one stops for loose coins.", 0.92, ["escape", "collapse", "caller"], {"action_type": "move", "target": "exit_route"}))
+            elif actor_id == "PC_TASSLEHOFF":
+                proposals.append(_proposal(actor_id, "escape_route_memory", "I remember the way back enough to run it, but nobody let me get distracted by side passages.", 0.80, ["escape", "route", "memory"], {"action_type": "guide"}))
+            else:
+                proposals.append(_proposal(actor_id, "escape_support", "I keep moving and help whoever stumbles.", 0.70, ["escape", "support"], {"action_type": "move"}))
+            continue
+
+        if scene_id == "DL1_AREA_46B_MISHAKAL_FORM" and actor_id in {"PC_GOLDMOON", "NPC_RIVERWIND"}:
+            proposals.append(_proposal(actor_id, "sacred_pause", "This is not a place for clever tricks. Let the staff-bearer listen first.", 0.84, ["sacred", "staff", "mission"], {"action_type": "listen"}))
+            continue
+
+        if scene_id == "DL1_AREA_70K" and actor_id in {"PC_RAISTLIN", "PC_FLINT"}:
+            proposals.append(_proposal(actor_id, "lair_caution", "This is the lair. Mark the exits, keep spread out, and do not assume the treasure is safe ground.", 0.86, ["dragon", "caution", "secret_route"], {"action_type": "guard"}))
+            continue
+
         if actor_id == "PC_TASSLEHOFF":
             if scene_id == "DL1_AREA_44F" and "wicker_truth_known" not in public:
                 proposals.append(_proposal(actor_id, "risky_scouting", "I can creep close enough to see whether that dragon thing is breathing. Probably.", 0.82, ["scout", "inspect_structure", "risk"], {"action_type": "inspect", "target": "dragon_structure"}))

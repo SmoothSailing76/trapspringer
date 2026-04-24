@@ -366,3 +366,21 @@ def run_v080_party_maturity_demo(user_character_id: str = "PC_TANIS") -> V080Par
     chunks.append("Mapper notes recorded: " + str(len(report["mapper_notes"])))
     chunks.append("Memory actors tracked: " + str(len(report["memory"])))
     return V080PartyMaturityRun(output="\n".join(chunks), report=report)
+
+
+@dataclass(slots=True)
+class V090HardeningRun:
+    output: str
+    report: dict[str, Any]
+    status: str
+
+
+def run_v090_hardening_demo() -> V090HardeningRun:
+    """Run the v0.9 hardening/release-confidence gate."""
+    from trapspringer.services.v090_hardening_service import V090HardeningService
+
+    report = V090HardeningService().run()
+    lines = [report.summary]
+    for check in report.checks:
+        lines.append(f"- {check.name}: {check.status.upper()} — {check.detail}")
+    return V090HardeningRun(output="\n".join(lines), report=report.to_dict(), status=report.status)

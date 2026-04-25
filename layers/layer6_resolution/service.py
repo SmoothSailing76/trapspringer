@@ -2,7 +2,7 @@ from __future__ import annotations
 
 from trapspringer.schemas.resolution import ResolutionRequest, ResolutionResult, PublicOutcome, PrivateOutcome
 from trapspringer.services.random_service import RandomService
-from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait, resolve_missile_attack, resolve_initiative, resolve_surprise
+from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait, resolve_missile_attack, resolve_initiative, resolve_surprise, resolve_dragon_breath, resolve_dragon_fear, resolve_ghoul_paralysis, resolve_wight_level_drain, resolve_spider_web_attack, resolve_item_saves_from_breath
 from trapspringer.layers.layer6_resolution.spells import resolve_spell
 from trapspringer.layers.layer6_resolution import module_scripts as scripts
 from trapspringer.layers.layer6_resolution.open_ended import resolve_open_ended_intent
@@ -65,6 +65,33 @@ class ResolutionService:
 
     def resolve_collapse_escape_and_epilogue(self, state: dict, breaker: str = "PC_GOLDMOON") -> ResolutionResult:
         return scripts.resolve_collapse_escape_and_epilogue(state, breaker=breaker)
+
+    def resolve_road_east_goblin_scouts(self, state: dict) -> ResolutionResult:
+        return scripts.resolve_road_east_goblin_scouts(state, self.rng)
+
+    def resolve_road_east_nomad_camp(self, state: dict) -> ResolutionResult:
+        return scripts.resolve_road_east_nomad_camp(state, self.rng)
+
+    def resolve_road_east_rejoin_main_path(self, state: dict) -> ResolutionResult:
+        return scripts.resolve_road_east_rejoin_main_path(state)
+
+    def resolve_dragon_breath(self, dragon, targets: list, state: dict) -> list[ResolutionResult]:
+        return resolve_dragon_breath(dragon, targets, state, self.rng)
+
+    def resolve_dragon_fear(self, actor, dragon_hd: int) -> ResolutionResult:
+        return resolve_dragon_fear(actor, dragon_hd, self.rng)
+
+    def resolve_item_saves_from_breath(self, dragon, targets: list, state: dict) -> list[dict]:
+        return resolve_item_saves_from_breath(dragon, targets, state, self.rng)
+
+    def resolve_ghoul_paralysis(self, ghoul, target) -> ResolutionResult:
+        return resolve_ghoul_paralysis(ghoul, target, self.rng)
+
+    def resolve_wight_level_drain(self, wight, target) -> ResolutionResult:
+        return resolve_wight_level_drain(wight, target, self.rng)
+
+    def resolve_spider_web_attack(self, spider, target) -> ResolutionResult:
+        return resolve_spider_web_attack(spider, target, self.rng)
 
 # v0.5 facade extension: bind as an instance method without disturbing the
 # existing v0.4 class body above.

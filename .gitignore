@@ -22,3 +22,5 @@ Thumbs.db
 saves/
 exports/
 tmp/
+
+content_packs/*/structured_data/*_validation_report.json

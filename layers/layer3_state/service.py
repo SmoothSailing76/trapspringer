@@ -1,5 +1,12 @@
 import json
 from pathlib import Path
+from trapspringer.schemas.loaders import (
+    load_encounter,
+    load_module_manifest,
+    load_npc,
+    load_pregen,
+    load_scene,
+)
 from trapspringer.schemas.maps import Position
 from trapspringer.schemas.state import CampaignState, CharacterState, PartyState, SceneState, TimeState
 from trapspringer.layers.layer3_state.campaign_store import CampaignStore
@@ -40,15 +47,15 @@ class StateService:
         )
 
     def load_pregen(self, pregen_id: str, team: str = "party") -> CharacterState:
-        return self._char_from_data(self._load_json(f"data/dl1/pregens/{pregen_id}.json"), team=team)
+        return self._char_from_data(load_pregen(PACKAGE_ROOT / f"data/dl1/pregens/{pregen_id}.json"), team=team)
 
     def load_toede(self) -> CharacterState:
-        c = self._char_from_data(self._load_json("data/dl1/npcs/toede.json"), team="enemy")
+        c = self._char_from_data(load_npc(PACKAGE_ROOT / "data/dl1/npcs/toede.json"), team="enemy")
         c.location = Position(area_id="EVENT_1_START", zone="toede_front")
         return c
 
     def load_event1_hobgoblins(self) -> dict[str, CharacterState]:
-        data = self._load_json("data/dl1/encounters/hobgoblin_event1_group.json")
+        data = load_encounter(PACKAGE_ROOT / "data/dl1/encounters/hobgoblin_event1_group.json")
         out: dict[str, CharacterState] = {}
         for i, hp in enumerate(data["max_hp_values"], start=1):
             aid = f"HOBGOBLIN_EVENT1_{i}"
@@ -75,7 +82,7 @@ class StateService:
 
     def create_initial_state(self, config: dict | None = None) -> CampaignState:
         config = config or {}
-        scene_content = self._load_json("data/dl1/scenes/event_1_ambush.json")
+        scene_content = load_scene(PACKAGE_ROOT / "data/dl1/scenes/event_1_ambush.json")
         campaign = CampaignState(config.get("campaign_id", "DL1-CAMPAIGN-001"), "ADND_1E", "DL1_DRAGONS_OF_DESPAIR", "active", "DL1_EVENT_1_AMBUSH")
         time = TimeState(day=1, hour=20, mode="setup")
         characters = self.create_character_states_from_pregens(ACTIVE_EVENT1_PARTY)
@@ -104,11 +111,11 @@ class StateService:
         return campaign
 
     def load_scene_content(self, scene_id: str) -> dict:
-        manifest = self._load_json("data/manifests/module_manifest_dl1.json")
-        rel = manifest.get("scene_files", {}).get(scene_id)
+        manifest = load_module_manifest(PACKAGE_ROOT / "data/manifests/module_manifest_dl1.json")
+        rel = manifest["scene_files"].get(scene_id)
         if not rel:
             raise KeyError(scene_id)
-        return self._load_json(rel)
+        return load_scene(PACKAGE_ROOT / rel)
 
     def transition_to_scene(self, scene_id: str) -> SceneState:
         content = self.load_scene_content(scene_id)

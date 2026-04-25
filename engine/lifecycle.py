@@ -1,18 +1,18 @@
-import json
 from pathlib import Path
 from trapspringer.config.feature_flags import FeatureFlags
 from trapspringer.config.policies import ExecutionPolicies
 from trapspringer.config.settings import EngineSettings
 from trapspringer.engine.runtime import RuntimeContext, RuntimeSession
+from trapspringer.schemas.loaders import load_module_manifest
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 
 class LifecycleManager:
     def load_module_manifest(self, module_id: str = "DL1_DRAGONS_OF_DESPAIR") -> dict:
         path = PACKAGE_ROOT / "data/manifests/module_manifest_dl1.json"
-        manifest = json.loads(path.read_text())
-        if manifest.get("module_id") != module_id:
-            raise ValueError(f"Unexpected module manifest: {manifest.get('module_id')}")
+        manifest = load_module_manifest(path)
+        if manifest["module_id"] != module_id:
+            raise ValueError(f"Unexpected module manifest: {manifest['module_id']}")
         return manifest
 
     def create_session(self, campaign_id: str, services: dict | None = None, user_character_id: str | None = None) -> RuntimeSession:

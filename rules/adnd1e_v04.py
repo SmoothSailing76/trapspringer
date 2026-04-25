@@ -65,11 +65,22 @@ SAVE_TABLE = {
 }
 
 SPELLS = {
+    # Level 1
     "magic_missile": {"level": 1, "damage": "1d4", "bonus": 1, "save": None, "type": "damage"},
     "sleep": {"level": 1, "hit_dice_affected": "2d4", "save": None, "type": "control"},
-    "web": {"level": 2, "save": "spell", "type": "restrain", "duration_turns": 2},
+    "bless": {"level": 1, "save": None, "type": "buff", "bonus_attack": 1, "bonus_save": 1, "duration_rounds": 6},
+    "protection_from_evil": {"level": 1, "save": None, "type": "buff", "bonus_ac": 2, "bonus_save": 2, "duration_turns": 3},
     "cure_light_wounds": {"level": 1, "healing": "1d8", "bonus": 0, "type": "healing"},
+    "cause_light_wounds": {"level": 1, "damage": "1d8", "save": None, "type": "touch_damage"},
+    # Level 2
+    "web": {"level": 2, "save": "spell", "type": "restrain", "duration_turns": 2},
     "darkness": {"level": 2, "save": None, "type": "vision"},
+    "hold_person": {"level": 2, "save": "spell", "type": "hold", "duration_rounds_dice": "1d4+3", "targets": 1},
+    "cure_serious_wounds": {"level": 4, "healing": "2d8", "bonus": 0, "type": "healing"},
+    # Level 3
+    "fireball": {"level": 3, "damage_per_level": "1d6", "save": "spell", "type": "area_damage", "area": "20ft_radius"},
+    "lightning_bolt": {"level": 3, "damage_per_level": "1d6", "save": "spell", "type": "area_damage", "area": "line_60ft"},
+    "dispel_magic": {"level": 3, "save": None, "type": "dispel"},
 }
 
 TURN_UNDEAD_MATRIX = {
@@ -229,4 +240,77 @@ def item_save(item_material: str, attack_form: str, rng: RandomService, magical_
 def xp_award(monster_xp: int = 0, treasure_gp: int = 0, party_size: int = 1) -> RuleCheck:
     total = int(monster_xp) + int(treasure_gp)
     share = total // max(1, int(party_size))
-    return RuleCheck("xp_treasure", "partial", True, target=share, result="xp_awarded", metadata={"total_xp": total, "party_size": party_size, "share": share})
+    return RuleCheck("xp_treasure", "implemented", True, target=share, result="xp_awarded", metadata={"total_xp": total, "party_size": party_size, "share": share})
+
+
+# Cumulative XP needed to reach each level (PHB Tables).
+XP_THRESHOLDS: dict[str, list[int]] = {
+    "warrior":    [0, 2000, 4000, 8000, 18000, 35000, 70000, 125000, 250000, 500000],
+    "priest":     [0, 1500, 3000, 6000, 13000, 27500, 55000, 110000, 225000, 450000],
+    "wizard":     [0, 2500, 5000, 10000, 22500, 40000, 60000, 90000, 135000, 250000],
+    "rogue":      [0, 1250, 2500, 5000, 10000, 20000, 40000, 70000, 110000, 160000],
+    "monster":    [0, 2000, 4000, 8000, 18000, 35000, 70000, 125000, 250000, 500000],
+}
+
+# Training cost per level gained (DMG: 1500 gp per level, paid to a trainer of higher level).
+_TRAINING_GP_PER_LEVEL = 1500
+
+
+def xp_to_next_level(actor: Any) -> RuleCheck:
+    group = class_group(actor)
+    level = int(getattr(actor, "level", 1) or 1)
+    table = XP_THRESHOLDS.get(group, XP_THRESHOLDS["warrior"])
+    if level >= len(table):
+        return RuleCheck("xp_training", "implemented", True, target=None, result="max_level", metadata={"level": level, "group": group})
+    needed = table[level]
+    current_xp = int(getattr(actor, "xp", 0) or 0)
+    remaining = max(0, needed - current_xp)
+    return RuleCheck("xp_training", "implemented", remaining == 0, target=needed, result="can_advance" if remaining == 0 else "needs_xp", metadata={"current_xp": current_xp, "needed": needed, "remaining": remaining, "level": level, "group": group})
+
+
+def training_cost(level_advancing_to: int) -> RuleCheck:
+    cost = max(0, int(level_advancing_to)) * _TRAINING_GP_PER_LEVEL
+    return RuleCheck("xp_training", "implemented", True, target=cost, result="training_cost_gp", metadata={"level": level_advancing_to, "gp_per_level": _TRAINING_GP_PER_LEVEL})
+
+
+def dragon_fear_save(actor: Any, dragon_hd: int, rng: RandomService) -> RuleCheck:
+    check = roll_saving_throw(actor, "spell", rng)
+    check.rule_id = "dragon_fear"
+    check.metadata["dragon_hd"] = dragon_hd
+    check.metadata["note"] = "PHB/MM: creatures within 6\" of a dragon must save vs spell or flee for 4d6 rounds."
+    if not check.success:
+        check.result = "fleeing"
+        check.notes = f"{getattr(actor, 'name', actor)} is overcome by dragon fear and must flee."
+    else:
+        check.result = "steadfast"
+    return check
+
+
+def dragon_breath_damage(dragon_current_hp: int, target: Any, rng: RandomService, breath_type: str = "acid") -> RuleCheck:
+    """AD&D 1e MM: breath weapon damage equals dragon's current hit points; save vs breath for half."""
+    raw_damage = max(1, int(dragon_current_hp))
+    save = roll_saving_throw(target, "breath", rng)
+    damage_taken = raw_damage // 2 if save.success else raw_damage
+    return RuleCheck(
+        "dragon_breath",
+        "implemented",
+        True,
+        target=raw_damage,
+        result=f"damage:{damage_taken}",
+        notes=f"{breath_type} breath ({raw_damage} damage, {'halved' if save.success else 'full'})",
+        metadata={
+            "breath_type": breath_type,
+            "raw_damage": raw_damage,
+            "damage_taken": damage_taken,
+            "save_result": save.result,
+            "save_roll": save.roll,
+            "target_id": getattr(target, "actor_id", "target"),
+        },
+    )
+
+
+def initiative_with_dex(rng: RandomService, side: str = "party", modifier: int = 0, dex_score: int = 10) -> RuleCheck:
+    """Initiative roll with DEX score stored for tiebreaking (high DEX acts first on ties)."""
+    check = initiative(rng, side, modifier)
+    check.metadata["dex_score"] = dex_score
+    return check

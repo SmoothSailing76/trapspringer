@@ -13,4 +13,4 @@ def test_authority_service_exposes_capabilities():
     service = AuthorityService()
     assert service.capability_status("melee_attacks") == "implemented"
     cap = service.require_capability("spell_casting")
-    assert cap.status == "partial"
+    assert cap.status == "implemented"

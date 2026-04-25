@@ -51,6 +51,26 @@
         "opening"
       ]
     },
+    "pregens_dir": {
+      "kind": "directory",
+      "path": "../../data/dl1/pregens",
+      "tags": ["pregens"]
+    },
+    "npcs_dir": {
+      "kind": "directory",
+      "path": "../../data/dl1/npcs",
+      "tags": ["npcs"]
+    },
+    "encounters_dir": {
+      "kind": "directory",
+      "path": "../../data/dl1/encounters",
+      "tags": ["encounters"]
+    },
+    "scenes_dir": {
+      "kind": "directory",
+      "path": "../../data/dl1/scenes",
+      "tags": ["scenes"]
+    },
     "event_1_map": {
       "kind": "map_template",
       "path": "../../data/maps/scene_templates/event_1_ambush_map.json",

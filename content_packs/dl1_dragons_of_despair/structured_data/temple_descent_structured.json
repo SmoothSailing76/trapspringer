@@ -1,0 +1,1473 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "areas": [
+    {
+      "id": "45",
+      "canonical_id": "DL1_45",
+      "name": "The Great Well",
+      "heading": "AREA 45: The Great Well",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 45: The Great Well"
+      },
+      "summary": "The shaft plunges into darkness, foul air rising. Steam and heavy odor of rottenness. The masonry shaft drops **100 feet** before opening into the ceiling of a vast cavern. On the cavern floor **800 feet below** lie the shattered remains of Xak Tsaroth — the most preserved part of the ruined ancient capital. The well sits directly over the central plaza of the ruins (area 67).",
+      "description": "The shaft plunges into darkness, foul air rising. Steam and heavy odor of rottenness. The masonry shaft drops **100 feet** before opening into the ceiling of a vast cavern. On the cavern floor **800 feet below** lie the shattered remains of Xak Tsaroth — the most preserved part of the ruined ancient capital. The well sits directly over the central plaza of the ruins (area 67).\n\n---",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "67"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "46",
+      "canonical_id": "DL1_46",
+      "name": "Temple of Mishakal",
+      "heading": "AREA 46: Temple of Mishakal",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 46: Temple of Mishakal"
+      },
+      "summary": "The only entrance to the windowless temple is through the gold front doors (15,000 gpw each; counterpoised hinges; open as normal doors).",
+      "description": "The only entrance to the windowless temple is through the gold front doors (15,000 gpw each; counterpoised hinges; open as normal doors).",
+      "tags": [
+        "map",
+        "quest",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [
+        "The only entrance to the windowless temple is through the gold front doors (15,000 gpw each; counterpoised hinges; open as normal doors)."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "46a",
+      "canonical_id": "DL1_46A",
+      "name": "Temple Entrance",
+      "heading": "46a. Temple Entrance",
+      "heading_level": 3,
+      "parent_id": "46",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46a. Temple Entrance"
+      },
+      "summary": "Blue oval archways rise 30 feet to form the ceiling. Another pair of stained gold doors at the other end.",
+      "description": "Blue oval archways rise 30 feet to form the ceiling. Another pair of stained gold doors at the other end.\n\n**Inner doors:** 25,000 gpw each. Move on hinges; open as normal dungeon doors.",
+      "tags": [
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Inner doors",
+          "text": "25,000 gpw each. Move on hinges; open as normal dungeon doors."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Blue oval archways rise 30 feet to form the ceiling. Another pair of stained gold doors at the other end.",
+        "**Inner doors:** 25,000 gpw each. Move on hinges; open as normal dungeon doors."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "46b",
+      "canonical_id": "DL1_46B",
+      "name": "Mishakal's Form",
+      "heading": "46b. Mishakal's Form",
+      "heading_level": 3,
+      "parent_id": "46",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46b. Mishakal's Form"
+      },
+      "summary": "Polished statue of singular grace — a woman draped in flowing robes, hair cascading about shoulders, neck adorned with a detailed amulet. Expression: radiant hope tempered with sadness. Feeling of warmth and love pervades the room.",
+      "description": "Polished statue of singular grace — a woman draped in flowing robes, hair cascading about shoulders, neck adorned with a detailed amulet. Expression: radiant hope tempered with sadness. Feeling of warmth and love pervades the room.\n\n**The statue:** Likeness of **Mishakal, ancient goddess of healing**. Her power still fills the chamber.\n\n| Entity | AL | MV | HP | AC | HD | Attacks | Damage |\n|--------|----|----|----|----|----|---------|----|\n| Mishakal, Goddess of Healing | LG | 24\"/48\" | 355 | –3 | 25 | 2 | 3–24 |\n\n**Trigger:** If a cleric brings the blue crystal staff into this room, the statue comes to life and speaks.\n\n**Mishakal's message:** The gods have not turned away from man — man turned away from them and now seeks gods who do not exist. The end of darkness nears. Krynn faces its greatest test. The Disks of Mishakal lie far below this temple, in the lair of the dragon. Recover the Disks. Present the staff boldly and never waver — then you shall prevail. The journey is not complete until you also search for a true Leader of the People.\n\n**Staff recharging:** Statue's arms are curved as though they once held a long thin pole. Placing the crystal staff in the statue's arms **glows brightly and recharges** it to full.",
+      "tags": [
+        "combat",
+        "map",
+        "quest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Mishakal, Goddess of Healing",
+          "stats": {
+            "Entity": "Mishakal, Goddess of Healing",
+            "AL": "LG",
+            "MV": "24\"/48\"",
+            "HP": "355",
+            "AC": "–3",
+            "HD": "25",
+            "Attacks": "2",
+            "Damage": "3–24"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Entity",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Entity": "Mishakal, Goddess of Healing",
+              "AL": "LG",
+              "MV": "24\"/48\"",
+              "HP": "355",
+              "AC": "–3",
+              "HD": "25",
+              "Attacks": "2",
+              "Damage": "3–24"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "The statue",
+          "text": "Likeness of **Mishakal, ancient goddess of healing**. Her power still fills the chamber."
+        },
+        {
+          "label": "Trigger",
+          "text": "If a cleric brings the blue crystal staff into this room, the statue comes to life and speaks."
+        },
+        {
+          "label": "Mishakal's message",
+          "text": "The gods have not turned away from man — man turned away from them and now seeks gods who do not exist. The end of darkness nears. Krynn faces its greatest test. The Disks of Mishakal lie far below this temple, in the lair of the dragon. Recover the Disks. Present the staff boldly and never waver — then you shall prevail. The journey is not complete until you also search for a true Leader of the People."
+        },
+        {
+          "label": "Staff recharging",
+          "text": "Statue's arms are curved as though they once held a long thin pole. Placing the crystal staff in the statue's arms **glows brightly and recharges** it to full."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Trigger:** If a cleric brings the blue crystal staff into this room, the statue comes to life and speaks.",
+        "**Mishakal's message:** The gods have not turned away from man — man turned away from them and now seeks gods who do not exist. The end of darkness nears. Krynn faces its greatest test. The Disks of Mishakal lie far below this temple, in the lair of the dragon. Recover the Disks. Present the staff boldly and never waver — then you shall prevail. The journey is not complete until you also search for a true Leader of the People.",
+        "**Staff recharging:** Statue's arms are curved as though they once held a long thin pole. Placing the crystal staff in the statue's arms **glows brightly and recharges** it to full."
+      ],
+      "hidden_or_dm_facts": [
+        "**Mishakal's message:** The gods have not turned away from man — man turned away from them and now seeks gods who do not exist. The end of darkness nears. Krynn faces its greatest test. The Disks of Mishakal lie far below this temple, in the lair of the dragon. Recover the Disks. Present the staff boldly and never waver — then you shall prevail. The journey is not complete until you also search for a true Leader of the People."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "46c",
+      "canonical_id": "DL1_46C",
+      "name": "South Worship Room",
+      "heading": "46c. South Worship Room",
+      "heading_level": 3,
+      "parent_id": "46",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46c. South Worship Room"
+      },
+      "summary": "Greenish tinge on marble benches. Long unused. No encounter.",
+      "description": "Greenish tinge on marble benches. Long unused. No encounter.",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "46d",
+      "canonical_id": "DL1_46D",
+      "name": "North Worship Room",
+      "heading": "46d. North Worship Room",
+      "heading_level": 3,
+      "parent_id": "46",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46d. North Worship Room"
+      },
+      "summary": "Three draconians spring from a dais to attack.",
+      "description": "Three draconians spring from a dais to attack.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconians ×3 | LE | 6\"[15\"]/18\" | 8×2,12 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\n**Scroll left behind on the dais:** Magic-user scroll for a **10th-level lightning bolt**.\n\n**If captured (>50% damage inflicted on them):** Know the way into the cavern through the well (only useful for flying creatures), about the **elevator at 47c**, and the **location of the dragon's lair (70k)**.",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×3",
+          "stats": {
+            "Creature": "Baaz Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "8×2,12",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconians ×3",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "8×2,12",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Scroll left behind on the dais",
+          "text": "Magic-user scroll for a **10th-level lightning bolt**."
+        },
+        {
+          "label": "If captured (>50% damage inflicted on them)",
+          "text": "Know the way into the cavern through the well (only useful for flying creatures), about the **elevator at 47c**, and the **location of the dragon's lair (70k)**."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Scroll left behind on the dais:** Magic-user scroll for a **10th-level lightning bolt**."
+      ],
+      "hidden_or_dm_facts": [
+        "**Scroll left behind on the dais:** Magic-user scroll for a **10th-level lightning bolt**.",
+        "**If captured (>50% damage inflicted on them):** Know the way into the cavern through the well (only useful for flying creatures), about the **elevator at 47c**, and the **location of the dragon's lair (70k)**."
+      ],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**If captured (>50% damage inflicted on them):** Know the way into the cavern through the well (only useful for flying creatures), about the **elevator at 47c**, and the **location of the dragon's lair (70k)**."
+      ]
+    },
+    {
+      "id": "46e",
+      "canonical_id": "DL1_46E",
+      "name": "Southern Holy Circle",
+      "heading": "46e. Southern Holy Circle",
+      "heading_level": 3,
+      "parent_id": "46",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46e. Southern Holy Circle"
+      },
+      "summary": "Five gully dwarves scraping frescoes.",
+      "description": "Five gully dwarves scraping frescoes.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Glup Clan Aghar) ×5 | CN | 12\" | 3,9×2,10,16 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\n**When noticed:** Drop to knees, grovel, and join the line at 47b. **If PCs spare them:** Draw a crude map showing the way down into the cavern city. Advise visiting \"the great Phudge Highbulp.\"",
+      "tags": [
+        "combat",
+        "encounter",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×5",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×5",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "3,9×2,10,16",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Glup Clan Aghar) ×5",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "3,9×2,10,16",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "When noticed",
+          "text": "Drop to knees, grovel, and join the line at 47b. **If PCs spare them:** Draw a crude map showing the way down into the cavern city. Advise visiting \"the great Phudge Highbulp.\""
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**When noticed:** Drop to knees, grovel, and join the line at 47b. **If PCs spare them:** Draw a crude map showing the way down into the cavern city. Advise visiting \"the great Phudge Highbulp.\""
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "46f",
+      "canonical_id": "DL1_46F",
+      "name": "Northern Holy Circle",
+      "heading": "46f. Northern Holy Circle",
+      "heading_level": 3,
+      "parent_id": "46",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46f. Northern Holy Circle"
+      },
+      "summary": "Circular fresco, 60' tall domed room. No encounter.",
+      "description": "Circular fresco, 60' tall domed room. No encounter.",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "46g",
+      "canonical_id": "DL1_46G",
+      "name": "Paths of the Dead",
+      "heading": "46g. Paths of the Dead",
+      "heading_level": 3,
+      "parent_id": "46",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46g. Paths of the Dead"
+      },
+      "summary": "Domed, 60' tall circular room. Empty pedestal. **On west side: circular staircase descending into darkness** (leads to area 47 series). Flagstones slick with green film.",
+      "description": "Domed, 60' tall circular room. Empty pedestal. **On west side: circular staircase descending into darkness** (leads to area 47 series). Flagstones slick with green film.\n\n---",
+      "tags": [
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "47"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47",
+      "canonical_id": "DL1_47",
+      "name": "Hall of the Ancestors and Adjacent Rooms",
+      "heading": "AREA 47: Hall of the Ancestors and Adjacent Rooms",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 47: Hall of the Ancestors and Adjacent Rooms"
+      },
+      "summary": "",
+      "description": "",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47a",
+      "canonical_id": "DL1_47A",
+      "name": "Hall of the Ancestors",
+      "heading": "47a. Hall of the Ancestors",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47a. Hall of the Ancestors"
+      },
+      "summary": "Vast hall stretching east. Floor has **fallen away in several places**. Hot mists and odor of decay from holes. Holes drop **700 feet** into lower ruins.",
+      "description": "Vast hall stretching east. Floor has **fallen away in several places**. Hot mists and odor of decay from holes. Holes drop **700 feet** into lower ruins.\n\n**Floor safety (any dwarf can detect):** Anyone over 500 gpw within 5' of a hole's edge: **65% chance** the floor collapses beneath them.",
+      "tags": [
+        "hazard",
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Floor safety (any dwarf can detect)",
+          "text": "Anyone over 500 gpw within 5' of a hole's edge: **65% chance** the floor collapses beneath them."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Floor safety (any dwarf can detect):** Anyone over 500 gpw within 5' of a hole's edge: **65% chance** the floor collapses beneath them."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Floor safety (any dwarf can detect):** Anyone over 500 gpw within 5' of a hole's edge: **65% chance** the floor collapses beneath them."
+      ]
+    },
+    {
+      "id": "47b",
+      "canonical_id": "DL1_47B",
+      "name": "Southern Crypts",
+      "heading": "47b. Southern Crypts",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47b. Southern Crypts"
+      },
+      "summary": "Many gully dwarves in a cycling line. Every 3 turns, whip cracks; half rush through eastern entrance (cycling through the elevator at 47c).",
+      "description": "Many gully dwarves in a cycling line. Every 3 turns, whip cracks; half rush through eastern entrance (cycling through the elevator at 47c).\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Glup Clan Aghar) ×30 | CN | 12\" | 10 each | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\n**If noticed:** Only \"Shhhh!\" Run if attacked.",
+      "tags": [
+        "combat",
+        "encounter",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×30",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×30",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "10 each",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Glup Clan Aghar) ×30",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "10 each",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "If noticed",
+          "text": "Only \"Shhhh!\" Run if attacked."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47c",
+      "canonical_id": "DL1_47C",
+      "name": "Going Down (The Gully Dwarf Elevator)",
+      "heading": "47c. Going Down (The Gully Dwarf Elevator)",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47c. Going Down (The Gully Dwarf Elevator)"
+      },
+      "summary": "Two 10'-diameter holes in the floor. Huge black iron pot on chain over the northern hole. Chain runs around two large wheels across the ceiling and down through the southern hole. Two draconian overseers guard.",
+      "description": "Two 10'-diameter holes in the floor. Huge black iron pot on chain over the northern hole. Chain runs around two large wheels across the ceiling and down through the southern hole. Two draconian overseers guard.\n\n**The holes drop 700 feet** to area 66.\n\n**Elevator cycle:** Every 3 game turns, gong sounds far below; overseers crack whip; 30 Aghar clamber into the pot; pot descends slowly; another pot of draconians groans up through the southern hole.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconian Overseers ×2 | LE | 6\"[15\"]/18\" | 12,14 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\n**If attacked:** Overseers panic and leap into the pot. PCs can jump aboard; heavier = faster descent. More than 2 PCs = pot falls quickly (warn players).\n\n**Second pot (rising):** Contains 6 Baaz Draconians (hp 16 each, AC 4, HD 2) — shock troops, fight to the death.",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconian Overseers ×2",
+          "stats": {
+            "Creature": "Baaz Draconian Overseers ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,14",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconian Overseers ×2",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "12,14",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Elevator cycle",
+          "text": "Every 3 game turns, gong sounds far below; overseers crack whip; 30 Aghar clamber into the pot; pot descends slowly; another pot of draconians groans up through the southern hole."
+        },
+        {
+          "label": "If attacked",
+          "text": "Overseers panic and leap into the pot. PCs can jump aboard; heavier = faster descent. More than 2 PCs = pot falls quickly (warn players)."
+        },
+        {
+          "label": "Second pot (rising)",
+          "text": "Contains 6 Baaz Draconians (hp 16 each, AC 4, HD 2) — shock troops, fight to the death."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "66"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47d",
+      "canonical_id": "DL1_47D",
+      "name": "Northern Crypts",
+      "heading": "47d. Northern Crypts",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47d. Northern Crypts"
+      },
+      "summary": "Row upon row of crypts, 10'-wide 30'-tall hall. No encounter.",
+      "description": "Row upon row of crypts, 10'-wide 30'-tall hall. No encounter.",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47e",
+      "canonical_id": "DL1_47E",
+      "name": "Floorless Room",
+      "heading": "47e. Floorless Room",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47e. Floorless Room"
+      },
+      "summary": "Four archways, square room, **no floor** — gaping hole with mist billowing up. Only ~1 sq yard of floor remains in the northeast corner. A small box sits at the edge.",
+      "description": "Four archways, square room, **no floor** — gaping hole with mist billowing up. Only ~1 sq yard of floor remains in the northeast corner. A small box sits at the edge.\n\n**Box:** 5 gems (1,000 gpv each).",
+      "tags": [
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Box",
+          "text": "5 gems (1,000 gpv each)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Box:** 5 gems (1,000 gpv each)."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47f",
+      "canonical_id": "DL1_47F",
+      "name": "Watch Room",
+      "heading": "47f. Watch Room",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47f. Watch Room"
+      },
+      "summary": "Extremely slippery floor. All creatures fight here at **–3 to hit**. Corroded metal fittings crumble at touch.",
+      "description": "Extremely slippery floor. All creatures fight here at **–3 to hit**. Corroded metal fittings crumble at touch.",
+      "tags": [
+        "combat",
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47g",
+      "canonical_id": "DL1_47G",
+      "name": "Treasury",
+      "heading": "47g. Treasury",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47g. Treasury"
+      },
+      "summary": "Six stone coffins. A hollow voice: \"Who enters the tomb of priests?\"",
+      "description": "Six stone coffins. A hollow voice: \"Who enters the tomb of priests?\"\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Guardian Spectral Minion ×1 | CG | 30\" | 16 | 2 | 3 | 1 | 1–8 |\n\n**Behavior:** Guards the priests' tombs. May not leave until relieved of duty. Tired of eternal watch. If heroes speak kindly and tell him they've come to relieve him: he is released from his vow and departs.\n\n**Treasure:** Each of the 6 coffins contains a skeleton of an ancient king of Xak Tsaroth holding a **sword +1** (hilt at chest, point toward feet).",
+      "tags": [
+        "combat",
+        "encounter",
+        "social",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Guardian Spectral Minion ×1",
+          "stats": {
+            "Creature": "Guardian Spectral Minion ×1",
+            "AL": "CG",
+            "MV": "30\"",
+            "HP": "16",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Guardian Spectral Minion ×1",
+              "AL": "CG",
+              "MV": "30\"",
+              "HP": "16",
+              "AC": "2",
+              "HD": "3",
+              "Attacks": "1",
+              "Damage": "1–8"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Behavior",
+          "text": "Guards the priests' tombs. May not leave until relieved of duty. Tired of eternal watch. If heroes speak kindly and tell him they've come to relieve him: he is released from his vow and departs."
+        },
+        {
+          "label": "Treasure",
+          "text": "Each of the 6 coffins contains a skeleton of an ancient king of Xak Tsaroth holding a **sword +1** (hilt at chest, point toward feet)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Treasure:** Each of the 6 coffins contains a skeleton of an ancient king of Xak Tsaroth holding a **sword +1** (hilt at chest, point toward feet)."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47h",
+      "canonical_id": "DL1_47H",
+      "name": "South Temple",
+      "heading": "47h. South Temple",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47h. South Temple"
+      },
+      "summary": "30'×30', 20' ceiling. Wall carvings coated in slimy green substance. No encounter.",
+      "description": "30'×30', 20' ceiling. Wall carvings coated in slimy green substance. No encounter.",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47i",
+      "canonical_id": "DL1_47I",
+      "name": "Temple of the Dead",
+      "heading": "47i. Temple of the Dead",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47i. Temple of the Dead"
+      },
+      "summary": "30'-wide octagonal room, 60' domed ceiling. Back wall: relief statue of Mishakal — arms reaching down as if to receive something. Exits to north, south, and west. No encounter.",
+      "description": "30'-wide octagonal room, 60' domed ceiling. Back wall: relief statue of Mishakal — arms reaching down as if to receive something. Exits to north, south, and west. No encounter.",
+      "tags": [
+        "encounter",
+        "quest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "47j",
+      "canonical_id": "DL1_47J",
+      "name": "North Temple",
+      "heading": "47j. North Temple",
+      "heading_level": 3,
+      "parent_id": "47",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47j. North Temple"
+      },
+      "summary": "Ceiling partially collapsed. A **4'-diameter sewer** fell through the roof; the jagged broken tunnel juts through rubble-strewn floor. A man could follow the tunnel downward but no room to swing a sword.",
+      "description": "Ceiling partially collapsed. A **4'-diameter sewer** fell through the roof; the jagged broken tunnel juts through rubble-strewn floor. A man could follow the tunnel downward but no room to swing a sword.\n\n**Riverwind:** If with the party, he remembers having been here before. The sewer opening leads to area 48.\n\n---",
+      "tags": [
+        "combat",
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Riverwind",
+          "text": "If with the party, he remembers having been here before. The sewer opening leads to area 48."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "48"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "48",
+      "canonical_id": "DL1_48",
+      "name": "Sewer Entrance",
+      "heading": "AREA 48: Sewer Entrance",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 48: Sewer Entrance"
+      },
+      "summary": "4'-diameter sewer, mosses and slimy green film on walls. **Extremely slick.**",
+      "description": "4'-diameter sewer, mosses and slimy green film on walls. **Extremely slick.**\n\n**Climbing down:** Unless both hands free, check DEX (add 8 to die roll) or slide down the entire shaft to area 49.\n\n**Five Gully Dwarves** are halfway up this tunnel. Sliding hero bowls them over and tumbles all the way down. **No falling damage** (it's more of a slide).\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Glup Clan Aghar) ×5 | CN | 12\" | 6,9×2,12,16 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\n**Dwarves' reaction:** Irritated but don't bother PCs. If no hero falls, Aghar back down to area 49 and let the party pass.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×5",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×5",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "6,9×2,12,16",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Glup Clan Aghar) ×5",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "6,9×2,12,16",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Climbing down",
+          "text": "Unless both hands free, check DEX (add 8 to die roll) or slide down the entire shaft to area 49."
+        },
+        {
+          "label": "Dwarves' reaction",
+          "text": "Irritated but don't bother PCs. If no hero falls, Aghar back down to area 49 and let the party pass."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "49"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "49",
+      "canonical_id": "DL1_49",
+      "name": "Sewer Junction",
+      "heading": "AREA 49: Sewer Junction",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 49: Sewer Junction"
+      },
+      "summary": "Slick sewer tunnel branches downward. Main corridor continues steeply; branch looks even steeper. Navigation choice point to areas 50 and 51.",
+      "description": "Slick sewer tunnel branches downward. Main corridor continues steeply; branch looks even steeper. Navigation choice point to areas 50 and 51.\n\n---",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "50"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "50",
+      "canonical_id": "DL1_50",
+      "name": "Sewer Branch",
+      "heading": "AREA 50: Sewer Branch",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 50: Sewer Branch"
+      },
+      "summary": "4'-diameter tube, moss and slimy green muck. Water trickles slowly down the shaft. Connects to area 51 series.",
+      "description": "4'-diameter tube, moss and slimy green muck. Water trickles slowly down the shaft. Connects to area 51 series.\n\n---",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "51"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "51",
+      "canonical_id": "DL1_51",
+      "name": "Series: Inverted Inn Complex",
+      "heading": "AREA 51 Series: Inverted Inn Complex",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 51 Series: Inverted Inn Complex"
+      },
+      "summary": "The buildings in this section are **upside down** — dropped inverted by the Cataclysm into the cavern below.",
+      "description": "The buildings in this section are **upside down** — dropped inverted by the Cataclysm into the cavern below.",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "51a",
+      "canonical_id": "DL1_51A",
+      "name": "Cellar Above",
+      "heading": "51a. Cellar Above",
+      "heading_level": 3,
+      "parent_id": "51",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51a. Cellar Above"
+      },
+      "summary": "Sewer pipe breaks through cavern ceiling 10' above floor. Room appears upside down — ceiling rafters span the floor; doors hang 3' above the rafters.",
+      "description": "Sewer pipe breaks through cavern ceiling 10' above floor. Room appears upside down — ceiling rafters span the floor; doors hang 3' above the rafters.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Huge Spider ×1 | N | 18\" | 14 | 6 | 2+2 | 1 | 1–6 + poison | Attacks first PC who slides down; fights to death |",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Huge Spider ×1",
+          "stats": {
+            "Creature": "Huge Spider ×1",
+            "AL": "N",
+            "MV": "18\"",
+            "HP": "14",
+            "AC": "6",
+            "HD": "2+2",
+            "Attacks": "1",
+            "Damage": "1–6 + poison",
+            "Notes": "Attacks first PC who slides down; fights to death"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Huge Spider ×1",
+              "AL": "N",
+              "MV": "18\"",
+              "HP": "14",
+              "AC": "6",
+              "HD": "2+2",
+              "Attacks": "1",
+              "Damage": "1–6 + poison",
+              "Notes": "Attacks first PC who slides down; fights to death"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "51b",
+      "canonical_id": "DL1_51B",
+      "name": "Tipped Hallway",
+      "heading": "51b. Tipped Hallway",
+      "heading_level": 3,
+      "parent_id": "51",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51b. Tipped Hallway"
+      },
+      "summary": "Polished plank flooring on the ceiling. No encounter.",
+      "description": "Polished plank flooring on the ceiling. No encounter.",
+      "tags": [
+        "encounter",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "51c",
+      "canonical_id": "DL1_51C",
+      "name": "Ceiling Cooks",
+      "heading": "51c. Ceiling Cooks",
+      "heading_level": 3,
+      "parent_id": "51",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51c. Ceiling Cooks"
+      },
+      "summary": "Cooking utensils scattered. Large wooden table hangs from the ceiling (former floor).",
+      "description": "Cooking utensils scattered. Large wooden table hangs from the ceiling (former floor).\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Spectral Minion Cooks ×3 | CE | 30\" | 17,10,16 | 2 | 3 | 1 | 1 hp | 20% magic resist |\n\n**Behavior:** Standing on the ceiling as if nothing is wrong. Will chase and scare intruders out of the kitchen.",
+      "tags": [
+        "combat",
+        "encounter"
+      ],
+      "occupants": [
+        {
+          "name": "Spectral Minion Cooks ×3",
+          "stats": {
+            "Creature": "Spectral Minion Cooks ×3",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "17,10,16",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1 hp",
+            "Notes": "20% magic resist"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Spectral Minion Cooks ×3",
+              "AL": "CE",
+              "MV": "30\"",
+              "HP": "17,10,16",
+              "AC": "2",
+              "HD": "3",
+              "Attacks": "1",
+              "Damage": "1 hp",
+              "Notes": "20% magic resist"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Behavior",
+          "text": "Standing on the ceiling as if nothing is wrong. Will chase and scare intruders out of the kitchen."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "| Spectral Minion Cooks ×3 | CE | 30\" | 17,10,16 | 2 | 3 | 1 | 1 hp | 20% magic resist |"
+      ]
+    },
+    {
+      "id": "51d",
+      "canonical_id": "DL1_51D",
+      "name": "Bottoms Down",
+      "heading": "51d. Bottoms Down",
+      "heading_level": 3,
+      "parent_id": "51",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51d. Bottoms Down"
+      },
+      "summary": "Swamp water seeping in, pooling in ceiling beams. Huge fireplace receives overflow draining down the chimney. Thin music and hollow laughter.",
+      "description": "Swamp water seeping in, pooling in ceiling beams. Huge fireplace receives overflow draining down the chimney. Thin music and hollow laughter.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Spectral Minions ×20 | CE | 30\" | 17 each | 2 | 3 | 0 | 0 | 20% magic resist |\n\n**Behavior:** Floating upside down as if at tables. **Ignore PCs completely** unless attacked. If attacked: scatter and vanish.",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [
+        {
+          "name": "Spectral Minions ×20",
+          "stats": {
+            "Creature": "Spectral Minions ×20",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "17 each",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "0",
+            "Damage": "0",
+            "Notes": "20% magic resist"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Spectral Minions ×20",
+              "AL": "CE",
+              "MV": "30\"",
+              "HP": "17 each",
+              "AC": "2",
+              "HD": "3",
+              "Attacks": "0",
+              "Damage": "0",
+              "Notes": "20% magic resist"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Behavior",
+          "text": "Floating upside down as if at tables. **Ignore PCs completely** unless attacked. If attacked: scatter and vanish."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "| Spectral Minions ×20 | CE | 30\" | 17 each | 2 | 3 | 0 | 0 | 20% magic resist |"
+      ]
+    },
+    {
+      "id": "51e",
+      "canonical_id": "DL1_51E",
+      "name": "Sleeping Inn",
+      "heading": "51e. Sleeping Inn",
+      "heading_level": 3,
+      "parent_id": "51",
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51e. Sleeping Inn"
+      },
+      "summary": "Rotted cots in jumble, water pooling, draining south. No encounter.",
+      "description": "Rotted cots in jumble, water pooling, draining south. No encounter.\n\n---",
+      "tags": [
+        "encounter",
+        "hazard",
+        "rest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "52",
+      "canonical_id": "DL1_52",
+      "name": "Chimney Down",
+      "heading": "AREA 52: Chimney Down",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_3_temple_descent",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 52: Chimney Down"
+      },
+      "summary": "Water trickles down the chimney. Loose bricks provide handholds on all sides. Chimney ends abruptly **15 feet above the sloping floor of a small cavern**. Leads down toward the upper levels of the underground city (area 53 series).",
+      "description": "Water trickles down the chimney. Loose bricks provide handholds on all sides. Chimney ends abruptly **15 feet above the sloping floor of a small cavern**. Leads down toward the upper levels of the underground city (area 53 series).",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "53"
+      ],
+      "checks_and_rolls": []
+    }
+  ]
+}

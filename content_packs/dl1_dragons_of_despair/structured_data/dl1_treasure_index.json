@@ -1,0 +1,630 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "treasures": [
+    {
+      "area_id": "1",
+      "area_name": "Solace Township",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 1: Solace Township"
+      },
+      "treasure_refs": [
+        "Warm autumn Vallenwood treetown; ~500 people (not counting outlying farmers). No local government; ruled by Theocracy of Seekers from Haven (3 days west). Uses **Emas exchange system**. Gold bricks prop doors or hold down papers. Steel weapons carry a premium from smith Theros Ironfeld (most respected man in town).",
+        "All standard adventurer services available at reasonable rates. Exception: Theros charges extra for steel weapons."
+      ]
+    },
+    {
+      "area_id": "1a",
+      "area_name": "Inn of the Last Home",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "1a. Inn of the Last Home"
+      },
+      "treasure_refs": [
+        " **Barkeeper (Otik):** Suspects the staff was forged by demons from Darken Wood",
+        " **Man at table:** Hooded men have been asking about the staff; wonders if they offered a reward",
+        " **Man by storyteller:** A Holy Guard rode through 2 days ago; anyone with the staff should make haste to Haven to meet the Prelate at the Temple there",
+        " **Old Storyteller:** \"I foresee great and terrible destiny in your eyes. There is a Blue Staff which you must return to Xak Tsaroth. There, in but a few days hence, you shall face your greatest peril in contest for the greatest gift given to man.\"",
+        " **Girl at table:** Staff was probably found in Darken Wood; ruins there are full of wealth and dangers; no one who enters returns"
+      ]
+    },
+    {
+      "area_id": "4",
+      "area_name": "New Haven Road",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 4: New Haven Road"
+      },
+      "treasure_refs": [
+        "**If spotted:** All attack, sound horn, fill woods with battle cries. Dragon-men fight to the death; block retreat to Solace. Horn is a **warning** to other draconians, not a call for aid. They intend to remain disguised while in human lands. They are searching for the Crystal Staff but don't know why."
+      ]
+    },
+    {
+      "area_id": "5",
+      "area_name": "Prayer's Eye Peak",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 5: Prayer's Eye Peak"
+      },
+      "treasure_refs": [
+        "**If heroes kill the stag:** Dark thunderclouds form overhead; hover for 7 days; all players add +1 to their Armor Class (i.e., AC becomes worse by 1) during this time. Stag body disappears."
+      ]
+    },
+    {
+      "area_id": "6",
+      "area_name": "Twin Flat",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 6: Twin Flat"
+      },
+      "treasure_refs": [
+        "**Leader's ruse:** Claims to be an old cleric; says their healing staff was stolen from Xak Tsaroth; a member of their flock is dying.",
+        "**If party reveals they have/know about the staff:** Leader screams and grabs weapon; all draconians attack (limited to MV 6\" because wings are bound). Each round, each draconian has 20% chance to tear off robes (uses action; frees them to move faster). Draconians try to drive party east into area 5 to sound horn and spring trap with area 4 draconians. Fight to the death."
+      ]
+    },
+    {
+      "area_id": "7",
+      "area_name": "Jakanth Vale",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 7: Jakanth Vale"
+      },
+      "treasure_refs": [
+        "**Treasure (searching):** Bright silver bracer with 4 gems (500 gpv each). Inside: \"Firehawk, warrior of Que-Shu.\" Que-Shu Plainsmen identify this as the bracer of warriors charged with defending the tribe. These bands are forged around the warrior's arm — death alone removes them."
+      ]
+    },
+    {
+      "area_id": "16",
+      "area_name": "Haven's Vale",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 16: Haven's Vale"
+      },
+      "treasure_refs": [
+        "Six white towers rising from foothills. Refugees choking the road. Contingent of Seeker Guards riding up and down lines trying to keep order (and looking for the Crystal Staff).",
+        "**30% chance** to stop the Guardleader. If stopped: describes total madness on the road; notes Qualinesti has closed its borders; no one enters Darken Wood and lives; asks if party has heard of a blue crystal staff. If they have it: escorted directly to Council of Highseekers (area 17b)."
+      ]
+    },
+    {
+      "area_id": "17",
+      "area_name": "Lordcity of Haven",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 17: Lordcity of Haven"
+      },
+      "treasure_refs": [
+        "White marble towers trimmed in gold. Low decorative wall with six towers. Inner circle 1 mile across; 3 miles including outer homes. Normal population ~5,000 (now overflowing). Nearly all standard adventurer services available; ironsmith works only for Highseekers.",
+        "**Key sub-areas:** 17a Steel Tankard Tavern, 17b Councilhall of Highseekers.",
+        "**Holy Guards on every street corner (10 per encounter):** AC 4, HD 4, MV 12\", Dmg 1–8. Most pressing mission: find bearer of the blue crystal staff and bring them before the Council."
+      ]
+    },
+    {
+      "area_id": "17a",
+      "area_name": "Steel Tankard Tavern",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "17a. Steel Tankard Tavern"
+      },
+      "treasure_refs": [
+        " **Forester:** Wonders why guards seek someone with a crystal staff; could it preserve them from invaders?"
+      ]
+    },
+    {
+      "area_id": "17b",
+      "area_name": "Councilhall of Highseekers",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "17b. Councilhall of Highseekers"
+      },
+      "treasure_refs": [
+        "50'×30'×30' tall hall. Nine chairs in semicircle on polished granite floor. Nine white-robed men with steel girdle bands.",
+        "**Entry:** 100 Holy Guardians (CG, MV 12\", AC 4, HD 4, Dmg 1–8) encircle building. Admit only those who bear news of the blue crystal staff.",
+        "**Situation:** Draconian army to the north offered not to invade if staff is returned to Xak Tsaroth. Council's prayers to Newgods go unanswered; no standing army. Crystal staff is their last hope.",
+        "**If party has staff and reveals it:** Councilors beg to take it. If refused, they beg party to return it to Xak Tsaroth.",
+        "**Crystal staff's reaction:** Any councilor who touches the staff is hit by a lightning bolt for 4d6 damage. After this, Highseekers declare it an evil artifact and command party to return it to Xak Tsaroth.",
+        "*(Note: The Master is too dignified to rise and touch the staff — determine randomly which councilor tries, 1d8.)*"
+      ]
+    },
+    {
+      "area_id": "22",
+      "area_name": "Spirit Forest (Entry to Darken Wood)",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 22: Spirit Forest (Entry to Darken Wood)"
+      },
+      "treasure_refs": [
+        " If they **give their correct names OR show Crystal Staff:** Minions halt and let them pass"
+      ]
+    },
+    {
+      "area_id": "23",
+      "area_name": "Centaur Reaches",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 23: Centaur Reaches"
+      },
+      "treasure_refs": [
+        "Centaur emerges from head-high bush, spear raised. If party resists, centaurs fight to death. Otherwise they take weapons and carry PCs to area 26."
+      ]
+    },
+    {
+      "area_id": "38",
+      "area_name": "Refugee",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 38: Refugee"
+      },
+      "treasure_refs": [
+        "**Nightshade's story (if rescued):** From village of Que-Teh; dragonmen taking everyone south as slaves; secret council while chained; he was chosen to escape while comrades created a distraction; a tremendous evil army lies to the south; second army waits to crush the Seeker Lands from the north; they hold back their armies only for fear that the crystal staff will return to Xak Tsaroth. \"Find the crystal staff, and take it to Xak Tsaroth. It is our only hope.\""
+      ]
+    },
+    {
+      "area_id": "43",
+      "area_name": "Dragonlands",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 43: Dragonlands"
+      },
+      "treasure_refs": [
+        "**Overheard if PC moves silently within 30':** Large draconian says, \"We can crush this human scum. So why wait until old Verminaard gets some fancy crystal staff? Why, he even has Khisanth tied up waiting for it, when we could use her help out here!\""
+      ]
+    },
+    {
+      "area_id": "44d",
+      "area_name": "Battle of the Fallen Ironclaw",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44d: Battle of the Fallen Ironclaw"
+      },
+      "treasure_refs": [
+        "**What they know:** Crystal staff is a very powerful item; stolen from the ruins; the one thing their leader Verminaard fears can upset his plans."
+      ]
+    },
+    {
+      "area_id": "44f",
+      "area_name": "Temple of Baaz (Draconian Camp)",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44f: Temple of Baaz (Draconian Camp)"
+      },
+      "treasure_refs": [
+        "**Priest behavior:** Runs the camp and conducts worship before the wicker dragon. Orders PCs held for 3 days until Khisanth (the priest's commander) comes to claim them. If party has the staff: \"The crystal staff is the greatest danger to our masters we know.\" If no staff: asks where it is. Either way tells party: \"Now that you are here, we only hope that you do not die as easily as those of Que-Shu did at our hands.\""
+      ]
+    },
+    {
+      "area_id": "44k",
+      "area_name": "Plaza of Death",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44k: Plaza of Death"
+      },
+      "treasure_refs": [
+        "3. Attacks from the air while hovering; avoids swords and hand weapons",
+        "5. Makes 2 aerial passes using 64-hp breath weapon (acid) each time",
+        "**Breath weapon:** Acid. Damage = current HP total. Use twice in this encounter.",
+        "**Temple doors (north building):** Gold doors weighing 15,000 gpw each. Counterpoised hinges; open as normal doors. Only entrance to the windowless temple."
+      ]
+    },
+    {
+      "area_id": "46",
+      "area_name": "Temple of Mishakal",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 46: Temple of Mishakal"
+      },
+      "treasure_refs": [
+        "The only entrance to the windowless temple is through the gold front doors (15,000 gpw each; counterpoised hinges; open as normal doors)."
+      ]
+    },
+    {
+      "area_id": "46a",
+      "area_name": "Temple Entrance",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46a. Temple Entrance"
+      },
+      "treasure_refs": [
+        "Blue oval archways rise 30 feet to form the ceiling. Another pair of stained gold doors at the other end.",
+        "**Inner doors:** 25,000 gpw each. Move on hinges; open as normal dungeon doors."
+      ]
+    },
+    {
+      "area_id": "46b",
+      "area_name": "Mishakal's Form",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46b. Mishakal's Form"
+      },
+      "treasure_refs": [
+        "**Trigger:** If a cleric brings the blue crystal staff into this room, the statue comes to life and speaks.",
+        "**Mishakal's message:** The gods have not turned away from man — man turned away from them and now seeks gods who do not exist. The end of darkness nears. Krynn faces its greatest test. The Disks of Mishakal lie far below this temple, in the lair of the dragon. Recover the Disks. Present the staff boldly and never waver — then you shall prevail. The journey is not complete until you also search for a true Leader of the People.",
+        "**Staff recharging:** Statue's arms are curved as though they once held a long thin pole. Placing the crystal staff in the statue's arms **glows brightly and recharges** it to full."
+      ]
+    },
+    {
+      "area_id": "46d",
+      "area_name": "North Worship Room",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46d. North Worship Room"
+      },
+      "treasure_refs": [
+        "**Scroll left behind on the dais:** Magic-user scroll for a **10th-level lightning bolt**."
+      ]
+    },
+    {
+      "area_id": "46e",
+      "area_name": "Southern Holy Circle",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46e. Southern Holy Circle"
+      },
+      "treasure_refs": [
+        "**When noticed:** Drop to knees, grovel, and join the line at 47b. **If PCs spare them:** Draw a crude map showing the way down into the cavern city. Advise visiting \"the great Phudge Highbulp.\""
+      ]
+    },
+    {
+      "area_id": "47a",
+      "area_name": "Hall of the Ancestors",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47a. Hall of the Ancestors"
+      },
+      "treasure_refs": [
+        "**Floor safety (any dwarf can detect):** Anyone over 500 gpw within 5' of a hole's edge: **65% chance** the floor collapses beneath them."
+      ]
+    },
+    {
+      "area_id": "47e",
+      "area_name": "Floorless Room",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47e. Floorless Room"
+      },
+      "treasure_refs": [
+        "**Box:** 5 gems (1,000 gpv each)."
+      ]
+    },
+    {
+      "area_id": "47g",
+      "area_name": "Treasury",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47g. Treasury"
+      },
+      "treasure_refs": [
+        "**Treasure:** Each of the 6 coffins contains a skeleton of an ancient king of Xak Tsaroth holding a **sword +1** (hilt at chest, point toward feet)."
+      ]
+    },
+    {
+      "area_id": "54b",
+      "area_name": "Sage's Court",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "54b. Sage's Court"
+      },
+      "treasure_refs": [
+        "Large golden chair sagging on a platform at the west end. Floating above the chair: the bright transparent form of a man in robes.",
+        "**What Ossamis knows:** The location of the **Disks of Mishakal (area 70k)** and how to get there."
+      ]
+    },
+    {
+      "area_id": "55",
+      "area_name": "Treasury Court",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 55: Treasury Court"
+      },
+      "treasure_refs": [
+        "Street emerges into a plaza. Tremendous cracked pillars under rock ceiling. Water from east and west streets flows into a large pool that empties into a river flowing west toward a steady roar. Across the plaza river: **blackened steel doors** stand in the face of a solid, square structure.",
+        "**Steel doors:** 1,500 gpw each. Worth 15,000 gp each in Solace, Haven, or Gateway. Counterpoised hinges; open easily."
+      ]
+    },
+    {
+      "area_id": "57a",
+      "area_name": "Outer Treasury",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "57a. Outer Treasury"
+      },
+      "treasure_refs": [
+        "Long counter of chipped, dusty marble bisecting the room. Four ghostly forms at south wall with weapons drawn. Behind the counter: another long-faced ghostly form — the clerk.",
+        "**Clerk demands:** Payment of **Kathal's taxes: 500 clay Tsarothian Culli**. Accepts no other currency. Payment releases him from duty.",
+        "**If PCs have no Culli:** Clerk orders guards to kill them for trying to impersonate Kathal."
+      ]
+    },
+    {
+      "area_id": "64a",
+      "area_name": "Entry",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64a. Entry"
+      },
+      "treasure_refs": [
+        "**The mural:** Heroes must clean it off before realizing it's a map of a city. Even discovered, only 30% chance of recognizing their current location on the map. Anyone who figures out which part is the cavern area can discover the way to the Great Plaza (67), the Hall of Justice (70a), and the Treasury Tower (62)."
+      ]
+    },
+    {
+      "area_id": "64c",
+      "area_name": "North Armory",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64c. North Armory"
+      },
+      "treasure_refs": [
+        "Ancient bronze weapons on broken racks. Low ceiling heavy with moisture; sagging beams. In the center: two squat shapes batting leathery wings, chattering, tugging a steel weapon between them."
+      ]
+    },
+    {
+      "area_id": "64f",
+      "area_name": "South Armory",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64f. South Armory"
+      },
+      "treasure_refs": [
+        "Bronze weapons (corroded and useless) askew from broken wall racks. No encounter."
+      ]
+    },
+    {
+      "area_id": "64h",
+      "area_name": "Mess Hall",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64h. Mess Hall"
+      },
+      "treasure_refs": [
+        " Second draconian: If Verminaard needs a staff, let him get it; Khisanth guards the only writings of the true gods — without them humans can't stop the draconian armies",
+        " Third draconian: Just wait until the spineless Seekers in Haven come up with the staff; then crush them and take it; only a few days' wait for extra safety"
+      ]
+    },
+    {
+      "area_id": "68g",
+      "area_name": "Waiting Place",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68g. Waiting Place"
+      },
+      "treasure_refs": [
+        "Walls buried under tapestries and decorations too gaudy to believe. Tapestries hanging everywhere — some upside down or sideways. Fraying gold cloth draped between statues of every shape and kind. The Aghar idea of the good life."
+      ]
+    },
+    {
+      "area_id": "68h",
+      "area_name": "Treasury",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68h. Treasury"
+      },
+      "treasure_refs": [
+        "**Draconian captain:** Stripped of weapons and uniform; woke up with a horrible hangover."
+      ]
+    },
+    {
+      "area_id": "68k",
+      "area_name": "Highbulp Quarters",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68k. Highbulp Quarters"
+      },
+      "treasure_refs": [
+        "**Searching the clothing piles:** Find an old, stained map showing the location of the **sewer access (69b)** and the tunnel leading from there to **the dragon's lair at 70k**. Crude note: \"Big treasure, much goods. Old bark of a dragon not miss if great Highbulp take his share!\""
+      ]
+    },
+    {
+      "area_id": "68m",
+      "area_name": "Court of the Aghar",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68m. Court of the Aghar"
+      },
+      "treasure_refs": [
+        "Heavy frayed gold cloth adorning the hall. Statues lining walls. Patchwork carpets across the floor. At the west end: a huge throne with badly peeling gold leafing. A shriveled figure nodding beneath a tarnished crown three sizes too big, buried in robes.",
+        "**What Phudge knows:** The Disks of Mishakal lie in the dragon's lair at 70k; also knows about the tunnel from 69b into that lair."
+      ]
+    },
+    {
+      "area_id": "70a",
+      "area_name": "Pillars of the Palace",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70a. Pillars of the Palace"
+      },
+      "treasure_refs": [
+        "Broad steps lead from the great plaza to a pillared courtyard. All pillars cracked, some shattered; supporting a sagging stone roof. In places, the cavern wall has broken the stonework. A large archway leads into a huge dark room to the east. At the back of the courtyard: stained steel doors standing closed (also lead east)."
+      ]
+    },
+    {
+      "area_id": "70d",
+      "area_name": "Palace Treasury",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70d. Palace Treasury"
+      },
+      "treasure_refs": [
+        "Huge chests (wood rotted and split) spill contents into the room. **30,000 Tsarothian clay Culli** — absolutely worthless.",
+        "**If a PC searches through the Culli (30% chance):** Finds one of the following:"
+      ]
+    },
+    {
+      "area_id": "70f",
+      "area_name": "Bozak Captain",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70f. Bozak Captain"
+      },
+      "treasure_refs": [
+        "**Pack contents:** Dried meats and a **map showing the exact layout of the palace (areas 70a–70h)**."
+      ]
+    },
+    {
+      "area_id": "70h",
+      "area_name": "Bozak Commander",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70h. Bozak Commander"
+      },
+      "treasure_refs": [
+        "Crude desk in the middle of a torch-lit room. A scaly winged lizard creature in partial armor suddenly looks up and leaps to its feet."
+      ]
+    },
+    {
+      "area_id": "70i",
+      "area_name": "Long Hall",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70i. Long Hall"
+      },
+      "treasure_refs": [
+        "Water seeping down the arching walls of the 10'-wide hall. Cold, musty smell. Hall runs south into rubble of a collapsed ceiling. **Steel double doors (500 gpw each) stand closed on the right** — lead to area 70k."
+      ]
+    },
+    {
+      "area_id": "70j",
+      "area_name": "Hall of Sound",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70j. Hall of Sound"
+      },
+      "treasure_refs": [
+        "**If gong is triggered:** The dragon pushes her head out the east doors and uses her **breath weapon** on the party in this narrow space. She then calls for draconian guards (unaware there are none left in the area)."
+      ]
+    },
+    {
+      "area_id": "70k",
+      "area_name": "Court of the Balance — DRAGON'S LAIR",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70k. Court of the Balance — DRAGON'S LAIR"
+      },
+      "treasure_refs": [
+        "A vast chamber, **100' in diameter**, 4 stories tall, cracked and broken translucent dome above. Dim light filters through mists above and spreads onto the center of the rotunda. There: a **glossy black dragon** straddles a pile of jewels, steel weapons, and intricate items.",
+        "**This is Khisanth's lair.** She is duty-bound to keep the Disks of Mishakal from the PCs.",
+        "**Combat:** If she has breath weapon or spells remaining, she takes to the air and uses them. Otherwise she must fight on the ground.",
+        "**Crystal Staff in the lair:** Any PC holding the staff hears a soft feminine whisper: \"Retrieve the disks, and hit the dragon with this staff. All will be well.\"",
+        "**If PC manages to hit the dragon with the staff:**",
+        "> The staff shatters as it strikes the dragon. Blue light bursts from the staff in brilliant spherical waves. The figure who broke the staff is lost in light, disappearing as a ringing sound fills the chamber. The wall of shining blue pulses, its power shaking the earth itself. The great dragon is covered in the glow and falls, screaming, into light. The walls shake; pillars in the room sway and topple. The cracked ceiling begins to crumble. Above the falling ceiling, the cavern walls themselves begin to collapse.",
+        "**Dragon's hoard:**",
+        " The **Disks of Mishakal** (see DL1_08)",
+        " 56 gems at 200 gp value each",
+        " 1,000 platinum pieces",
+        "**If PCs break the staff, escape the cavern, and return to area 46b:**",
+        "The beautiful statue of the goddess towers above. In her hands lies a perfect carved likeness of the blue crystal staff. At the foot of the statue, a lone figure stirs.",
+        "**The lone figure:** The person who broke the staff. They lie here unharmed, all hit points restored. The staff is now part of the statue. A **platinum version of the Medallion of Faith** — bearing the symbol of the goddess — now adorns the neck of the PC who broke the staff.",
+        "**If PCs took the Disks without the Crystal Staff (didn't use it):** Allow them to make their way out of the cavern as best they can. Do not read the Epilogue box."
+      ]
+    }
+  ]
+}

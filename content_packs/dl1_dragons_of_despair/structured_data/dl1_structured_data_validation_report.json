@@ -1,0 +1,67 @@
+{
+  "status": "pass_with_review_notes",
+  "generated_at": "2026-04-25T01:26:49.224748+00:00",
+  "counts": {
+    "keyed_area_entries": 147,
+    "events": 7,
+    "random_encounter_sections": 36,
+    "monster_npc_sections": 25,
+    "treasure_item_sections": 25,
+    "encounter_area_records": 55,
+    "treasure_records": 43,
+    "hidden_fact_records": 33,
+    "transition_candidate_records": 37,
+    "source_assets": 8
+  },
+  "checks": [
+    {
+      "name": "events_present_1_to_7",
+      "status": "pass",
+      "found": [
+        "event_1",
+        "event_2",
+        "event_3",
+        "event_4",
+        "event_5",
+        "event_6",
+        "event_7"
+      ]
+    },
+    {
+      "name": "surface_44a_to_44k_present",
+      "status": "pass",
+      "missing": []
+    },
+    {
+      "name": "has_cavern_finale_70k",
+      "status": "pass"
+    },
+    {
+      "name": "has_mishakal_room_46b",
+      "status": "pass"
+    },
+    {
+      "name": "has_secret_way_69b",
+      "status": "pass"
+    },
+    {
+      "name": "source_assets_present",
+      "status": "pass",
+      "assets": [
+        "DL1_overland.jpg",
+        "encounter_area_map.png",
+        "DL1_Swamp_Map.jpg",
+        "DL1_Cavern_Level_1_DM.png",
+        "DL1_Cavern_Level_2_DM.png",
+        "DL1_Cavern_Level_3_DM.png",
+        "DL1_Cavern_Level_4_DM.png",
+        "hourglass_dm_map_color_source_of_truth_v1_0_1.json"
+      ]
+    }
+  ],
+  "review_notes": [
+    "Combined headings such as AREAS 10–11 are represented as grouped ids (e.g. '10–11') and should be expanded into individual travel nodes if encounter-zone map color segmentation is later used.",
+    "This pass extracts room/encounter data from technical markdown sources, preserving text and tables; it does not hand-curate every exit or branch.",
+    "Map-derived coordinates and exact polygons remain in map manifests; this dataset links content to map areas by area id."
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "assets": [
+    {
+      "file": "DL1_overland.jpg",
+      "sha256": "e67f4ba37364b2df240a5e92447adaae31593279fd213ceb5c45e1c702d80df1",
+      "bytes": 1026993,
+      "role": "canonical_dm_source"
+    },
+    {
+      "file": "encounter_area_map.png",
+      "sha256": "5d90d2e32650fc9983ed9d6f328df7d6a395706b2a9fdf45178fa7b87211621a",
+      "bytes": 5806648,
+      "role": "canonical_dm_source"
+    },
+    {
+      "file": "DL1_Swamp_Map.jpg",
+      "sha256": "440cd031b01015189fd7c4eec467b3381361b5d4946e52f1be2613934d3e5a2b",
+      "bytes": 141749,
+      "role": "canonical_dm_source"
+    },
+    {
+      "file": "DL1_Cavern_Level_1_DM.png",
+      "sha256": "64519aaabfc46f0bd079e53c44d844a2fbde7b143452b10fdb0e8d03a8c3e187",
+      "bytes": 106701,
+      "role": "canonical_dm_source"
+    },
+    {
+      "file": "DL1_Cavern_Level_2_DM.png",
+      "sha256": "8e44ad51a96f8f1a1ca6426cb887c2c5adb30147f4edcf6a1bd8d4f6b2e05588",
+      "bytes": 95682,
+      "role": "canonical_dm_source"
+    },
+    {
+      "file": "DL1_Cavern_Level_3_DM.png",
+      "sha256": "daaf7f28c8298e50f77b9d9dec6d4da86cc189bdd9594309a476117bca999fb3",
+      "bytes": 89257,
+      "role": "canonical_dm_source"
+    },
+    {
+      "file": "DL1_Cavern_Level_4_DM.png",
+      "sha256": "93e356efa5aed89fb0b19a87fd1bc48a74abcf41c4b8816051e05ae9ae10d656",
+      "bytes": 285875,
+      "role": "canonical_dm_source"
+    },
+    {
+      "file": "hourglass_dm_map_color_source_of_truth_v1_0_1.json",
+      "sha256": "0e7f072c40a762227a4b07b25cce4a5287dbc72b005cf237fa68649452f779de",
+      "bytes": 65091,
+      "role": "source_legend"
+    }
+  ]
+}

@@ -1,0 +1,1679 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "encounters": [
+    {
+      "area_id": "1a",
+      "area_name": "Inn of the Last Home",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "1a. Inn of the Last Home"
+      },
+      "occupants": [
+        {
+          "name": "Otik Sandath (Innkeeper)",
+          "stats": {
+            "NPC": "Otik Sandath (Innkeeper)",
+            "AL": "LN",
+            "MV": "12\"",
+            "HP": "6",
+            "AC": "10",
+            "HD": "1",
+            "Attack": "1",
+            "Damage": "1–4"
+          }
+        },
+        {
+          "name": "Tika Wayland (Barmaid)",
+          "stats": {
+            "NPC": "Tika Wayland (Barmaid)",
+            "AL": "NG",
+            "MV": "12\"",
+            "HP": "16",
+            "AC": "9",
+            "HD": "3",
+            "Attack": "1",
+            "Damage": "1–6 (frying pan)"
+          }
+        },
+        {
+          "name": "Townspeople ×5",
+          "stats": {
+            "NPC": "Townspeople ×5",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "3,4,5,8,8",
+            "AC": "10",
+            "HD": "1",
+            "Attack": "1",
+            "Damage": "1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "4",
+      "area_name": "New Haven Road",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 4: New Haven Road"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×8",
+          "stats": {
+            "Creature": "Baaz Draconians ×8",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "3,6,9×2,10,12×2,16",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble on death"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "5",
+      "area_name": "Prayer's Eye Peak",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 5: Prayer's Eye Peak"
+      },
+      "occupants": [
+        {
+          "name": "White Stag ×1",
+          "stats": {
+            "Creature": "White Stag ×1",
+            "AL": "LG",
+            "MV": "24\"",
+            "HP": "77",
+            "AC": "–5",
+            "HD": "10",
+            "Attacks": "3",
+            "Damage": "1–12/1–6/1–6"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "6",
+      "area_name": "Twin Flat",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 6: Twin Flat"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconian Leader ×1",
+          "stats": {
+            "Creature": "Baaz Draconian Leader ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turns to stone, crumbles"
+          }
+        },
+        {
+          "name": "Baaz Draconians ×10",
+          "stats": {
+            "Creature": "Baaz Draconians ×10",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "2,3,5,6,8×2,9×2,10,11",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turns to stone, crumbles"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "9",
+      "area_name": "Nearfields",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 9: Nearfields"
+      },
+      "occupants": [
+        {
+          "name": "Farmers ×10–20",
+          "stats": {
+            "Creature": "Farmers ×10–20",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "10",
+            "HD": "2",
+            "Attacks": "1",
+            "Damage": "1–6"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "13–15",
+      "area_name": "North Seeker Reaches",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREAS 13–15: North Seeker Reaches"
+      },
+      "occupants": [
+        {
+          "name": "Refugees ×2–20",
+          "stats": {
+            "Creature": "Refugees ×2–20",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "8–10",
+            "HD": "0–3",
+            "Attacks": "1",
+            "Damage": "1–4 or 1–6"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "16",
+      "area_name": "Haven's Vale",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 16: Haven's Vale"
+      },
+      "occupants": [
+        {
+          "name": "Refugees ×2–20",
+          "stats": {
+            "Creature": "Refugees ×2–20",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "8–10",
+            "HD": "1–3",
+            "Attacks": "1",
+            "Damage": "1–4 or 1–6"
+          }
+        },
+        {
+          "name": "Guardleader ×1",
+          "stats": {
+            "Creature": "Guardleader ×1",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "2",
+            "HD": "5",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        },
+        {
+          "name": "Holy Guards ×10",
+          "stats": {
+            "Creature": "Holy Guards ×10",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "4",
+            "HD": "4",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "17b",
+      "area_name": "Councilhall of Highseekers",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "17b. Councilhall of Highseekers"
+      },
+      "occupants": [
+        {
+          "name": "Master of Highseekers ×1",
+          "stats": {
+            "NPC": "Master of Highseekers ×1",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "35",
+            "AC": "8",
+            "HD": "7",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        },
+        {
+          "name": "Highseeker Councilors ×8",
+          "stats": {
+            "NPC": "Highseeker Councilors ×8",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "25,26,17,22,26,16,15,16",
+            "AC": "8",
+            "HD": "5",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "19",
+      "area_name": "Qualinesti Elflands",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 19: Qualinesti Elflands"
+      },
+      "occupants": [
+        {
+          "name": "Elves ×15",
+          "stats": {
+            "Creature": "Elves ×15",
+            "AL": "LG",
+            "MV": "12\"",
+            "HP": "17 each",
+            "AC": "5",
+            "HD": "2+2",
+            "Attacks": "1",
+            "Damage": "2–9 (sword) or 1–6 (arrow)"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "22",
+      "area_name": "Spirit Forest (Entry to Darken Wood)",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 22: Spirit Forest (Entry to Darken Wood)"
+      },
+      "occupants": [
+        {
+          "name": "Spectral Minions ×12",
+          "stats": {
+            "Creature": "Spectral Minions ×12",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "17×3,18×2,19×2,14×2,10×2,12",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1–8",
+            "Notes": "20% magic resist"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "23",
+      "area_name": "Centaur Reaches",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 23: Centaur Reaches"
+      },
+      "occupants": [
+        {
+          "name": "Centaurs ×8",
+          "stats": {
+            "Creature": "Centaurs ×8",
+            "AL": "CG",
+            "MV": "18\"",
+            "HP": "18,28,21,13,24,20,19,16",
+            "AC": "5(4)",
+            "HD": "4",
+            "Attacks": "2",
+            "Damage": "1–6/1–6"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "24",
+      "area_name": "Dryad Forests",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 24: Dryad Forests"
+      },
+      "occupants": [
+        {
+          "name": "Dryads ×1–6",
+          "stats": {
+            "Creature": "Dryads ×1–6",
+            "AL": "N",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "9",
+            "HD": "2",
+            "Attacks": "1",
+            "Damage": "1–4",
+            "Notes": "Charm spells; warn Forestmaster"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "25",
+      "area_name": "Starnight Canyon",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 25: Starnight Canyon"
+      },
+      "occupants": [
+        {
+          "name": "Pegasi ×1–12",
+          "stats": {
+            "Creature": "Pegasi ×1–12",
+            "AL": "CG",
+            "MV": "24\"/48\"",
+            "HP": "—",
+            "AC": "6",
+            "HD": "4",
+            "Attacks": "3",
+            "Damage": "1–8/1–8/1–3"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "26",
+      "area_name": "Unicorn Grove",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 26: Unicorn Grove"
+      },
+      "occupants": [
+        {
+          "name": "Forestmaster Unicorn ×1",
+          "stats": {
+            "Creature": "Forestmaster Unicorn ×1",
+            "AL": "CG",
+            "MV": "24\"",
+            "HP": "60",
+            "AC": "2",
+            "HD": "10",
+            "Attacks": "3",
+            "Damage": "1–8/1–8/1–20"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "32",
+      "area_name": "Que-Kiri",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 32: Que-Kiri"
+      },
+      "occupants": [
+        {
+          "name": "City Guards ×10",
+          "stats": {
+            "Creature": "City Guards ×10",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "11,10,3,6,2,8×2,9,4,5",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1",
+            "Damage": "1–6"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "38",
+      "area_name": "Refugee",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 38: Refugee"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×3",
+          "stats": {
+            "Creature": "Baaz Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "8×2, 11",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        },
+        {
+          "name": "Nightshade (Refugee)",
+          "stats": {
+            "Creature": "Nightshade (Refugee)",
+            "AL": "LG",
+            "MV": "12\"",
+            "HP": "21 (6 now)",
+            "AC": "10",
+            "HD": "F4",
+            "Attacks": "1",
+            "Damage": "1–2",
+            "Notes": "Human F4; STR 16, DEX 17"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "39",
+      "area_name": "Oldroad Bridge",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 39: Oldroad Bridge"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconian Guards ×4",
+          "stats": {
+            "Creature": "Baaz Draconian Guards ×4",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,6,9,9",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        },
+        {
+          "name": "Baaz Reserves ×10–20",
+          "stats": {
+            "Creature": "Baaz Reserves ×10–20",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12 each",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "40",
+      "area_name": "Southway",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 40: Southway"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Reserves (per unit) ×10–20",
+          "stats": {
+            "Creature": "Baaz Reserves (per unit) ×10–20",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "14 each",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "43",
+      "area_name": "Dragonlands",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 43: Dragonlands"
+      },
+      "occupants": [
+        {
+          "name": "Bozak Draconian Guardleader ×1",
+          "stats": {
+            "Creature": "Bozak Draconian Guardleader ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "23",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+            "Notes": "Explodes 1d6 on death"
+          }
+        },
+        {
+          "name": "Baaz Guards ×2",
+          "stats": {
+            "Creature": "Baaz Guards ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,6",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "—",
+            "Notes": "Turn to stone, crumble"
+          }
+        },
+        {
+          "name": "Hobgoblins ×6",
+          "stats": {
+            "Creature": "Hobgoblins ×6",
+            "AL": "LE",
+            "MV": "9\"",
+            "HP": "5×4, 6, 7",
+            "AC": "5",
+            "HD": "1+1",
+            "Attacks": "1",
+            "Damage": "1–8",
+            "Spells": "—",
+            "Notes": "—"
+          }
+        },
+        {
+          "name": "Baaz Footmen (per unit) ×11–20",
+          "stats": {
+            "Creature": "Baaz Footmen (per unit) ×11–20",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "—",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "44d",
+      "area_name": "Battle of the Fallen Ironclaw",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44d: Battle of the Fallen Ironclaw"
+      },
+      "occupants": [
+        {
+          "name": "Bozak Draconians ×6",
+          "stats": {
+            "Creature": "Bozak Draconians ×6",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "18,23,20,15,17,27",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+            "Notes": "Explode on death"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "44e",
+      "area_name": "Broken Bridge",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44e: Broken Bridge"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconian Guards ×2",
+          "stats": {
+            "Creature": "Baaz Draconian Guards ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,8",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "44f",
+      "area_name": "Temple of Baaz (Draconian Camp)",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44f: Temple of Baaz (Draconian Camp)"
+      },
+      "occupants": [
+        {
+          "name": "Bozak Draconian Priest ×1",
+          "stats": {
+            "Creature": "Bozak Draconian Priest ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "23",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+            "Notes": "Explodes on death"
+          }
+        },
+        {
+          "name": "Baaz Draconians ×7",
+          "stats": {
+            "Creature": "Baaz Draconians ×7",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "8×2,9,5,11,10,3",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "—",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "44h",
+      "area_name": "Breeding Pool",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44h: Breeding Pool"
+      },
+      "occupants": [
+        {
+          "name": "Black Dragon Hatchlings ×5",
+          "stats": {
+            "Creature": "Black Dragon Hatchlings ×5",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "6 each",
+            "AC": "3",
+            "HD": "6",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Notes": "Acid breath: 6 hp each"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "44k",
+      "area_name": "Plaza of Death",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44k: Plaza of Death"
+      },
+      "occupants": [
+        {
+          "name": "Khisanth (Onyx), Ancient Huge Black Dragon",
+          "stats": {
+            "Creature": "Khisanth (Onyx), Ancient Huge Black Dragon",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "64",
+            "AC": "3",
+            "HD": "8",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Spells": "1st: charm person ×2, magic missile ×2, shocking grasp ×2, sleep ×2"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "46b",
+      "area_name": "Mishakal's Form",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46b. Mishakal's Form"
+      },
+      "occupants": [
+        {
+          "name": "Mishakal, Goddess of Healing",
+          "stats": {
+            "Entity": "Mishakal, Goddess of Healing",
+            "AL": "LG",
+            "MV": "24\"/48\"",
+            "HP": "355",
+            "AC": "–3",
+            "HD": "25",
+            "Attacks": "2",
+            "Damage": "3–24"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "46d",
+      "area_name": "North Worship Room",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46d. North Worship Room"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×3",
+          "stats": {
+            "Creature": "Baaz Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "8×2,12",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "46e",
+      "area_name": "Southern Holy Circle",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46e. Southern Holy Circle"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×5",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×5",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "3,9×2,10,16",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "47b",
+      "area_name": "Southern Crypts",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47b. Southern Crypts"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×30",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×30",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "10 each",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "47c",
+      "area_name": "Going Down (The Gully Dwarf Elevator)",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47c. Going Down (The Gully Dwarf Elevator)"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconian Overseers ×2",
+          "stats": {
+            "Creature": "Baaz Draconian Overseers ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,14",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "47g",
+      "area_name": "Treasury",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47g. Treasury"
+      },
+      "occupants": [
+        {
+          "name": "Guardian Spectral Minion ×1",
+          "stats": {
+            "Creature": "Guardian Spectral Minion ×1",
+            "AL": "CG",
+            "MV": "30\"",
+            "HP": "16",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "48",
+      "area_name": "Sewer Entrance",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 48: Sewer Entrance"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×5",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×5",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "6,9×2,12,16",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "51a",
+      "area_name": "Cellar Above",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51a. Cellar Above"
+      },
+      "occupants": [
+        {
+          "name": "Huge Spider ×1",
+          "stats": {
+            "Creature": "Huge Spider ×1",
+            "AL": "N",
+            "MV": "18\"",
+            "HP": "14",
+            "AC": "6",
+            "HD": "2+2",
+            "Attacks": "1",
+            "Damage": "1–6 + poison",
+            "Notes": "Attacks first PC who slides down; fights to death"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "51c",
+      "area_name": "Ceiling Cooks",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51c. Ceiling Cooks"
+      },
+      "occupants": [
+        {
+          "name": "Spectral Minion Cooks ×3",
+          "stats": {
+            "Creature": "Spectral Minion Cooks ×3",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "17,10,16",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1 hp",
+            "Notes": "20% magic resist"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "51d",
+      "area_name": "Bottoms Down",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "51d. Bottoms Down"
+      },
+      "occupants": [
+        {
+          "name": "Spectral Minions ×20",
+          "stats": {
+            "Creature": "Spectral Minions ×20",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "17 each",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "0",
+            "Damage": "0",
+            "Notes": "20% magic resist"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "54b",
+      "area_name": "Sage's Court",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "54b. Sage's Court"
+      },
+      "occupants": [
+        {
+          "name": "Sage Spectral Minion (Ossamis) ×1",
+          "stats": {
+            "Creature": "Sage Spectral Minion (Ossamis) ×1",
+            "AL": "CN",
+            "MV": "30\"",
+            "HP": "15",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "0",
+            "Notes": "20% magic resist"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "56",
+      "area_name": "View from the Falls",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 56: View from the Falls"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×8",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×8",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "1,6,7,9,10×2,11,12",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "57a",
+      "area_name": "Outer Treasury",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "57a. Outer Treasury"
+      },
+      "occupants": [
+        {
+          "name": "Clerk Spectral Minion ×1",
+          "stats": {
+            "Creature": "Clerk Spectral Minion ×1",
+            "AL": "CN",
+            "MV": "30\"",
+            "HP": "18",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "0",
+            "Damage": "—",
+            "Notes": "20% magic resist"
+          }
+        },
+        {
+          "name": "Guardian Spectral Minions ×4",
+          "stats": {
+            "Creature": "Guardian Spectral Minions ×4",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "9,11,16,17",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1–8",
+            "Notes": "20% magic resist"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "59b",
+      "area_name": "Dance on the Wall",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "59b. Dance on the Wall"
+      },
+      "occupants": [
+        {
+          "name": "Poisonous Snakes ×10",
+          "stats": {
+            "Creature": "Poisonous Snakes ×10",
+            "AL": "N",
+            "MV": "15\"",
+            "HP": "9 each",
+            "AC": "6",
+            "HD": "2+1",
+            "Attacks": "1",
+            "Damage": "1 hp + poison (3d4 pts)",
+            "Notes": "On the floor"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "64c",
+      "area_name": "North Armory",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64c. North Armory"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×5",
+          "stats": {
+            "Creature": "Baaz Draconians ×5",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "6,7,9,11,12",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "64d",
+      "area_name": "Assembly",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64d. Assembly"
+      },
+      "occupants": [
+        {
+          "name": "Bozak Draconian (Drunk) ×1",
+          "stats": {
+            "Creature": "Bozak Draconian (Drunk) ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "15",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, push; 2nd: darkness 15', web",
+            "Notes": "Explodes 1d6 on death"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "64g",
+      "area_name": "Quarters",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64g. Quarters"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×15",
+          "stats": {
+            "Creature": "Baaz Draconians ×15",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "14 each",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "64h",
+      "area_name": "Mess Hall",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64h. Mess Hall"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×3",
+          "stats": {
+            "Creature": "Baaz Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "11,13×2",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble; spoiling for a fight"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "65a",
+      "area_name": "Larder Office",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "65a. Larder Office"
+      },
+      "occupants": [
+        {
+          "name": "Bozak Draconians ×3",
+          "stats": {
+            "Creature": "Bozak Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "22,23,17",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+            "Notes": "Explode on death"
+          }
+        },
+        {
+          "name": "Hugon Barker (Kender prisoner)",
+          "stats": {
+            "Creature": "Hugon Barker (Kender prisoner)",
+            "AL": "CG",
+            "MV": "9\"",
+            "HP": "14",
+            "AC": "5",
+            "HD": "T3",
+            "Attacks": "1",
+            "Damage": "1–4",
+            "Spells": "—",
+            "Notes": "STR 11, INT 13, DEX 15"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "66",
+      "area_name": "Court of Reception",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 66: Court of Reception"
+      },
+      "occupants": [
+        {
+          "name": "Baaz Draconian ×1",
+          "stats": {
+            "Creature": "Baaz Draconian ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "16",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "67",
+      "area_name": "Great Plaza",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 67: Great Plaza"
+      },
+      "occupants": [
+        {
+          "name": "Khisanth (Onyx) ×1",
+          "stats": {
+            "Creature": "Khisanth (Onyx) ×1",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "64",
+            "AC": "3",
+            "HD": "8",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Spells": "1st ×8: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2"
+          }
+        },
+        {
+          "name": "Gully Dwarves (Slud Clan Aghar) ×7",
+          "stats": {
+            "Creature": "Gully Dwarves (Slud Clan Aghar) ×7",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "2,3,5,6,8×2,9",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4",
+            "Spells": "—"
+          }
+        },
+        {
+          "name": "Bozak Leader ×1",
+          "stats": {
+            "Creature": "Bozak Leader ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "15",
+            "AC": "4",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, push; 2nd: darkness 15', web"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "67b",
+      "area_name": "West Falls",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "67b. West Falls"
+      },
+      "occupants": [
+        {
+          "name": "Sunstar, Que-Shu Survivor",
+          "stats": {
+            "NPC": "Sunstar, Que-Shu Survivor",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "8",
+            "AC": "8",
+            "HD": "F2",
+            "Attacks": "1",
+            "Damage": "1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "68c",
+      "area_name": "Slud Clan Rooms",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68c. Slud Clan Rooms"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Slud Clan Aghar) ×15",
+          "stats": {
+            "Creature": "Gully Dwarves (Slud Clan Aghar) ×15",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "3,6×2,7×3,8×2,10×3,12,13×2,15",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "68f",
+      "area_name": "Guards Post",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68f. Guards Post"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Bulp Clan Aghar Guards) ×3",
+          "stats": {
+            "Creature": "Gully Dwarves (Bulp Clan Aghar Guards) ×3",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "7,10,12",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "68h",
+      "area_name": "Treasury",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68h. Treasury"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Bulp Aghar Guards) ×2",
+          "stats": {
+            "Creature": "Gully Dwarves (Bulp Aghar Guards) ×2",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "9,11",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        },
+        {
+          "name": "Bozak Draconian (Captain) ×1",
+          "stats": {
+            "Creature": "Bozak Draconian (Captain) ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "33",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "68j",
+      "area_name": "Bulp Clan Rooms",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68j. Bulp Clan Rooms"
+      },
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Bulp Clan Aghar) ×8",
+          "stats": {
+            "Creature": "Gully Dwarves (Bulp Clan Aghar) ×8",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "3,6,8,10×2,11,12,13",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "68m",
+      "area_name": "Court of the Aghar",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68m. Court of the Aghar"
+      },
+      "occupants": [
+        {
+          "name": "Phudge Highbulp I, King of the Aghar",
+          "stats": {
+            "NPC": "Phudge Highbulp I, King of the Aghar",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "16",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        },
+        {
+          "name": "Highbulp Guards (Bulp Clan) ×4",
+          "stats": {
+            "NPC": "Highbulp Guards (Bulp Clan) ×4",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "4,6,7,13",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "70c",
+      "area_name": "First Hall",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70c. First Hall"
+      },
+      "occupants": [
+        {
+          "name": "Bozak Draconian Guards ×2",
+          "stats": {
+            "Creature": "Bozak Draconian Guards ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "22,23",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+            "Notes": "Explode for 1d6 on death"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "70g",
+      "area_name": "Prisoner Cell",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70g. Prisoner Cell"
+      },
+      "occupants": [
+        {
+          "name": "Raven-eye, Que-Shu Warrior",
+          "stats": {
+            "NPC": "Raven-eye, Que-Shu Warrior",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "16",
+            "AC": "9",
+            "HD": "F2",
+            "Attacks": "1",
+            "Damage": "1–4"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "70h",
+      "area_name": "Bozak Commander",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70h. Bozak Commander"
+      },
+      "occupants": [
+        {
+          "name": "Bozak Draconian Commander ×1",
+          "stats": {
+            "Creature": "Bozak Draconian Commander ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "30",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+            "Notes": "Explodes 1d6 on death"
+          }
+        }
+      ]
+    },
+    {
+      "area_id": "70k",
+      "area_name": "Court of the Balance — DRAGON'S LAIR",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70k. Court of the Balance — DRAGON'S LAIR"
+      },
+      "occupants": [
+        {
+          "name": "Khisanth (Onyx), Ancient Huge Black Dragon",
+          "stats": {
+            "Creature": "Khisanth (Onyx), Ancient Huge Black Dragon",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "64",
+            "AC": "3",
+            "HD": "8",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Spells": "1st: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2"
+          }
+        }
+      ]
+    }
+  ]
+}

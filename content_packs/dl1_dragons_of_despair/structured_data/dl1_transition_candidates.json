@@ -1,0 +1,618 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "transition_candidates": [
+    {
+      "area_id": "4",
+      "area_name": "New Haven Road",
+      "references": [
+        "6"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 4: New Haven Road"
+      }
+    },
+    {
+      "area_id": "5",
+      "area_name": "Prayer's Eye Peak",
+      "references": [
+        "24"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 5: Prayer's Eye Peak"
+      }
+    },
+    {
+      "area_id": "6",
+      "area_name": "Twin Flat",
+      "references": [
+        "4",
+        "5"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 6: Twin Flat"
+      }
+    },
+    {
+      "area_id": "8",
+      "area_name": "Northfields",
+      "references": [
+        "35"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 8: Northfields"
+      }
+    },
+    {
+      "area_id": "10–11",
+      "area_name": "Sentinel Gap / Twin Peaks Vale",
+      "references": [
+        "10",
+        "11"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREAS 10–11: Sentinel Gap / Twin Peaks Vale"
+      }
+    },
+    {
+      "area_id": "13–15",
+      "area_name": "North Seeker Reaches",
+      "references": [
+        "13",
+        "14",
+        "15"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREAS 13–15: North Seeker Reaches"
+      }
+    },
+    {
+      "area_id": "16",
+      "area_name": "Haven's Vale",
+      "references": [
+        "17b"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 16: Haven's Vale"
+      }
+    },
+    {
+      "area_id": "18",
+      "area_name": "River White-rage",
+      "references": [
+        "20"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 18: River White-rage"
+      }
+    },
+    {
+      "area_id": "19",
+      "area_name": "Qualinesti Elflands",
+      "references": [
+        "23"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 19: Qualinesti Elflands"
+      }
+    },
+    {
+      "area_id": "20",
+      "area_name": "The White-rage Cut",
+      "references": [
+        "18",
+        "22"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 20: The White-rage Cut"
+      }
+    },
+    {
+      "area_id": "22",
+      "area_name": "Spirit Forest (Entry to Darken Wood)",
+      "references": [
+        "22–26",
+        "26"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 22: Spirit Forest (Entry to Darken Wood)"
+      }
+    },
+    {
+      "area_id": "23",
+      "area_name": "Centaur Reaches",
+      "references": [
+        "26"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 23: Centaur Reaches"
+      }
+    },
+    {
+      "area_id": "25",
+      "area_name": "Starnight Canyon",
+      "references": [
+        "26"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 25: Starnight Canyon"
+      }
+    },
+    {
+      "area_id": "27–28",
+      "area_name": "Gateway Pass / Gateway",
+      "references": [
+        "27",
+        "28"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREAS 27–28: Gateway Pass / Gateway"
+      }
+    },
+    {
+      "area_id": "30",
+      "area_name": "Que-Teh",
+      "references": [
+        "38"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 30: Que-Teh"
+      }
+    },
+    {
+      "area_id": "31",
+      "area_name": "The Great Crossroads",
+      "references": [
+        "36"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 31: The Great Crossroads"
+      }
+    },
+    {
+      "area_id": "39",
+      "area_name": "Oldroad Bridge",
+      "references": [
+        "18"
+      ],
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 39: Oldroad Bridge"
+      }
+    },
+    {
+      "area_id": "44c",
+      "area_name": "Vine Bridges",
+      "references": [
+        "44b"
+      ],
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44c: Vine Bridges"
+      }
+    },
+    {
+      "area_id": "44k",
+      "area_name": "Plaza of Death",
+      "references": [
+        "45",
+        "46",
+        "46a"
+      ],
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44k: Plaza of Death"
+      }
+    },
+    {
+      "area_id": "45",
+      "area_name": "The Great Well",
+      "references": [
+        "67"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 45: The Great Well"
+      }
+    },
+    {
+      "area_id": "46g",
+      "area_name": "Paths of the Dead",
+      "references": [
+        "47"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46g. Paths of the Dead"
+      }
+    },
+    {
+      "area_id": "47c",
+      "area_name": "Going Down (The Gully Dwarf Elevator)",
+      "references": [
+        "66"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47c. Going Down (The Gully Dwarf Elevator)"
+      }
+    },
+    {
+      "area_id": "47j",
+      "area_name": "North Temple",
+      "references": [
+        "48"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "47j. North Temple"
+      }
+    },
+    {
+      "area_id": "48",
+      "area_name": "Sewer Entrance",
+      "references": [
+        "49"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 48: Sewer Entrance"
+      }
+    },
+    {
+      "area_id": "49",
+      "area_name": "Sewer Junction",
+      "references": [
+        "50"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 49: Sewer Junction"
+      }
+    },
+    {
+      "area_id": "50",
+      "area_name": "Sewer Branch",
+      "references": [
+        "51"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 50: Sewer Branch"
+      }
+    },
+    {
+      "area_id": "52",
+      "area_name": "Chimney Down",
+      "references": [
+        "53"
+      ],
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "AREA 52: Chimney Down"
+      }
+    },
+    {
+      "area_id": "54b",
+      "area_name": "Sage's Court",
+      "references": [
+        "70k"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "54b. Sage's Court"
+      }
+    },
+    {
+      "area_id": "55",
+      "area_name": "Treasury Court",
+      "references": [
+        "56"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 55: Treasury Court"
+      }
+    },
+    {
+      "area_id": "57b",
+      "area_name": "Vault",
+      "references": [
+        "62"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "57b. Vault"
+      }
+    },
+    {
+      "area_id": "66",
+      "area_name": "Court of Reception",
+      "references": [
+        "59b"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 66: Court of Reception"
+      }
+    },
+    {
+      "area_id": "67",
+      "area_name": "Great Plaza",
+      "references": [
+        "67b",
+        "70a"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 67: Great Plaza"
+      }
+    },
+    {
+      "area_id": "67a",
+      "area_name": "East Falls",
+      "references": [
+        "56"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "67a. East Falls"
+      }
+    },
+    {
+      "area_id": "70f",
+      "area_name": "Bozak Captain",
+      "references": [
+        "70a–70h"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70f. Bozak Captain"
+      }
+    },
+    {
+      "area_id": "70h",
+      "area_name": "Bozak Commander",
+      "references": [
+        "70j"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70h. Bozak Commander"
+      }
+    },
+    {
+      "area_id": "70i",
+      "area_name": "Long Hall",
+      "references": [
+        "70k"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70i. Long Hall"
+      }
+    },
+    {
+      "area_id": "70k",
+      "area_name": "Court of the Balance — DRAGON'S LAIR",
+      "references": [
+        "46b"
+      ],
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70k. Court of the Balance — DRAGON'S LAIR"
+      }
+    }
+  ],
+  "manual_transitions": [
+    {
+      "from": "44k",
+      "to": "45",
+      "type": "well_descent",
+      "visibility": "public_after_entering_44k",
+      "notes": "Great well descends toward cavern above area 67."
+    },
+    {
+      "from": "44k",
+      "to": "46a",
+      "type": "temple_doors",
+      "visibility": "public_after_entering_44k",
+      "notes": "North building is Temple of Mishakal."
+    },
+    {
+      "from": "46a",
+      "to": "46b",
+      "type": "inner_doors",
+      "visibility": "public_after_entering_46a"
+    },
+    {
+      "from": "46",
+      "to": "47",
+      "type": "temple_to_hall_descent",
+      "visibility": "after_exploration"
+    },
+    {
+      "from": "47c",
+      "to": "lower_city",
+      "type": "elevator_chain",
+      "visibility": "discovered_in_47c"
+    },
+    {
+      "from": "53a",
+      "to": "53b",
+      "type": "door_or_street",
+      "visibility": "public_after_entering_53a"
+    },
+    {
+      "from": "54b",
+      "to": "70k",
+      "type": "information_only",
+      "visibility": "after_ossamis_answer",
+      "notes": "Ossamis can reveal location/how to get there."
+    },
+    {
+      "from": "57b",
+      "to": "62",
+      "type": "dimension_door",
+      "visibility": "after_reading_or_entering_alcove"
+    },
+    {
+      "from": "62",
+      "to": "57b",
+      "type": "dimension_door",
+      "visibility": "after_entering_cube"
+    },
+    {
+      "from": "68l",
+      "to": "69a",
+      "type": "secret_exit",
+      "visibility": "after_aghar_route_discovery"
+    },
+    {
+      "from": "69a",
+      "to": "69b",
+      "type": "delvers_route",
+      "visibility": "after_route_discovery"
+    },
+    {
+      "from": "69b",
+      "to": "70k",
+      "type": "secret_way",
+      "visibility": "after_secret_way_discovered"
+    },
+    {
+      "from": "70i",
+      "to": "70k",
+      "type": "steel_double_doors",
+      "visibility": "public_in_70i"
+    },
+    {
+      "from": "70j",
+      "to": "70k",
+      "type": "trapped_hall_of_sound",
+      "visibility": "public_in_70j",
+      "hazard": "gong pressure plates trigger dragon breath"
+    }
+  ]
+}

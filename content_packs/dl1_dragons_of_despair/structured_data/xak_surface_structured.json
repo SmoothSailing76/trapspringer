@@ -1,0 +1,788 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "areas": [
+    {
+      "id": "44a",
+      "canonical_id": "DL1_44A",
+      "name": "Swamp Ruins",
+      "heading": "AREA 44a: Swamp Ruins",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44a: Swamp Ruins"
+      },
+      "summary": "Ironclaw tree roots twist into mud and swamp water. Vines, trees, and ferns block vision beyond a few feet. Ground soaked and spongy. All in shadow.",
+      "description": "Ironclaw tree roots twist into mud and swamp water. Vines, trees, and ferns block vision beyond a few feet. Ground soaked and spongy. All in shadow.\n\n**Occasional ruins (1 in 6 per round):** Broken foundation stones, shattered urns, ancient carvings jut from underbrush.\n\n**Tracks:** Many creatures passed through within last 3–4 hours. Faintly reptilian prints. Heroes who have met draconians: 20% chance to recognize them.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Occasional ruins (1 in 6 per round)",
+          "text": "Broken foundation stones, shattered urns, ancient carvings jut from underbrush."
+        },
+        {
+          "label": "Tracks",
+          "text": "Many creatures passed through within last 3–4 hours. Faintly reptilian prints. Heroes who have met draconians: 20% chance to recognize them."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Occasional ruins (1 in 6 per round):** Broken foundation stones, shattered urns, ancient carvings jut from underbrush.",
+        "**Tracks:** Many creatures passed through within last 3–4 hours. Faintly reptilian prints. Heroes who have met draconians: 20% chance to recognize them."
+      ]
+    },
+    {
+      "id": "44b",
+      "canonical_id": "DL1_44B",
+      "name": "Waters of the Swamp",
+      "heading": "AREA 44b: Waters of the Swamp",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44b: Waters of the Swamp"
+      },
+      "summary": "Green scum on dark swamp water. Sour, metallic smells.",
+      "description": "Green scum on dark swamp water. Sour, metallic smells.\n\n**Water depth:** Unpredictable — 1d6 feet per 30 feet traveled.\n\n**Whenever anyone enters the water for any reason:** Roll 1d6. If result < 4: roll 1d4+20 on the random encounter table (Appendix 4) to determine what creature rises up to attack.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Water depth",
+          "text": "Unpredictable — 1d6 feet per 30 feet traveled."
+        },
+        {
+          "label": "Whenever anyone enters the water for any reason",
+          "text": "Roll 1d6. If result < 4: roll 1d4+20 on the random encounter table (Appendix 4) to determine what creature rises up to attack."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Water depth:** Unpredictable — 1d6 feet per 30 feet traveled.",
+        "**Whenever anyone enters the water for any reason:** Roll 1d6. If result < 4: roll 1d4+20 on the random encounter table (Appendix 4) to determine what creature rises up to attack."
+      ]
+    },
+    {
+      "id": "44c",
+      "canonical_id": "DL1_44C",
+      "name": "Vine Bridges",
+      "heading": "AREA 44c: Vine Bridges",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44c: Vine Bridges"
+      },
+      "summary": "Thick vines woven into strong ropes stretched between two sections of land. Each end knotted around several Ironclaw trees. Slimy mosses cover the ropes.",
+      "description": "Thick vines woven into strong ropes stretched between two sections of land. Each end knotted around several Ironclaw trees. Slimy mosses cover the ropes.\n\n**Crossing:** Surprisingly sturdy. Check DEX at –5 to cross without trouble. If failed: PC falls into water below — triggers monster roll per area 44b rules.\n\n---",
+      "tags": [
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Crossing",
+          "text": "Surprisingly sturdy. Check DEX at –5 to cross without trouble. If failed: PC falls into water below — triggers monster roll per area 44b rules."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "44b"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "44d",
+      "canonical_id": "DL1_44D",
+      "name": "Battle of the Fallen Ironclaw",
+      "heading": "AREA 44d: Battle of the Fallen Ironclaw",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44d: Battle of the Fallen Ironclaw"
+      },
+      "summary": "Soaked ground slopes into thick swamp water. Giant Ironclaw tree has fallen, spanning the waters. Thick green moss drapes the log.",
+      "description": "Soaked ground slopes into thick swamp water. Giant Ironclaw tree has fallen, spanning the waters. Thick green moss drapes the log.\n\nBehind trees and bushes, only 15–20 feet away: **6 Bozak Draconians.** Four on heroes' side, two on far side.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells | Notes |\n|----------|----|----|----|----|----|---------|----|--------|-------|\n| Bozak Draconians ×6 | LE | 6\"[15\"]/18\" | 18,23,20,15,17,27 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: MM, shield, sleep; 2nd: darkness 15', web | Explode on death |\n\n**Tactic:** Plan to capture party for questioning at camp (44f). Attack first with **web** spells (save at –2 or tangled in trees behind PCs). Then attempt to **sleep** party one at a time. Take captives to 44f.\n\n**Retreat:** If they take more than 50% losses, they retreat.\n\n**What they know:** Crystal staff is a very powerful item; stolen from the ruins; the one thing their leader Verminaard fears can upset his plans.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "map",
+        "quest",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Bozak Draconians ×6",
+          "stats": {
+            "Creature": "Bozak Draconians ×6",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "18,23,20,15,17,27",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+            "Notes": "Explode on death"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Bozak Draconians ×6",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "18,23,20,15,17,27",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+              "Notes": "Explode on death"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Tactic",
+          "text": "Plan to capture party for questioning at camp (44f). Attack first with **web** spells (save at –2 or tangled in trees behind PCs). Then attempt to **sleep** party one at a time. Take captives to 44f."
+        },
+        {
+          "label": "Retreat",
+          "text": "If they take more than 50% losses, they retreat."
+        },
+        {
+          "label": "What they know",
+          "text": "Crystal staff is a very powerful item; stolen from the ruins; the one thing their leader Verminaard fears can upset his plans."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**What they know:** Crystal staff is a very powerful item; stolen from the ruins; the one thing their leader Verminaard fears can upset his plans."
+      ],
+      "hidden_or_dm_facts": [
+        "Behind trees and bushes, only 15–20 feet away: **6 Bozak Draconians.** Four on heroes' side, two on far side.",
+        "**Tactic:** Plan to capture party for questioning at camp (44f). Attack first with **web** spells (save at –2 or tangled in trees behind PCs). Then attempt to **sleep** party one at a time. Take captives to 44f."
+      ],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Tactic:** Plan to capture party for questioning at camp (44f). Attack first with **web** spells (save at –2 or tangled in trees behind PCs). Then attempt to **sleep** party one at a time. Take captives to 44f.",
+        "**Retreat:** If they take more than 50% losses, they retreat."
+      ]
+    },
+    {
+      "id": "44e",
+      "canonical_id": "DL1_44E",
+      "name": "Broken Bridge",
+      "heading": "AREA 44e: Broken Bridge",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44e: Broken Bridge"
+      },
+      "summary": "Ornate wooden lattice bridge (carved to resemble vines), broken in many places. Two hooded figures stand on the north side.",
+      "description": "Ornate wooden lattice bridge (carved to resemble vines), broken in many places. Two hooded figures stand on the north side.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconian Guards ×2 | LE | 6\"[15\"]/18\" | 12,8 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\n---",
+      "tags": [
+        "combat",
+        "encounter"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconian Guards ×2",
+          "stats": {
+            "Creature": "Baaz Draconian Guards ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,8",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconian Guards ×2",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "12,8",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "44f",
+      "canonical_id": "DL1_44F",
+      "name": "Temple of Baaz (Draconian Camp)",
+      "heading": "AREA 44f: Temple of Baaz (Draconian Camp)",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44f: Temple of Baaz (Draconian Camp)"
+      },
+      "summary": "Massive ruins, small broken towers. Ferns and bushes through flagstone plaza with small shacks and lean-tos. Huge bonfire at north end. Beyond fire: crumbled dome with a **huge black dragon** figure with wings outfolded.",
+      "description": "Massive ruins, small broken towers. Ferns and bushes through flagstone plaza with small shacks and lean-tos. Huge bonfire at north end. Beyond fire: crumbled dome with a **huge black dragon** figure with wings outfolded.\n\n**Dragon is a wicker model.** However, draconians nearby attack any unescorted intruders.\n\n**If PCs are prisoners:** Equipment placed randomly in one of six huts; PCs held in bamboo cage.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells | Notes |\n|----------|----|----|----|----|----|---------|----|--------|-------|\n| Bozak Draconian Priest ×1 | LE | 6\"[15\"]/18\" | 23 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, shield; 2nd: invis, mirror image | Explodes on death |\n| Baaz Draconians ×7 | LE | 6\"[15\"]/18\" | 8×2,9,5,11,10,3 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | — | Turn to stone, crumble |\n\n**Priest behavior:** Runs the camp and conducts worship before the wicker dragon. Orders PCs held for 3 days until Khisanth (the priest's commander) comes to claim them. If party has the staff: \"The crystal staff is the greatest danger to our masters we know.\" If no staff: asks where it is. Either way tells party: \"Now that you are here, we only hope that you do not die as easily as those of Que-Shu did at our hands.\"\n\n**The Wicker Dragon — Trick:**\n- Opening at base between its legs; main wing braces tied together just below mouth; mouth forms a funnel\n- If a PC gets inside unnoticed, leaps on main brace, and shouts through the mouth: panics draconians and drives them screaming into jungle for 1d6 turns\n- **30% chance** the structure falls face-first into the bonfire and burns furiously\n- Anyone inside must check DEX to escape; takes 1d6 damage each round DEX check is failed\n\n**The Bamboo Cage:**\n- 1 Baaz draconian guards it night and day\n- 10% chance per daylight hour the guard falls asleep; 30% chance per hour after sundown\n- Successful bend bars/lift gates check breaks the bars open\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "hidden",
+        "map",
+        "quest",
+        "rest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Bozak Draconian Priest ×1",
+          "stats": {
+            "Creature": "Bozak Draconian Priest ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "23",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+            "Notes": "Explodes on death"
+          }
+        },
+        {
+          "name": "Baaz Draconians ×7",
+          "stats": {
+            "Creature": "Baaz Draconians ×7",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "8×2,9,5,11,10,3",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "—",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Bozak Draconian Priest ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "23",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+              "Notes": "Explodes on death"
+            },
+            {
+              "Creature": "Baaz Draconians ×7",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "8×2,9,5,11,10,3",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "—",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "If PCs are prisoners",
+          "text": "Equipment placed randomly in one of six huts; PCs held in bamboo cage."
+        },
+        {
+          "label": "Priest behavior",
+          "text": "Runs the camp and conducts worship before the wicker dragon. Orders PCs held for 3 days until Khisanth (the priest's commander) comes to claim them. If party has the staff: \"The crystal staff is the greatest danger to our masters we know.\" If no staff: asks where it is. Either way tells party: \"Now that you are here, we only hope that you do not die as easily as those of Que-Shu did at our hands.\""
+        },
+        {
+          "label": "The Wicker Dragon — Trick",
+          "text": "- Opening at base between its legs; main wing braces tied together just below mouth; mouth forms a funnel"
+        },
+        {
+          "label": "The Bamboo Cage",
+          "text": "- 1 Baaz draconian guards it night and day"
+        }
+      ],
+      "bullets": [
+        "Opening at base between its legs; main wing braces tied together just below mouth; mouth forms a funnel",
+        "If a PC gets inside unnoticed, leaps on main brace, and shouts through the mouth: panics draconians and drives them screaming into jungle for 1d6 turns",
+        "**30% chance** the structure falls face-first into the bonfire and burns furiously",
+        "Anyone inside must check DEX to escape; takes 1d6 damage each round DEX check is failed",
+        "1 Baaz draconian guards it night and day",
+        "10% chance per daylight hour the guard falls asleep; 30% chance per hour after sundown",
+        "Successful bend bars/lift gates check breaks the bars open"
+      ],
+      "treasure_refs": [
+        "**Priest behavior:** Runs the camp and conducts worship before the wicker dragon. Orders PCs held for 3 days until Khisanth (the priest's commander) comes to claim them. If party has the staff: \"The crystal staff is the greatest danger to our masters we know.\" If no staff: asks where it is. Either way tells party: \"Now that you are here, we only hope that you do not die as easily as those of Que-Shu did at our hands.\""
+      ],
+      "hidden_or_dm_facts": [
+        "**Dragon is a wicker model.** However, draconians nearby attack any unescorted intruders.",
+        "**If PCs are prisoners:** Equipment placed randomly in one of six huts; PCs held in bamboo cage.",
+        "**Priest behavior:** Runs the camp and conducts worship before the wicker dragon. Orders PCs held for 3 days until Khisanth (the priest's commander) comes to claim them. If party has the staff: \"The crystal staff is the greatest danger to our masters we know.\" If no staff: asks where it is. Either way tells party: \"Now that you are here, we only hope that you do not die as easily as those of Que-Shu did at our hands.\"",
+        "**The Wicker Dragon — Trick:**",
+        " If a PC gets inside unnoticed, leaps on main brace, and shouts through the mouth: panics draconians and drives them screaming into jungle for 1d6 turns"
+      ],
+      "area_references": [],
+      "checks_and_rolls": [
+        " If a PC gets inside unnoticed, leaps on main brace, and shouts through the mouth: panics draconians and drives them screaming into jungle for 1d6 turns",
+        " **30% chance** the structure falls face-first into the bonfire and burns furiously",
+        " Anyone inside must check DEX to escape; takes 1d6 damage each round DEX check is failed",
+        " 10% chance per daylight hour the guard falls asleep; 30% chance per hour after sundown"
+      ]
+    },
+    {
+      "id": "44g",
+      "canonical_id": "DL1_44G",
+      "name": "Tower of Truth",
+      "heading": "AREA 44g: Tower of Truth",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44g: Tower of Truth"
+      },
+      "summary": "Graceful crumbling tower rises from swamp waters. Finely carved stonework still glints under undergrowth. Wooden floors and rafters have long rotted away. Carved staircase circles up interior to stone floor at top.",
+      "description": "Graceful crumbling tower rises from swamp waters. Finely carved stonework still glints under undergrowth. Wooden floors and rafters have long rotted away. Carved staircase circles up interior to stone floor at top.\n\n**View from top:** All surrounding swamplands visible. Cluster of ruins (44k) lies to the northeast.\n\n---",
+      "tags": [
+        "hazard",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "View from top",
+          "text": "All surrounding swamplands visible. Cluster of ruins (44k) lies to the northeast."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "44h",
+      "canonical_id": "DL1_44H",
+      "name": "Breeding Pool",
+      "heading": "AREA 44h: Breeding Pool",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44h: Breeding Pool"
+      },
+      "summary": "Pool of black water amid towering jungle trees; not even mighty Ironclaws grow in this water. Five cracked leathery egg shells on shore (~2' long each). Dragon hatchlings lurk beneath water and rise to attack if PCs disturb the surface.",
+      "description": "Pool of black water amid towering jungle trees; not even mighty Ironclaws grow in this water. Five cracked leathery egg shells on shore (~2' long each). Dragon hatchlings lurk beneath water and rise to attack if PCs disturb the surface.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Black Dragon Hatchlings ×5 | CE | 12\"/24\" | 6 each | 3 | 6 | 3 | 1–4/1–4/3–18 | Acid breath: 6 hp each |\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [
+        {
+          "name": "Black Dragon Hatchlings ×5",
+          "stats": {
+            "Creature": "Black Dragon Hatchlings ×5",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "6 each",
+            "AC": "3",
+            "HD": "6",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Notes": "Acid breath: 6 hp each"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Black Dragon Hatchlings ×5",
+              "AL": "CE",
+              "MV": "12\"/24\"",
+              "HP": "6 each",
+              "AC": "3",
+              "HD": "6",
+              "Attacks": "3",
+              "Damage": "1–4/1–4/3–18",
+              "Notes": "Acid breath: 6 hp each"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "44i",
+      "canonical_id": "DL1_44I",
+      "name": "Swamp Falls",
+      "heading": "AREA 44i: Swamp Falls",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44i: Swamp Falls"
+      },
+      "summary": "Soggy jungle floor ends suddenly in a **1,000-foot cliff**. Swamp water trickles down the stone bluff to a crashing seashore below. The Newsea spreads to the eastern horizon — covering what was once a fertile plain.",
+      "description": "Soggy jungle floor ends suddenly in a **1,000-foot cliff**. Swamp water trickles down the stone bluff to a crashing seashore below. The Newsea spreads to the eastern horizon — covering what was once a fertile plain.\n\n---",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "44j",
+      "canonical_id": "DL1_44J",
+      "name": "Fallen Obelisk",
+      "heading": "AREA 44j: Fallen Obelisk",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44j: Fallen Obelisk"
+      },
+      "summary": "Tremendous obelisk beside its broken pedestal base. Spidery runes cover its surface. Obelisk bridges two sections of ground divided by swamp water.",
+      "description": "Tremendous obelisk beside its broken pedestal base. Spidery runes cover its surface. Obelisk bridges two sections of ground divided by swamp water.\n\n**Reading the runes:** 15% base chance; add read languages score if applicable.\n\n**Rune text:**\n> *The Great City of Xak Tsaroth*\n> *Whose beauty surrounds you*\n> *Speaks to the good of its people*\n> *And their generous deeds.*\n> *The gods reward us*\n> *In the grace of our home.*\n\n---",
+      "tags": [
+        "hazard",
+        "social"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Reading the runes",
+          "text": "15% base chance; add read languages score if applicable."
+        },
+        {
+          "label": "Rune text",
+          "text": "> *The Great City of Xak Tsaroth*"
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Reading the runes:** 15% base chance; add read languages score if applicable."
+      ]
+    },
+    {
+      "id": "44k",
+      "canonical_id": "DL1_44K",
+      "name": "Plaza of Death",
+      "heading": "AREA 44k: Plaza of Death",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_2_xak_surface",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44k: Plaza of Death"
+      },
+      "summary": "Broad cobblestone street, fluted columns, relief carvings of sagging buildings. Large cobblestone courtyard with four tall free-standing columns. In front of pillars: a **huge well** plunging into the earth, vapors rising. To the north: a single building stands whole (Temple of Mishakal, area 46).",
+      "description": "Broad cobblestone street, fluted columns, relief carvings of sagging buildings. Large cobblestone courtyard with four tall free-standing columns. In front of pillars: a **huge well** plunging into the earth, vapors rising. To the north: a single building stands whole (Temple of Mishakal, area 46).\n\n**The Well:** Dark and terrible stillness. Gazing into it: nothing but vast blackness. Rushing air, dead cold, swells from below.\n\n**Dragon Arrival:** Suddenly Khisanth bursts from the well and unfolds tremendous leather wings. She casts **Darkness** covering the entire area.\n\n**Khisanth's Surface Battle Tactics:**\n1. First combat round: gains speed in air, circles for better attack position\n2. PCs susceptible to dragon fear (see Monster Manual p. 30)\n3. Attacks from the air while hovering; avoids swords and hand weapons\n4. Bombards heroes with **magic missile** and **sleep** spells\n5. Makes 2 aerial passes using 64-hp breath weapon (acid) each time\n6. On 3rd pass: feels need for safety of lair; flies over well, folds wings, drops like stone down the well; breaks out of dive far below; moves toward lair\n\n**After this encounter:** PCs may explore the well further (area 45). Heroes may also enter the building to the north (area 46a).\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells |\n|----------|----|----|----|----|----|---------|----|--------|\n| Khisanth (Onyx), Ancient Huge Black Dragon | CE | 12\"/24\" | 64 | 3 | 8 | 3 | 1–4/1–4/3–18 | 1st: charm person ×2, magic missile ×2, shocking grasp ×2, sleep ×2 |\n\n**Breath weapon:** Acid. Damage = current HP total. Use twice in this encounter.\n\n**Temple doors (north building):** Gold doors weighing 15,000 gpw each. Counterpoised hinges; open as normal doors. Only entrance to the windowless temple.",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "quest",
+        "rest",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Khisanth (Onyx), Ancient Huge Black Dragon",
+          "stats": {
+            "Creature": "Khisanth (Onyx), Ancient Huge Black Dragon",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "64",
+            "AC": "3",
+            "HD": "8",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Spells": "1st: charm person ×2, magic missile ×2, shocking grasp ×2, sleep ×2"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells"
+          ],
+          "rows": [
+            {
+              "Creature": "Khisanth (Onyx), Ancient Huge Black Dragon",
+              "AL": "CE",
+              "MV": "12\"/24\"",
+              "HP": "64",
+              "AC": "3",
+              "HD": "8",
+              "Attacks": "3",
+              "Damage": "1–4/1–4/3–18",
+              "Spells": "1st: charm person ×2, magic missile ×2, shocking grasp ×2, sleep ×2"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "The Well",
+          "text": "Dark and terrible stillness. Gazing into it: nothing but vast blackness. Rushing air, dead cold, swells from below."
+        },
+        {
+          "label": "Dragon Arrival",
+          "text": "Suddenly Khisanth bursts from the well and unfolds tremendous leather wings. She casts **Darkness** covering the entire area."
+        },
+        {
+          "label": "Khisanth's Surface Battle Tactics",
+          "text": "1. First combat round: gains speed in air, circles for better attack position"
+        },
+        {
+          "label": "After this encounter",
+          "text": "PCs may explore the well further (area 45). Heroes may also enter the building to the north (area 46a)."
+        },
+        {
+          "label": "Breath weapon",
+          "text": "Acid. Damage = current HP total. Use twice in this encounter."
+        },
+        {
+          "label": "Temple doors (north building)",
+          "text": "Gold doors weighing 15,000 gpw each. Counterpoised hinges; open as normal doors. Only entrance to the windowless temple."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "3. Attacks from the air while hovering; avoids swords and hand weapons",
+        "5. Makes 2 aerial passes using 64-hp breath weapon (acid) each time",
+        "**Breath weapon:** Acid. Damage = current HP total. Use twice in this encounter.",
+        "**Temple doors (north building):** Gold doors weighing 15,000 gpw each. Counterpoised hinges; open as normal doors. Only entrance to the windowless temple."
+      ],
+      "hidden_or_dm_facts": [
+        "6. On 3rd pass: feels need for safety of lair; flies over well, folds wings, drops like stone down the well; breaks out of dive far below; moves toward lair"
+      ],
+      "area_references": [
+        "45",
+        "46",
+        "46a"
+      ],
+      "checks_and_rolls": []
+    }
+  ]
+}

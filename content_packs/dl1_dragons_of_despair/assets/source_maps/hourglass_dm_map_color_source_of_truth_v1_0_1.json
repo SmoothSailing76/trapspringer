@@ -1,0 +1,2458 @@
+{
+  "system": "Hourglass",
+  "artifact_type": "dm_map_color_source_of_truth",
+  "artifact_version": "1.0.1",
+  "title": "Hourglass DM Map Color Source of Truth",
+  "source_file": "L4_Feature_Color_Index2.csv",
+  "source_file_type": "csv",
+  "csv_headers": [
+    "Feature Type",
+    "Traversable?",
+    "Encounter Area Number",
+    "Encounter Name",
+    "Feature Color Red",
+    "Feature Color Green",
+    "Featuer Color Blue"
+  ],
+  "entry_count_total": 55,
+  "entry_count_with_rgb": 54,
+  "lookup_by_rgb": {
+    "11,119,255": {
+      "class_id": "wall",
+      "label": "Wall",
+      "rgb": [
+        11,
+        119,
+        255
+      ],
+      "traversable": false,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_row_number": 1,
+      "source_fields": {
+        "Feature Type": "Wall",
+        "Traversable?": "No",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "11",
+        "Feature Color Green": "119",
+        "Featuer Color Blue": "255"
+      }
+    },
+    "145,240,240": {
+      "class_id": "rubble",
+      "label": "Rubble",
+      "rgb": [
+        145,
+        240,
+        240
+      ],
+      "traversable": false,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_row_number": 2,
+      "source_fields": {
+        "Feature Type": "Rubble",
+        "Traversable?": "No",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "145",
+        "Feature Color Green": "240",
+        "Featuer Color Blue": "240"
+      }
+    },
+    "248,18,60": {
+      "class_id": "door",
+      "label": "Door",
+      "rgb": [
+        248,
+        18,
+        60
+      ],
+      "traversable": null,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_row_number": 3,
+      "source_fields": {
+        "Feature Type": "Door",
+        "Traversable?": "If Open",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "248",
+        "Feature Color Green": "18",
+        "Featuer Color Blue": "60"
+      }
+    },
+    "138,8,251": {
+      "class_id": "secret_door",
+      "label": "Secret Door",
+      "rgb": [
+        138,
+        8,
+        251
+      ],
+      "traversable": null,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_row_number": 4,
+      "source_fields": {
+        "Feature Type": "Secret Door",
+        "Traversable?": "If Open",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "138",
+        "Feature Color Green": "8",
+        "Featuer Color Blue": "251"
+      }
+    },
+    "255,130,0": {
+      "class_id": "archway",
+      "label": "Archway",
+      "rgb": [
+        255,
+        130,
+        0
+      ],
+      "traversable": true,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_row_number": 5,
+      "source_fields": {
+        "Feature Type": "Archway",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "255",
+        "Feature Color Green": "130",
+        "Featuer Color Blue": "0"
+      }
+    },
+    "163,165,166": {
+      "class_id": "open_space",
+      "label": "Open Space",
+      "rgb": [
+        163,
+        165,
+        166
+      ],
+      "traversable": true,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_row_number": 6,
+      "source_fields": {
+        "Feature Type": "Open Space",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "163",
+        "Feature Color Green": "165",
+        "Featuer Color Blue": "166"
+      }
+    },
+    "204,102,255": {
+      "class_id": "encounter_area_59b",
+      "label": "Encounter Area",
+      "rgb": [
+        204,
+        102,
+        255
+      ],
+      "traversable": true,
+      "encounter_area_number": "59b",
+      "encounter_name": "Dance on the Wall",
+      "source_row_number": 8,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "59b",
+        "Encounter Name": "Dance on the Wall",
+        "Feature Color Red": "204",
+        "Feature Color Green": "102",
+        "Featuer Color Blue": "255"
+      }
+    },
+    "42,123,20": {
+      "class_id": "encounter_area_60",
+      "label": "Encounter Area",
+      "rgb": [
+        42,
+        123,
+        20
+      ],
+      "traversable": true,
+      "encounter_area_number": "60",
+      "encounter_name": "Approach to the Hall of Justice",
+      "source_row_number": 9,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "60",
+        "Encounter Name": "Approach to the Hall of Justice",
+        "Feature Color Red": "42",
+        "Feature Color Green": "123",
+        "Featuer Color Blue": "20"
+      }
+    },
+    "152,43,194": {
+      "class_id": "encounter_area_61",
+      "label": "Encounter Area",
+      "rgb": [
+        152,
+        43,
+        194
+      ],
+      "traversable": true,
+      "encounter_area_number": "61",
+      "encounter_name": "North Cavern Falls",
+      "source_row_number": 10,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "61",
+        "Encounter Name": "North Cavern Falls",
+        "Feature Color Red": "152",
+        "Feature Color Green": "43",
+        "Featuer Color Blue": "194"
+      }
+    },
+    "172,44,105": {
+      "class_id": "encounter_area_62",
+      "label": "Encounter Area",
+      "rgb": [
+        172,
+        44,
+        105
+      ],
+      "traversable": true,
+      "encounter_area_number": "62",
+      "encounter_name": "Treasury Tower",
+      "source_row_number": 11,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "62",
+        "Encounter Name": "Treasury Tower",
+        "Feature Color Red": "172",
+        "Feature Color Green": "44",
+        "Featuer Color Blue": "105"
+      }
+    },
+    "25,187,190": {
+      "class_id": "encounter_area_63",
+      "label": "Encounter Area",
+      "rgb": [
+        25,
+        187,
+        190
+      ],
+      "traversable": true,
+      "encounter_area_number": "63",
+      "encounter_name": "North Mall",
+      "source_row_number": 12,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "63",
+        "Encounter Name": "North Mall",
+        "Feature Color Red": "25",
+        "Feature Color Green": "187",
+        "Featuer Color Blue": "190"
+      }
+    },
+    "235,142,43": {
+      "class_id": "encounter_area_64",
+      "label": "Encounter Area",
+      "rgb": [
+        235,
+        142,
+        43
+      ],
+      "traversable": true,
+      "encounter_area_number": "64",
+      "encounter_name": "Palace Guard Hall",
+      "source_row_number": 13,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64",
+        "Encounter Name": "Palace Guard Hall",
+        "Feature Color Red": "235",
+        "Feature Color Green": "142",
+        "Featuer Color Blue": "43"
+      }
+    },
+    "156,21,65": {
+      "class_id": "encounter_area_64a",
+      "label": "Encounter Area",
+      "rgb": [
+        156,
+        21,
+        65
+      ],
+      "traversable": true,
+      "encounter_area_number": "64a",
+      "encounter_name": "Entry",
+      "source_row_number": 14,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64a",
+        "Encounter Name": "Entry",
+        "Feature Color Red": "156",
+        "Feature Color Green": "21",
+        "Featuer Color Blue": "65"
+      }
+    },
+    "188,169,211": {
+      "class_id": "encounter_area_64b",
+      "label": "Encounter Area",
+      "rgb": [
+        188,
+        169,
+        211
+      ],
+      "traversable": true,
+      "encounter_area_number": "64b",
+      "encounter_name": "North Cell",
+      "source_row_number": 15,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64b",
+        "Encounter Name": "North Cell",
+        "Feature Color Red": "188",
+        "Feature Color Green": "169",
+        "Featuer Color Blue": "211"
+      }
+    },
+    "189,67,68": {
+      "class_id": "encounter_area_64c",
+      "label": "Encounter Area",
+      "rgb": [
+        189,
+        67,
+        68
+      ],
+      "traversable": true,
+      "encounter_area_number": "64c",
+      "encounter_name": "North Armory",
+      "source_row_number": 16,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64c",
+        "Encounter Name": "North Armory",
+        "Feature Color Red": "189",
+        "Feature Color Green": "67",
+        "Featuer Color Blue": "68"
+      }
+    },
+    "56,149,207": {
+      "class_id": "encounter_area_64d",
+      "label": "Encounter Area",
+      "rgb": [
+        56,
+        149,
+        207
+      ],
+      "traversable": true,
+      "encounter_area_number": "64d",
+      "encounter_name": "Assembly",
+      "source_row_number": 17,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64d",
+        "Encounter Name": "Assembly",
+        "Feature Color Red": "56",
+        "Feature Color Green": "149",
+        "Featuer Color Blue": "207"
+      }
+    },
+    "53,97,124": {
+      "class_id": "encounter_area_64e",
+      "label": "Encounter Area",
+      "rgb": [
+        53,
+        97,
+        124
+      ],
+      "traversable": true,
+      "encounter_area_number": "64e",
+      "encounter_name": "South Cell",
+      "source_row_number": 18,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64e",
+        "Encounter Name": "South Cell",
+        "Feature Color Red": "53",
+        "Feature Color Green": "97",
+        "Featuer Color Blue": "124"
+      }
+    },
+    "210,88,162": {
+      "class_id": "encounter_area_64f",
+      "label": "Encounter Area",
+      "rgb": [
+        210,
+        88,
+        162
+      ],
+      "traversable": true,
+      "encounter_area_number": "64f",
+      "encounter_name": "South Armory",
+      "source_row_number": 19,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64f",
+        "Encounter Name": "South Armory",
+        "Feature Color Red": "210",
+        "Feature Color Green": "88",
+        "Featuer Color Blue": "162"
+      }
+    },
+    "228,159,171": {
+      "class_id": "encounter_area_64g",
+      "label": "Encounter Area",
+      "rgb": [
+        228,
+        159,
+        171
+      ],
+      "traversable": true,
+      "encounter_area_number": "64g",
+      "encounter_name": "Quarters",
+      "source_row_number": 20,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64g",
+        "Encounter Name": "Quarters",
+        "Feature Color Red": "228",
+        "Feature Color Green": "159",
+        "Featuer Color Blue": "171"
+      }
+    },
+    "89,44,128": {
+      "class_id": "encounter_area_64h",
+      "label": "Encounter Area",
+      "rgb": [
+        89,
+        44,
+        128
+      ],
+      "traversable": true,
+      "encounter_area_number": "64h",
+      "encounter_name": "Mess Hall",
+      "source_row_number": 21,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64h",
+        "Encounter Name": "Mess Hall",
+        "Feature Color Red": "89",
+        "Feature Color Green": "44",
+        "Featuer Color Blue": "128"
+      }
+    },
+    "132,215,129": {
+      "class_id": "encounter_area_65a",
+      "label": "Encounter Area",
+      "rgb": [
+        132,
+        215,
+        129
+      ],
+      "traversable": true,
+      "encounter_area_number": "65a",
+      "encounter_name": "Larder Office",
+      "source_row_number": 22,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "65a",
+        "Encounter Name": "Larder Office",
+        "Feature Color Red": "132",
+        "Feature Color Green": "215",
+        "Featuer Color Blue": "129"
+      }
+    },
+    "174,61,160": {
+      "class_id": "encounter_area_65b",
+      "label": "Encounter Area",
+      "rgb": [
+        174,
+        61,
+        160
+      ],
+      "traversable": true,
+      "encounter_area_number": "65b",
+      "encounter_name": "Larder",
+      "source_row_number": 23,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "65b",
+        "Encounter Name": "Larder",
+        "Feature Color Red": "174",
+        "Feature Color Green": "61",
+        "Featuer Color Blue": "160"
+      }
+    },
+    "219,74,232": {
+      "class_id": "encounter_area_66",
+      "label": "Encounter Area",
+      "rgb": [
+        219,
+        74,
+        232
+      ],
+      "traversable": true,
+      "encounter_area_number": "66",
+      "encounter_name": "Court of Reception",
+      "source_row_number": 24,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "66",
+        "Encounter Name": "Court of Reception",
+        "Feature Color Red": "219",
+        "Feature Color Green": "74",
+        "Featuer Color Blue": "232"
+      }
+    },
+    "199,95,27": {
+      "class_id": "encounter_area_67",
+      "label": "Encounter Area",
+      "rgb": [
+        199,
+        95,
+        27
+      ],
+      "traversable": true,
+      "encounter_area_number": "67",
+      "encounter_name": "Great Plaza",
+      "source_row_number": 25,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67",
+        "Encounter Name": "Great Plaza",
+        "Feature Color Red": "199",
+        "Feature Color Green": "95",
+        "Featuer Color Blue": "27"
+      }
+    },
+    "207,153,102": {
+      "class_id": "encounter_area_67a",
+      "label": "Encounter Area",
+      "rgb": [
+        207,
+        153,
+        102
+      ],
+      "traversable": true,
+      "encounter_area_number": "67a",
+      "encounter_name": "East Falls",
+      "source_row_number": 26,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67a",
+        "Encounter Name": "East Falls",
+        "Feature Color Red": "207",
+        "Feature Color Green": "153",
+        "Featuer Color Blue": "102"
+      }
+    },
+    "109,189,84": {
+      "class_id": "encounter_area_67b",
+      "label": "Encounter Area",
+      "rgb": [
+        109,
+        189,
+        84
+      ],
+      "traversable": true,
+      "encounter_area_number": "67b",
+      "encounter_name": "West Falls",
+      "source_row_number": 27,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67b",
+        "Encounter Name": "West Falls",
+        "Feature Color Red": "109",
+        "Feature Color Green": "189",
+        "Featuer Color Blue": "84"
+      }
+    },
+    "68,231,176": {
+      "class_id": "encounter_area_67c",
+      "label": "Encounter Area",
+      "rgb": [
+        68,
+        231,
+        176
+      ],
+      "traversable": true,
+      "encounter_area_number": "67c",
+      "encounter_name": "Steps to Palace",
+      "source_row_number": 28,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67c",
+        "Encounter Name": "Steps to Palace",
+        "Feature Color Red": "68",
+        "Feature Color Green": "231",
+        "Featuer Color Blue": "176"
+      }
+    },
+    "28,77,35": {
+      "class_id": "encounter_area_67d",
+      "label": "Encounter Area",
+      "rgb": [
+        28,
+        77,
+        35
+      ],
+      "traversable": true,
+      "encounter_area_number": "67d",
+      "encounter_name": "Fountain",
+      "source_row_number": 29,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67d",
+        "Encounter Name": "Fountain",
+        "Feature Color Red": "28",
+        "Feature Color Green": "77",
+        "Featuer Color Blue": "35"
+      }
+    },
+    "195,70,127": {
+      "class_id": "encounter_area_68a",
+      "label": "Encounter Area",
+      "rgb": [
+        195,
+        70,
+        127
+      ],
+      "traversable": true,
+      "encounter_area_number": "68a",
+      "encounter_name": "Alley",
+      "source_row_number": 30,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68a",
+        "Encounter Name": "Alley",
+        "Feature Color Red": "195",
+        "Feature Color Green": "70",
+        "Featuer Color Blue": "127"
+      }
+    },
+    "81,131,86": {
+      "class_id": "encounter_area_68b",
+      "label": "Encounter Area",
+      "rgb": [
+        81,
+        131,
+        86
+      ],
+      "traversable": true,
+      "encounter_area_number": "68b",
+      "encounter_name": "Slud Entrance",
+      "source_row_number": 31,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68b",
+        "Encounter Name": "Slud Entrance",
+        "Feature Color Red": "81",
+        "Feature Color Green": "131",
+        "Featuer Color Blue": "86"
+      }
+    },
+    "70,153,30": {
+      "class_id": "encounter_area_68c",
+      "label": "Encounter Area",
+      "rgb": [
+        70,
+        153,
+        30
+      ],
+      "traversable": true,
+      "encounter_area_number": "68c",
+      "encounter_name": "Slud Clan Rooms",
+      "source_row_number": 32,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68c",
+        "Encounter Name": "Slud Clan Rooms",
+        "Feature Color Red": "70",
+        "Feature Color Green": "153",
+        "Featuer Color Blue": "30"
+      }
+    },
+    "137,22,143": {
+      "class_id": "encounter_area_68d",
+      "label": "Encounter Area",
+      "rgb": [
+        137,
+        22,
+        143
+      ],
+      "traversable": true,
+      "encounter_area_number": "68d",
+      "encounter_name": "Glup Clan Rooms",
+      "source_row_number": 33,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68d",
+        "Encounter Name": "Glup Clan Rooms",
+        "Feature Color Red": "137",
+        "Feature Color Green": "22",
+        "Featuer Color Blue": "143"
+      }
+    },
+    "131,49,46": {
+      "class_id": "encounter_area_68e",
+      "label": "Encounter Area",
+      "rgb": [
+        131,
+        49,
+        46
+      ],
+      "traversable": true,
+      "encounter_area_number": "68e",
+      "encounter_name": "Welcome Room",
+      "source_row_number": 34,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68e",
+        "Encounter Name": "Welcome Room",
+        "Feature Color Red": "131",
+        "Feature Color Green": "49",
+        "Featuer Color Blue": "46"
+      }
+    },
+    "151,109,170": {
+      "class_id": "encounter_area_68f",
+      "label": "Encounter Area",
+      "rgb": [
+        151,
+        109,
+        170
+      ],
+      "traversable": true,
+      "encounter_area_number": "68f",
+      "encounter_name": "Guards Post",
+      "source_row_number": 35,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68f",
+        "Encounter Name": "Guards Post",
+        "Feature Color Red": "151",
+        "Feature Color Green": "109",
+        "Featuer Color Blue": "170"
+      }
+    },
+    "222,30,189": {
+      "class_id": "encounter_area_68g",
+      "label": "Encounter Area",
+      "rgb": [
+        222,
+        30,
+        189
+      ],
+      "traversable": true,
+      "encounter_area_number": "68g",
+      "encounter_name": "Waiting Place",
+      "source_row_number": 36,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68g",
+        "Encounter Name": "Waiting Place",
+        "Feature Color Red": "222",
+        "Feature Color Green": "30",
+        "Featuer Color Blue": "189"
+      }
+    },
+    "95,165,131": {
+      "class_id": "encounter_area_68h",
+      "label": "Encounter Area",
+      "rgb": [
+        95,
+        165,
+        131
+      ],
+      "traversable": true,
+      "encounter_area_number": "68h",
+      "encounter_name": "Treasury",
+      "source_row_number": 37,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68h",
+        "Encounter Name": "Treasury",
+        "Feature Color Red": "95",
+        "Feature Color Green": "165",
+        "Featuer Color Blue": "131"
+      }
+    },
+    "124,231,52": {
+      "class_id": "encounter_area_68i",
+      "label": "Encounter Area",
+      "rgb": [
+        124,
+        231,
+        52
+      ],
+      "traversable": true,
+      "encounter_area_number": "68i",
+      "encounter_name": "Messy Mess",
+      "source_row_number": 38,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68i",
+        "Encounter Name": "Messy Mess",
+        "Feature Color Red": "124",
+        "Feature Color Green": "231",
+        "Featuer Color Blue": "52"
+      }
+    },
+    "218,197,70": {
+      "class_id": "encounter_area_68j",
+      "label": "Encounter Area",
+      "rgb": [
+        218,
+        197,
+        70
+      ],
+      "traversable": true,
+      "encounter_area_number": "68j",
+      "encounter_name": "Bulp Clan Rooms",
+      "source_row_number": 39,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68j",
+        "Encounter Name": "Bulp Clan Rooms",
+        "Feature Color Red": "218",
+        "Feature Color Green": "197",
+        "Featuer Color Blue": "70"
+      }
+    },
+    "54,199,124": {
+      "class_id": "encounter_area_68k",
+      "label": "Encounter Area",
+      "rgb": [
+        54,
+        199,
+        124
+      ],
+      "traversable": true,
+      "encounter_area_number": "68k",
+      "encounter_name": "Highbulp Quarters",
+      "source_row_number": 40,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68k",
+        "Encounter Name": "Highbulp Quarters",
+        "Feature Color Red": "54",
+        "Feature Color Green": "199",
+        "Featuer Color Blue": "124"
+      }
+    },
+    "222,229,169": {
+      "class_id": "encounter_area_68l",
+      "label": "Encounter Area",
+      "rgb": [
+        222,
+        229,
+        169
+      ],
+      "traversable": true,
+      "encounter_area_number": "68l",
+      "encounter_name": "Secret Exit",
+      "source_row_number": 41,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68l",
+        "Encounter Name": "Secret Exit",
+        "Feature Color Red": "222",
+        "Feature Color Green": "229",
+        "Featuer Color Blue": "169"
+      }
+    },
+    "136,151,50": {
+      "class_id": "encounter_area_68m",
+      "label": "Encounter Area",
+      "rgb": [
+        136,
+        151,
+        50
+      ],
+      "traversable": true,
+      "encounter_area_number": "68m",
+      "encounter_name": "Court of the Aghar",
+      "source_row_number": 42,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68m",
+        "Encounter Name": "Court of the Aghar",
+        "Feature Color Red": "136",
+        "Feature Color Green": "151",
+        "Featuer Color Blue": "50"
+      }
+    },
+    "119,73,154": {
+      "class_id": "encounter_area_69a",
+      "label": "Encounter Area",
+      "rgb": [
+        119,
+        73,
+        154
+      ],
+      "traversable": true,
+      "encounter_area_number": "69a",
+      "encounter_name": "Delvers Welcome",
+      "source_row_number": 43,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "69a",
+        "Encounter Name": "Delvers Welcome",
+        "Feature Color Red": "119",
+        "Feature Color Green": "73",
+        "Featuer Color Blue": "154"
+      }
+    },
+    "91,113,40": {
+      "class_id": "encounter_area_69b",
+      "label": "Encounter Area",
+      "rgb": [
+        91,
+        113,
+        40
+      ],
+      "traversable": true,
+      "encounter_area_number": "69b",
+      "encounter_name": "The Secret Way",
+      "source_row_number": 44,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "69b",
+        "Encounter Name": "The Secret Way",
+        "Feature Color Red": "91",
+        "Feature Color Green": "113",
+        "Featuer Color Blue": "40"
+      }
+    },
+    "128,233,171": {
+      "class_id": "encounter_area_70a",
+      "label": "Encounter Area",
+      "rgb": [
+        128,
+        233,
+        171
+      ],
+      "traversable": true,
+      "encounter_area_number": "70a",
+      "encounter_name": "Pillars of the Palace",
+      "source_row_number": 45,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70a",
+        "Encounter Name": "Pillars of the Palace",
+        "Feature Color Red": "128",
+        "Feature Color Green": "233",
+        "Featuer Color Blue": "171"
+      }
+    },
+    "29,58,169": {
+      "class_id": "encounter_area_70b",
+      "label": "Encounter Area",
+      "rgb": [
+        29,
+        58,
+        169
+      ],
+      "traversable": true,
+      "encounter_area_number": "70b",
+      "encounter_name": "Honored Dead",
+      "source_row_number": 46,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70b",
+        "Encounter Name": "Honored Dead",
+        "Feature Color Red": "29",
+        "Feature Color Green": "58",
+        "Featuer Color Blue": "169"
+      }
+    },
+    "23,68,98": {
+      "class_id": "encounter_area_70c",
+      "label": "Encounter Area",
+      "rgb": [
+        23,
+        68,
+        98
+      ],
+      "traversable": true,
+      "encounter_area_number": "70c",
+      "encounter_name": "First Hall",
+      "source_row_number": 47,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70c",
+        "Encounter Name": "First Hall",
+        "Feature Color Red": "23",
+        "Feature Color Green": "68",
+        "Featuer Color Blue": "98"
+      }
+    },
+    "145,129,206": {
+      "class_id": "encounter_area_70d",
+      "label": "Encounter Area",
+      "rgb": [
+        145,
+        129,
+        206
+      ],
+      "traversable": true,
+      "encounter_area_number": "70d",
+      "encounter_name": "Palace Treasury",
+      "source_row_number": 48,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70d",
+        "Encounter Name": "Palace Treasury",
+        "Feature Color Red": "145",
+        "Feature Color Green": "129",
+        "Featuer Color Blue": "206"
+      }
+    },
+    "146,82,21": {
+      "class_id": "encounter_area_70e",
+      "label": "Encounter Area",
+      "rgb": [
+        146,
+        82,
+        21
+      ],
+      "traversable": true,
+      "encounter_area_number": "70e",
+      "encounter_name": "Bozak Quarters",
+      "source_row_number": 49,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70e",
+        "Encounter Name": "Bozak Quarters",
+        "Feature Color Red": "146",
+        "Feature Color Green": "82",
+        "Featuer Color Blue": "21"
+      }
+    },
+    "222,197,21": {
+      "class_id": "encounter_area_70f",
+      "label": "Encounter Area",
+      "rgb": [
+        222,
+        197,
+        21
+      ],
+      "traversable": true,
+      "encounter_area_number": "70f",
+      "encounter_name": "Bozak Captain",
+      "source_row_number": 50,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70f",
+        "Encounter Name": "Bozak Captain",
+        "Feature Color Red": "222",
+        "Feature Color Green": "197",
+        "Featuer Color Blue": "21"
+      }
+    },
+    "143,204,199": {
+      "class_id": "encounter_area_70g",
+      "label": "Encounter Area",
+      "rgb": [
+        143,
+        204,
+        199
+      ],
+      "traversable": true,
+      "encounter_area_number": "70g",
+      "encounter_name": "Prisoner Cell",
+      "source_row_number": 51,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70g",
+        "Encounter Name": "Prisoner Cell",
+        "Feature Color Red": "143",
+        "Feature Color Green": "204",
+        "Featuer Color Blue": "199"
+      }
+    },
+    "194,132,157": {
+      "class_id": "encounter_area_70h",
+      "label": "Encounter Area",
+      "rgb": [
+        194,
+        132,
+        157
+      ],
+      "traversable": true,
+      "encounter_area_number": "70h",
+      "encounter_name": "Bozak Commander",
+      "source_row_number": 52,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70h",
+        "Encounter Name": "Bozak Commander",
+        "Feature Color Red": "194",
+        "Feature Color Green": "132",
+        "Featuer Color Blue": "157"
+      }
+    },
+    "167,208,109": {
+      "class_id": "encounter_area_70i",
+      "label": "Encounter Area",
+      "rgb": [
+        167,
+        208,
+        109
+      ],
+      "traversable": true,
+      "encounter_area_number": "70i",
+      "encounter_name": "Long Hall",
+      "source_row_number": 53,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70i",
+        "Encounter Name": "Long Hall",
+        "Feature Color Red": "167",
+        "Feature Color Green": "208",
+        "Featuer Color Blue": "109"
+      }
+    },
+    "150,111,124": {
+      "class_id": "encounter_area_70j",
+      "label": "Encounter Area",
+      "rgb": [
+        150,
+        111,
+        124
+      ],
+      "traversable": true,
+      "encounter_area_number": "70j",
+      "encounter_name": "Hall of Sound",
+      "source_row_number": 54,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70j",
+        "Encounter Name": "Hall of Sound",
+        "Feature Color Red": "150",
+        "Feature Color Green": "111",
+        "Featuer Color Blue": "124"
+      }
+    },
+    "213,132,226": {
+      "class_id": "encounter_area_70k",
+      "label": "Encounter Area",
+      "rgb": [
+        213,
+        132,
+        226
+      ],
+      "traversable": true,
+      "encounter_area_number": "70k",
+      "encounter_name": "Court of the Balance",
+      "source_row_number": 55,
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70k",
+        "Encounter Name": "Court of the Balance",
+        "Feature Color Red": "213",
+        "Feature Color Green": "132",
+        "Featuer Color Blue": "226"
+      }
+    }
+  },
+  "entries": [
+    {
+      "row_number": 1,
+      "class_id": "wall",
+      "label": "Wall",
+      "rgb": [
+        11,
+        119,
+        255
+      ],
+      "rgb_key": "11,119,255",
+      "traversable": false,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_fields": {
+        "Feature Type": "Wall",
+        "Traversable?": "No",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "11",
+        "Feature Color Green": "119",
+        "Featuer Color Blue": "255"
+      }
+    },
+    {
+      "row_number": 2,
+      "class_id": "rubble",
+      "label": "Rubble",
+      "rgb": [
+        145,
+        240,
+        240
+      ],
+      "rgb_key": "145,240,240",
+      "traversable": false,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_fields": {
+        "Feature Type": "Rubble",
+        "Traversable?": "No",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "145",
+        "Feature Color Green": "240",
+        "Featuer Color Blue": "240"
+      }
+    },
+    {
+      "row_number": 3,
+      "class_id": "door",
+      "label": "Door",
+      "rgb": [
+        248,
+        18,
+        60
+      ],
+      "rgb_key": "248,18,60",
+      "traversable": null,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_fields": {
+        "Feature Type": "Door",
+        "Traversable?": "If Open",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "248",
+        "Feature Color Green": "18",
+        "Featuer Color Blue": "60"
+      }
+    },
+    {
+      "row_number": 4,
+      "class_id": "secret_door",
+      "label": "Secret Door",
+      "rgb": [
+        138,
+        8,
+        251
+      ],
+      "rgb_key": "138,8,251",
+      "traversable": null,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_fields": {
+        "Feature Type": "Secret Door",
+        "Traversable?": "If Open",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "138",
+        "Feature Color Green": "8",
+        "Featuer Color Blue": "251"
+      }
+    },
+    {
+      "row_number": 5,
+      "class_id": "archway",
+      "label": "Archway",
+      "rgb": [
+        255,
+        130,
+        0
+      ],
+      "rgb_key": "255,130,0",
+      "traversable": true,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_fields": {
+        "Feature Type": "Archway",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "255",
+        "Feature Color Green": "130",
+        "Featuer Color Blue": "0"
+      }
+    },
+    {
+      "row_number": 6,
+      "class_id": "open_space",
+      "label": "Open Space",
+      "rgb": [
+        163,
+        165,
+        166
+      ],
+      "rgb_key": "163,165,166",
+      "traversable": true,
+      "encounter_area_number": null,
+      "encounter_name": null,
+      "source_fields": {
+        "Feature Type": "Open Space",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "",
+        "Encounter Name": "",
+        "Feature Color Red": "163",
+        "Feature Color Green": "165",
+        "Featuer Color Blue": "166"
+      }
+    },
+    {
+      "row_number": 8,
+      "class_id": "encounter_area_59b",
+      "label": "Encounter Area",
+      "rgb": [
+        204,
+        102,
+        255
+      ],
+      "rgb_key": "204,102,255",
+      "traversable": true,
+      "encounter_area_number": "59b",
+      "encounter_name": "Dance on the Wall",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "59b",
+        "Encounter Name": "Dance on the Wall",
+        "Feature Color Red": "204",
+        "Feature Color Green": "102",
+        "Featuer Color Blue": "255"
+      }
+    },
+    {
+      "row_number": 9,
+      "class_id": "encounter_area_60",
+      "label": "Encounter Area",
+      "rgb": [
+        42,
+        123,
+        20
+      ],
+      "rgb_key": "42,123,20",
+      "traversable": true,
+      "encounter_area_number": "60",
+      "encounter_name": "Approach to the Hall of Justice",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "60",
+        "Encounter Name": "Approach to the Hall of Justice",
+        "Feature Color Red": "42",
+        "Feature Color Green": "123",
+        "Featuer Color Blue": "20"
+      }
+    },
+    {
+      "row_number": 10,
+      "class_id": "encounter_area_61",
+      "label": "Encounter Area",
+      "rgb": [
+        152,
+        43,
+        194
+      ],
+      "rgb_key": "152,43,194",
+      "traversable": true,
+      "encounter_area_number": "61",
+      "encounter_name": "North Cavern Falls",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "61",
+        "Encounter Name": "North Cavern Falls",
+        "Feature Color Red": "152",
+        "Feature Color Green": "43",
+        "Featuer Color Blue": "194"
+      }
+    },
+    {
+      "row_number": 11,
+      "class_id": "encounter_area_62",
+      "label": "Encounter Area",
+      "rgb": [
+        172,
+        44,
+        105
+      ],
+      "rgb_key": "172,44,105",
+      "traversable": true,
+      "encounter_area_number": "62",
+      "encounter_name": "Treasury Tower",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "62",
+        "Encounter Name": "Treasury Tower",
+        "Feature Color Red": "172",
+        "Feature Color Green": "44",
+        "Featuer Color Blue": "105"
+      }
+    },
+    {
+      "row_number": 12,
+      "class_id": "encounter_area_63",
+      "label": "Encounter Area",
+      "rgb": [
+        25,
+        187,
+        190
+      ],
+      "rgb_key": "25,187,190",
+      "traversable": true,
+      "encounter_area_number": "63",
+      "encounter_name": "North Mall",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "63",
+        "Encounter Name": "North Mall",
+        "Feature Color Red": "25",
+        "Feature Color Green": "187",
+        "Featuer Color Blue": "190"
+      }
+    },
+    {
+      "row_number": 13,
+      "class_id": "encounter_area_64",
+      "label": "Encounter Area",
+      "rgb": [
+        235,
+        142,
+        43
+      ],
+      "rgb_key": "235,142,43",
+      "traversable": true,
+      "encounter_area_number": "64",
+      "encounter_name": "Palace Guard Hall",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64",
+        "Encounter Name": "Palace Guard Hall",
+        "Feature Color Red": "235",
+        "Feature Color Green": "142",
+        "Featuer Color Blue": "43"
+      }
+    },
+    {
+      "row_number": 14,
+      "class_id": "encounter_area_64a",
+      "label": "Encounter Area",
+      "rgb": [
+        156,
+        21,
+        65
+      ],
+      "rgb_key": "156,21,65",
+      "traversable": true,
+      "encounter_area_number": "64a",
+      "encounter_name": "Entry",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64a",
+        "Encounter Name": "Entry",
+        "Feature Color Red": "156",
+        "Feature Color Green": "21",
+        "Featuer Color Blue": "65"
+      }
+    },
+    {
+      "row_number": 15,
+      "class_id": "encounter_area_64b",
+      "label": "Encounter Area",
+      "rgb": [
+        188,
+        169,
+        211
+      ],
+      "rgb_key": "188,169,211",
+      "traversable": true,
+      "encounter_area_number": "64b",
+      "encounter_name": "North Cell",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64b",
+        "Encounter Name": "North Cell",
+        "Feature Color Red": "188",
+        "Feature Color Green": "169",
+        "Featuer Color Blue": "211"
+      }
+    },
+    {
+      "row_number": 16,
+      "class_id": "encounter_area_64c",
+      "label": "Encounter Area",
+      "rgb": [
+        189,
+        67,
+        68
+      ],
+      "rgb_key": "189,67,68",
+      "traversable": true,
+      "encounter_area_number": "64c",
+      "encounter_name": "North Armory",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64c",
+        "Encounter Name": "North Armory",
+        "Feature Color Red": "189",
+        "Feature Color Green": "67",
+        "Featuer Color Blue": "68"
+      }
+    },
+    {
+      "row_number": 17,
+      "class_id": "encounter_area_64d",
+      "label": "Encounter Area",
+      "rgb": [
+        56,
+        149,
+        207
+      ],
+      "rgb_key": "56,149,207",
+      "traversable": true,
+      "encounter_area_number": "64d",
+      "encounter_name": "Assembly",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64d",
+        "Encounter Name": "Assembly",
+        "Feature Color Red": "56",
+        "Feature Color Green": "149",
+        "Featuer Color Blue": "207"
+      }
+    },
+    {
+      "row_number": 18,
+      "class_id": "encounter_area_64e",
+      "label": "Encounter Area",
+      "rgb": [
+        53,
+        97,
+        124
+      ],
+      "rgb_key": "53,97,124",
+      "traversable": true,
+      "encounter_area_number": "64e",
+      "encounter_name": "South Cell",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64e",
+        "Encounter Name": "South Cell",
+        "Feature Color Red": "53",
+        "Feature Color Green": "97",
+        "Featuer Color Blue": "124"
+      }
+    },
+    {
+      "row_number": 19,
+      "class_id": "encounter_area_64f",
+      "label": "Encounter Area",
+      "rgb": [
+        210,
+        88,
+        162
+      ],
+      "rgb_key": "210,88,162",
+      "traversable": true,
+      "encounter_area_number": "64f",
+      "encounter_name": "South Armory",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64f",
+        "Encounter Name": "South Armory",
+        "Feature Color Red": "210",
+        "Feature Color Green": "88",
+        "Featuer Color Blue": "162"
+      }
+    },
+    {
+      "row_number": 20,
+      "class_id": "encounter_area_64g",
+      "label": "Encounter Area",
+      "rgb": [
+        228,
+        159,
+        171
+      ],
+      "rgb_key": "228,159,171",
+      "traversable": true,
+      "encounter_area_number": "64g",
+      "encounter_name": "Quarters",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64g",
+        "Encounter Name": "Quarters",
+        "Feature Color Red": "228",
+        "Feature Color Green": "159",
+        "Featuer Color Blue": "171"
+      }
+    },
+    {
+      "row_number": 21,
+      "class_id": "encounter_area_64h",
+      "label": "Encounter Area",
+      "rgb": [
+        89,
+        44,
+        128
+      ],
+      "rgb_key": "89,44,128",
+      "traversable": true,
+      "encounter_area_number": "64h",
+      "encounter_name": "Mess Hall",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "64h",
+        "Encounter Name": "Mess Hall",
+        "Feature Color Red": "89",
+        "Feature Color Green": "44",
+        "Featuer Color Blue": "128"
+      }
+    },
+    {
+      "row_number": 22,
+      "class_id": "encounter_area_65a",
+      "label": "Encounter Area",
+      "rgb": [
+        132,
+        215,
+        129
+      ],
+      "rgb_key": "132,215,129",
+      "traversable": true,
+      "encounter_area_number": "65a",
+      "encounter_name": "Larder Office",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "65a",
+        "Encounter Name": "Larder Office",
+        "Feature Color Red": "132",
+        "Feature Color Green": "215",
+        "Featuer Color Blue": "129"
+      }
+    },
+    {
+      "row_number": 23,
+      "class_id": "encounter_area_65b",
+      "label": "Encounter Area",
+      "rgb": [
+        174,
+        61,
+        160
+      ],
+      "rgb_key": "174,61,160",
+      "traversable": true,
+      "encounter_area_number": "65b",
+      "encounter_name": "Larder",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "65b",
+        "Encounter Name": "Larder",
+        "Feature Color Red": "174",
+        "Feature Color Green": "61",
+        "Featuer Color Blue": "160"
+      }
+    },
+    {
+      "row_number": 24,
+      "class_id": "encounter_area_66",
+      "label": "Encounter Area",
+      "rgb": [
+        219,
+        74,
+        232
+      ],
+      "rgb_key": "219,74,232",
+      "traversable": true,
+      "encounter_area_number": "66",
+      "encounter_name": "Court of Reception",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "66",
+        "Encounter Name": "Court of Reception",
+        "Feature Color Red": "219",
+        "Feature Color Green": "74",
+        "Featuer Color Blue": "232"
+      }
+    },
+    {
+      "row_number": 25,
+      "class_id": "encounter_area_67",
+      "label": "Encounter Area",
+      "rgb": [
+        199,
+        95,
+        27
+      ],
+      "rgb_key": "199,95,27",
+      "traversable": true,
+      "encounter_area_number": "67",
+      "encounter_name": "Great Plaza",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67",
+        "Encounter Name": "Great Plaza",
+        "Feature Color Red": "199",
+        "Feature Color Green": "95",
+        "Featuer Color Blue": "27"
+      }
+    },
+    {
+      "row_number": 26,
+      "class_id": "encounter_area_67a",
+      "label": "Encounter Area",
+      "rgb": [
+        207,
+        153,
+        102
+      ],
+      "rgb_key": "207,153,102",
+      "traversable": true,
+      "encounter_area_number": "67a",
+      "encounter_name": "East Falls",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67a",
+        "Encounter Name": "East Falls",
+        "Feature Color Red": "207",
+        "Feature Color Green": "153",
+        "Featuer Color Blue": "102"
+      }
+    },
+    {
+      "row_number": 27,
+      "class_id": "encounter_area_67b",
+      "label": "Encounter Area",
+      "rgb": [
+        109,
+        189,
+        84
+      ],
+      "rgb_key": "109,189,84",
+      "traversable": true,
+      "encounter_area_number": "67b",
+      "encounter_name": "West Falls",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67b",
+        "Encounter Name": "West Falls",
+        "Feature Color Red": "109",
+        "Feature Color Green": "189",
+        "Featuer Color Blue": "84"
+      }
+    },
+    {
+      "row_number": 28,
+      "class_id": "encounter_area_67c",
+      "label": "Encounter Area",
+      "rgb": [
+        68,
+        231,
+        176
+      ],
+      "rgb_key": "68,231,176",
+      "traversable": true,
+      "encounter_area_number": "67c",
+      "encounter_name": "Steps to Palace",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67c",
+        "Encounter Name": "Steps to Palace",
+        "Feature Color Red": "68",
+        "Feature Color Green": "231",
+        "Featuer Color Blue": "176"
+      }
+    },
+    {
+      "row_number": 29,
+      "class_id": "encounter_area_67d",
+      "label": "Encounter Area",
+      "rgb": [
+        28,
+        77,
+        35
+      ],
+      "rgb_key": "28,77,35",
+      "traversable": true,
+      "encounter_area_number": "67d",
+      "encounter_name": "Fountain",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "67d",
+        "Encounter Name": "Fountain",
+        "Feature Color Red": "28",
+        "Feature Color Green": "77",
+        "Featuer Color Blue": "35"
+      }
+    },
+    {
+      "row_number": 30,
+      "class_id": "encounter_area_68a",
+      "label": "Encounter Area",
+      "rgb": [
+        195,
+        70,
+        127
+      ],
+      "rgb_key": "195,70,127",
+      "traversable": true,
+      "encounter_area_number": "68a",
+      "encounter_name": "Alley",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68a",
+        "Encounter Name": "Alley",
+        "Feature Color Red": "195",
+        "Feature Color Green": "70",
+        "Featuer Color Blue": "127"
+      }
+    },
+    {
+      "row_number": 31,
+      "class_id": "encounter_area_68b",
+      "label": "Encounter Area",
+      "rgb": [
+        81,
+        131,
+        86
+      ],
+      "rgb_key": "81,131,86",
+      "traversable": true,
+      "encounter_area_number": "68b",
+      "encounter_name": "Slud Entrance",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68b",
+        "Encounter Name": "Slud Entrance",
+        "Feature Color Red": "81",
+        "Feature Color Green": "131",
+        "Featuer Color Blue": "86"
+      }
+    },
+    {
+      "row_number": 32,
+      "class_id": "encounter_area_68c",
+      "label": "Encounter Area",
+      "rgb": [
+        70,
+        153,
+        30
+      ],
+      "rgb_key": "70,153,30",
+      "traversable": true,
+      "encounter_area_number": "68c",
+      "encounter_name": "Slud Clan Rooms",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68c",
+        "Encounter Name": "Slud Clan Rooms",
+        "Feature Color Red": "70",
+        "Feature Color Green": "153",
+        "Featuer Color Blue": "30"
+      }
+    },
+    {
+      "row_number": 33,
+      "class_id": "encounter_area_68d",
+      "label": "Encounter Area",
+      "rgb": [
+        137,
+        22,
+        143
+      ],
+      "rgb_key": "137,22,143",
+      "traversable": true,
+      "encounter_area_number": "68d",
+      "encounter_name": "Glup Clan Rooms",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68d",
+        "Encounter Name": "Glup Clan Rooms",
+        "Feature Color Red": "137",
+        "Feature Color Green": "22",
+        "Featuer Color Blue": "143"
+      }
+    },
+    {
+      "row_number": 34,
+      "class_id": "encounter_area_68e",
+      "label": "Encounter Area",
+      "rgb": [
+        131,
+        49,
+        46
+      ],
+      "rgb_key": "131,49,46",
+      "traversable": true,
+      "encounter_area_number": "68e",
+      "encounter_name": "Welcome Room",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68e",
+        "Encounter Name": "Welcome Room",
+        "Feature Color Red": "131",
+        "Feature Color Green": "49",
+        "Featuer Color Blue": "46"
+      }
+    },
+    {
+      "row_number": 35,
+      "class_id": "encounter_area_68f",
+      "label": "Encounter Area",
+      "rgb": [
+        151,
+        109,
+        170
+      ],
+      "rgb_key": "151,109,170",
+      "traversable": true,
+      "encounter_area_number": "68f",
+      "encounter_name": "Guards Post",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68f",
+        "Encounter Name": "Guards Post",
+        "Feature Color Red": "151",
+        "Feature Color Green": "109",
+        "Featuer Color Blue": "170"
+      }
+    },
+    {
+      "row_number": 36,
+      "class_id": "encounter_area_68g",
+      "label": "Encounter Area",
+      "rgb": [
+        222,
+        30,
+        189
+      ],
+      "rgb_key": "222,30,189",
+      "traversable": true,
+      "encounter_area_number": "68g",
+      "encounter_name": "Waiting Place",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68g",
+        "Encounter Name": "Waiting Place",
+        "Feature Color Red": "222",
+        "Feature Color Green": "30",
+        "Featuer Color Blue": "189"
+      }
+    },
+    {
+      "row_number": 37,
+      "class_id": "encounter_area_68h",
+      "label": "Encounter Area",
+      "rgb": [
+        95,
+        165,
+        131
+      ],
+      "rgb_key": "95,165,131",
+      "traversable": true,
+      "encounter_area_number": "68h",
+      "encounter_name": "Treasury",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68h",
+        "Encounter Name": "Treasury",
+        "Feature Color Red": "95",
+        "Feature Color Green": "165",
+        "Featuer Color Blue": "131"
+      }
+    },
+    {
+      "row_number": 38,
+      "class_id": "encounter_area_68i",
+      "label": "Encounter Area",
+      "rgb": [
+        124,
+        231,
+        52
+      ],
+      "rgb_key": "124,231,52",
+      "traversable": true,
+      "encounter_area_number": "68i",
+      "encounter_name": "Messy Mess",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68i",
+        "Encounter Name": "Messy Mess",
+        "Feature Color Red": "124",
+        "Feature Color Green": "231",
+        "Featuer Color Blue": "52"
+      }
+    },
+    {
+      "row_number": 39,
+      "class_id": "encounter_area_68j",
+      "label": "Encounter Area",
+      "rgb": [
+        218,
+        197,
+        70
+      ],
+      "rgb_key": "218,197,70",
+      "traversable": true,
+      "encounter_area_number": "68j",
+      "encounter_name": "Bulp Clan Rooms",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68j",
+        "Encounter Name": "Bulp Clan Rooms",
+        "Feature Color Red": "218",
+        "Feature Color Green": "197",
+        "Featuer Color Blue": "70"
+      }
+    },
+    {
+      "row_number": 40,
+      "class_id": "encounter_area_68k",
+      "label": "Encounter Area",
+      "rgb": [
+        54,
+        199,
+        124
+      ],
+      "rgb_key": "54,199,124",
+      "traversable": true,
+      "encounter_area_number": "68k",
+      "encounter_name": "Highbulp Quarters",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68k",
+        "Encounter Name": "Highbulp Quarters",
+        "Feature Color Red": "54",
+        "Feature Color Green": "199",
+        "Featuer Color Blue": "124"
+      }
+    },
+    {
+      "row_number": 41,
+      "class_id": "encounter_area_68l",
+      "label": "Encounter Area",
+      "rgb": [
+        222,
+        229,
+        169
+      ],
+      "rgb_key": "222,229,169",
+      "traversable": true,
+      "encounter_area_number": "68l",
+      "encounter_name": "Secret Exit",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68l",
+        "Encounter Name": "Secret Exit",
+        "Feature Color Red": "222",
+        "Feature Color Green": "229",
+        "Featuer Color Blue": "169"
+      }
+    },
+    {
+      "row_number": 42,
+      "class_id": "encounter_area_68m",
+      "label": "Encounter Area",
+      "rgb": [
+        136,
+        151,
+        50
+      ],
+      "rgb_key": "136,151,50",
+      "traversable": true,
+      "encounter_area_number": "68m",
+      "encounter_name": "Court of the Aghar",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "68m",
+        "Encounter Name": "Court of the Aghar",
+        "Feature Color Red": "136",
+        "Feature Color Green": "151",
+        "Featuer Color Blue": "50"
+      }
+    },
+    {
+      "row_number": 43,
+      "class_id": "encounter_area_69a",
+      "label": "Encounter Area",
+      "rgb": [
+        119,
+        73,
+        154
+      ],
+      "rgb_key": "119,73,154",
+      "traversable": true,
+      "encounter_area_number": "69a",
+      "encounter_name": "Delvers Welcome",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "69a",
+        "Encounter Name": "Delvers Welcome",
+        "Feature Color Red": "119",
+        "Feature Color Green": "73",
+        "Featuer Color Blue": "154"
+      }
+    },
+    {
+      "row_number": 44,
+      "class_id": "encounter_area_69b",
+      "label": "Encounter Area",
+      "rgb": [
+        91,
+        113,
+        40
+      ],
+      "rgb_key": "91,113,40",
+      "traversable": true,
+      "encounter_area_number": "69b",
+      "encounter_name": "The Secret Way",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "69b",
+        "Encounter Name": "The Secret Way",
+        "Feature Color Red": "91",
+        "Feature Color Green": "113",
+        "Featuer Color Blue": "40"
+      }
+    },
+    {
+      "row_number": 45,
+      "class_id": "encounter_area_70a",
+      "label": "Encounter Area",
+      "rgb": [
+        128,
+        233,
+        171
+      ],
+      "rgb_key": "128,233,171",
+      "traversable": true,
+      "encounter_area_number": "70a",
+      "encounter_name": "Pillars of the Palace",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70a",
+        "Encounter Name": "Pillars of the Palace",
+        "Feature Color Red": "128",
+        "Feature Color Green": "233",
+        "Featuer Color Blue": "171"
+      }
+    },
+    {
+      "row_number": 46,
+      "class_id": "encounter_area_70b",
+      "label": "Encounter Area",
+      "rgb": [
+        29,
+        58,
+        169
+      ],
+      "rgb_key": "29,58,169",
+      "traversable": true,
+      "encounter_area_number": "70b",
+      "encounter_name": "Honored Dead",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70b",
+        "Encounter Name": "Honored Dead",
+        "Feature Color Red": "29",
+        "Feature Color Green": "58",
+        "Featuer Color Blue": "169"
+      }
+    },
+    {
+      "row_number": 47,
+      "class_id": "encounter_area_70c",
+      "label": "Encounter Area",
+      "rgb": [
+        23,
+        68,
+        98
+      ],
+      "rgb_key": "23,68,98",
+      "traversable": true,
+      "encounter_area_number": "70c",
+      "encounter_name": "First Hall",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70c",
+        "Encounter Name": "First Hall",
+        "Feature Color Red": "23",
+        "Feature Color Green": "68",
+        "Featuer Color Blue": "98"
+      }
+    },
+    {
+      "row_number": 48,
+      "class_id": "encounter_area_70d",
+      "label": "Encounter Area",
+      "rgb": [
+        145,
+        129,
+        206
+      ],
+      "rgb_key": "145,129,206",
+      "traversable": true,
+      "encounter_area_number": "70d",
+      "encounter_name": "Palace Treasury",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70d",
+        "Encounter Name": "Palace Treasury",
+        "Feature Color Red": "145",
+        "Feature Color Green": "129",
+        "Featuer Color Blue": "206"
+      }
+    },
+    {
+      "row_number": 49,
+      "class_id": "encounter_area_70e",
+      "label": "Encounter Area",
+      "rgb": [
+        146,
+        82,
+        21
+      ],
+      "rgb_key": "146,82,21",
+      "traversable": true,
+      "encounter_area_number": "70e",
+      "encounter_name": "Bozak Quarters",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70e",
+        "Encounter Name": "Bozak Quarters",
+        "Feature Color Red": "146",
+        "Feature Color Green": "82",
+        "Featuer Color Blue": "21"
+      }
+    },
+    {
+      "row_number": 50,
+      "class_id": "encounter_area_70f",
+      "label": "Encounter Area",
+      "rgb": [
+        222,
+        197,
+        21
+      ],
+      "rgb_key": "222,197,21",
+      "traversable": true,
+      "encounter_area_number": "70f",
+      "encounter_name": "Bozak Captain",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70f",
+        "Encounter Name": "Bozak Captain",
+        "Feature Color Red": "222",
+        "Feature Color Green": "197",
+        "Featuer Color Blue": "21"
+      }
+    },
+    {
+      "row_number": 51,
+      "class_id": "encounter_area_70g",
+      "label": "Encounter Area",
+      "rgb": [
+        143,
+        204,
+        199
+      ],
+      "rgb_key": "143,204,199",
+      "traversable": true,
+      "encounter_area_number": "70g",
+      "encounter_name": "Prisoner Cell",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70g",
+        "Encounter Name": "Prisoner Cell",
+        "Feature Color Red": "143",
+        "Feature Color Green": "204",
+        "Featuer Color Blue": "199"
+      }
+    },
+    {
+      "row_number": 52,
+      "class_id": "encounter_area_70h",
+      "label": "Encounter Area",
+      "rgb": [
+        194,
+        132,
+        157
+      ],
+      "rgb_key": "194,132,157",
+      "traversable": true,
+      "encounter_area_number": "70h",
+      "encounter_name": "Bozak Commander",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70h",
+        "Encounter Name": "Bozak Commander",
+        "Feature Color Red": "194",
+        "Feature Color Green": "132",
+        "Featuer Color Blue": "157"
+      }
+    },
+    {
+      "row_number": 53,
+      "class_id": "encounter_area_70i",
+      "label": "Encounter Area",
+      "rgb": [
+        167,
+        208,
+        109
+      ],
+      "rgb_key": "167,208,109",
+      "traversable": true,
+      "encounter_area_number": "70i",
+      "encounter_name": "Long Hall",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70i",
+        "Encounter Name": "Long Hall",
+        "Feature Color Red": "167",
+        "Feature Color Green": "208",
+        "Featuer Color Blue": "109"
+      }
+    },
+    {
+      "row_number": 54,
+      "class_id": "encounter_area_70j",
+      "label": "Encounter Area",
+      "rgb": [
+        150,
+        111,
+        124
+      ],
+      "rgb_key": "150,111,124",
+      "traversable": true,
+      "encounter_area_number": "70j",
+      "encounter_name": "Hall of Sound",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70j",
+        "Encounter Name": "Hall of Sound",
+        "Feature Color Red": "150",
+        "Feature Color Green": "111",
+        "Featuer Color Blue": "124"
+      }
+    },
+    {
+      "row_number": 55,
+      "class_id": "encounter_area_70k",
+      "label": "Encounter Area",
+      "rgb": [
+        213,
+        132,
+        226
+      ],
+      "rgb_key": "213,132,226",
+      "traversable": true,
+      "encounter_area_number": "70k",
+      "encounter_name": "Court of the Balance",
+      "source_fields": {
+        "Feature Type": "Encounter Area",
+        "Traversable?": "Yes",
+        "Encounter Area Number": "70k",
+        "Encounter Name": "Court of the Balance",
+        "Feature Color Red": "213",
+        "Feature Color Green": "132",
+        "Featuer Color Blue": "226"
+      }
+    }
+  ],
+  "conversion_notes": [
+    "RGB values were assembled from separate CSV columns: red, green, and blue.",
+    "The source CSV misspells the blue header as 'Featuer Color Blue'; this conversion preserves that source header while normalizing the output.",
+    "This JSON is designated as the authoritative source of truth for what colors on the DM map represent."
+  ]
+}

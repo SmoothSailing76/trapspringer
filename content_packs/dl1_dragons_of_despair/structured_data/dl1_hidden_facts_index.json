@@ -1,0 +1,487 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "hidden_facts": [
+    {
+      "area_id": "4",
+      "area_name": "New Haven Road",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 4: New Haven Road"
+      },
+      "hidden_or_dm_facts": [
+        "Ancient stone bridge over Solace Stream. Road forks west/south. Concealed draconian ambush in trees, waiting for their leader (area 6) to sound a horn. PCs must climb a tree to spot them; even then only 30% chance.",
+        "**If spotted:** All attack, sound horn, fill woods with battle cries. Dragon-men fight to the death; block retreat to Solace. Horn is a **warning** to other draconians, not a call for aid. They intend to remain disguised while in human lands. They are searching for the Crystal Staff but don't know why."
+      ]
+    },
+    {
+      "area_id": "6",
+      "area_name": "Twin Flat",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 6: Twin Flat"
+      },
+      "hidden_or_dm_facts": [
+        "**Disguise:** Hoods + black cloth masks + heavy gloves + leg wrappings. Despite autumn, overdressed.",
+        "**Leader's ruse:** Claims to be an old cleric; says their healing staff was stolen from Xak Tsaroth; a member of their flock is dying.",
+        "**If party reveals they have/know about the staff:** Leader screams and grabs weapon; all draconians attack (limited to MV 6\" because wings are bound). Each round, each draconian has 20% chance to tear off robes (uses action; frees them to move faster). Draconians try to drive party east into area 5 to sound horn and spring trap with area 4 draconians. Fight to the death."
+      ]
+    },
+    {
+      "area_id": "19",
+      "area_name": "Qualinesti Elflands",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 19: Qualinesti Elflands"
+      },
+      "hidden_or_dm_facts": [
+        "**Why they have these orders:** \"A glorious being passed through our land and said you would be coming. We do not know his name, but we have orders to take you to the edge of Darken Wood at his bidding.\""
+      ]
+    },
+    {
+      "area_id": "26",
+      "area_name": "Unicorn Grove",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 26: Unicorn Grove"
+      },
+      "hidden_or_dm_facts": [
+        "**The Forestmaster knows:** A terrible force of evil will shortly destroy the beauty of his domain."
+      ]
+    },
+    {
+      "area_id": "32",
+      "area_name": "Que-Kiri",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 32: Que-Kiri"
+      },
+      "hidden_or_dm_facts": [
+        "**80% chance** a guard will speak. What he says: Unknown danger coming from the north; scouts have seen great fires; many have disappeared in the last week; 600+ defenders ready; confident they cannot be stopped."
+      ]
+    },
+    {
+      "area_id": "36",
+      "area_name": "Que-Shu",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 36: Que-Shu"
+      },
+      "hidden_or_dm_facts": [
+        "*\"Know ye, my servants, the fate of those who take prisoners against my will. Kill or be killed. Verminaard.\"*"
+      ]
+    },
+    {
+      "area_id": "38",
+      "area_name": "Refugee",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 38: Refugee"
+      },
+      "hidden_or_dm_facts": [
+        "**Nightshade's story (if rescued):** From village of Que-Teh; dragonmen taking everyone south as slaves; secret council while chained; he was chosen to escape while comrades created a distraction; a tremendous evil army lies to the south; second army waits to crush the Seeker Lands from the north; they hold back their armies only for fear that the crystal staff will return to Xak Tsaroth. \"Find the crystal staff, and take it to Xak Tsaroth. It is our only hope.\""
+      ]
+    },
+    {
+      "area_id": "39",
+      "area_name": "Oldroad Bridge",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 39: Oldroad Bridge"
+      },
+      "hidden_or_dm_facts": [
+        "**Orders:** Kill anyone who approaches (no more prisoners per dragonlord). This is all they know about dragonarmy positions."
+      ]
+    },
+    {
+      "area_id": "44d",
+      "area_name": "Battle of the Fallen Ironclaw",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44d: Battle of the Fallen Ironclaw"
+      },
+      "hidden_or_dm_facts": [
+        "Behind trees and bushes, only 15–20 feet away: **6 Bozak Draconians.** Four on heroes' side, two on far side.",
+        "**Tactic:** Plan to capture party for questioning at camp (44f). Attack first with **web** spells (save at –2 or tangled in trees behind PCs). Then attempt to **sleep** party one at a time. Take captives to 44f."
+      ]
+    },
+    {
+      "area_id": "44f",
+      "area_name": "Temple of Baaz (Draconian Camp)",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44f: Temple of Baaz (Draconian Camp)"
+      },
+      "hidden_or_dm_facts": [
+        "**Dragon is a wicker model.** However, draconians nearby attack any unescorted intruders.",
+        "**If PCs are prisoners:** Equipment placed randomly in one of six huts; PCs held in bamboo cage.",
+        "**Priest behavior:** Runs the camp and conducts worship before the wicker dragon. Orders PCs held for 3 days until Khisanth (the priest's commander) comes to claim them. If party has the staff: \"The crystal staff is the greatest danger to our masters we know.\" If no staff: asks where it is. Either way tells party: \"Now that you are here, we only hope that you do not die as easily as those of Que-Shu did at our hands.\"",
+        "**The Wicker Dragon — Trick:**",
+        " If a PC gets inside unnoticed, leaps on main brace, and shouts through the mouth: panics draconians and drives them screaming into jungle for 1d6 turns"
+      ]
+    },
+    {
+      "area_id": "44k",
+      "area_name": "Plaza of Death",
+      "source": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "file_key": "xak_surface",
+        "heading": "AREA 44k: Plaza of Death"
+      },
+      "hidden_or_dm_facts": [
+        "6. On 3rd pass: feels need for safety of lair; flies over well, folds wings, drops like stone down the well; breaks out of dive far below; moves toward lair"
+      ]
+    },
+    {
+      "area_id": "46b",
+      "area_name": "Mishakal's Form",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46b. Mishakal's Form"
+      },
+      "hidden_or_dm_facts": [
+        "**Mishakal's message:** The gods have not turned away from man — man turned away from them and now seeks gods who do not exist. The end of darkness nears. Krynn faces its greatest test. The Disks of Mishakal lie far below this temple, in the lair of the dragon. Recover the Disks. Present the staff boldly and never waver — then you shall prevail. The journey is not complete until you also search for a true Leader of the People."
+      ]
+    },
+    {
+      "area_id": "46d",
+      "area_name": "North Worship Room",
+      "source": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "file_key": "temple_descent",
+        "heading": "46d. North Worship Room"
+      },
+      "hidden_or_dm_facts": [
+        "**Scroll left behind on the dais:** Magic-user scroll for a **10th-level lightning bolt**.",
+        "**If captured (>50% damage inflicted on them):** Know the way into the cavern through the well (only useful for flying creatures), about the **elevator at 47c**, and the **location of the dragon's lair (70k)**."
+      ]
+    },
+    {
+      "area_id": "54b",
+      "area_name": "Sage's Court",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "54b. Sage's Court"
+      },
+      "hidden_or_dm_facts": [
+        "**What Ossamis knows:** The location of the **Disks of Mishakal (area 70k)** and how to get there."
+      ]
+    },
+    {
+      "area_id": "57a",
+      "area_name": "Outer Treasury",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "57a. Outer Treasury"
+      },
+      "hidden_or_dm_facts": [
+        "Long counter of chipped, dusty marble bisecting the room. Four ghostly forms at south wall with weapons drawn. Behind the counter: another long-faced ghostly form — the clerk."
+      ]
+    },
+    {
+      "area_id": "64h",
+      "area_name": "Mess Hall",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64h. Mess Hall"
+      },
+      "hidden_or_dm_facts": [
+        " Second draconian: If Verminaard needs a staff, let him get it; Khisanth guards the only writings of the true gods — without them humans can't stop the draconian armies"
+      ]
+    },
+    {
+      "area_id": "65a",
+      "area_name": "Larder Office",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "65a. Larder Office"
+      },
+      "hidden_or_dm_facts": [
+        "| Hugon Barker (Kender prisoner) | CG | 9\" | 14 | 5 | T3 | 1 | 1–4 | — | STR 11, INT 13, DEX 15 |",
+        "**Hugon Barker:** Caught up in wanderlust; wanted to see what was at the bottom of the cavern. Knows nothing about dragonmen's plans. **If rescued, joins the party.**"
+      ]
+    },
+    {
+      "area_id": "65b",
+      "area_name": "Larder",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "65b. Larder"
+      },
+      "hidden_or_dm_facts": [
+        "30'-square room, no natural light. Wicker baskets stacked against walls. Anyone who checks carefully: glint of metal behind the baskets against the west wall.",
+        "**Hidden cache:** Three long swords of superior craftsmanship (+2 to hit and damage) and an elven bow with matching quiver of 12 arrows (+1)."
+      ]
+    },
+    {
+      "area_id": "66",
+      "area_name": "Court of Reception",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 66: Court of Reception"
+      },
+      "hidden_or_dm_facts": [
+        "Thin shaft of light overhead dimly outlines a dismal 40'-diameter courtyard. Broken cobblestone streets run east, west, and south. Against the northern wall: a **10' high wicker dragon** bearing a large round metal plate (gong) in a hole in its chest. A robed figure stands beside it. A huge black metal pot sits in the center; a chain rises from the pot disappearing into the mists above."
+      ]
+    },
+    {
+      "area_id": "67",
+      "area_name": "Great Plaza",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 67: Great Plaza"
+      },
+      "hidden_or_dm_facts": [
+        "**Dragon arrives:** A huge black creature arches like a cobra on the steps of one of the southern buildings. The plaza stills. Khisanth speaks in a hissing language to a draconian; the draconian orders Aghar to begin a search for an escaped prisoner (at area 67b). Then the dragon retreats through area 70a into its lair (70k).",
+        "**The escaped prisoner:** Aghar scatter to search for a Que-Shu tribeswoman hiding at area 67b. Draconians follow one search group randomly."
+      ]
+    },
+    {
+      "area_id": "67b",
+      "area_name": "West Falls",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "67b. West Falls"
+      },
+      "hidden_or_dm_facts": [
+        "**Hidden prisoner:**",
+        "**Behavior:** Crouches as far from water as possible. If cornered: fights fiercely to the death unless party shows they mean no harm. One of only two survivors of her tribe. Desperate to escape. Her cell (70g) is near the dragon's lair (70k). **If party is friendly, she joins them gladly.**"
+      ]
+    },
+    {
+      "area_id": "68g",
+      "area_name": "Waiting Place",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68g. Waiting Place"
+      },
+      "hidden_or_dm_facts": [
+        "**Secret door:** In north end of east wall. Anyone within 3' hears thumping against the door and muffled growls and yells. Leads to 68h."
+      ]
+    },
+    {
+      "area_id": "68h",
+      "area_name": "Treasury",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68h. Treasury"
+      },
+      "hidden_or_dm_facts": [
+        "**What the captain reveals (only if threatened with death or charmed):** \"Verminaard is our Dragonlord! True cleric of evil, he calls upon the powers of darkness to bring this land under his rule and that of his brothers. Yet he fears one thing: the uprising of light against the darkness. We guard that which might kindle hope among men and lift the darkness! We guard the true knowledge of the gods. Under the eye of Khisanth, the truth is safe in the secret night!\""
+      ]
+    },
+    {
+      "area_id": "68j",
+      "area_name": "Bulp Clan Rooms",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68j. Bulp Clan Rooms"
+      },
+      "hidden_or_dm_facts": [
+        "**If awakened:** Try to run away. **If captured:** Know the tunnelway from 69b into the dragon's lair."
+      ]
+    },
+    {
+      "area_id": "68k",
+      "area_name": "Highbulp Quarters",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68k. Highbulp Quarters"
+      },
+      "hidden_or_dm_facts": [
+        "**Secret door in west wall.**",
+        "**Searching the clothing piles:** Find an old, stained map showing the location of the **sewer access (69b)** and the tunnel leading from there to **the dragon's lair at 70k**. Crude note: \"Big treasure, much goods. Old bark of a dragon not miss if great Highbulp take his share!\""
+      ]
+    },
+    {
+      "area_id": "68l",
+      "area_name": "Secret Exit",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68l. Secret Exit"
+      },
+      "hidden_or_dm_facts": [
+        "One-way-out secret doors (old thief escape route). No encounter."
+      ]
+    },
+    {
+      "area_id": "68m",
+      "area_name": "Court of the Aghar",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68m. Court of the Aghar"
+      },
+      "hidden_or_dm_facts": [
+        "**What Phudge knows:** The Disks of Mishakal lie in the dragon's lair at 70k; also knows about the tunnel from 69b into that lair."
+      ]
+    },
+    {
+      "area_id": "69a",
+      "area_name": "Delvers Welcome",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "69a. Delvers Welcome"
+      },
+      "hidden_or_dm_facts": [
+        "Water seeps down walls, pools, then winds out the south door. A long stone counter bisects the room east to west. Behind it: another doorway."
+      ]
+    },
+    {
+      "area_id": "69b",
+      "area_name": "The Secret Way",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "69b. The Secret Way"
+      },
+      "hidden_or_dm_facts": [
+        "**Finding the trapdoor:** PCs who check the floor near the center of the room find a closed trapdoor operated by a pull ring. Add the STR of all PCs trying to pull the door open to find the **percentage chance of success**.",
+        "**The trapdoor:** 4'-square opening over a 4'-square shaft 20' deep. Opens into a 5'-diameter masonry tunnel half-filled with water.",
+        " **30 feet before the end of the east branching tunnel:** A shaft ascends 30' to a **grate in the floor of Khisanth's lair (70k)**"
+      ]
+    },
+    {
+      "area_id": "70g",
+      "area_name": "Prisoner Cell",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70g. Prisoner Cell"
+      },
+      "hidden_or_dm_facts": [
+        "**Though weak, Raven-eye speaks:** His tribe was attacked by demons from the north; they fought bravely but fell into the enemy's hands; only two of his people remain (the other is a woman who escaped — Sunstar at 67b). **He knows the way to the dragon's lair (70k) and will join and aid the PCs.**"
+      ]
+    },
+    {
+      "area_id": "70h",
+      "area_name": "Bozak Commander",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70h. Bozak Commander"
+      },
+      "hidden_or_dm_facts": [
+        "**If badly outnumbered:** Surrenders, then tries to lead heroes through the **west doors of area 70j** — insisting it's the only safe way to enter the dragon's lair. (It is not; it is a trap.)"
+      ]
+    },
+    {
+      "area_id": "70j",
+      "area_name": "Hall of Sound",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70j. Hall of Sound"
+      },
+      "hidden_or_dm_facts": [
+        "**Pressure plates:** 40' from either end, pressure plates in the floor activate a **loud gong** that resounds through the palace area."
+      ]
+    },
+    {
+      "area_id": "70k",
+      "area_name": "Court of the Balance — DRAGON'S LAIR",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70k. Court of the Balance — DRAGON'S LAIR"
+      },
+      "hidden_or_dm_facts": [
+        "**This is Khisanth's lair.** She is duty-bound to keep the Disks of Mishakal from the PCs.",
+        "**Crystal Staff in the lair:** Any PC holding the staff hears a soft feminine whisper: \"Retrieve the disks, and hit the dragon with this staff. All will be well.\""
+      ]
+    }
+  ]
+}

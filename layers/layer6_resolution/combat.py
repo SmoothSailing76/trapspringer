@@ -157,3 +157,79 @@ def resolve_dragon_breath(dragon: Any, targets: list, state: dict, rng: RandomSe
         narration = f"{getattr(dragon, 'name', 'The dragon')} breathes {breath_type} at {getattr(target, 'name', target_id)} for {damage} damage{saved_text}."
         results.append(ResolutionResult(f"RES-BREATH-{target_id}", "resolved", PrivateOutcome({"breath_check": asdict(check)}), PublicOutcome(narration), mutations))
     return results
+
+
+def resolve_item_saves_from_breath(dragon: Any, targets: list, state: dict, rng: RandomService) -> list[dict]:
+    """Auto-trigger item saves for equipment carried by breath targets.
+
+    Returns a list of item-save result dicts (informational; no HP mutations).
+    """
+    breath_type = getattr(dragon, "breath_type", "acid")
+    attack_form = {"acid": "acid", "fire": "fire", "cold": "crushing", "lightning": "lightning"}.get(breath_type, "fire")
+    results = []
+    chars = state.get("characters", {})
+    for target_id in targets:
+        target = chars.get(target_id)
+        if target is None:
+            continue
+        for item in getattr(target, "inventory", []) or getattr(target, "equipment", []):
+            material = "metal" if any(k in str(item) for k in ("sword", "armor", "axe", "plate", "shield")) else "wood" if any(k in str(item) for k in ("staff", "bow", "hoopak")) else "paper" if "scroll" in str(item) else "leather"
+            save = adnd1e_v04.item_save(material, attack_form, rng)
+            results.append({"item": item, "owner": target_id, "material": material, "attack_form": attack_form, "result": save.result, "roll": save.roll})
+    return results
+
+
+def resolve_ghoul_paralysis(ghoul: Any, target: Any, rng: RandomService) -> ResolutionResult:
+    """Ghoul touch attack: on hit, target saves vs paralysis or is paralyzed for 3d6 rounds (MM)."""
+    target_id = getattr(target, "actor_id", "target")
+    attack = adnd1e_v04.roll_attack(ghoul, target, rng, purpose="ghoul_touch")
+    private: dict[str, Any] = {"attack_check": asdict(attack)}
+    if not attack.success:
+        return ResolutionResult(f"RES-GHOUL-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(f"{getattr(ghoul, 'name', 'The ghoul')} claws at {getattr(target, 'name', target_id)} but misses."))
+    save = adnd1e_v04.roll_saving_throw(target, "paralysis", rng)
+    private["paralysis_save"] = asdict(save)
+    mutations: list[dict] = []
+    if not save.success:
+        dur_roll = rng.roll_dice("3d6", f"ghoul_paralysis_dur:{target_id}")
+        conditions = list(set(getattr(target, "conditions", []) + ["paralyzed"]))
+        mutations.append({"path": f"characters.{target_id}.conditions", "value": conditions})
+        private["duration_rounds"] = dur_roll.total
+        narration = f"{getattr(ghoul, 'name', 'The ghoul')} touches {getattr(target, 'name', target_id)}; they are paralyzed for {dur_roll.total} rounds!"
+    else:
+        narration = f"{getattr(ghoul, 'name', 'The ghoul')} touches {getattr(target, 'name', target_id)}, who shudders but resists paralysis."
+    return ResolutionResult(f"RES-GHOUL-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)
+
+
+def resolve_wight_level_drain(wight: Any, target: Any, rng: RandomService) -> ResolutionResult:
+    """Wight attack: on hit, drains 1 experience level (MM); no save."""
+    target_id = getattr(target, "actor_id", "target")
+    attack = adnd1e_v04.roll_attack(wight, target, rng, purpose="wight_drain")
+    private: dict[str, Any] = {"attack_check": asdict(attack)}
+    if not attack.success:
+        return ResolutionResult(f"RES-WIGHT-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(f"{getattr(wight, 'name', 'The wight')} reaches for {getattr(target, 'name', target_id)} but misses."))
+    current_level = int(getattr(target, "level", 1) or 1)
+    new_level = max(0, current_level - 1)
+    mutations: list[dict] = [{"path": f"characters.{target_id}.level", "value": new_level}]
+    private["level_before"] = current_level
+    private["level_after"] = new_level
+    if new_level <= 0:
+        mutations.append({"path": f"characters.{target_id}.status", "value": "defeated"})
+        narration = f"{getattr(wight, 'name', 'The wight')}'s touch drains {getattr(target, 'name', target_id)}'s last level — they crumple, lifeless."
+    else:
+        narration = f"{getattr(wight, 'name', 'The wight')}'s icy touch drains {getattr(target, 'name', target_id)}'s life energy. They drop to level {new_level}."
+    return ResolutionResult(f"RES-WIGHT-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)
+
+
+def resolve_spider_web_attack(spider: Any, target: Any, rng: RandomService) -> ResolutionResult:
+    """Giant spider web attack: target saves vs spell or is webbed (MM: paralyzed, 1 turn)."""
+    target_id = getattr(target, "actor_id", "target")
+    save = adnd1e_v04.roll_saving_throw(target, "spell", rng)
+    private: dict[str, Any] = {"web_save": asdict(save)}
+    mutations: list[dict] = []
+    if not save.success:
+        conditions = list(set(getattr(target, "conditions", []) + ["webbed"]))
+        mutations.append({"path": f"characters.{target_id}.conditions", "value": conditions})
+        narration = f"{getattr(spider, 'name', 'The giant spider')} sprays web at {getattr(target, 'name', target_id)}, who is caught fast!"
+    else:
+        narration = f"{getattr(spider, 'name', 'The giant spider')} sprays web at {getattr(target, 'name', target_id)}, who twists free."
+    return ResolutionResult(f"RES-SPIDER-WEB-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)

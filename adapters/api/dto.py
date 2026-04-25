@@ -1,5 +1,5 @@
 class TurnRequestDTO(dict):
-    pass
+    """Request body for POST /sessions/{id}/turn. Expected key: 'action' (str)."""
 
 class TurnResponseDTO(dict):
-    pass
+    """Response body for turn results. Keys: session_id, narration, prompt, status."""

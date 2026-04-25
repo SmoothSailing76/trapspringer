@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import asdict
+from typing import Any
 
 from trapspringer.schemas.actions import Action
 from trapspringer.schemas.resolution import PrivateOutcome, PublicOutcome, ResolutionResult, ResourceChange
@@ -105,12 +106,54 @@ def resolve_missile_attack(action: Action, state: dict, rng: RandomService) -> R
     return result
 
 
-def resolve_initiative(rng: RandomService) -> dict:
-    party = adnd1e_v04.initiative(rng, "party")
-    enemies = adnd1e_v04.initiative(rng, "enemies")
-    winner = "party" if int(party.result or 0) >= int(enemies.result or 0) else "enemies"
-    return {"party": party, "enemies": enemies, "winner": winner}
+def resolve_initiative(rng: RandomService, party_dex: int = 10, enemy_dex: int = 10) -> dict:
+    party = adnd1e_v04.initiative_with_dex(rng, "party", dex_score=party_dex)
+    enemies = adnd1e_v04.initiative_with_dex(rng, "enemies", dex_score=enemy_dex)
+    party_roll = int(party.result or 0)
+    enemy_roll = int(enemies.result or 0)
+    if party_roll != enemy_roll:
+        winner = "party" if party_roll > enemy_roll else "enemies"
+    else:
+        winner = "party" if party_dex >= enemy_dex else "enemies"
+    return {"party": party, "enemies": enemies, "winner": winner, "tiebreak": party_roll == enemy_roll}
 
 
 def resolve_surprise(side: str, rng: RandomService, threshold: int = 2) -> adnd1e_v04.RuleCheck:
     return adnd1e_v04.surprise(rng, side, threshold=threshold)
+
+
+def resolve_dragon_fear(actor: Any, dragon_hd: int, rng: RandomService) -> ResolutionResult:
+    check = adnd1e_v04.dragon_fear_save(actor, dragon_hd, rng)
+    actor_id = getattr(actor, "actor_id", "actor")
+    mutations: list[dict] = []
+    if not check.success:
+        conditions = list(set(getattr(actor, "conditions", []) + ["fleeing"]))
+        mutations.append({"path": f"characters.{actor_id}.conditions", "value": conditions})
+    private = {"dragon_fear_check": asdict(check), "dragon_hd": dragon_hd}
+    narration = check.notes or (f"{getattr(actor, 'name', actor_id)} holds steady against the dragon's terror." if check.success else f"{getattr(actor, 'name', actor_id)} flees in terror from the dragon.")
+    return ResolutionResult(f"RES-DRAGON-FEAR-{actor_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)
+
+
+def resolve_dragon_breath(dragon: Any, targets: list, state: dict, rng: RandomService) -> list[ResolutionResult]:
+    """Resolve a dragon breath weapon attack against one or more targets.
+
+    Per AD&D 1e MM: breath damage = dragon's current HP; save vs breath for half.
+    """
+    dragon_hp = int(getattr(dragon, "current_hp", 1))
+    breath_type = getattr(dragon, "breath_type", "acid")
+    results = []
+    chars = state.get("characters", {})
+    for target_id in targets:
+        target = chars.get(target_id)
+        if target is None or not getattr(target, "is_active", True):
+            continue
+        check = adnd1e_v04.dragon_breath_damage(dragon_hp, target, rng, breath_type)
+        damage = int(check.result.split(":")[-1]) if ":" in str(check.result) else dragon_hp
+        new_hp = max(0, target.current_hp - damage)
+        mutations = [{"path": f"characters.{target_id}.current_hp", "value": new_hp}]
+        if new_hp <= 0:
+            mutations.append({"path": f"characters.{target_id}.status", "value": "defeated"})
+        saved_text = " (half damage from save)" if check.metadata.get("save_result") == "saved" else ""
+        narration = f"{getattr(dragon, 'name', 'The dragon')} breathes {breath_type} at {getattr(target, 'name', target_id)} for {damage} damage{saved_text}."
+        results.append(ResolutionResult(f"RES-BREATH-{target_id}", "resolved", PrivateOutcome({"breath_check": asdict(check)}), PublicOutcome(narration), mutations))
+    return results

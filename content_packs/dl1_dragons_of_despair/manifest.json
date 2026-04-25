@@ -84,5 +84,14 @@
         "test"
       ]
     }
+  },
+  "structured_data": {
+    "metadata": "structured_data/dl1_structured_metadata.json",
+    "keyed_areas": "structured_data/dl1_keyed_areas_complete.json",
+    "encounter_index": "structured_data/dl1_encounter_index.json",
+    "treasure_index": "structured_data/dl1_treasure_index.json",
+    "hidden_facts": "structured_data/dl1_hidden_facts_index.json",
+    "transition_candidates": "structured_data/dl1_transition_candidates.json",
+    "validation_report": "structured_data/dl1_structured_data_validation_report.json"
   }
 }

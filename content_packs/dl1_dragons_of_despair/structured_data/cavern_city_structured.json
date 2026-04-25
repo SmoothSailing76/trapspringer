@@ -1,0 +1,3400 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "areas": [
+    {
+      "id": "53–54",
+      "canonical_id": "DL1_53_54",
+      "name": "Upper Underground City",
+      "heading": "AREAS 53–54: Upper Underground City",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREAS 53–54: Upper Underground City"
+      },
+      "summary": "",
+      "description": "",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "53a",
+      "canonical_id": "DL1_53A",
+      "name": "Bakery",
+      "heading": "53a. Bakery",
+      "heading_level": 3,
+      "parent_id": "53–54",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "53a. Bakery"
+      },
+      "summary": "Sewer tube of fitted stone breaks through ceiling. Water trickles from tube onto floor and out the east door. 20 large rotting sacks on the floor south of the tube.",
+      "description": "Sewer tube of fitted stone breaks through ceiling. Water trickles from tube onto floor and out the east door. 20 large rotting sacks on the floor south of the tube.\n\n**If PC slides down the sewer into this room:** Launches into the rotting sacks — they disintegrate in an explosion of white. PC is covered in flour. No damage, but everyone they meet asks why they're covered in it until cleaned.\n\nWindows in east wall overlook ruins of a city street. Sound of rushing water from that direction.",
+      "tags": [
+        "hazard",
+        "map",
+        "social"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "If PC slides down the sewer into this room",
+          "text": "Launches into the rotting sacks — they disintegrate in an explosion of white. PC is covered in flour. No damage, but everyone they meet asks why they're covered in it until cleaned."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "53b",
+      "canonical_id": "DL1_53B",
+      "name": "Sidestreet",
+      "heading": "53b. Sidestreet",
+      "heading_level": 3,
+      "parent_id": "53–54",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "53b. Sidestreet"
+      },
+      "summary": "Toppled buildings leaning against each other form a rough arch of marble slabs over the cobblestone street. Still and tense, like the nave of a haunted cathedral. Doors and broken shop windows yawn open. No encounter.",
+      "description": "Toppled buildings leaning against each other form a rough arch of marble slabs over the cobblestone street. Still and tense, like the nave of a haunted cathedral. Doors and broken shop windows yawn open. No encounter.\n\n---",
+      "tags": [
+        "encounter",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "54a",
+      "canonical_id": "DL1_54A",
+      "name": "Sage Front",
+      "heading": "54a. Sage Front",
+      "heading_level": 3,
+      "parent_id": "53–54",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "54a. Sage Front"
+      },
+      "summary": "Books line the north wall, spines stained with green fungus. Rich, musty smell of rotting paper.",
+      "description": "Books line the north wall, spines stained with green fungus. Rich, musty smell of rotting paper.\n\n**Book titles:** Huma and the Lance of Dragons; Tales of the Greystone Wars; Chronicle of Kith-Kanan; The Gods of Krynn; Iconochronos, Vol. II (note for the DM: Astinus wrote the Iconochronos — the DM is the spirit of Astinus).\n\n**Condition:** All books so rotted from swamp water they crumble at the touch.",
+      "tags": [
+        "combat",
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Book titles",
+          "text": "Huma and the Lance of Dragons; Tales of the Greystone Wars; Chronicle of Kith-Kanan; The Gods of Krynn; Iconochronos, Vol. II (note for the DM: Astinus wrote the Iconochronos — the DM is the spirit of Astinus)."
+        },
+        {
+          "label": "Condition",
+          "text": "All books so rotted from swamp water they crumble at the touch."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "54b",
+      "canonical_id": "DL1_54B",
+      "name": "Sage's Court",
+      "heading": "54b. Sage's Court",
+      "heading_level": 3,
+      "parent_id": "53–54",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "54b. Sage's Court"
+      },
+      "summary": "Large golden chair sagging on a platform at the west end. Floating above the chair: the bright transparent form of a man in robes.",
+      "description": "Large golden chair sagging on a platform at the west end. Floating above the chair: the bright transparent form of a man in robes.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Notes |\n|----------|----|----|----|----|----|----|-------|\n| Sage Spectral Minion (Ossamis) ×1 | CN | 30\" | 15 | 2 | 3 | 0 | 20% magic resist |\n\n**Speech:** \"I am Ossamis. It is my vow to answer one last question before I may leave. Ask: yours is the answer.\"\n\n**What Ossamis knows:** The location of the **Disks of Mishakal (area 70k)** and how to get there.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "quest",
+        "social",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Sage Spectral Minion (Ossamis) ×1",
+          "stats": {
+            "Creature": "Sage Spectral Minion (Ossamis) ×1",
+            "AL": "CN",
+            "MV": "30\"",
+            "HP": "15",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "0",
+            "Notes": "20% magic resist"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Sage Spectral Minion (Ossamis) ×1",
+              "AL": "CN",
+              "MV": "30\"",
+              "HP": "15",
+              "AC": "2",
+              "HD": "3",
+              "Attacks": "0",
+              "Notes": "20% magic resist"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Speech",
+          "text": "\"I am Ossamis. It is my vow to answer one last question before I may leave. Ask: yours is the answer.\""
+        },
+        {
+          "label": "What Ossamis knows",
+          "text": "The location of the **Disks of Mishakal (area 70k)** and how to get there."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Large golden chair sagging on a platform at the west end. Floating above the chair: the bright transparent form of a man in robes.",
+        "**What Ossamis knows:** The location of the **Disks of Mishakal (area 70k)** and how to get there."
+      ],
+      "hidden_or_dm_facts": [
+        "**What Ossamis knows:** The location of the **Disks of Mishakal (area 70k)** and how to get there."
+      ],
+      "area_references": [
+        "70k"
+      ],
+      "checks_and_rolls": [
+        "| Sage Spectral Minion (Ossamis) ×1 | CN | 30\" | 15 | 2 | 3 | 0 | 20% magic resist |"
+      ]
+    },
+    {
+      "id": "55",
+      "canonical_id": "DL1_55",
+      "name": "Treasury Court",
+      "heading": "AREA 55: Treasury Court",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 55: Treasury Court"
+      },
+      "summary": "Street emerges into a plaza. Tremendous cracked pillars under rock ceiling. Water from east and west streets flows into a large pool that empties into a river flowing west toward a steady roar. Across the plaza river: **blackened steel doors** stand in the face of a solid, square structure.",
+      "description": "Street emerges into a plaza. Tremendous cracked pillars under rock ceiling. Water from east and west streets flows into a large pool that empties into a river flowing west toward a steady roar. Across the plaza river: **blackened steel doors** stand in the face of a solid, square structure.\n\n**Crossing the river (not at ford):** STR check (subtract 5 from roll) to cross. Kender and dwarves get no bonus. Fail: swept 10' further toward the falls (area 56). Must check again until success or going over the falls.\n\n**Steel doors:** 1,500 gpw each. Worth 15,000 gp each in Solace, Haven, or Gateway. Counterpoised hinges; open easily.\n\n---",
+      "tags": [
+        "hazard",
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Crossing the river (not at ford)",
+          "text": "STR check (subtract 5 from roll) to cross. Kender and dwarves get no bonus. Fail: swept 10' further toward the falls (area 56). Must check again until success or going over the falls."
+        },
+        {
+          "label": "Steel doors",
+          "text": "1,500 gpw each. Worth 15,000 gp each in Solace, Haven, or Gateway. Counterpoised hinges; open easily."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Street emerges into a plaza. Tremendous cracked pillars under rock ceiling. Water from east and west streets flows into a large pool that empties into a river flowing west toward a steady roar. Across the plaza river: **blackened steel doors** stand in the face of a solid, square structure.",
+        "**Steel doors:** 1,500 gpw each. Worth 15,000 gp each in Solace, Haven, or Gateway. Counterpoised hinges; open easily."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "56"
+      ],
+      "checks_and_rolls": [
+        "**Crossing the river (not at ford):** STR check (subtract 5 from roll) to cross. Kender and dwarves get no bonus. Fail: swept 10' further toward the falls (area 56). Must check again until success or going over the falls."
+      ]
+    },
+    {
+      "id": "56",
+      "canonical_id": "DL1_56",
+      "name": "View from the Falls",
+      "heading": "AREA 56: View from the Falls",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 56: View from the Falls"
+      },
+      "summary": "Water rushing around columns and plunging from hanging steps into a vast cavern. Over **500 feet below**: ruins litter the dim cavern floor. Several waterfalls pour into the cavern; many streets are rivers, all flowing into a single abyss to the north. A **huge chain extends from the mists overhead down into a small courtyard below**.",
+      "description": "Water rushing around columns and plunging from hanging steps into a vast cavern. Over **500 feet below**: ruins litter the dim cavern floor. Several waterfalls pour into the cavern; many streets are rivers, all flowing into a single abyss to the north. A **huge chain extends from the mists overhead down into a small courtyard below**.\n\n**Vines to climb down:** Slippery and damp. Must pass **two DEX checks** to climb down without trouble. Fall from here: 20d6 damage + certainly attracts draconians.\n\n**Gully Dwarves on the vines:** If first PC descends about 100 feet, they hear sniffling, muttering, and cursing — more Gully Dwarves climbing up to add their weight to the lifter.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Glup Clan Aghar) ×8 | CN | 12\" | 1,6,7,9,10×2,11,12 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\nDwarves will grumble, move back down, and let heroes go by.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Glup Clan Aghar) ×8",
+          "stats": {
+            "Creature": "Gully Dwarves (Glup Clan Aghar) ×8",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "1,6,7,9,10×2,11,12",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Glup Clan Aghar) ×8",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "1,6,7,9,10×2,11,12",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Vines to climb down",
+          "text": "Slippery and damp. Must pass **two DEX checks** to climb down without trouble. Fall from here: 20d6 damage + certainly attracts draconians."
+        },
+        {
+          "label": "Gully Dwarves on the vines",
+          "text": "If first PC descends about 100 feet, they hear sniffling, muttering, and cursing — more Gully Dwarves climbing up to add their weight to the lifter."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Vines to climb down:** Slippery and damp. Must pass **two DEX checks** to climb down without trouble. Fall from here: 20d6 damage + certainly attracts draconians."
+      ]
+    },
+    {
+      "id": "57–59",
+      "canonical_id": "DL1_57_59",
+      "name": "Treasury Complex",
+      "heading": "AREAS 57–59: Treasury Complex",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREAS 57–59: Treasury Complex"
+      },
+      "summary": "",
+      "description": "",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "57a",
+      "canonical_id": "DL1_57A",
+      "name": "Outer Treasury",
+      "heading": "57a. Outer Treasury",
+      "heading_level": 3,
+      "parent_id": "57–59",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "57a. Outer Treasury"
+      },
+      "summary": "Long counter of chipped, dusty marble bisecting the room. Four ghostly forms at south wall with weapons drawn. Behind the counter: another long-faced ghostly form — the clerk.",
+      "description": "Long counter of chipped, dusty marble bisecting the room. Four ghostly forms at south wall with weapons drawn. Behind the counter: another long-faced ghostly form — the clerk.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Clerk Spectral Minion ×1 | CN | 30\" | 18 | 2 | 3 | 0 | — | 20% magic resist |\n| Guardian Spectral Minions ×4 | CE | 30\" | 9,11,16,17 | 2 | 3 | 1 | 1–8 | 20% magic resist |\n\n**Clerk demands:** Payment of **Kathal's taxes: 500 clay Tsarothian Culli**. Accepts no other currency. Payment releases him from duty.\n\n**If PCs have no Culli:** Clerk orders guards to kill them for trying to impersonate Kathal.\n\n**Counter:** 3' gap at east end; about 4' high. Spectral minions hover around it.",
+      "tags": [
+        "combat",
+        "encounter",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Clerk Spectral Minion ×1",
+          "stats": {
+            "Creature": "Clerk Spectral Minion ×1",
+            "AL": "CN",
+            "MV": "30\"",
+            "HP": "18",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "0",
+            "Damage": "—",
+            "Notes": "20% magic resist"
+          }
+        },
+        {
+          "name": "Guardian Spectral Minions ×4",
+          "stats": {
+            "Creature": "Guardian Spectral Minions ×4",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "9,11,16,17",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1–8",
+            "Notes": "20% magic resist"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Clerk Spectral Minion ×1",
+              "AL": "CN",
+              "MV": "30\"",
+              "HP": "18",
+              "AC": "2",
+              "HD": "3",
+              "Attacks": "0",
+              "Damage": "—",
+              "Notes": "20% magic resist"
+            },
+            {
+              "Creature": "Guardian Spectral Minions ×4",
+              "AL": "CE",
+              "MV": "30\"",
+              "HP": "9,11,16,17",
+              "AC": "2",
+              "HD": "3",
+              "Attacks": "1",
+              "Damage": "1–8",
+              "Notes": "20% magic resist"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Clerk demands",
+          "text": "Payment of **Kathal's taxes: 500 clay Tsarothian Culli**. Accepts no other currency. Payment releases him from duty."
+        },
+        {
+          "label": "If PCs have no Culli",
+          "text": "Clerk orders guards to kill them for trying to impersonate Kathal."
+        },
+        {
+          "label": "Counter",
+          "text": "3' gap at east end; about 4' high. Spectral minions hover around it."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Long counter of chipped, dusty marble bisecting the room. Four ghostly forms at south wall with weapons drawn. Behind the counter: another long-faced ghostly form — the clerk.",
+        "**Clerk demands:** Payment of **Kathal's taxes: 500 clay Tsarothian Culli**. Accepts no other currency. Payment releases him from duty.",
+        "**If PCs have no Culli:** Clerk orders guards to kill them for trying to impersonate Kathal."
+      ],
+      "hidden_or_dm_facts": [
+        "Long counter of chipped, dusty marble bisecting the room. Four ghostly forms at south wall with weapons drawn. Behind the counter: another long-faced ghostly form — the clerk."
+      ],
+      "area_references": [],
+      "checks_and_rolls": [
+        "| Clerk Spectral Minion ×1 | CN | 30\" | 18 | 2 | 3 | 0 | — | 20% magic resist |",
+        "| Guardian Spectral Minions ×4 | CE | 30\" | 9,11,16,17 | 2 | 3 | 1 | 1–8 | 20% magic resist |"
+      ]
+    },
+    {
+      "id": "57b",
+      "canonical_id": "DL1_57B",
+      "name": "Vault",
+      "heading": "57b. Vault",
+      "heading_level": 3,
+      "parent_id": "57–59",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "57b. Vault"
+      },
+      "summary": "Hundreds of rotting sacks, clay tokens spilling from split sides. Three skeletons (two holding shovels) sprawl half-buried in clay tokens. Two alcoves in east wall with moss-covered inscriptions.",
+      "description": "Hundreds of rotting sacks, clay tokens spilling from split sides. Three skeletons (two holding shovels) sprawl half-buried in clay tokens. Two alcoves in east wall with moss-covered inscriptions.\n\n**Reading inscriptions:** 30% chance. Northern one reads \"Treasury\"; southern one reads \"Taxes.\"\n\n**The alcoves:** Both are **permanent dimension doors** leading to the ruins of the Treasury Tower (area 62). They warp space to appear as normal arched entrances into the vault.\n\n---",
+      "tags": [
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Reading inscriptions",
+          "text": "30% chance. Northern one reads \"Treasury\"; southern one reads \"Taxes.\""
+        },
+        {
+          "label": "The alcoves",
+          "text": "Both are **permanent dimension doors** leading to the ruins of the Treasury Tower (area 62). They warp space to appear as normal arched entrances into the vault."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "62"
+      ],
+      "checks_and_rolls": [
+        "**Reading inscriptions:** 30% chance. Northern one reads \"Treasury\"; southern one reads \"Taxes.\""
+      ]
+    },
+    {
+      "id": "58a",
+      "canonical_id": "DL1_58A",
+      "name": "North Cavern",
+      "heading": "58a. North Cavern",
+      "heading_level": 3,
+      "parent_id": "57–59",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "58a. North Cavern"
+      },
+      "summary": "Chimney fragments hang 5' from cavern ceiling. Water trickles from chimney and fissures. 15 feet below the chimney: cavern floor slants sharply toward the southwest.",
+      "description": "Chimney fragments hang 5' from cavern ceiling. Water trickles from chimney and fissures. 15 feet below the chimney: cavern floor slants sharply toward the southwest.",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "58b",
+      "canonical_id": "DL1_58B",
+      "name": "Drain",
+      "heading": "58b. Drain",
+      "heading_level": 3,
+      "parent_id": "57–59",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "58b. Drain"
+      },
+      "summary": "Steepening floor narrows into a smooth, yard-wide **vertical drain**. Water collected from all the cavern fissures swirls steadily down the sides of the shaft.",
+      "description": "Steepening floor narrows into a smooth, yard-wide **vertical drain**. Water collected from all the cavern fissures swirls steadily down the sides of the shaft.",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "58c",
+      "canonical_id": "DL1_58C",
+      "name": "Down the Sink",
+      "heading": "58c. Down the Sink",
+      "heading_level": 3,
+      "parent_id": "57–59",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "58c. Down the Sink"
+      },
+      "summary": "Water splashes down slick sides of the vertical shaft. Chilly; noise of the water is deafening.",
+      "description": "Water splashes down slick sides of the vertical shaft. Chilly; noise of the water is deafening.\n\n---",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "59a",
+      "canonical_id": "DL1_59A",
+      "name": "Windows Below",
+      "heading": "59a. Windows Below",
+      "heading_level": 3,
+      "parent_id": "57–59",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "59a. Windows Below"
+      },
+      "summary": "Natural shaft of smooth rock carries a spray of water into a cramped cave. Ceiling filled with water. Floor is made of solid masonry stonework — what appears to be a **30' tall window laid into the stone floor**. Glass is gone; ironwork of the window-frame remains.",
+      "description": "Natural shaft of smooth rock carries a spray of water into a cramped cave. Ceiling filled with water. Floor is made of solid masonry stonework — what appears to be a **30' tall window laid into the stone floor**. Glass is gone; ironwork of the window-frame remains.",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "59b",
+      "canonical_id": "DL1_59B",
+      "name": "Dance on the Wall",
+      "heading": "59b. Dance on the Wall",
+      "heading_level": 3,
+      "parent_id": "57–59",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "59b. Dance on the Wall"
+      },
+      "summary": "A vast hall lying **on its side**: its northern wall (beamed like a ceiling) is one side; its southern wall (tiled floor) is another. Now the ceiling and floor of the room are windowed. Water pours in from upper windows, out through broken lower ones. Mosses and fungus everywhere. Fungus on the floor **appears to be moving**.",
+      "description": "A vast hall lying **on its side**: its northern wall (beamed like a ceiling) is one side; its southern wall (tiled floor) is another. Now the ceiling and floor of the room are windowed. Water pours in from upper windows, out through broken lower ones. Mosses and fungus everywhere. Fungus on the floor **appears to be moving**.\n\n**The curtains:** From the northern end of each upper window (the former top), curtains of corroded woven metal hang down to the wall below. Support the weight of a man. Those from the westernmost window have been pulled over to an arched opening in the west wall, 30' up, fastened there — **this opening leads to a dark corridor**.\n\n**Crossing from curtain to curtain:** Each adventurer must make a DEX check or fall to the floor (3d6 damage) and be attacked by the snakes.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Poisonous Snakes ×10 | N | 15\" | 9 each | 6 | 2+1 | 1 | 1 hp + poison (3d4 pts) | On the floor |\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [
+        {
+          "name": "Poisonous Snakes ×10",
+          "stats": {
+            "Creature": "Poisonous Snakes ×10",
+            "AL": "N",
+            "MV": "15\"",
+            "HP": "9 each",
+            "AC": "6",
+            "HD": "2+1",
+            "Attacks": "1",
+            "Damage": "1 hp + poison (3d4 pts)",
+            "Notes": "On the floor"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Poisonous Snakes ×10",
+              "AL": "N",
+              "MV": "15\"",
+              "HP": "9 each",
+              "AC": "6",
+              "HD": "2+1",
+              "Attacks": "1",
+              "Damage": "1 hp + poison (3d4 pts)",
+              "Notes": "On the floor"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "The curtains",
+          "text": "From the northern end of each upper window (the former top), curtains of corroded woven metal hang down to the wall below. Support the weight of a man. Those from the westernmost window have been pulled over to an arched opening in the west wall, 30' up, fastened there — **this opening leads to a dark corridor**."
+        },
+        {
+          "label": "Crossing from curtain to curtain",
+          "text": "Each adventurer must make a DEX check or fall to the floor (3d6 damage) and be attacked by the snakes."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Crossing from curtain to curtain:** Each adventurer must make a DEX check or fall to the floor (3d6 damage) and be attacked by the snakes.",
+        "| Poisonous Snakes ×10 | N | 15\" | 9 each | 6 | 2+1 | 1 | 1 hp + poison (3d4 pts) | On the floor |"
+      ]
+    },
+    {
+      "id": "60",
+      "canonical_id": "DL1_60",
+      "name": "Entrance to the Hall of Justice",
+      "heading": "AREA 60: Entrance to the Hall of Justice",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 60: Entrance to the Hall of Justice"
+      },
+      "summary": "Only dim light from above scattering darkness onto ruins-covered cavern floor. A facade of an ancient building juts sideways from the cavern wall. Its roof lies half-buried in rubble to the north; steps now rising to the south. Delicately carved pillars lie broken amid rubble sloping west to a cobblestone street. Further west: ring of broken stones — foundation of a tremendous tower. The tower itself lies next to the foundation, its top buried in the cavern wall. Water pours into the cavern from several high places.",
+      "description": "Only dim light from above scattering darkness onto ruins-covered cavern floor. A facade of an ancient building juts sideways from the cavern wall. Its roof lies half-buried in rubble to the north; steps now rising to the south. Delicately carved pillars lie broken amid rubble sloping west to a cobblestone street. Further west: ring of broken stones — foundation of a tremendous tower. The tower itself lies next to the foundation, its top buried in the cavern wall. Water pours into the cavern from several high places.\n\n---",
+      "tags": [
+        "hazard",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "61",
+      "canonical_id": "DL1_61",
+      "name": "North Cavern Falls",
+      "heading": "AREA 61: North Cavern Falls",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 61: North Cavern Falls"
+      },
+      "summary": "Water thunders down from an opening high up the cavern wall. Gleaming faintly, tumbles over rubble, forms a river on the cobblestone street, rushing out of sight.",
+      "description": "Water thunders down from an opening high up the cavern wall. Gleaming faintly, tumbles over rubble, forms a river on the cobblestone street, rushing out of sight.\n\n---",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "62",
+      "canonical_id": "DL1_62",
+      "name": "Treasury Tower",
+      "heading": "AREA 62: Treasury Tower",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 62: Treasury Tower"
+      },
+      "summary": "A broken foundation circles where a tremendous tower once stood. **Two 10' cubes** stand within the circle, apparently untouched by the catastrophe. Each cube has an arched opening in its side; the openings face each other, 20' apart. The fallen tower lies on its side, its top buried in the cavern wall to the north. Inside the hollow cylinder of the tower: only darkness.",
+      "description": "A broken foundation circles where a tremendous tower once stood. **Two 10' cubes** stand within the circle, apparently untouched by the catastrophe. Each cube has an arched opening in its side; the openings face each other, 20' apart. The fallen tower lies on its side, its top buried in the cavern wall to the north. Inside the hollow cylinder of the tower: only darkness.\n\n**The cubes:** Permanent dimension doors, both leading to the vault (57b). Warp space so they appear to be normal arched entrances.\n\n---",
+      "tags": [
+        "hazard",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "The cubes",
+          "text": "Permanent dimension doors, both leading to the vault (57b). Warp space so they appear to be normal arched entrances."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "63",
+      "canonical_id": "DL1_63",
+      "name": "North Mall",
+      "heading": "AREA 63: North Mall",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 63: North Mall"
+      },
+      "summary": "Catastrophe has marred once-beautiful buildings. Moss-covered rubble hides cobblestones. Icy river surges northwest; the street ends abruptly in a **chasm** — mist billows from the hole, water crashes somewhere below.",
+      "description": "Catastrophe has marred once-beautiful buildings. Moss-covered rubble hides cobblestones. Icy river surges northwest; the street ends abruptly in a **chasm** — mist billows from the hole, water crashes somewhere below.\n\n**Crossing the swift water (within 50' of the chasm):** Must check both STR and DEX to cross unaided. Fail either: swept 10' toward the twisting whirlpool in the crevasse. Must check again or be swept another 10' toward the maelstrom. Falling into the crevasse: drowns unless waterbreathing, in which case PC surfaces at the bottom of a **1,000' cliff** floating out into the Newsea.\n\n---",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Crossing the swift water (within 50' of the chasm)",
+          "text": "Must check both STR and DEX to cross unaided. Fail either: swept 10' toward the twisting whirlpool in the crevasse. Must check again or be swept another 10' toward the maelstrom. Falling into the crevasse: drowns unless waterbreathing, in which case PC surfaces at the bottom of a **1,000' cliff** floating out into the Newsea."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "64",
+      "canonical_id": "DL1_64",
+      "name": "Palace Guard Hall",
+      "heading": "AREA 64: Palace Guard Hall",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 64: Palace Guard Hall"
+      },
+      "summary": "Shattered city walls. In middle of the street, a river flowing swiftly north. A shaft of dim light overhead centers on a great plaza to the south. One building holds up admirably. Dark growth obscures the lettering above its double doors.",
+      "description": "Shattered city walls. In middle of the street, a river flowing swiftly north. A shaft of dim light overhead centers on a great plaza to the south. One building holds up admirably. Dark growth obscures the lettering above its double doors.\n\n**Reading the runes (60% chance):** \"Guardians of Justice.\"",
+      "tags": [
+        "hazard",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Reading the runes (60% chance)",
+          "text": "\"Guardians of Justice.\""
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Reading the runes (60% chance):** \"Guardians of Justice.\""
+      ]
+    },
+    {
+      "id": "64a",
+      "canonical_id": "DL1_64A",
+      "name": "Entry",
+      "heading": "64a. Entry",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64a. Entry"
+      },
+      "summary": "Dark stains on walls. 10'-wide hall curves before a set of bronze double doors. In front of the doors: mosses cover an ancient, faded mural.",
+      "description": "Dark stains on walls. 10'-wide hall curves before a set of bronze double doors. In front of the doors: mosses cover an ancient, faded mural.\n\n**The mural:** Heroes must clean it off before realizing it's a map of a city. Even discovered, only 30% chance of recognizing their current location on the map. Anyone who figures out which part is the cavern area can discover the way to the Great Plaza (67), the Hall of Justice (70a), and the Treasury Tower (62).",
+      "tags": [
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "The mural",
+          "text": "Heroes must clean it off before realizing it's a map of a city. Even discovered, only 30% chance of recognizing their current location on the map. Anyone who figures out which part is the cavern area can discover the way to the Great Plaza (67), the Hall of Justice (70a), and the Treasury Tower (62)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**The mural:** Heroes must clean it off before realizing it's a map of a city. Even discovered, only 30% chance of recognizing their current location on the map. Anyone who figures out which part is the cavern area can discover the way to the Great Plaza (67), the Hall of Justice (70a), and the Treasury Tower (62)."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**The mural:** Heroes must clean it off before realizing it's a map of a city. Even discovered, only 30% chance of recognizing their current location on the map. Anyone who figures out which part is the cavern area can discover the way to the Great Plaza (67), the Hall of Justice (70a), and the Treasury Tower (62)."
+      ]
+    },
+    {
+      "id": "64b",
+      "canonical_id": "DL1_64B",
+      "name": "North Cell",
+      "heading": "64b. North Cell",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64b. North Cell"
+      },
+      "summary": "Dark stains. 20'-square room. Two sodden wooden doors open east and south. No encounter.",
+      "description": "Dark stains. 20'-square room. Two sodden wooden doors open east and south. No encounter.",
+      "tags": [
+        "encounter",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "64c",
+      "canonical_id": "DL1_64C",
+      "name": "North Armory",
+      "heading": "64c. North Armory",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64c. North Armory"
+      },
+      "summary": "Ancient bronze weapons on broken racks. Low ceiling heavy with moisture; sagging beams. In the center: two squat shapes batting leathery wings, chattering, tugging a steel weapon between them.",
+      "description": "Ancient bronze weapons on broken racks. Low ceiling heavy with moisture; sagging beams. In the center: two squat shapes batting leathery wings, chattering, tugging a steel weapon between them.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconians ×5 | LE | 6\"[15\"]/18\" | 6,7,9,11,12 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\nTwo argue over a short sword in the center; all five stop bickering and attack the party. Fight to the death.",
+      "tags": [
+        "combat",
+        "encounter",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×5",
+          "stats": {
+            "Creature": "Baaz Draconians ×5",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "6,7,9,11,12",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconians ×5",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "6,7,9,11,12",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [
+        "Ancient bronze weapons on broken racks. Low ceiling heavy with moisture; sagging beams. In the center: two squat shapes batting leathery wings, chattering, tugging a steel weapon between them."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "64d",
+      "canonical_id": "DL1_64D",
+      "name": "Assembly",
+      "heading": "64d. Assembly",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64d. Assembly"
+      },
+      "summary": "Dark room; echo suggests it is large. From deep in the darkness: shrill, hiccuping sounds.",
+      "description": "Dark room; echo suggests it is large. From deep in the darkness: shrill, hiccuping sounds.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells | Notes |\n|----------|----|----|----|----|----|---------|----|--------|-------|\n| Bozak Draconian (Drunk) ×1 | LE | 6\"[15\"]/18\" | 15 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, push; 2nd: darkness 15', web | Explodes 1d6 on death |\n\n**Stone drunk and lying in northwest corner.** Thinks adventurers are his draconian brothers; babbles in common tongue without trouble. Says: \"The Captain an' I was havin' a little celebration when we got a bit too celebrated! I remember that a bunch of stinking gully dwarves came along and carried him off. If they let the humans in on our real plan, the whole thing could be ruined. I'm pretty sure they dragged him off to their Guildhouse west of here. I've got to get a rescue party together — just as soon as I've had a chance to sleep...off...this...\"\n\n**Cannot be awakened for at least 3 hours.**",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Bozak Draconian (Drunk) ×1",
+          "stats": {
+            "Creature": "Bozak Draconian (Drunk) ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "15",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, push; 2nd: darkness 15', web",
+            "Notes": "Explodes 1d6 on death"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Bozak Draconian (Drunk) ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "15",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: charm, MM, push; 2nd: darkness 15', web",
+              "Notes": "Explodes 1d6 on death"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "| Bozak Draconian (Drunk) ×1 | LE | 6\"[15\"]/18\" | 15 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, push; 2nd: darkness 15', web | Explodes 1d6 on death |"
+      ]
+    },
+    {
+      "id": "64e",
+      "canonical_id": "DL1_64E",
+      "name": "South Cell",
+      "heading": "64e. South Cell",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64e. South Cell"
+      },
+      "summary": "Dark stains; 20'-square room; slimy green substance on ceiling. No encounter.",
+      "description": "Dark stains; 20'-square room; slimy green substance on ceiling. No encounter.",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "64f",
+      "canonical_id": "DL1_64F",
+      "name": "South Armory",
+      "heading": "64f. South Armory",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64f. South Armory"
+      },
+      "summary": "Bronze weapons (corroded and useless) askew from broken wall racks. No encounter.",
+      "description": "Bronze weapons (corroded and useless) askew from broken wall racks. No encounter.",
+      "tags": [
+        "encounter",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [
+        "Bronze weapons (corroded and useless) askew from broken wall racks. No encounter."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "64g",
+      "canonical_id": "DL1_64G",
+      "name": "Quarters",
+      "heading": "64g. Quarters",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64g. Quarters"
+      },
+      "summary": "Mosses drape the darkened corridor. Inky alcoves branch from both sides. Putrid smell.",
+      "description": "Mosses drape the darkened corridor. Inky alcoves branch from both sides. Putrid smell.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconians ×15 | LE | 6\"[15\"]/18\" | 14 each | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\n**Sleeping in cells.** Each hero entering must be quiet or wake them. **Each hero must check DEX** to move silently. If awakened: one thought — kill the intruders. Sleep is not restful; each hero entering the area must be quiet.",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×15",
+          "stats": {
+            "Creature": "Baaz Draconians ×15",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "14 each",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconians ×15",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "14 each",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "64h",
+      "canonical_id": "DL1_64H",
+      "name": "Mess Hall",
+      "heading": "64h. Mess Hall",
+      "heading_level": 3,
+      "parent_id": "64",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "64h. Mess Hall"
+      },
+      "summary": "Smoky torches. Broken tables scattered. Cold fireplace to east. Three unbroken tables in center. Three dark shapes argue loudly.",
+      "description": "Smoky torches. Broken tables scattered. Cold fireplace to east. Three unbroken tables in center. Three dark shapes argue loudly.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconians ×3 | LE | 6\"[15\"]/18\" | 11,13×2 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble; spoiling for a fight |\n\n**Conversation overheard:**\n- First draconian: Wants to know why they're waiting; can just crush the humans\n- Second draconian: If Verminaard needs a staff, let him get it; Khisanth guards the only writings of the true gods — without them humans can't stop the draconian armies\n- Third draconian: Just wait until the spineless Seekers in Haven come up with the staff; then crush them and take it; only a few days' wait for extra safety\n\n**Fight to the death.**\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "quest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×3",
+          "stats": {
+            "Creature": "Baaz Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "11,13×2",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble; spoiling for a fight"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconians ×3",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "11,13×2",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble; spoiling for a fight"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Conversation overheard",
+          "text": "- First draconian: Wants to know why they're waiting; can just crush the humans"
+        }
+      ],
+      "bullets": [
+        "First draconian: Wants to know why they're waiting; can just crush the humans",
+        "Second draconian: If Verminaard needs a staff, let him get it; Khisanth guards the only writings of the true gods — without them humans can't stop the draconian armies",
+        "Third draconian: Just wait until the spineless Seekers in Haven come up with the staff; then crush them and take it; only a few days' wait for extra safety"
+      ],
+      "treasure_refs": [
+        " Second draconian: If Verminaard needs a staff, let him get it; Khisanth guards the only writings of the true gods — without them humans can't stop the draconian armies",
+        " Third draconian: Just wait until the spineless Seekers in Haven come up with the staff; then crush them and take it; only a few days' wait for extra safety"
+      ],
+      "hidden_or_dm_facts": [
+        " Second draconian: If Verminaard needs a staff, let him get it; Khisanth guards the only writings of the true gods — without them humans can't stop the draconian armies"
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "65",
+      "canonical_id": "DL1_65",
+      "name": "Larder Complex",
+      "heading": "AREA 65: Larder Complex",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 65: Larder Complex"
+      },
+      "summary": "",
+      "description": "",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "65a",
+      "canonical_id": "DL1_65A",
+      "name": "Larder Office",
+      "heading": "65a. Larder Office",
+      "heading_level": 3,
+      "parent_id": "65",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "65a. Larder Office"
+      },
+      "summary": "Three figures squat in center, wings folded, tossing something on the floor (gambling). In the northwest corner: a single short figure bound head to toe, eyes glittering above a gag.",
+      "description": "Three figures squat in center, wings folded, tossing something on the floor (gambling). In the northwest corner: a single short figure bound head to toe, eyes glittering above a gag.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells | Notes |\n|----------|----|----|----|----|----|---------|----|--------|-------|\n| Bozak Draconians ×3 | LE | 6\"[15\"]/18\" | 22,23,17 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: MM, shield, sleep; 2nd: darkness 15', web | Explode on death |\n| Hugon Barker (Kender prisoner) | CG | 9\" | 14 | 5 | T3 | 1 | 1–4 | — | STR 11, INT 13, DEX 15 |\n\n**Draconians' plan:** Casting bones to see who wins the Kender for dinner.\n\n**Hugon Barker:** Caught up in wanderlust; wanted to see what was at the bottom of the cavern. Knows nothing about dragonmen's plans. **If rescued, joins the party.**",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Bozak Draconians ×3",
+          "stats": {
+            "Creature": "Bozak Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "22,23,17",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+            "Notes": "Explode on death"
+          }
+        },
+        {
+          "name": "Hugon Barker (Kender prisoner)",
+          "stats": {
+            "Creature": "Hugon Barker (Kender prisoner)",
+            "AL": "CG",
+            "MV": "9\"",
+            "HP": "14",
+            "AC": "5",
+            "HD": "T3",
+            "Attacks": "1",
+            "Damage": "1–4",
+            "Spells": "—",
+            "Notes": "STR 11, INT 13, DEX 15"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Bozak Draconians ×3",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "22,23,17",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+              "Notes": "Explode on death"
+            },
+            {
+              "Creature": "Hugon Barker (Kender prisoner)",
+              "AL": "CG",
+              "MV": "9\"",
+              "HP": "14",
+              "AC": "5",
+              "HD": "T3",
+              "Attacks": "1",
+              "Damage": "1–4",
+              "Spells": "—",
+              "Notes": "STR 11, INT 13, DEX 15"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Draconians' plan",
+          "text": "Casting bones to see who wins the Kender for dinner."
+        },
+        {
+          "label": "Hugon Barker",
+          "text": "Caught up in wanderlust; wanted to see what was at the bottom of the cavern. Knows nothing about dragonmen's plans. **If rescued, joins the party.**"
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "| Hugon Barker (Kender prisoner) | CG | 9\" | 14 | 5 | T3 | 1 | 1–4 | — | STR 11, INT 13, DEX 15 |",
+        "**Hugon Barker:** Caught up in wanderlust; wanted to see what was at the bottom of the cavern. Knows nothing about dragonmen's plans. **If rescued, joins the party.**"
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "65b",
+      "canonical_id": "DL1_65B",
+      "name": "Larder",
+      "heading": "65b. Larder",
+      "heading_level": 3,
+      "parent_id": "65",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "65b. Larder"
+      },
+      "summary": "30'-square room, no natural light. Wicker baskets stacked against walls. Anyone who checks carefully: glint of metal behind the baskets against the west wall.",
+      "description": "30'-square room, no natural light. Wicker baskets stacked against walls. Anyone who checks carefully: glint of metal behind the baskets against the west wall.\n\n**Hidden cache:** Three long swords of superior craftsmanship (+2 to hit and damage) and an elven bow with matching quiver of 12 arrows (+1).\n\n---",
+      "tags": [
+        "combat",
+        "hidden"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Hidden cache",
+          "text": "Three long swords of superior craftsmanship (+2 to hit and damage) and an elven bow with matching quiver of 12 arrows (+1)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "30'-square room, no natural light. Wicker baskets stacked against walls. Anyone who checks carefully: glint of metal behind the baskets against the west wall.",
+        "**Hidden cache:** Three long swords of superior craftsmanship (+2 to hit and damage) and an elven bow with matching quiver of 12 arrows (+1)."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "66",
+      "canonical_id": "DL1_66",
+      "name": "Court of Reception",
+      "heading": "AREA 66: Court of Reception",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 66: Court of Reception"
+      },
+      "summary": "Thin shaft of light overhead dimly outlines a dismal 40'-diameter courtyard. Broken cobblestone streets run east, west, and south. Against the northern wall: a **10' high wicker dragon** bearing a large round metal plate (gong) in a hole in its chest. A robed figure stands beside it. A huge black metal pot sits in the center; a chain rises from the pot disappearing into the mists above.",
+      "description": "Thin shaft of light overhead dimly outlines a dismal 40'-diameter courtyard. Broken cobblestone streets run east, west, and south. Against the northern wall: a **10' high wicker dragon** bearing a large round metal plate (gong) in a hole in its chest. A robed figure stands beside it. A huge black metal pot sits in the center; a chain rises from the pot disappearing into the mists above.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconian ×1 | LE | 6\"[15\"]/18\" | 16 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\n**Within a few minutes:** 8 more draconians arrive (hp 2,3,5×2,8×2,9,12).\n\n**The gong:** Robed draconian takes a mallet and hits the metal plate. Moments after the sound, the chain grows taut; the pot begins to rise with 8 draconians scrambling in. A second pot (bristling with Aghar arms and legs) descends on a chain and passes the ascending one.\n\n**Second pot (descending):** Contains 15 Gully Dwarves (Slud Clan Aghar; hp 8 each; AC 8; HD 2). They wait until the robed draconian yells \"Now, you scum! Climb out or else!\" — then leap out and scramble through area 59b and 58.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "hidden"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconian ×1",
+          "stats": {
+            "Creature": "Baaz Draconian ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "16",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconian ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "16",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Within a few minutes",
+          "text": "8 more draconians arrive (hp 2,3,5×2,8×2,9,12)."
+        },
+        {
+          "label": "The gong",
+          "text": "Robed draconian takes a mallet and hits the metal plate. Moments after the sound, the chain grows taut; the pot begins to rise with 8 draconians scrambling in. A second pot (bristling with Aghar arms and legs) descends on a chain and passes the ascending one."
+        },
+        {
+          "label": "Second pot (descending)",
+          "text": "Contains 15 Gully Dwarves (Slud Clan Aghar; hp 8 each; AC 8; HD 2). They wait until the robed draconian yells \"Now, you scum! Climb out or else!\" — then leap out and scramble through area 59b and 58."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "Thin shaft of light overhead dimly outlines a dismal 40'-diameter courtyard. Broken cobblestone streets run east, west, and south. Against the northern wall: a **10' high wicker dragon** bearing a large round metal plate (gong) in a hole in its chest. A robed figure stands beside it. A huge black metal pot sits in the center; a chain rises from the pot disappearing into the mists above."
+      ],
+      "area_references": [
+        "59b"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "67",
+      "canonical_id": "DL1_67",
+      "name": "Great Plaza",
+      "heading": "AREA 67: Great Plaza",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 67: Great Plaza"
+      },
+      "summary": "A single column of light pierces the overhead mists onto a vast plaza at least **120 feet across**. Steady streams from east and west streets flow into a large pool emptying into a north river. The roar of waterfalls fades.",
+      "description": "A single column of light pierces the overhead mists onto a vast plaza at least **120 feet across**. Steady streams from east and west streets flow into a large pool emptying into a north river. The roar of waterfalls fades.\n\n**Dragon arrives:** A huge black creature arches like a cobra on the steps of one of the southern buildings. The plaza stills. Khisanth speaks in a hissing language to a draconian; the draconian orders Aghar to begin a search for an escaped prisoner (at area 67b). Then the dragon retreats through area 70a into its lair (70k).\n\n**Encounter:**\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells |\n|----------|----|----|----|----|----|---------|----|--------|\n| Khisanth (Onyx) ×1 | CE | 12\"/24\" | 64 | 3 | 8 | 3 | 1–4/1–4/3–18 | 1st ×8: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2 |\n| Gully Dwarves (Slud Clan Aghar) ×7 | CN | 12\" | 2,3,5,6,8×2,9 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 | — |\n| Bozak Leader ×1 | LE | 6\"[15\"]/18\" | 15 | 4 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, push; 2nd: darkness 15', web |\n\n**The escaped prisoner:** Aghar scatter to search for a Que-Shu tribeswoman hiding at area 67b. Draconians follow one search group randomly.",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "quest",
+        "rest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Khisanth (Onyx) ×1",
+          "stats": {
+            "Creature": "Khisanth (Onyx) ×1",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "64",
+            "AC": "3",
+            "HD": "8",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Spells": "1st ×8: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2"
+          }
+        },
+        {
+          "name": "Gully Dwarves (Slud Clan Aghar) ×7",
+          "stats": {
+            "Creature": "Gully Dwarves (Slud Clan Aghar) ×7",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "2,3,5,6,8×2,9",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4",
+            "Spells": "—"
+          }
+        },
+        {
+          "name": "Bozak Leader ×1",
+          "stats": {
+            "Creature": "Bozak Leader ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "15",
+            "AC": "4",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, push; 2nd: darkness 15', web"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells"
+          ],
+          "rows": [
+            {
+              "Creature": "Khisanth (Onyx) ×1",
+              "AL": "CE",
+              "MV": "12\"/24\"",
+              "HP": "64",
+              "AC": "3",
+              "HD": "8",
+              "Attacks": "3",
+              "Damage": "1–4/1–4/3–18",
+              "Spells": "1st ×8: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2"
+            },
+            {
+              "Creature": "Gully Dwarves (Slud Clan Aghar) ×7",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "2,3,5,6,8×2,9",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4",
+              "Spells": "—"
+            },
+            {
+              "Creature": "Bozak Leader ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "15",
+              "AC": "4",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: charm, MM, push; 2nd: darkness 15', web"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Dragon arrives",
+          "text": "A huge black creature arches like a cobra on the steps of one of the southern buildings. The plaza stills. Khisanth speaks in a hissing language to a draconian; the draconian orders Aghar to begin a search for an escaped prisoner (at area 67b). Then the dragon retreats through area 70a into its lair (70k)."
+        },
+        {
+          "label": "Encounter",
+          "text": "| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells |"
+        },
+        {
+          "label": "The escaped prisoner",
+          "text": "Aghar scatter to search for a Que-Shu tribeswoman hiding at area 67b. Draconians follow one search group randomly."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**Dragon arrives:** A huge black creature arches like a cobra on the steps of one of the southern buildings. The plaza stills. Khisanth speaks in a hissing language to a draconian; the draconian orders Aghar to begin a search for an escaped prisoner (at area 67b). Then the dragon retreats through area 70a into its lair (70k).",
+        "**The escaped prisoner:** Aghar scatter to search for a Que-Shu tribeswoman hiding at area 67b. Draconians follow one search group randomly."
+      ],
+      "area_references": [
+        "67b",
+        "70a"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "67a",
+      "canonical_id": "DL1_67A",
+      "name": "East Falls",
+      "heading": "67a. East Falls",
+      "heading_level": 3,
+      "parent_id": "67",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "67a. East Falls"
+      },
+      "summary": "Torrents of water batter rubble, hurling mists, settling into a stream flowing west. **Vines grow up the cavern side next to the waterfall.** Very slippery — must check DEX **twice** (once halfway up, again at top) to climb to ruins of the treasury (area 56).",
+      "description": "Torrents of water batter rubble, hurling mists, settling into a stream flowing west. **Vines grow up the cavern side next to the waterfall.** Very slippery — must check DEX **twice** (once halfway up, again at top) to climb to ruins of the treasury (area 56).",
+      "tags": [
+        "hazard",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "56"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "67b",
+      "canonical_id": "DL1_67B",
+      "name": "West Falls",
+      "heading": "67b. West Falls",
+      "heading_level": 3,
+      "parent_id": "67",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "67b. West Falls"
+      },
+      "summary": "Wall of water diving from opening in west cavern, settling into an east-running stream.",
+      "description": "Wall of water diving from opening in west cavern, settling into an east-running stream.\n\n**Hidden prisoner:**\n\n| NPC | AL | MV | HP | AC | HD | Attacks | Damage |\n|-----|----|----|----|----|----|---------|----|\n| Sunstar, Que-Shu Survivor | CG | 12\" | 8 | 8 | F2 | 1 | 1–4 |\n\n**Behavior:** Crouches as far from water as possible. If cornered: fights fiercely to the death unless party shows they mean no harm. One of only two survivors of her tribe. Desperate to escape. Her cell (70g) is near the dragon's lair (70k). **If party is friendly, she joins them gladly.**\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "hidden",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Sunstar, Que-Shu Survivor",
+          "stats": {
+            "NPC": "Sunstar, Que-Shu Survivor",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "8",
+            "AC": "8",
+            "HD": "F2",
+            "Attacks": "1",
+            "Damage": "1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "NPC",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "NPC": "Sunstar, Que-Shu Survivor",
+              "AL": "CG",
+              "MV": "12\"",
+              "HP": "8",
+              "AC": "8",
+              "HD": "F2",
+              "Attacks": "1",
+              "Damage": "1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Hidden prisoner",
+          "text": "| NPC | AL | MV | HP | AC | HD | Attacks | Damage |"
+        },
+        {
+          "label": "Behavior",
+          "text": "Crouches as far from water as possible. If cornered: fights fiercely to the death unless party shows they mean no harm. One of only two survivors of her tribe. Desperate to escape. Her cell (70g) is near the dragon's lair (70k). **If party is friendly, she joins them gladly.**"
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**Hidden prisoner:**",
+        "**Behavior:** Crouches as far from water as possible. If cornered: fights fiercely to the death unless party shows they mean no harm. One of only two survivors of her tribe. Desperate to escape. Her cell (70g) is near the dragon's lair (70k). **If party is friendly, she joins them gladly.**"
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68",
+      "canonical_id": "DL1_68",
+      "name": "Aghar Guildhall",
+      "heading": "AREA 68: Aghar Guildhall",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 68: Aghar Guildhall"
+      },
+      "summary": "",
+      "description": "",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68a",
+      "canonical_id": "DL1_68A",
+      "name": "Alley",
+      "heading": "68a. Alley",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68a. Alley"
+      },
+      "summary": "Narrow passage through crumbling vine-covered ruins; ends in a door.",
+      "description": "Narrow passage through crumbling vine-covered ruins; ends in a door.",
+      "tags": [
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68b",
+      "canonical_id": "DL1_68B",
+      "name": "Scum Entrance",
+      "heading": "68b. Scum Entrance",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68b. Scum Entrance"
+      },
+      "summary": "Damp and chill. Old and terrible quiet. An unspeakable thing happened here once. No encounter.",
+      "description": "Damp and chill. Old and terrible quiet. An unspeakable thing happened here once. No encounter.",
+      "tags": [
+        "encounter",
+        "social"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68c",
+      "canonical_id": "DL1_68C",
+      "name": "Slud Clan Rooms",
+      "heading": "68c. Slud Clan Rooms",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68c. Slud Clan Rooms"
+      },
+      "summary": "Brown and drying mold covers every wall. Dull stench from lumpy woven mats piled on the floor. Faint sounds rattle from each mat — sleeping Aghar barracks.",
+      "description": "Brown and drying mold covers every wall. Dull stench from lumpy woven mats piled on the floor. Faint sounds rattle from each mat — sleeping Aghar barracks.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Slud Clan Aghar) ×15 | CN | 12\" | 3,6×2,7×3,8×2,10×3,12,13×2,15 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\n**Entry:** Thieves must move silently to walk among them without waking. Non-thieves who attempt to enter automatically wake the Aghar. **If awakened:** Rush toward the door and safety. **If captured:** Know about the elevator (47c, 66) but nothing else.",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Slud Clan Aghar) ×15",
+          "stats": {
+            "Creature": "Gully Dwarves (Slud Clan Aghar) ×15",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "3,6×2,7×3,8×2,10×3,12,13×2,15",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Slud Clan Aghar) ×15",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "3,6×2,7×3,8×2,10×3,12,13×2,15",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Entry",
+          "text": "Thieves must move silently to walk among them without waking. Non-thieves who attempt to enter automatically wake the Aghar. **If awakened:** Rush toward the door and safety. **If captured:** Know about the elevator (47c, 66) but nothing else."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68d",
+      "canonical_id": "DL1_68D",
+      "name": "Glup Clan Rooms",
+      "heading": "68d. Glup Clan Rooms",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68d. Glup Clan Rooms"
+      },
+      "summary": "Fungus stains and water streaks. Light flickers through four vertical slits in the north wall.",
+      "description": "Fungus stains and water streaks. Light flickers through four vertical slits in the north wall.\n\n**Looking through slits:** See the torch-lit room (68e).",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Looking through slits",
+          "text": "See the torch-lit room (68e)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68e",
+      "canonical_id": "DL1_68E",
+      "name": "Welcome Room",
+      "heading": "68e. Welcome Room",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68e. Welcome Room"
+      },
+      "summary": "Torches sputter and smoke. Darker than the smoke are the slits in south and west walls. Southern slits look into an empty room (68d). Sound of hearty snoring through western wall slits (the guards in 68f). No amount of noise in this room awakens those guards.",
+      "description": "Torches sputter and smoke. Darker than the smoke are the slits in south and west walls. Southern slits look into an empty room (68d). Sound of hearty snoring through western wall slits (the guards in 68f). No amount of noise in this room awakens those guards.",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68f",
+      "canonical_id": "DL1_68F",
+      "name": "Guards Post",
+      "heading": "68f. Guards Post",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68f. Guards Post"
+      },
+      "summary": "Three Gully Dwarves leaning against each other, asleep. Snoring that could awaken a mountain.",
+      "description": "Three Gully Dwarves leaning against each other, asleep. Snoring that could awaken a mountain.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Bulp Clan Aghar Guards) ×3 | CN | 12\" | 7,10,12 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\n**These are \"crack\" Aghar guards!** If wakened: try to bully a lone trespasser; run away from more than one. If they run: go straight to the Highbulp's throne room (68m), report that an army has broken in, and ask for orders.",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Bulp Clan Aghar Guards) ×3",
+          "stats": {
+            "Creature": "Gully Dwarves (Bulp Clan Aghar Guards) ×3",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "7,10,12",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Bulp Clan Aghar Guards) ×3",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "7,10,12",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68g",
+      "canonical_id": "DL1_68G",
+      "name": "Waiting Place",
+      "heading": "68g. Waiting Place",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68g. Waiting Place"
+      },
+      "summary": "Walls buried under tapestries and decorations too gaudy to believe. Tapestries hanging everywhere — some upside down or sideways. Fraying gold cloth draped between statues of every shape and kind. The Aghar idea of the good life.",
+      "description": "Walls buried under tapestries and decorations too gaudy to believe. Tapestries hanging everywhere — some upside down or sideways. Fraying gold cloth draped between statues of every shape and kind. The Aghar idea of the good life.\n\n**Secret door:** In north end of east wall. Anyone within 3' hears thumping against the door and muffled growls and yells. Leads to 68h.",
+      "tags": [
+        "hidden",
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Secret door",
+          "text": "In north end of east wall. Anyone within 3' hears thumping against the door and muffled growls and yells. Leads to 68h."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Walls buried under tapestries and decorations too gaudy to believe. Tapestries hanging everywhere — some upside down or sideways. Fraying gold cloth draped between statues of every shape and kind. The Aghar idea of the good life."
+      ],
+      "hidden_or_dm_facts": [
+        "**Secret door:** In north end of east wall. Anyone within 3' hears thumping against the door and muffled growls and yells. Leads to 68h."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68h",
+      "canonical_id": "DL1_68H",
+      "name": "Treasury",
+      "heading": "68h. Treasury",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68h. Treasury"
+      },
+      "summary": "A single draconian glares from the darkness — hands and feet bound, wings tied securely against his body. Two small gully dwarves stand on either side, bearing wooden spears, prodding him, then jumping back. Their oversized horned helmets roll around atop their heads.",
+      "description": "A single draconian glares from the darkness — hands and feet bound, wings tied securely against his body. Two small gully dwarves stand on either side, bearing wooden spears, prodding him, then jumping back. Their oversized horned helmets roll around atop their heads.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Bulp Aghar Guards) ×2 | CN | 12\" | 9,11 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n| Bozak Draconian (Captain) ×1 | LE | 6\"[15\"]/18\" | 33 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 |\n\n**Draconian captain:** Stripped of weapons and uniform; woke up with a horrible hangover.\n\n**If untied:** Uses every means (mainly spells) to escape and regain command of troops. **Spells:** 1st: charm person, magic missile, push; 2nd: darkness 15', web.\n\n**What the captain reveals (only if threatened with death or charmed):** \"Verminaard is our Dragonlord! True cleric of evil, he calls upon the powers of darkness to bring this land under his rule and that of his brothers. Yet he fears one thing: the uprising of light against the darkness. We guard that which might kindle hope among men and lift the darkness! We guard the true knowledge of the gods. Under the eye of Khisanth, the truth is safe in the secret night!\"\n\n**The dwarves:** Try to flee when they notice heroes (after only 2 rounds).",
+      "tags": [
+        "combat",
+        "encounter",
+        "hidden",
+        "quest",
+        "rest",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Bulp Aghar Guards) ×2",
+          "stats": {
+            "Creature": "Gully Dwarves (Bulp Aghar Guards) ×2",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "9,11",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        },
+        {
+          "name": "Bozak Draconian (Captain) ×1",
+          "stats": {
+            "Creature": "Bozak Draconian (Captain) ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "33",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Bulp Aghar Guards) ×2",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "9,11",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            },
+            {
+              "Creature": "Bozak Draconian (Captain) ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "33",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Draconian captain",
+          "text": "Stripped of weapons and uniform; woke up with a horrible hangover."
+        },
+        {
+          "label": "If untied",
+          "text": "Uses every means (mainly spells) to escape and regain command of troops. **Spells:** 1st: charm person, magic missile, push; 2nd: darkness 15', web."
+        },
+        {
+          "label": "What the captain reveals (only if threatened with death or charmed)",
+          "text": "\"Verminaard is our Dragonlord! True cleric of evil, he calls upon the powers of darkness to bring this land under his rule and that of his brothers. Yet he fears one thing: the uprising of light against the darkness. We guard that which might kindle hope among men and lift the darkness! We guard the true knowledge of the gods. Under the eye of Khisanth, the truth is safe in the secret night!\""
+        },
+        {
+          "label": "The dwarves",
+          "text": "Try to flee when they notice heroes (after only 2 rounds)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Draconian captain:** Stripped of weapons and uniform; woke up with a horrible hangover."
+      ],
+      "hidden_or_dm_facts": [
+        "**What the captain reveals (only if threatened with death or charmed):** \"Verminaard is our Dragonlord! True cleric of evil, he calls upon the powers of darkness to bring this land under his rule and that of his brothers. Yet he fears one thing: the uprising of light against the darkness. We guard that which might kindle hope among men and lift the darkness! We guard the true knowledge of the gods. Under the eye of Khisanth, the truth is safe in the secret night!\""
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68i",
+      "canonical_id": "DL1_68I",
+      "name": "Messy Mess",
+      "heading": "68i. Messy Mess",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68i. Messy Mess"
+      },
+      "summary": "Lukewarm, stinking glop flying about. Bowls shattering. Knives clattering. Gully dwarves settling a wild argument over dinner.",
+      "description": "Lukewarm, stinking glop flying about. Bowls shattering. Knives clattering. Gully dwarves settling a wild argument over dinner.\n\n**Each round a hero is in this room:** 70% chance a bowl of goo hits and splatters on them. Aghar stew made by throwing nearly anything dead or near-death into a pot. **Stench:** Wears off in 1d20 turns; during that time other heroes must check CON to stand within 10' of the affected hero. Neither the affected hero nor anyone with him has a chance of surprising an enemy.\n\nAghar don't notice heroes until 5 rounds after entering. They throw food at intruders (chance to hit doesn't increase; they're too busy dodging bowls themselves). **If heroes try to fight:** Foul-smelling dwarves run out one of the doors.",
+      "tags": [
+        "combat",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Each round a hero is in this room",
+          "text": "70% chance a bowl of goo hits and splatters on them. Aghar stew made by throwing nearly anything dead or near-death into a pot. **Stench:** Wears off in 1d20 turns; during that time other heroes must check CON to stand within 10' of the affected hero. Neither the affected hero nor anyone with him has a chance of surprising an enemy."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Each round a hero is in this room:** 70% chance a bowl of goo hits and splatters on them. Aghar stew made by throwing nearly anything dead or near-death into a pot. **Stench:** Wears off in 1d20 turns; during that time other heroes must check CON to stand within 10' of the affected hero. Neither the affected hero nor anyone with him has a chance of surprising an enemy."
+      ]
+    },
+    {
+      "id": "68j",
+      "canonical_id": "DL1_68J",
+      "name": "Bulp Clan Rooms",
+      "heading": "68j. Bulp Clan Rooms",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68j. Bulp Clan Rooms"
+      },
+      "summary": "Grinding snores and whistles from dirty cells.",
+      "description": "Grinding snores and whistles from dirty cells.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Gully Dwarves (Bulp Clan Aghar) ×8 | CN | 12\" | 3,6,8,10×2,11,12,13 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\n**If awakened:** Try to run away. **If captured:** Know the tunnelway from 69b into the dragon's lair.",
+      "tags": [
+        "combat",
+        "encounter",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Gully Dwarves (Bulp Clan Aghar) ×8",
+          "stats": {
+            "Creature": "Gully Dwarves (Bulp Clan Aghar) ×8",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "3,6,8,10×2,11,12,13",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Gully Dwarves (Bulp Clan Aghar) ×8",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "3,6,8,10×2,11,12,13",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "If awakened",
+          "text": "Try to run away. **If captured:** Know the tunnelway from 69b into the dragon's lair."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**If awakened:** Try to run away. **If captured:** Know the tunnelway from 69b into the dragon's lair."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68k",
+      "canonical_id": "DL1_68K",
+      "name": "Highbulp Quarters",
+      "heading": "68k. Highbulp Quarters",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68k. Highbulp Quarters"
+      },
+      "summary": "Huge carved, rotting-posted bed sagging in the middle. Tattered hats with shredded or soiled feathers on racks lining the west wall. Caps and loud clothing of all kinds piled about.",
+      "description": "Huge carved, rotting-posted bed sagging in the middle. Tattered hats with shredded or soiled feathers on racks lining the west wall. Caps and loud clothing of all kinds piled about.\n\n**Secret door in west wall.**\n\n**Searching the clothing piles:** Find an old, stained map showing the location of the **sewer access (69b)** and the tunnel leading from there to **the dragon's lair at 70k**. Crude note: \"Big treasure, much goods. Old bark of a dragon not miss if great Highbulp take his share!\"",
+      "tags": [
+        "combat",
+        "hidden",
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Searching the clothing piles",
+          "text": "Find an old, stained map showing the location of the **sewer access (69b)** and the tunnel leading from there to **the dragon's lair at 70k**. Crude note: \"Big treasure, much goods. Old bark of a dragon not miss if great Highbulp take his share!\""
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Searching the clothing piles:** Find an old, stained map showing the location of the **sewer access (69b)** and the tunnel leading from there to **the dragon's lair at 70k**. Crude note: \"Big treasure, much goods. Old bark of a dragon not miss if great Highbulp take his share!\""
+      ],
+      "hidden_or_dm_facts": [
+        "**Secret door in west wall.**",
+        "**Searching the clothing piles:** Find an old, stained map showing the location of the **sewer access (69b)** and the tunnel leading from there to **the dragon's lair at 70k**. Crude note: \"Big treasure, much goods. Old bark of a dragon not miss if great Highbulp take his share!\""
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68l",
+      "canonical_id": "DL1_68L",
+      "name": "Secret Exit",
+      "heading": "68l. Secret Exit",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68l. Secret Exit"
+      },
+      "summary": "One-way-out secret doors (old thief escape route). No encounter.",
+      "description": "One-way-out secret doors (old thief escape route). No encounter.",
+      "tags": [
+        "encounter",
+        "hidden",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "One-way-out secret doors (old thief escape route). No encounter."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "68m",
+      "canonical_id": "DL1_68M",
+      "name": "Court of the Aghar",
+      "heading": "68m. Court of the Aghar",
+      "heading_level": 3,
+      "parent_id": "68",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "68m. Court of the Aghar"
+      },
+      "summary": "Heavy frayed gold cloth adorning the hall. Statues lining walls. Patchwork carpets across the floor. At the west end: a huge throne with badly peeling gold leafing. A shriveled figure nodding beneath a tarnished crown three sizes too big, buried in robes.",
+      "description": "Heavy frayed gold cloth adorning the hall. Statues lining walls. Patchwork carpets across the floor. At the west end: a huge throne with badly peeling gold leafing. A shriveled figure nodding beneath a tarnished crown three sizes too big, buried in robes.\n\n| NPC | AL | MV | HP | AC | HD | Attacks | Damage |\n|-----|----|----|----|----|----|---------|----|\n| Phudge Highbulp I, King of the Aghar | CN | 12\" | 16 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n| Highbulp Guards (Bulp Clan) ×4 | CN | 12\" | 4,6,7,13 | 8 | 2 | 1 or 2 | 1–6 or 1–4/1–4 |\n\n**Guards:** Attack only if they or Phudge are attacked. Though Aghar generally run away from a fight, **when backed into a corner they are ferocious.**\n\n**Phudge's disposition:** Dislikes draconians. Misses the times when Aghar could go for weeks without working. Dragonmen have cleaned the place up far too much for his tastes.\n\n**What Phudge knows:** The Disks of Mishakal lie in the dragon's lair at 70k; also knows about the tunnel from 69b into that lair.\n\n**What Phudge offers:** Guides to various places in the caverns. No other aid.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "quest",
+        "social",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Phudge Highbulp I, King of the Aghar",
+          "stats": {
+            "NPC": "Phudge Highbulp I, King of the Aghar",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "16",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        },
+        {
+          "name": "Highbulp Guards (Bulp Clan) ×4",
+          "stats": {
+            "NPC": "Highbulp Guards (Bulp Clan) ×4",
+            "AL": "CN",
+            "MV": "12\"",
+            "HP": "4,6,7,13",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–6 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "NPC",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "NPC": "Phudge Highbulp I, King of the Aghar",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "16",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            },
+            {
+              "NPC": "Highbulp Guards (Bulp Clan) ×4",
+              "AL": "CN",
+              "MV": "12\"",
+              "HP": "4,6,7,13",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–6 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Guards",
+          "text": "Attack only if they or Phudge are attacked. Though Aghar generally run away from a fight, **when backed into a corner they are ferocious.**"
+        },
+        {
+          "label": "Phudge's disposition",
+          "text": "Dislikes draconians. Misses the times when Aghar could go for weeks without working. Dragonmen have cleaned the place up far too much for his tastes."
+        },
+        {
+          "label": "What Phudge knows",
+          "text": "The Disks of Mishakal lie in the dragon's lair at 70k; also knows about the tunnel from 69b into that lair."
+        },
+        {
+          "label": "What Phudge offers",
+          "text": "Guides to various places in the caverns. No other aid."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Heavy frayed gold cloth adorning the hall. Statues lining walls. Patchwork carpets across the floor. At the west end: a huge throne with badly peeling gold leafing. A shriveled figure nodding beneath a tarnished crown three sizes too big, buried in robes.",
+        "**What Phudge knows:** The Disks of Mishakal lie in the dragon's lair at 70k; also knows about the tunnel from 69b into that lair."
+      ],
+      "hidden_or_dm_facts": [
+        "**What Phudge knows:** The Disks of Mishakal lie in the dragon's lair at 70k; also knows about the tunnel from 69b into that lair."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "69",
+      "canonical_id": "DL1_69",
+      "name": "The Secret Way",
+      "heading": "AREA 69: The Secret Way",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 69: The Secret Way"
+      },
+      "summary": "",
+      "description": "",
+      "tags": [
+        "hidden",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "69a",
+      "canonical_id": "DL1_69A",
+      "name": "Delvers Welcome",
+      "heading": "69a. Delvers Welcome",
+      "heading_level": 3,
+      "parent_id": "69",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "69a. Delvers Welcome"
+      },
+      "summary": "Water seeps down walls, pools, then winds out the south door. A long stone counter bisects the room east to west. Behind it: another doorway.",
+      "description": "Water seeps down walls, pools, then winds out the south door. A long stone counter bisects the room east to west. Behind it: another doorway.",
+      "tags": [
+        "hazard",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "Water seeps down walls, pools, then winds out the south door. A long stone counter bisects the room east to west. Behind it: another doorway."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "69b",
+      "canonical_id": "DL1_69B",
+      "name": "The Secret Way",
+      "heading": "69b. The Secret Way",
+      "heading_level": 3,
+      "parent_id": "69",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "69b. The Secret Way"
+      },
+      "summary": "Rivulets of water trickle down the walls.",
+      "description": "Rivulets of water trickle down the walls.\n\n**Finding the trapdoor:** PCs who check the floor near the center of the room find a closed trapdoor operated by a pull ring. Add the STR of all PCs trying to pull the door open to find the **percentage chance of success**.\n\n**The trapdoor:** 4'-square opening over a 4'-square shaft 20' deep. Opens into a 5'-diameter masonry tunnel half-filled with water.\n\n**Before entering:** Check for a random encounter. If indicated, roll 1d20 for how many rounds later the encounter takes place. Treat a Khisanth encounter as **no encounter** (she's not down here).\n\n**The tunnel layout:**\n- North of the access shaft: runs 30' to a cave-in\n- South from the shaft: runs 200' south, then turns east 340' to another cave-in\n- **30 feet before the end of the east branching tunnel:** A shaft ascends 30' to a **grate in the floor of Khisanth's lair (70k)**\n\n---",
+      "tags": [
+        "encounter",
+        "hazard",
+        "hidden",
+        "map",
+        "quest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Finding the trapdoor",
+          "text": "PCs who check the floor near the center of the room find a closed trapdoor operated by a pull ring. Add the STR of all PCs trying to pull the door open to find the **percentage chance of success**."
+        },
+        {
+          "label": "The trapdoor",
+          "text": "4'-square opening over a 4'-square shaft 20' deep. Opens into a 5'-diameter masonry tunnel half-filled with water."
+        },
+        {
+          "label": "Before entering",
+          "text": "Check for a random encounter. If indicated, roll 1d20 for how many rounds later the encounter takes place. Treat a Khisanth encounter as **no encounter** (she's not down here)."
+        },
+        {
+          "label": "The tunnel layout",
+          "text": "- North of the access shaft: runs 30' to a cave-in"
+        }
+      ],
+      "bullets": [
+        "North of the access shaft: runs 30' to a cave-in",
+        "South from the shaft: runs 200' south, then turns east 340' to another cave-in",
+        "**30 feet before the end of the east branching tunnel:** A shaft ascends 30' to a **grate in the floor of Khisanth's lair (70k)**"
+      ],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**Finding the trapdoor:** PCs who check the floor near the center of the room find a closed trapdoor operated by a pull ring. Add the STR of all PCs trying to pull the door open to find the **percentage chance of success**.",
+        "**The trapdoor:** 4'-square opening over a 4'-square shaft 20' deep. Opens into a 5'-diameter masonry tunnel half-filled with water.",
+        " **30 feet before the end of the east branching tunnel:** A shaft ascends 30' to a **grate in the floor of Khisanth's lair (70k)**"
+      ],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Before entering:** Check for a random encounter. If indicated, roll 1d20 for how many rounds later the encounter takes place. Treat a Khisanth encounter as **no encounter** (she's not down here)."
+      ]
+    },
+    {
+      "id": "70",
+      "canonical_id": "DL1_70",
+      "name": "Hall of Justice and Dragon's Lair",
+      "heading": "AREA 70: Hall of Justice and Dragon's Lair",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "AREA 70: Hall of Justice and Dragon's Lair"
+      },
+      "summary": "",
+      "description": "",
+      "tags": [
+        "combat"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70a",
+      "canonical_id": "DL1_70A",
+      "name": "Pillars of the Palace",
+      "heading": "70a. Pillars of the Palace",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70a. Pillars of the Palace"
+      },
+      "summary": "Broad steps lead from the great plaza to a pillared courtyard. All pillars cracked, some shattered; supporting a sagging stone roof. In places, the cavern wall has broken the stonework. A large archway leads into a huge dark room to the east. At the back of the courtyard: stained steel doors standing closed (also lead east).",
+      "description": "Broad steps lead from the great plaza to a pillared courtyard. All pillars cracked, some shattered; supporting a sagging stone roof. In places, the cavern wall has broken the stonework. A large archway leads into a huge dark room to the east. At the back of the courtyard: stained steel doors standing closed (also lead east).",
+      "tags": [
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [
+        "Broad steps lead from the great plaza to a pillared courtyard. All pillars cracked, some shattered; supporting a sagging stone roof. In places, the cavern wall has broken the stonework. A large archway leads into a huge dark room to the east. At the back of the courtyard: stained steel doors standing closed (also lead east)."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70b",
+      "canonical_id": "DL1_70B",
+      "name": "Honored Dead",
+      "heading": "70b. Honored Dead",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70b. Honored Dead"
+      },
+      "summary": "Tremendous 40' statues of ancient kings at north and south walls. Deeply carved features masked in shadows — they seem to watch intruders. No encounter.",
+      "description": "Tremendous 40' statues of ancient kings at north and south walls. Deeply carved features masked in shadows — they seem to watch intruders. No encounter.",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70c",
+      "canonical_id": "DL1_70C",
+      "name": "First Hall",
+      "heading": "70c. First Hall",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70c. First Hall"
+      },
+      "summary": "Soiled walls rise 30' to an arched ceiling. Mosses and off-white fungus line the hall. Ancient man-sized statues stand throughout the chamber. **Two Bozak Draconians guard the north end of the hall.**",
+      "description": "Soiled walls rise 30' to an arched ceiling. Mosses and off-white fungus line the hall. Ancient man-sized statues stand throughout the chamber. **Two Bozak Draconians guard the north end of the hall.**\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells | Notes |\n|----------|----|----|----|----|----|---------|----|--------|-------|\n| Bozak Draconian Guards ×2 | LE | 6\"[15\"]/18\" | 22,23 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: MM, shield, sleep; 2nd: darkness 15', web | Explode for 1d6 on death |",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Bozak Draconian Guards ×2",
+          "stats": {
+            "Creature": "Bozak Draconian Guards ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "22,23",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+            "Notes": "Explode for 1d6 on death"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Bozak Draconian Guards ×2",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "22,23",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: MM, shield, sleep; 2nd: darkness 15', web",
+              "Notes": "Explode for 1d6 on death"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "| Bozak Draconian Guards ×2 | LE | 6\"[15\"]/18\" | 22,23 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: MM, shield, sleep; 2nd: darkness 15', web | Explode for 1d6 on death |"
+      ]
+    },
+    {
+      "id": "70d",
+      "canonical_id": "DL1_70D",
+      "name": "Palace Treasury",
+      "heading": "70d. Palace Treasury",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70d. Palace Treasury"
+      },
+      "summary": "Huge chests (wood rotted and split) spill contents into the room. **30,000 Tsarothian clay Culli** — absolutely worthless.",
+      "description": "Huge chests (wood rotted and split) spill contents into the room. **30,000 Tsarothian clay Culli** — absolutely worthless.\n\n**If a PC searches through the Culli (30% chance):** Finds one of the following:\n- Two throwing daggers +3\n- 1 pair gauntlets of climbing\n- One spellbook containing: wizard lock, knock, invisibility\n- Shield +1",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "If a PC searches through the Culli (30% chance)",
+          "text": "Finds one of the following:"
+        }
+      ],
+      "bullets": [
+        "Two throwing daggers +3",
+        "1 pair gauntlets of climbing",
+        "One spellbook containing: wizard lock, knock, invisibility",
+        "Shield +1"
+      ],
+      "treasure_refs": [
+        "Huge chests (wood rotted and split) spill contents into the room. **30,000 Tsarothian clay Culli** — absolutely worthless.",
+        "**If a PC searches through the Culli (30% chance):** Finds one of the following:"
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**If a PC searches through the Culli (30% chance):** Finds one of the following:"
+      ]
+    },
+    {
+      "id": "70e",
+      "canonical_id": "DL1_70E",
+      "name": "Bozak Quarters",
+      "heading": "70e. Bozak Quarters",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70e. Bozak Quarters"
+      },
+      "summary": "Cells branch north from a long hall running east. Hall is silent. No encounter listed.",
+      "description": "Cells branch north from a long hall running east. Hall is silent. No encounter listed.",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70f",
+      "canonical_id": "DL1_70F",
+      "name": "Bozak Captain",
+      "heading": "70f. Bozak Captain",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70f. Bozak Captain"
+      },
+      "summary": "Sparse room: a bedroll on the floor, a pack in the corner.",
+      "description": "Sparse room: a bedroll on the floor, a pack in the corner.\n\n**Pack contents:** Dried meats and a **map showing the exact layout of the palace (areas 70a–70h)**.",
+      "tags": [
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Pack contents",
+          "text": "Dried meats and a **map showing the exact layout of the palace (areas 70a–70h)**."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Pack contents:** Dried meats and a **map showing the exact layout of the palace (areas 70a–70h)**."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "70a–70h"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70g",
+      "canonical_id": "DL1_70G",
+      "name": "Prisoner Cell",
+      "heading": "70g. Prisoner Cell",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70g. Prisoner Cell"
+      },
+      "summary": "Door opens to reveal a man hanging by his wrists from manacles driven into the walls. Torso bare, stretched, showing signs of torture.",
+      "description": "Door opens to reveal a man hanging by his wrists from manacles driven into the walls. Torso bare, stretched, showing signs of torture.\n\n| NPC | AL | MV | HP | AC | HD | Attacks | Damage |\n|-----|----|----|----|----|----|---------|----|\n| Raven-eye, Que-Shu Warrior | CG | 12\" | 16 | 9 | F2 | 1 | 1–4 |\n\n**Though weak, Raven-eye speaks:** His tribe was attacked by demons from the north; they fought bravely but fell into the enemy's hands; only two of his people remain (the other is a woman who escaped — Sunstar at 67b). **He knows the way to the dragon's lair (70k) and will join and aid the PCs.**",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Raven-eye, Que-Shu Warrior",
+          "stats": {
+            "NPC": "Raven-eye, Que-Shu Warrior",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "16",
+            "AC": "9",
+            "HD": "F2",
+            "Attacks": "1",
+            "Damage": "1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "NPC",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "NPC": "Raven-eye, Que-Shu Warrior",
+              "AL": "CG",
+              "MV": "12\"",
+              "HP": "16",
+              "AC": "9",
+              "HD": "F2",
+              "Attacks": "1",
+              "Damage": "1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Though weak, Raven-eye speaks",
+          "text": "His tribe was attacked by demons from the north; they fought bravely but fell into the enemy's hands; only two of his people remain (the other is a woman who escaped — Sunstar at 67b). **He knows the way to the dragon's lair (70k) and will join and aid the PCs.**"
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**Though weak, Raven-eye speaks:** His tribe was attacked by demons from the north; they fought bravely but fell into the enemy's hands; only two of his people remain (the other is a woman who escaped — Sunstar at 67b). **He knows the way to the dragon's lair (70k) and will join and aid the PCs.**"
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70h",
+      "canonical_id": "DL1_70H",
+      "name": "Bozak Commander",
+      "heading": "70h. Bozak Commander",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70h. Bozak Commander"
+      },
+      "summary": "Crude desk in the middle of a torch-lit room. A scaly winged lizard creature in partial armor suddenly looks up and leaps to its feet.",
+      "description": "Crude desk in the middle of a torch-lit room. A scaly winged lizard creature in partial armor suddenly looks up and leaps to its feet.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells | Notes |\n|----------|----|----|----|----|----|---------|----|--------|-------|\n| Bozak Draconian Commander ×1 | LE | 6\"[15\"]/18\" | 30 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, shield; 2nd: invis, mirror image | Explodes 1d6 on death |\n\n**If badly outnumbered:** Surrenders, then tries to lead heroes through the **west doors of area 70j** — insisting it's the only safe way to enter the dragon's lair. (It is not; it is a trap.)",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "hidden",
+        "map",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Bozak Draconian Commander ×1",
+          "stats": {
+            "Creature": "Bozak Draconian Commander ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "30",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+            "Notes": "Explodes 1d6 on death"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Bozak Draconian Commander ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "30",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+              "Notes": "Explodes 1d6 on death"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "If badly outnumbered",
+          "text": "Surrenders, then tries to lead heroes through the **west doors of area 70j** — insisting it's the only safe way to enter the dragon's lair. (It is not; it is a trap.)"
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Crude desk in the middle of a torch-lit room. A scaly winged lizard creature in partial armor suddenly looks up and leaps to its feet."
+      ],
+      "hidden_or_dm_facts": [
+        "**If badly outnumbered:** Surrenders, then tries to lead heroes through the **west doors of area 70j** — insisting it's the only safe way to enter the dragon's lair. (It is not; it is a trap.)"
+      ],
+      "area_references": [
+        "70j"
+      ],
+      "checks_and_rolls": [
+        "| Bozak Draconian Commander ×1 | LE | 6\"[15\"]/18\" | 30 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, shield; 2nd: invis, mirror image | Explodes 1d6 on death |"
+      ]
+    },
+    {
+      "id": "70i",
+      "canonical_id": "DL1_70I",
+      "name": "Long Hall",
+      "heading": "70i. Long Hall",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70i. Long Hall"
+      },
+      "summary": "Water seeping down the arching walls of the 10'-wide hall. Cold, musty smell. Hall runs south into rubble of a collapsed ceiling. **Steel double doors (500 gpw each) stand closed on the right** — lead to area 70k.",
+      "description": "Water seeping down the arching walls of the 10'-wide hall. Cold, musty smell. Hall runs south into rubble of a collapsed ceiling. **Steel double doors (500 gpw each) stand closed on the right** — lead to area 70k.",
+      "tags": [
+        "hazard",
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [
+        "Water seeping down the arching walls of the 10'-wide hall. Cold, musty smell. Hall runs south into rubble of a collapsed ceiling. **Steel double doors (500 gpw each) stand closed on the right** — lead to area 70k."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "70k"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70j",
+      "canonical_id": "DL1_70J",
+      "name": "Hall of Sound",
+      "heading": "70j. Hall of Sound",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70j. Hall of Sound"
+      },
+      "summary": "30'-high ceiling arches above 20'-wide hall. Mosaic patterns cover the floor. Hall is **90' long**.",
+      "description": "30'-high ceiling arches above 20'-wide hall. Mosaic patterns cover the floor. Hall is **90' long**.\n\n**Pressure plates:** 40' from either end, pressure plates in the floor activate a **loud gong** that resounds through the palace area.\n\n**If gong is triggered:** The dragon pushes her head out the east doors and uses her **breath weapon** on the party in this narrow space. She then calls for draconian guards (unaware there are none left in the area).",
+      "tags": [
+        "combat",
+        "hazard",
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Pressure plates",
+          "text": "40' from either end, pressure plates in the floor activate a **loud gong** that resounds through the palace area."
+        },
+        {
+          "label": "If gong is triggered",
+          "text": "The dragon pushes her head out the east doors and uses her **breath weapon** on the party in this narrow space. She then calls for draconian guards (unaware there are none left in the area)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**If gong is triggered:** The dragon pushes her head out the east doors and uses her **breath weapon** on the party in this narrow space. She then calls for draconian guards (unaware there are none left in the area)."
+      ],
+      "hidden_or_dm_facts": [
+        "**Pressure plates:** 40' from either end, pressure plates in the floor activate a **loud gong** that resounds through the palace area."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "70k",
+      "canonical_id": "DL1_70K",
+      "name": "Court of the Balance — DRAGON'S LAIR",
+      "heading": "70k. Court of the Balance — DRAGON'S LAIR",
+      "heading_level": 3,
+      "parent_id": "70",
+      "chapter": "chapter_4_cavern_city",
+      "source": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "file_key": "cavern_city",
+        "heading": "70k. Court of the Balance — DRAGON'S LAIR"
+      },
+      "summary": "A vast chamber, **100' in diameter**, 4 stories tall, cracked and broken translucent dome above. Dim light filters through mists above and spreads onto the center of the rotunda. There: a **glossy black dragon** straddles a pile of jewels, steel weapons, and intricate items.",
+      "description": "A vast chamber, **100' in diameter**, 4 stories tall, cracked and broken translucent dome above. Dim light filters through mists above and spreads onto the center of the rotunda. There: a **glossy black dragon** straddles a pile of jewels, steel weapons, and intricate items.\n\n**This is Khisanth's lair.** She is duty-bound to keep the Disks of Mishakal from the PCs.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells |\n|----------|----|----|----|----|----|---------|----|--------|\n| Khisanth (Onyx), Ancient Huge Black Dragon | CE | 12\"/24\" | 64 | 3 | 8 | 3 | 1–4/1–4/3–18 | 1st: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2 |\n\n**Combat:** If she has breath weapon or spells remaining, she takes to the air and uses them. Otherwise she must fight on the ground.\n\n**Crystal Staff in the lair:** Any PC holding the staff hears a soft feminine whisper: \"Retrieve the disks, and hit the dragon with this staff. All will be well.\"\n\n**If PC manages to hit the dragon with the staff:**\n> The staff shatters as it strikes the dragon. Blue light bursts from the staff in brilliant spherical waves. The figure who broke the staff is lost in light, disappearing as a ringing sound fills the chamber. The wall of shining blue pulses, its power shaking the earth itself. The great dragon is covered in the glow and falls, screaming, into light. The walls shake; pillars in the room sway and topple. The cracked ceiling begins to crumble. Above the falling ceiling, the cavern walls themselves begin to collapse.\n\n**Cave-in consequences:**\n- All creatures in all encounter areas are now trying desperately to escape the collapsing cavern\n- PCs: **15% chance per turn** of being hit by falling ceiling debris for **1d12 damage**\n- Water level in cavern rises **1 foot per turn**\n- If heroes escape: direct them to Temple of Mishakal (46b) and read the Epilogue\n\n**Dragon's hoard:**\n- The **Disks of Mishakal** (see DL1_08)\n- 56 gems at 200 gp value each\n- A **cloak of invisibility**\n- 1,000 platinum pieces\n- A **ring of darkness** (projects darkness to a 100' radius)\n\n---\n\n## EPILOGUE\n\n**If PCs break the staff, escape the cavern, and return to area 46b:**\n\nThe beautiful statue of the goddess towers above. In her hands lies a perfect carved likeness of the blue crystal staff. At the foot of the statue, a lone figure stirs.\n\n**The lone figure:** The person who broke the staff. They lie here unharmed, all hit points restored. The staff is now part of the statue. A **platinum version of the Medallion of Faith** — bearing the symbol of the goddess — now adorns the neck of the PC who broke the staff.\n\n**If PCs took the Disks without the Crystal Staff (didn't use it):** Allow them to make their way out of the cavern as best they can. Do not read the Epilogue box.\n\n**Continuing to DL2:** If players continue with Dragons of Flame (DL2): the day ends as heroes trudge back over the Forsaken Mountains. Dark clouds flash in the west — but the billowing darkness is more than clouds. Smoke climbs into the autumn sky, rising from the **forests of Solace**.",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "map",
+        "quest",
+        "rest",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Khisanth (Onyx), Ancient Huge Black Dragon",
+          "stats": {
+            "Creature": "Khisanth (Onyx), Ancient Huge Black Dragon",
+            "AL": "CE",
+            "MV": "12\"/24\"",
+            "HP": "64",
+            "AC": "3",
+            "HD": "8",
+            "Attacks": "3",
+            "Damage": "1–4/1–4/3–18",
+            "Spells": "1st: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells"
+          ],
+          "rows": [
+            {
+              "Creature": "Khisanth (Onyx), Ancient Huge Black Dragon",
+              "AL": "CE",
+              "MV": "12\"/24\"",
+              "HP": "64",
+              "AC": "3",
+              "HD": "8",
+              "Attacks": "3",
+              "Damage": "1–4/1–4/3–18",
+              "Spells": "1st: charm person ×2, MM ×2, shocking grasp ×2, sleep ×2"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Combat",
+          "text": "If she has breath weapon or spells remaining, she takes to the air and uses them. Otherwise she must fight on the ground."
+        },
+        {
+          "label": "Crystal Staff in the lair",
+          "text": "Any PC holding the staff hears a soft feminine whisper: \"Retrieve the disks, and hit the dragon with this staff. All will be well.\""
+        },
+        {
+          "label": "If PC manages to hit the dragon with the staff",
+          "text": "> The staff shatters as it strikes the dragon. Blue light bursts from the staff in brilliant spherical waves. The figure who broke the staff is lost in light, disappearing as a ringing sound fills the chamber. The wall of shining blue pulses, its power shaking the earth itself. The great dragon is covered in the glow and falls, screaming, into light. The walls shake; pillars in the room sway and topple. The cracked ceiling begins to crumble. Above the falling ceiling, the cavern walls themselves begin to collapse."
+        },
+        {
+          "label": "Cave-in consequences",
+          "text": "- All creatures in all encounter areas are now trying desperately to escape the collapsing cavern"
+        },
+        {
+          "label": "Dragon's hoard",
+          "text": "- The **Disks of Mishakal** (see DL1_08)"
+        },
+        {
+          "label": "If PCs break the staff, escape the cavern, and return to area 46b",
+          "text": "The beautiful statue of the goddess towers above. In her hands lies a perfect carved likeness of the blue crystal staff. At the foot of the statue, a lone figure stirs."
+        },
+        {
+          "label": "The lone figure",
+          "text": "The person who broke the staff. They lie here unharmed, all hit points restored. The staff is now part of the statue. A **platinum version of the Medallion of Faith** — bearing the symbol of the goddess — now adorns the neck of the PC who broke the staff."
+        },
+        {
+          "label": "If PCs took the Disks without the Crystal Staff (didn't use it)",
+          "text": "Allow them to make their way out of the cavern as best they can. Do not read the Epilogue box."
+        },
+        {
+          "label": "Continuing to DL2",
+          "text": "If players continue with Dragons of Flame (DL2): the day ends as heroes trudge back over the Forsaken Mountains. Dark clouds flash in the west — but the billowing darkness is more than clouds. Smoke climbs into the autumn sky, rising from the **forests of Solace**."
+        }
+      ],
+      "bullets": [
+        "All creatures in all encounter areas are now trying desperately to escape the collapsing cavern",
+        "PCs: **15% chance per turn** of being hit by falling ceiling debris for **1d12 damage**",
+        "Water level in cavern rises **1 foot per turn**",
+        "If heroes escape: direct them to Temple of Mishakal (46b) and read the Epilogue",
+        "The **Disks of Mishakal** (see DL1_08)",
+        "56 gems at 200 gp value each",
+        "A **cloak of invisibility**",
+        "1,000 platinum pieces",
+        "A **ring of darkness** (projects darkness to a 100' radius)"
+      ],
+      "treasure_refs": [
+        "A vast chamber, **100' in diameter**, 4 stories tall, cracked and broken translucent dome above. Dim light filters through mists above and spreads onto the center of the rotunda. There: a **glossy black dragon** straddles a pile of jewels, steel weapons, and intricate items.",
+        "**This is Khisanth's lair.** She is duty-bound to keep the Disks of Mishakal from the PCs.",
+        "**Combat:** If she has breath weapon or spells remaining, she takes to the air and uses them. Otherwise she must fight on the ground.",
+        "**Crystal Staff in the lair:** Any PC holding the staff hears a soft feminine whisper: \"Retrieve the disks, and hit the dragon with this staff. All will be well.\"",
+        "**If PC manages to hit the dragon with the staff:**",
+        "> The staff shatters as it strikes the dragon. Blue light bursts from the staff in brilliant spherical waves. The figure who broke the staff is lost in light, disappearing as a ringing sound fills the chamber. The wall of shining blue pulses, its power shaking the earth itself. The great dragon is covered in the glow and falls, screaming, into light. The walls shake; pillars in the room sway and topple. The cracked ceiling begins to crumble. Above the falling ceiling, the cavern walls themselves begin to collapse.",
+        "**Dragon's hoard:**",
+        " The **Disks of Mishakal** (see DL1_08)",
+        " 56 gems at 200 gp value each",
+        " 1,000 platinum pieces",
+        "**If PCs break the staff, escape the cavern, and return to area 46b:**",
+        "The beautiful statue of the goddess towers above. In her hands lies a perfect carved likeness of the blue crystal staff. At the foot of the statue, a lone figure stirs.",
+        "**The lone figure:** The person who broke the staff. They lie here unharmed, all hit points restored. The staff is now part of the statue. A **platinum version of the Medallion of Faith** — bearing the symbol of the goddess — now adorns the neck of the PC who broke the staff.",
+        "**If PCs took the Disks without the Crystal Staff (didn't use it):** Allow them to make their way out of the cavern as best they can. Do not read the Epilogue box."
+      ],
+      "hidden_or_dm_facts": [
+        "**This is Khisanth's lair.** She is duty-bound to keep the Disks of Mishakal from the PCs.",
+        "**Crystal Staff in the lair:** Any PC holding the staff hears a soft feminine whisper: \"Retrieve the disks, and hit the dragon with this staff. All will be well.\""
+      ],
+      "area_references": [
+        "46b"
+      ],
+      "checks_and_rolls": [
+        " PCs: **15% chance per turn** of being hit by falling ceiling debris for **1d12 damage**"
+      ]
+    }
+  ]
+}

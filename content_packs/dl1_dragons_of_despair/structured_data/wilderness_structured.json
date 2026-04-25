@@ -1,0 +1,2780 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "areas": [
+    {
+      "id": "1",
+      "canonical_id": "DL1_1",
+      "name": "Solace Township",
+      "heading": "AREA 1: Solace Township",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 1: Solace Township"
+      },
+      "summary": "Warm autumn Vallenwood treetown; ~500 people (not counting outlying farmers). No local government; ruled by Theocracy of Seekers from Haven (3 days west). Uses **Emas exchange system**. Gold bricks prop doors or hold down papers. Steel weapons carry a premium from smith Theros Ironfeld (most respected man in town).",
+      "description": "Warm autumn Vallenwood treetown; ~500 people (not counting outlying farmers). No local government; ruled by Theocracy of Seekers from Haven (3 days west). Uses **Emas exchange system**. Gold bricks prop doors or hold down papers. Steel weapons carry a premium from smith Theros Ironfeld (most respected man in town).\n\nAll standard adventurer services available at reasonable rates. Exception: Theros charges extra for steel weapons.",
+      "tags": [
+        "map",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [
+        "Warm autumn Vallenwood treetown; ~500 people (not counting outlying farmers). No local government; ruled by Theocracy of Seekers from Haven (3 days west). Uses **Emas exchange system**. Gold bricks prop doors or hold down papers. Steel weapons carry a premium from smith Theros Ironfeld (most respected man in town).",
+        "All standard adventurer services available at reasonable rates. Exception: Theros charges extra for steel weapons."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "1a",
+      "canonical_id": "DL1_1A",
+      "name": "Inn of the Last Home",
+      "heading": "1a. Inn of the Last Home",
+      "heading_level": 3,
+      "parent_id": "1",
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "1a. Inn of the Last Home"
+      },
+      "summary": "Read three descriptions depending on: approach, entry, and whether slavers are using module PCs.",
+      "description": "Read three descriptions depending on: approach, entry, and whether slavers are using module PCs.\n\n**NPCs:**\n\n| NPC | AL | MV | HP | AC | HD | Attack | Damage |\n|-----|----|----|----|----|----|----|-----|\n| Otik Sandath (Innkeeper) | LN | 12\" | 6 | 10 | 1 | 1 | 1–4 |\n| Tika Wayland (Barmaid) | NG | 12\" | 16 | 9 | 3 | 1 | 1–6 (frying pan) |\n| Townspeople ×5 | var | 12\" | 3,4,5,8,8 | 10 | 1 | 1 | 1–4 |\n\n**NPC reactions:** 50% friendly to any PC who approaches.\n\n**Information available (each NPC gives one piece):**\n- **Barkeeper (Otik):** Suspects the staff was forged by demons from Darken Wood\n- **Man at table:** Hooded men have been asking about the staff; wonders if they offered a reward\n- **Man by storyteller:** A Holy Guard rode through 2 days ago; anyone with the staff should make haste to Haven to meet the Prelate at the Temple there\n- **Old Storyteller:** \"I foresee great and terrible destiny in your eyes. There is a Blue Staff which you must return to Xak Tsaroth. There, in but a few days hence, you shall face your greatest peril in contest for the greatest gift given to man.\"\n- **Girl at table:** Staff was probably found in Darken Wood; ruins there are full of wealth and dangers; no one who enters returns\n- **Boy by fire:** Saw the White Stag near Prayer's Eye Peak a few days ago; \"He who walks the paths of the white stag is blessed\"\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "quest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Otik Sandath (Innkeeper)",
+          "stats": {
+            "NPC": "Otik Sandath (Innkeeper)",
+            "AL": "LN",
+            "MV": "12\"",
+            "HP": "6",
+            "AC": "10",
+            "HD": "1",
+            "Attack": "1",
+            "Damage": "1–4"
+          }
+        },
+        {
+          "name": "Tika Wayland (Barmaid)",
+          "stats": {
+            "NPC": "Tika Wayland (Barmaid)",
+            "AL": "NG",
+            "MV": "12\"",
+            "HP": "16",
+            "AC": "9",
+            "HD": "3",
+            "Attack": "1",
+            "Damage": "1–6 (frying pan)"
+          }
+        },
+        {
+          "name": "Townspeople ×5",
+          "stats": {
+            "NPC": "Townspeople ×5",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "3,4,5,8,8",
+            "AC": "10",
+            "HD": "1",
+            "Attack": "1",
+            "Damage": "1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "NPC",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attack",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "NPC": "Otik Sandath (Innkeeper)",
+              "AL": "LN",
+              "MV": "12\"",
+              "HP": "6",
+              "AC": "10",
+              "HD": "1",
+              "Attack": "1",
+              "Damage": "1–4"
+            },
+            {
+              "NPC": "Tika Wayland (Barmaid)",
+              "AL": "NG",
+              "MV": "12\"",
+              "HP": "16",
+              "AC": "9",
+              "HD": "3",
+              "Attack": "1",
+              "Damage": "1–6 (frying pan)"
+            },
+            {
+              "NPC": "Townspeople ×5",
+              "AL": "var",
+              "MV": "12\"",
+              "HP": "3,4,5,8,8",
+              "AC": "10",
+              "HD": "1",
+              "Attack": "1",
+              "Damage": "1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "NPCs",
+          "text": "| NPC | AL | MV | HP | AC | HD | Attack | Damage |"
+        },
+        {
+          "label": "NPC reactions",
+          "text": "50% friendly to any PC who approaches."
+        },
+        {
+          "label": "Information available (each NPC gives one piece)",
+          "text": "- **Barkeeper (Otik):** Suspects the staff was forged by demons from Darken Wood"
+        }
+      ],
+      "bullets": [
+        "**Barkeeper (Otik):** Suspects the staff was forged by demons from Darken Wood",
+        "**Man at table:** Hooded men have been asking about the staff; wonders if they offered a reward",
+        "**Man by storyteller:** A Holy Guard rode through 2 days ago; anyone with the staff should make haste to Haven to meet the Prelate at the Temple there",
+        "**Old Storyteller:** \"I foresee great and terrible destiny in your eyes. There is a Blue Staff which you must return to Xak Tsaroth. There, in but a few days hence, you shall face your greatest peril in contest for the greatest gift given to man.\"",
+        "**Girl at table:** Staff was probably found in Darken Wood; ruins there are full of wealth and dangers; no one who enters returns",
+        "**Boy by fire:** Saw the White Stag near Prayer's Eye Peak a few days ago; \"He who walks the paths of the white stag is blessed\""
+      ],
+      "treasure_refs": [
+        " **Barkeeper (Otik):** Suspects the staff was forged by demons from Darken Wood",
+        " **Man at table:** Hooded men have been asking about the staff; wonders if they offered a reward",
+        " **Man by storyteller:** A Holy Guard rode through 2 days ago; anyone with the staff should make haste to Haven to meet the Prelate at the Temple there",
+        " **Old Storyteller:** \"I foresee great and terrible destiny in your eyes. There is a Blue Staff which you must return to Xak Tsaroth. There, in but a few days hence, you shall face your greatest peril in contest for the greatest gift given to man.\"",
+        " **Girl at table:** Staff was probably found in Darken Wood; ruins there are full of wealth and dangers; no one who enters returns"
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**NPC reactions:** 50% friendly to any PC who approaches."
+      ]
+    },
+    {
+      "id": "2",
+      "canonical_id": "DL1_2",
+      "name": "Crystalmir Lake",
+      "heading": "AREA 2: Crystalmir Lake",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 2: Crystalmir Lake"
+      },
+      "summary": "Blue lake bordered by giant Vallenwood on east/south/west shores. Patchwork of fields to the north toward distant purple mountains. No encounter listed; descriptive area.",
+      "description": "Blue lake bordered by giant Vallenwood on east/south/west shores. Patchwork of fields to the north toward distant purple mountains. No encounter listed; descriptive area.\n\n---",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "3",
+      "canonical_id": "DL1_3",
+      "name": "Solace East Woods",
+      "heading": "AREA 3: Solace East Woods",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 3: Solace East Woods"
+      },
+      "summary": "Giant Vallenwood trees, soft forest paths, dappled sunlight, sparrows and squirrels. No encounter listed; descriptive/travel area.",
+      "description": "Giant Vallenwood trees, soft forest paths, dappled sunlight, sparrows and squirrels. No encounter listed; descriptive/travel area.\n\n---",
+      "tags": [
+        "encounter",
+        "map",
+        "rest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "4",
+      "canonical_id": "DL1_4",
+      "name": "New Haven Road",
+      "heading": "AREA 4: New Haven Road",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 4: New Haven Road"
+      },
+      "summary": "Ancient stone bridge over Solace Stream. Road forks west/south. Concealed draconian ambush in trees, waiting for their leader (area 6) to sound a horn. PCs must climb a tree to spot them; even then only 30% chance.",
+      "description": "Ancient stone bridge over Solace Stream. Road forks west/south. Concealed draconian ambush in trees, waiting for their leader (area 6) to sound a horn. PCs must climb a tree to spot them; even then only 30% chance.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconians ×8 | LE | 6\"[15\"]/18\" | 3,6,9×2,10,12×2,16 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble on death |\n\n**If spotted:** All attack, sound horn, fill woods with battle cries. Dragon-men fight to the death; block retreat to Solace. Horn is a **warning** to other draconians, not a call for aid. They intend to remain disguised while in human lands. They are searching for the Crystal Staff but don't know why.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hidden",
+        "quest"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×8",
+          "stats": {
+            "Creature": "Baaz Draconians ×8",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "3,6,9×2,10,12×2,16",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble on death"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconians ×8",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "3,6,9×2,10,12×2,16",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble on death"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "If spotted",
+          "text": "All attack, sound horn, fill woods with battle cries. Dragon-men fight to the death; block retreat to Solace. Horn is a **warning** to other draconians, not a call for aid. They intend to remain disguised while in human lands. They are searching for the Crystal Staff but don't know why."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**If spotted:** All attack, sound horn, fill woods with battle cries. Dragon-men fight to the death; block retreat to Solace. Horn is a **warning** to other draconians, not a call for aid. They intend to remain disguised while in human lands. They are searching for the Crystal Staff but don't know why."
+      ],
+      "hidden_or_dm_facts": [
+        "Ancient stone bridge over Solace Stream. Road forks west/south. Concealed draconian ambush in trees, waiting for their leader (area 6) to sound a horn. PCs must climb a tree to spot them; even then only 30% chance.",
+        "**If spotted:** All attack, sound horn, fill woods with battle cries. Dragon-men fight to the death; block retreat to Solace. Horn is a **warning** to other draconians, not a call for aid. They intend to remain disguised while in human lands. They are searching for the Crystal Staff but don't know why."
+      ],
+      "area_references": [
+        "6"
+      ],
+      "checks_and_rolls": [
+        "Ancient stone bridge over Solace Stream. Road forks west/south. Concealed draconian ambush in trees, waiting for their leader (area 6) to sound a horn. PCs must climb a tree to spot them; even then only 30% chance."
+      ]
+    },
+    {
+      "id": "5",
+      "canonical_id": "DL1_5",
+      "name": "Prayer's Eye Peak",
+      "heading": "AREA 5: Prayer's Eye Peak",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 5: Prayer's Eye Peak"
+      },
+      "summary": "Flaming autumn colors; Prayer's Eye Peak to southwest. **30% chance** one party member (random) spots the White Stag. If enemies pursue heroes into this area, chance increases to **80%**.",
+      "description": "Flaming autumn colors; Prayer's Eye Peak to southwest. **30% chance** one party member (random) spots the White Stag. If enemies pursue heroes into this area, chance increases to **80%**.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| White Stag ×1 | LG | 24\" | 77 | –5 | 10 | 3 | 1–12/1–6/1–6 |\n\n**White Stag behavior:** Stays just ahead of heroes, leads them through the crack in Prayer's Eye Peak, then bounds at full speed into Darken Wood (area 24). Cannot be captured.\n\n**If heroes kill the stag:** Dark thunderclouds form overhead; hover for 7 days; all players add +1 to their Armor Class (i.e., AC becomes worse by 1) during this time. Stag body disappears.\n\n---",
+      "tags": [
+        "combat",
+        "encounter"
+      ],
+      "occupants": [
+        {
+          "name": "White Stag ×1",
+          "stats": {
+            "Creature": "White Stag ×1",
+            "AL": "LG",
+            "MV": "24\"",
+            "HP": "77",
+            "AC": "–5",
+            "HD": "10",
+            "Attacks": "3",
+            "Damage": "1–12/1–6/1–6"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "White Stag ×1",
+              "AL": "LG",
+              "MV": "24\"",
+              "HP": "77",
+              "AC": "–5",
+              "HD": "10",
+              "Attacks": "3",
+              "Damage": "1–12/1–6/1–6"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "White Stag behavior",
+          "text": "Stays just ahead of heroes, leads them through the crack in Prayer's Eye Peak, then bounds at full speed into Darken Wood (area 24). Cannot be captured."
+        },
+        {
+          "label": "If heroes kill the stag",
+          "text": "Dark thunderclouds form overhead; hover for 7 days; all players add +1 to their Armor Class (i.e., AC becomes worse by 1) during this time. Stag body disappears."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**If heroes kill the stag:** Dark thunderclouds form overhead; hover for 7 days; all players add +1 to their Armor Class (i.e., AC becomes worse by 1) during this time. Stag body disappears."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "24"
+      ],
+      "checks_and_rolls": [
+        "Flaming autumn colors; Prayer's Eye Peak to southwest. **30% chance** one party member (random) spots the White Stag. If enemies pursue heroes into this area, chance increases to **80%**."
+      ]
+    },
+    {
+      "id": "6",
+      "canonical_id": "DL1_6",
+      "name": "Twin Flat",
+      "heading": "AREA 6: Twin Flat",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 6: Twin Flat"
+      },
+      "summary": "Mountain valley; Crystalmir Lake to east; canyon westward. A group of 30–3,000 (1d100×10 feet) away: hooded figures pulling a large cart. See party at same moment.",
+      "description": "Mountain valley; Crystalmir Lake to east; canyon westward. A group of 30–3,000 (1d100×10 feet) away: hooded figures pulling a large cart. See party at same moment.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconian Leader ×1 | LE | 6\"[15\"]/18\" | 12 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turns to stone, crumbles |\n| Baaz Draconians ×10 | LE | 6\"[15\"]/18\" | 2,3,5,6,8×2,9×2,10,11 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turns to stone, crumbles |\n\n**Disguise:** Hoods + black cloth masks + heavy gloves + leg wrappings. Despite autumn, overdressed.\n\n**Leader's ruse:** Claims to be an old cleric; says their healing staff was stolen from Xak Tsaroth; a member of their flock is dying.\n\n**If party claims ignorance:** Draconians step aside and let them pass.\n\n**If party reveals they have/know about the staff:** Leader screams and grabs weapon; all draconians attack (limited to MV 6\" because wings are bound). Each round, each draconian has 20% chance to tear off robes (uses action; frees them to move faster). Draconians try to drive party east into area 5 to sound horn and spring trap with area 4 draconians. Fight to the death.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "hidden",
+        "map",
+        "quest",
+        "social",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconian Leader ×1",
+          "stats": {
+            "Creature": "Baaz Draconian Leader ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turns to stone, crumbles"
+          }
+        },
+        {
+          "name": "Baaz Draconians ×10",
+          "stats": {
+            "Creature": "Baaz Draconians ×10",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "2,3,5,6,8×2,9×2,10,11",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turns to stone, crumbles"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconian Leader ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "12",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turns to stone, crumbles"
+            },
+            {
+              "Creature": "Baaz Draconians ×10",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "2,3,5,6,8×2,9×2,10,11",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turns to stone, crumbles"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Disguise",
+          "text": "Hoods + black cloth masks + heavy gloves + leg wrappings. Despite autumn, overdressed."
+        },
+        {
+          "label": "Leader's ruse",
+          "text": "Claims to be an old cleric; says their healing staff was stolen from Xak Tsaroth; a member of their flock is dying."
+        },
+        {
+          "label": "If party claims ignorance",
+          "text": "Draconians step aside and let them pass."
+        },
+        {
+          "label": "If party reveals they have/know about the staff",
+          "text": "Leader screams and grabs weapon; all draconians attack (limited to MV 6\" because wings are bound). Each round, each draconian has 20% chance to tear off robes (uses action; frees them to move faster). Draconians try to drive party east into area 5 to sound horn and spring trap with area 4 draconians. Fight to the death."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Leader's ruse:** Claims to be an old cleric; says their healing staff was stolen from Xak Tsaroth; a member of their flock is dying.",
+        "**If party reveals they have/know about the staff:** Leader screams and grabs weapon; all draconians attack (limited to MV 6\" because wings are bound). Each round, each draconian has 20% chance to tear off robes (uses action; frees them to move faster). Draconians try to drive party east into area 5 to sound horn and spring trap with area 4 draconians. Fight to the death."
+      ],
+      "hidden_or_dm_facts": [
+        "**Disguise:** Hoods + black cloth masks + heavy gloves + leg wrappings. Despite autumn, overdressed.",
+        "**Leader's ruse:** Claims to be an old cleric; says their healing staff was stolen from Xak Tsaroth; a member of their flock is dying.",
+        "**If party reveals they have/know about the staff:** Leader screams and grabs weapon; all draconians attack (limited to MV 6\" because wings are bound). Each round, each draconian has 20% chance to tear off robes (uses action; frees them to move faster). Draconians try to drive party east into area 5 to sound horn and spring trap with area 4 draconians. Fight to the death."
+      ],
+      "area_references": [
+        "4",
+        "5"
+      ],
+      "checks_and_rolls": [
+        "Mountain valley; Crystalmir Lake to east; canyon westward. A group of 30–3,000 (1d100×10 feet) away: hooded figures pulling a large cart. See party at same moment.",
+        "**If party reveals they have/know about the staff:** Leader screams and grabs weapon; all draconians attack (limited to MV 6\" because wings are bound). Each round, each draconian has 20% chance to tear off robes (uses action; frees them to move faster). Draconians try to drive party east into area 5 to sound horn and spring trap with area 4 draconians. Fight to the death."
+      ]
+    },
+    {
+      "id": "7",
+      "canonical_id": "DL1_7",
+      "name": "Jakanth Vale",
+      "heading": "AREA 7: Jakanth Vale",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 7: Jakanth Vale"
+      },
+      "summary": "Unnatural stillness; heavily wrapped footprints lead to a campsite in a glade.",
+      "description": "Unnatural stillness; heavily wrapped footprints lead to a campsite in a glade.\n\n**Campsite:** Smells like burned hair. Charred bones in fire pit ashes. Grass stamped down.\n\n**Treasure (searching):** Bright silver bracer with 4 gems (500 gpv each). Inside: \"Firehawk, warrior of Que-Shu.\" Que-Shu Plainsmen identify this as the bracer of warriors charged with defending the tribe. These bands are forged around the warrior's arm — death alone removes them.\n\nNo combat encounter listed.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Campsite",
+          "text": "Smells like burned hair. Charred bones in fire pit ashes. Grass stamped down."
+        },
+        {
+          "label": "Treasure (searching)",
+          "text": "Bright silver bracer with 4 gems (500 gpv each). Inside: \"Firehawk, warrior of Que-Shu.\" Que-Shu Plainsmen identify this as the bracer of warriors charged with defending the tribe. These bands are forged around the warrior's arm — death alone removes them."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Treasure (searching):** Bright silver bracer with 4 gems (500 gpv each). Inside: \"Firehawk, warrior of Que-Shu.\" Que-Shu Plainsmen identify this as the bracer of warriors charged with defending the tribe. These bands are forged around the warrior's arm — death alone removes them."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "8",
+      "canonical_id": "DL1_8",
+      "name": "Northfields",
+      "heading": "AREA 8: Northfields",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 8: Northfields"
+      },
+      "summary": "Sea of grain fields; nobody present; farm houses abandoned in haste.",
+      "description": "Sea of grain fields; nobody present; farm houses abandoned in haste.\n\n**Investigation:** 20% chance per turn to find signs of fierce fight (in fields and farm homes). Draconian footprints surround marks of struggle; only heroes who have met draconians can identify them (60% chance). All tracks lead east to area 35.\n\n---",
+      "tags": [
+        "combat"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Investigation",
+          "text": "20% chance per turn to find signs of fierce fight (in fields and farm homes). Draconian footprints surround marks of struggle; only heroes who have met draconians can identify them (60% chance). All tracks lead east to area 35."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "35"
+      ],
+      "checks_and_rolls": [
+        "**Investigation:** 20% chance per turn to find signs of fierce fight (in fields and farm homes). Draconian footprints surround marks of struggle; only heroes who have met draconians can identify them (60% chance). All tracks lead east to area 35."
+      ]
+    },
+    {
+      "id": "9",
+      "canonical_id": "DL1_9",
+      "name": "Nearfields",
+      "heading": "AREA 9: Nearfields",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 9: Nearfields"
+      },
+      "summary": "Farmers and workers harvesting grain with scythes.",
+      "description": "Farmers and workers harvesting grain with scythes.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Farmers ×10–20 | var | 12\" | — | 10 | 2 | 1 | 1–6 |\n\n**Conversation:** Only 20% willing to talk. Those who do: \"Good luck. We want no trouble.\" Only 20% of those who speak will say more: people disappearing in the night from camps and homes; they fear all strangers now.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Farmers ×10–20",
+          "stats": {
+            "Creature": "Farmers ×10–20",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "10",
+            "HD": "2",
+            "Attacks": "1",
+            "Damage": "1–6"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Farmers ×10–20",
+              "AL": "var",
+              "MV": "12\"",
+              "HP": "—",
+              "AC": "10",
+              "HD": "2",
+              "Attacks": "1",
+              "Damage": "1–6"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Conversation",
+          "text": "Only 20% willing to talk. Those who do: \"Good luck. We want no trouble.\" Only 20% of those who speak will say more: people disappearing in the night from camps and homes; they fear all strangers now."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Conversation:** Only 20% willing to talk. Those who do: \"Good luck. We want no trouble.\" Only 20% of those who speak will say more: people disappearing in the night from camps and homes; they fear all strangers now."
+      ]
+    },
+    {
+      "id": "10–11",
+      "canonical_id": "DL1_10_11",
+      "name": "Sentinel Gap / Twin Peaks Vale",
+      "heading": "AREAS 10–11: Sentinel Gap / Twin Peaks Vale",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREAS 10–11: Sentinel Gap / Twin Peaks Vale"
+      },
+      "summary": "",
+      "description": "**Area 10:** Dust-filled highway; stream of refugees shuffling south toward Haven. Narrow canyon floor between soaring granite walls.\n\n**Area 11:** Twin peaks Tasin and Fasin flank Shadow Canyon. Lush mountain valley. No encounters listed.\n\n---",
+      "tags": [
+        "encounter",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Area 10",
+          "text": "Dust-filled highway; stream of refugees shuffling south toward Haven. Narrow canyon floor between soaring granite walls."
+        },
+        {
+          "label": "Area 11",
+          "text": "Twin peaks Tasin and Fasin flank Shadow Canyon. Lush mountain valley. No encounters listed."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "10",
+        "11"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "12",
+      "canonical_id": "DL1_12",
+      "name": "Shadow Canyon",
+      "heading": "AREA 12: Shadow Canyon",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 12: Shadow Canyon"
+      },
+      "summary": "Solid granite walls; no sunlight except 1 hour at noon. Narrow canyon floor, well traveled and clear. No encounter listed.",
+      "description": "Solid granite walls; no sunlight except 1 hour at noon. Narrow canyon floor, well traveled and clear. No encounter listed.\n\n---",
+      "tags": [
+        "encounter"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "13–15",
+      "canonical_id": "DL1_13_15",
+      "name": "North Seeker Reaches",
+      "heading": "AREAS 13–15: North Seeker Reaches",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREAS 13–15: North Seeker Reaches"
+      },
+      "summary": "Green farmlands. 15% chance per turn of finding a farmer family moving south with all belongings in a dogcart. Main road: 30% in area 13, 70% in area 14. Area 15: family always found traveling south.",
+      "description": "Green farmlands. 15% chance per turn of finding a farmer family moving south with all belongings in a dogcart. Main road: 30% in area 13, 70% in area 14. Area 15: family always found traveling south.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Refugees ×2–20 | var | 12\" | — | 8–10 | 0–3 | 1 | 1–4 or 1–6 |\n\n**Refugees' story (20% chance to stop):** Report fires and devils from the Cataclysm attacking from the north 3 days ago; plundering and killing; fleeing to Haven capital for safety.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Refugees ×2–20",
+          "stats": {
+            "Creature": "Refugees ×2–20",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "8–10",
+            "HD": "0–3",
+            "Attacks": "1",
+            "Damage": "1–4 or 1–6"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Refugees ×2–20",
+              "AL": "var",
+              "MV": "12\"",
+              "HP": "—",
+              "AC": "8–10",
+              "HD": "0–3",
+              "Attacks": "1",
+              "Damage": "1–4 or 1–6"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Refugees' story (20% chance to stop)",
+          "text": "Report fires and devils from the Cataclysm attacking from the north 3 days ago; plundering and killing; fleeing to Haven capital for safety."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "13",
+        "14",
+        "15"
+      ],
+      "checks_and_rolls": [
+        "Green farmlands. 15% chance per turn of finding a farmer family moving south with all belongings in a dogcart. Main road: 30% in area 13, 70% in area 14. Area 15: family always found traveling south.",
+        "**Refugees' story (20% chance to stop):** Report fires and devils from the Cataclysm attacking from the north 3 days ago; plundering and killing; fleeing to Haven capital for safety."
+      ]
+    },
+    {
+      "id": "16",
+      "canonical_id": "DL1_16",
+      "name": "Haven's Vale",
+      "heading": "AREA 16: Haven's Vale",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 16: Haven's Vale"
+      },
+      "summary": "Six white towers rising from foothills. Refugees choking the road. Contingent of Seeker Guards riding up and down lines trying to keep order (and looking for the Crystal Staff).",
+      "description": "Six white towers rising from foothills. Refugees choking the road. Contingent of Seeker Guards riding up and down lines trying to keep order (and looking for the Crystal Staff).\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Refugees ×2–20 | var | 12\" | — | 8–10 | 1–3 | 1 | 1–4 or 1–6 |\n\n**Holy Guard troops:** 25% chance per game hour. 50% of encounters have them going *away* from Haven.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Guardleader ×1 | CG | 12\" | — | 2 | 5 | 1 | 1–8 |\n| Holy Guards ×10 | CG | 12\" | — | 4 | 4 | 1 | 1–8 |\n\n**30% chance** to stop the Guardleader. If stopped: describes total madness on the road; notes Qualinesti has closed its borders; no one enters Darken Wood and lives; asks if party has heard of a blue crystal staff. If they have it: escorted directly to Council of Highseekers (area 17b).\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "map",
+        "quest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Refugees ×2–20",
+          "stats": {
+            "Creature": "Refugees ×2–20",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "8–10",
+            "HD": "1–3",
+            "Attacks": "1",
+            "Damage": "1–4 or 1–6"
+          }
+        },
+        {
+          "name": "Guardleader ×1",
+          "stats": {
+            "Creature": "Guardleader ×1",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "2",
+            "HD": "5",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        },
+        {
+          "name": "Holy Guards ×10",
+          "stats": {
+            "Creature": "Holy Guards ×10",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "4",
+            "HD": "4",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Refugees ×2–20",
+              "AL": "var",
+              "MV": "12\"",
+              "HP": "—",
+              "AC": "8–10",
+              "HD": "1–3",
+              "Attacks": "1",
+              "Damage": "1–4 or 1–6"
+            }
+          ]
+        },
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Guardleader ×1",
+              "AL": "CG",
+              "MV": "12\"",
+              "HP": "—",
+              "AC": "2",
+              "HD": "5",
+              "Attacks": "1",
+              "Damage": "1–8"
+            },
+            {
+              "Creature": "Holy Guards ×10",
+              "AL": "CG",
+              "MV": "12\"",
+              "HP": "—",
+              "AC": "4",
+              "HD": "4",
+              "Attacks": "1",
+              "Damage": "1–8"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Holy Guard troops",
+          "text": "25% chance per game hour. 50% of encounters have them going *away* from Haven."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Six white towers rising from foothills. Refugees choking the road. Contingent of Seeker Guards riding up and down lines trying to keep order (and looking for the Crystal Staff).",
+        "**30% chance** to stop the Guardleader. If stopped: describes total madness on the road; notes Qualinesti has closed its borders; no one enters Darken Wood and lives; asks if party has heard of a blue crystal staff. If they have it: escorted directly to Council of Highseekers (area 17b)."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "17b"
+      ],
+      "checks_and_rolls": [
+        "**Holy Guard troops:** 25% chance per game hour. 50% of encounters have them going *away* from Haven.",
+        "**30% chance** to stop the Guardleader. If stopped: describes total madness on the road; notes Qualinesti has closed its borders; no one enters Darken Wood and lives; asks if party has heard of a blue crystal staff. If they have it: escorted directly to Council of Highseekers (area 17b)."
+      ]
+    },
+    {
+      "id": "17",
+      "canonical_id": "DL1_17",
+      "name": "Lordcity of Haven",
+      "heading": "AREA 17: Lordcity of Haven",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 17: Lordcity of Haven"
+      },
+      "summary": "White marble towers trimmed in gold. Low decorative wall with six towers. Inner circle 1 mile across; 3 miles including outer homes. Normal population ~5,000 (now overflowing). Nearly all standard adventurer services available; ironsmith works only for Highseekers.",
+      "description": "White marble towers trimmed in gold. Low decorative wall with six towers. Inner circle 1 mile across; 3 miles including outer homes. Normal population ~5,000 (now overflowing). Nearly all standard adventurer services available; ironsmith works only for Highseekers.\n\n**Key sub-areas:** 17a Steel Tankard Tavern, 17b Councilhall of Highseekers.\n\nCity overflows with refugees (2–20 present everywhere; HD 1–3, AC 8–10).\n\n**Holy Guards on every street corner (10 per encounter):** AC 4, HD 4, MV 12\", Dmg 1–8. Most pressing mission: find bearer of the blue crystal staff and bring them before the Council.\n\n---",
+      "tags": [
+        "encounter",
+        "quest",
+        "social",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Key sub-areas",
+          "text": "17a Steel Tankard Tavern, 17b Councilhall of Highseekers."
+        },
+        {
+          "label": "Holy Guards on every street corner (10 per encounter)",
+          "text": "AC 4, HD 4, MV 12\", Dmg 1–8. Most pressing mission: find bearer of the blue crystal staff and bring them before the Council."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "White marble towers trimmed in gold. Low decorative wall with six towers. Inner circle 1 mile across; 3 miles including outer homes. Normal population ~5,000 (now overflowing). Nearly all standard adventurer services available; ironsmith works only for Highseekers.",
+        "**Key sub-areas:** 17a Steel Tankard Tavern, 17b Councilhall of Highseekers.",
+        "**Holy Guards on every street corner (10 per encounter):** AC 4, HD 4, MV 12\", Dmg 1–8. Most pressing mission: find bearer of the blue crystal staff and bring them before the Council."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "17a",
+      "canonical_id": "DL1_17A",
+      "name": "Steel Tankard Tavern",
+      "heading": "17a. Steel Tankard Tavern",
+      "heading_level": 3,
+      "parent_id": "17",
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "17a. Steel Tankard Tavern"
+      },
+      "summary": "Packed shoulder to shoulder. Three notable figures:",
+      "description": "Packed shoulder to shoulder. Three notable figures:\n- **Man in fur cloak:** Doubts the Highseekers have any power; \"Where is their magic? Where are their miracles?\"\n- **Forester:** Wonders why guards seek someone with a crystal staff; could it preserve them from invaders?\n- **Woman with eye-patch:** All ways south are blocked. Qualinesti is closed. Darken Wood south entrance possible but no one returns. River White-rage between Darken Wood and Qualinesti is most dangerous. No happy choices.\n\n---",
+      "tags": [
+        "hazard",
+        "map",
+        "quest",
+        "rest",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [
+        "**Man in fur cloak:** Doubts the Highseekers have any power; \"Where is their magic? Where are their miracles?\"",
+        "**Forester:** Wonders why guards seek someone with a crystal staff; could it preserve them from invaders?",
+        "**Woman with eye-patch:** All ways south are blocked. Qualinesti is closed. Darken Wood south entrance possible but no one returns. River White-rage between Darken Wood and Qualinesti is most dangerous. No happy choices."
+      ],
+      "treasure_refs": [
+        " **Forester:** Wonders why guards seek someone with a crystal staff; could it preserve them from invaders?"
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "17b",
+      "canonical_id": "DL1_17B",
+      "name": "Councilhall of Highseekers",
+      "heading": "17b. Councilhall of Highseekers",
+      "heading_level": 3,
+      "parent_id": "17",
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "17b. Councilhall of Highseekers"
+      },
+      "summary": "50'×30'×30' tall hall. Nine chairs in semicircle on polished granite floor. Nine white-robed men with steel girdle bands.",
+      "description": "50'×30'×30' tall hall. Nine chairs in semicircle on polished granite floor. Nine white-robed men with steel girdle bands.\n\n**Entry:** 100 Holy Guardians (CG, MV 12\", AC 4, HD 4, Dmg 1–8) encircle building. Admit only those who bear news of the blue crystal staff.\n\n| NPC | AL | MV | HP | AC | HD | Attacks | Damage |\n|-----|----|----|----|----|----|---------|----|\n| Master of Highseekers ×1 | CG | 12\" | 35 | 8 | 7 | 1 | 1–8 |\n| Highseeker Councilors ×8 | CG | 12\" | 25,26,17,22,26,16,15,16 | 8 | 5 | 1 | 1–8 |\n\n**Situation:** Draconian army to the north offered not to invade if staff is returned to Xak Tsaroth. Council's prayers to Newgods go unanswered; no standing army. Crystal staff is their last hope.\n\n**If party has staff and reveals it:** Councilors beg to take it. If refused, they beg party to return it to Xak Tsaroth.\n\n**Crystal staff's reaction:** Any councilor who touches the staff is hit by a lightning bolt for 4d6 damage. After this, Highseekers declare it an evil artifact and command party to return it to Xak Tsaroth.\n\n*(Note: The Master is too dignified to rise and touch the staff — determine randomly which councilor tries, 1d8.)*\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "quest",
+        "social",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Master of Highseekers ×1",
+          "stats": {
+            "NPC": "Master of Highseekers ×1",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "35",
+            "AC": "8",
+            "HD": "7",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        },
+        {
+          "name": "Highseeker Councilors ×8",
+          "stats": {
+            "NPC": "Highseeker Councilors ×8",
+            "AL": "CG",
+            "MV": "12\"",
+            "HP": "25,26,17,22,26,16,15,16",
+            "AC": "8",
+            "HD": "5",
+            "Attacks": "1",
+            "Damage": "1–8"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "NPC",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "NPC": "Master of Highseekers ×1",
+              "AL": "CG",
+              "MV": "12\"",
+              "HP": "35",
+              "AC": "8",
+              "HD": "7",
+              "Attacks": "1",
+              "Damage": "1–8"
+            },
+            {
+              "NPC": "Highseeker Councilors ×8",
+              "AL": "CG",
+              "MV": "12\"",
+              "HP": "25,26,17,22,26,16,15,16",
+              "AC": "8",
+              "HD": "5",
+              "Attacks": "1",
+              "Damage": "1–8"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Entry",
+          "text": "100 Holy Guardians (CG, MV 12\", AC 4, HD 4, Dmg 1–8) encircle building. Admit only those who bear news of the blue crystal staff."
+        },
+        {
+          "label": "Situation",
+          "text": "Draconian army to the north offered not to invade if staff is returned to Xak Tsaroth. Council's prayers to Newgods go unanswered; no standing army. Crystal staff is their last hope."
+        },
+        {
+          "label": "If party has staff and reveals it",
+          "text": "Councilors beg to take it. If refused, they beg party to return it to Xak Tsaroth."
+        },
+        {
+          "label": "Crystal staff's reaction",
+          "text": "Any councilor who touches the staff is hit by a lightning bolt for 4d6 damage. After this, Highseekers declare it an evil artifact and command party to return it to Xak Tsaroth."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "50'×30'×30' tall hall. Nine chairs in semicircle on polished granite floor. Nine white-robed men with steel girdle bands.",
+        "**Entry:** 100 Holy Guardians (CG, MV 12\", AC 4, HD 4, Dmg 1–8) encircle building. Admit only those who bear news of the blue crystal staff.",
+        "**Situation:** Draconian army to the north offered not to invade if staff is returned to Xak Tsaroth. Council's prayers to Newgods go unanswered; no standing army. Crystal staff is their last hope.",
+        "**If party has staff and reveals it:** Councilors beg to take it. If refused, they beg party to return it to Xak Tsaroth.",
+        "**Crystal staff's reaction:** Any councilor who touches the staff is hit by a lightning bolt for 4d6 damage. After this, Highseekers declare it an evil artifact and command party to return it to Xak Tsaroth.",
+        "*(Note: The Master is too dignified to rise and touch the staff — determine randomly which councilor tries, 1d8.)*"
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Crystal staff's reaction:** Any councilor who touches the staff is hit by a lightning bolt for 4d6 damage. After this, Highseekers declare it an evil artifact and command party to return it to Xak Tsaroth.",
+        "*(Note: The Master is too dignified to rise and touch the staff — determine randomly which councilor tries, 1d8.)*"
+      ]
+    },
+    {
+      "id": "18",
+      "canonical_id": "DL1_18",
+      "name": "River White-rage",
+      "heading": "AREA 18: River White-rage",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 18: River White-rage"
+      },
+      "summary": "Frothing powerful river formed by joining of several rivers. Easy crossing at the fords; impassable elsewhere without a raft.",
+      "description": "Frothing powerful river formed by joining of several rivers. Easy crossing at the fords; impassable elsewhere without a raft.\n\n**Swimming rules:** Any PC attempting to walk or swim across (non-ford): STR check to swim back to starting side, or be swept 100' downstream taking 1d12 drowning damage. Must check again until they make the check or drown. PCs cannot be swept to the other side.\n\n**Raft building:** 1d4 hours per PC the raft is built to carry (6 PCs = 6d4 hours). River is safe for rafts; floating downstream enters area 20.\n\n---",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Swimming rules",
+          "text": "Any PC attempting to walk or swim across (non-ford): STR check to swim back to starting side, or be swept 100' downstream taking 1d12 drowning damage. Must check again until they make the check or drown. PCs cannot be swept to the other side."
+        },
+        {
+          "label": "Raft building",
+          "text": "1d4 hours per PC the raft is built to carry (6 PCs = 6d4 hours). River is safe for rafts; floating downstream enters area 20."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "20"
+      ],
+      "checks_and_rolls": [
+        "**Swimming rules:** Any PC attempting to walk or swim across (non-ford): STR check to swim back to starting side, or be swept 100' downstream taking 1d12 drowning damage. Must check again until they make the check or drown. PCs cannot be swept to the other side.",
+        "**Raft building:** 1d4 hours per PC the raft is built to carry (6 PCs = 6d4 hours). River is safe for rafts; floating downstream enters area 20."
+      ]
+    },
+    {
+      "id": "19",
+      "canonical_id": "DL1_19",
+      "name": "Qualinesti Elflands",
+      "heading": "AREA 19: Qualinesti Elflands",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 19: Qualinesti Elflands"
+      },
+      "summary": "Thick aspen forest, trunks only a few feet apart. After more than 1 hour in area, 15 elves emerge and surround party.",
+      "description": "Thick aspen forest, trunks only a few feet apart. After more than 1 hour in area, 15 elves emerge and surround party.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Elves ×15 | LG | 12\" | 17 each | 5 | 2+2 | 1 | 2–9 (sword) or 1–6 (arrow) |\n\n**Behavior:** Bows nocked, swords drawn; demand surrender. Order: take PCs to centaurs (area 23). They do not attack first.\n\n**If party fights:** Additional elf army units, 1 per game hour (identical stats). Fight to the death for their homeland, cold fierceness. They do not pursue beyond north border of their land.\n\n**Why they have these orders:** \"A glorious being passed through our land and said you would be coming. We do not know his name, but we have orders to take you to the edge of Darken Wood at his bidding.\"\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Elves ×15",
+          "stats": {
+            "Creature": "Elves ×15",
+            "AL": "LG",
+            "MV": "12\"",
+            "HP": "17 each",
+            "AC": "5",
+            "HD": "2+2",
+            "Attacks": "1",
+            "Damage": "2–9 (sword) or 1–6 (arrow)"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Elves ×15",
+              "AL": "LG",
+              "MV": "12\"",
+              "HP": "17 each",
+              "AC": "5",
+              "HD": "2+2",
+              "Attacks": "1",
+              "Damage": "2–9 (sword) or 1–6 (arrow)"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Behavior",
+          "text": "Bows nocked, swords drawn; demand surrender. Order: take PCs to centaurs (area 23). They do not attack first."
+        },
+        {
+          "label": "If party fights",
+          "text": "Additional elf army units, 1 per game hour (identical stats). Fight to the death for their homeland, cold fierceness. They do not pursue beyond north border of their land."
+        },
+        {
+          "label": "Why they have these orders",
+          "text": "\"A glorious being passed through our land and said you would be coming. We do not know his name, but we have orders to take you to the edge of Darken Wood at his bidding.\""
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**Why they have these orders:** \"A glorious being passed through our land and said you would be coming. We do not know his name, but we have orders to take you to the edge of Darken Wood at his bidding.\""
+      ],
+      "area_references": [
+        "23"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "20",
+      "canonical_id": "DL1_20",
+      "name": "The White-rage Cut",
+      "heading": "AREA 20: The White-rage Cut",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 20: The White-rage Cut"
+      },
+      "summary": "Tall cliffs funnel the river; crashing between two soaring bluffs.",
+      "description": "Tall cliffs funnel the river; crashing between two soaring bluffs.\n\n**Raft navigation:** Check both STR and DEX once per turn. Fail either = raft splinters on rocks; all passengers fall into rapids. Raft ends up nearer north shore; use swimming rules from area 18. North shore survivors find paths up cliff face into area 22. Raft moves 2 miles per turn.\n\n---",
+      "tags": [
+        "hazard",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Raft navigation",
+          "text": "Check both STR and DEX once per turn. Fail either = raft splinters on rocks; all passengers fall into rapids. Raft ends up nearer north shore; use swimming rules from area 18. North shore survivors find paths up cliff face into area 22. Raft moves 2 miles per turn."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "18",
+        "22"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "21",
+      "canonical_id": "DL1_21",
+      "name": "Magic Mountains",
+      "heading": "AREA 21: Magic Mountains",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 21: Magic Mountains"
+      },
+      "summary": "Mountain valley between Prayer's Eye Peak and second ridge. Tall aspens, still green into autumn. Soft grass carpet. Exits to SW and E lead into deeper woods.",
+      "description": "Mountain valley between Prayer's Eye Peak and second ridge. Tall aspens, still green into autumn. Soft grass carpet. Exits to SW and E lead into deeper woods.\n\n---",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "22",
+      "canonical_id": "DL1_22",
+      "name": "Spirit Forest (Entry to Darken Wood)",
+      "heading": "AREA 22: Spirit Forest (Entry to Darken Wood)",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 22: Spirit Forest (Entry to Darken Wood)"
+      },
+      "summary": "Thickening canopy; dappled light fades to nothing; black knotted trees.",
+      "description": "Thickening canopy; dappled light fades to nothing; black knotted trees.\n\n**Darken Wood confusion effect:** PCs who enter areas 22–26 are subject to its confusing charm. When leaving the Darken Wood, PCs **cannot express** what they saw or experienced there even though their memory is clear.\n\n**Spectral Minion challenge:** PCs see strange shapes flitting through dense woods. Minions challenge them — ask their names.\n- If they **answer falsely:** Spectral Minions attack\n- If they **give their correct names OR show Crystal Staff:** Minions halt and let them pass\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Spectral Minions ×12 | CE | 30\" | 17×3,18×2,19×2,14×2,10×2,12 | 2 | 3 | 1 | 1–8 | 20% magic resist |\n\n**If allowed to pass:** Leader says, \"The Forestmaster awaits. You are expected.\" One spirit escorts them ~½ mile to area 26. Escort's backstory: \"Ages ago, before the world changed, we were ordered to keep this land safe. That is the Purpose. We failed. Now we repent by protecting the land while we can.\"\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "quest",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Spectral Minions ×12",
+          "stats": {
+            "Creature": "Spectral Minions ×12",
+            "AL": "CE",
+            "MV": "30\"",
+            "HP": "17×3,18×2,19×2,14×2,10×2,12",
+            "AC": "2",
+            "HD": "3",
+            "Attacks": "1",
+            "Damage": "1–8",
+            "Notes": "20% magic resist"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Spectral Minions ×12",
+              "AL": "CE",
+              "MV": "30\"",
+              "HP": "17×3,18×2,19×2,14×2,10×2,12",
+              "AC": "2",
+              "HD": "3",
+              "Attacks": "1",
+              "Damage": "1–8",
+              "Notes": "20% magic resist"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Darken Wood confusion effect",
+          "text": "PCs who enter areas 22–26 are subject to its confusing charm. When leaving the Darken Wood, PCs **cannot express** what they saw or experienced there even though their memory is clear."
+        },
+        {
+          "label": "Spectral Minion challenge",
+          "text": "PCs see strange shapes flitting through dense woods. Minions challenge them — ask their names."
+        },
+        {
+          "label": "If allowed to pass",
+          "text": "Leader says, \"The Forestmaster awaits. You are expected.\" One spirit escorts them ~½ mile to area 26. Escort's backstory: \"Ages ago, before the world changed, we were ordered to keep this land safe. That is the Purpose. We failed. Now we repent by protecting the land while we can.\""
+        }
+      ],
+      "bullets": [
+        "If they **answer falsely:** Spectral Minions attack",
+        "If they **give their correct names OR show Crystal Staff:** Minions halt and let them pass"
+      ],
+      "treasure_refs": [
+        " If they **give their correct names OR show Crystal Staff:** Minions halt and let them pass"
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "22–26",
+        "26"
+      ],
+      "checks_and_rolls": [
+        "| Spectral Minions ×12 | CE | 30\" | 17×3,18×2,19×2,14×2,10×2,12 | 2 | 3 | 1 | 1–8 | 20% magic resist |"
+      ]
+    },
+    {
+      "id": "23",
+      "canonical_id": "DL1_23",
+      "name": "Centaur Reaches",
+      "heading": "AREA 23: Centaur Reaches",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 23: Centaur Reaches"
+      },
+      "summary": "Centaur emerges from head-high bush, spear raised. If party resists, centaurs fight to death. Otherwise they take weapons and carry PCs to area 26.",
+      "description": "Centaur emerges from head-high bush, spear raised. If party resists, centaurs fight to death. Otherwise they take weapons and carry PCs to area 26.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Centaurs ×8 | CG | 18\" | 18,28,21,13,24,20,19,16 | 5(4) | 4 | 2 | 1–6/1–6 |\n\n**Centaurs' only reply to questions:** \"The Forestmaster will answer all things.\"\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest",
+        "treasure"
+      ],
+      "occupants": [
+        {
+          "name": "Centaurs ×8",
+          "stats": {
+            "Creature": "Centaurs ×8",
+            "AL": "CG",
+            "MV": "18\"",
+            "HP": "18,28,21,13,24,20,19,16",
+            "AC": "5(4)",
+            "HD": "4",
+            "Attacks": "2",
+            "Damage": "1–6/1–6"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Centaurs ×8",
+              "AL": "CG",
+              "MV": "18\"",
+              "HP": "18,28,21,13,24,20,19,16",
+              "AC": "5(4)",
+              "HD": "4",
+              "Attacks": "2",
+              "Damage": "1–6/1–6"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Centaurs' only reply to questions",
+          "text": "\"The Forestmaster will answer all things.\""
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "Centaur emerges from head-high bush, spear raised. If party resists, centaurs fight to death. Otherwise they take weapons and carry PCs to area 26."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "26"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "24",
+      "canonical_id": "DL1_24",
+      "name": "Dryad Forests",
+      "heading": "AREA 24: Dryad Forests",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 24: Dryad Forests"
+      },
+      "summary": "Tremendous deep-rooted oak trees. If PCs have no forest creature escort: dryads become known after ¼ mile travel. Seen briefly as long-haired women whispering to each other; vanish if approached. If escorted by forest creature: dryads are not seen.",
+      "description": "Tremendous deep-rooted oak trees. If PCs have no forest creature escort: dryads become known after ¼ mile travel. Seen briefly as long-haired women whispering to each other; vanish if approached. If escorted by forest creature: dryads are not seen.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Dryads ×1–6 | N | 12\" | — | 9 | 2 | 1 | 1–4 | Charm spells; warn Forestmaster |\n\nForestmaster gives dryads their home and protection in return for their guarding the forest. They whisper and forewarn the Forestmaster of intruders.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Dryads ×1–6",
+          "stats": {
+            "Creature": "Dryads ×1–6",
+            "AL": "N",
+            "MV": "12\"",
+            "HP": "—",
+            "AC": "9",
+            "HD": "2",
+            "Attacks": "1",
+            "Damage": "1–4",
+            "Notes": "Charm spells; warn Forestmaster"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Dryads ×1–6",
+              "AL": "N",
+              "MV": "12\"",
+              "HP": "—",
+              "AC": "9",
+              "HD": "2",
+              "Attacks": "1",
+              "Damage": "1–4",
+              "Notes": "Charm spells; warn Forestmaster"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "25",
+      "canonical_id": "DL1_25",
+      "name": "Starnight Canyon",
+      "heading": "AREA 25: Starnight Canyon",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 25: Starnight Canyon"
+      },
+      "summary": "Craggy canyons among Sentinel Mountains peaks. **15% chance per turn** to encounter Pegasi. They graze calmly; PCs can mount them.",
+      "description": "Craggy canyons among Sentinel Mountains peaks. **15% chance per turn** to encounter Pegasi. They graze calmly; PCs can mount them.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Pegasi ×1–12 | CG | 24\"/48\" | — | 6 | 4 | 3 | 1–8/1–8/1–3 |\n\n**Once mounted:** Pegasi bound into sky and fly directly to area 26 regardless of what riders try to direct them to do. If rider threatens a Pegasus: creature bucks once in the air; rider must check DEX or fall.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Pegasi ×1–12",
+          "stats": {
+            "Creature": "Pegasi ×1–12",
+            "AL": "CG",
+            "MV": "24\"/48\"",
+            "HP": "—",
+            "AC": "6",
+            "HD": "4",
+            "Attacks": "3",
+            "Damage": "1–8/1–8/1–3"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Pegasi ×1–12",
+              "AL": "CG",
+              "MV": "24\"/48\"",
+              "HP": "—",
+              "AC": "6",
+              "HD": "4",
+              "Attacks": "3",
+              "Damage": "1–8/1–8/1–3"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Once mounted",
+          "text": "Pegasi bound into sky and fly directly to area 26 regardless of what riders try to direct them to do. If rider threatens a Pegasus: creature bucks once in the air; rider must check DEX or fall."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "26"
+      ],
+      "checks_and_rolls": [
+        "Craggy canyons among Sentinel Mountains peaks. **15% chance per turn** to encounter Pegasi. They graze calmly; PCs can mount them."
+      ]
+    },
+    {
+      "id": "26",
+      "canonical_id": "DL1_26",
+      "name": "Unicorn Grove",
+      "heading": "AREA 26: Unicorn Grove",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 26: Unicorn Grove"
+      },
+      "summary": "Dense oak forest opens into a glade. Soft green grass up a hillside; rock outcropping at top. Forestmaster Unicorn stands atop the overhang, head raised high, strange sadness in its eyes.",
+      "description": "Dense oak forest opens into a glade. Soft green grass up a hillside; rock outcropping at top. Forestmaster Unicorn stands atop the overhang, head raised high, strange sadness in its eyes.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Forestmaster Unicorn ×1 | CG | 24\" | 60 | 2 | 10 | 3 | 1–8/1–8/1–20 |\n\n**Forestmaster's greeting:** \"I am the Forestmaster. You have entered my Great Forest: I grant you passage and the aid of all creatures while you remain within our borders.\" From now until PCs leave the forest: no creature attacks unless PCs attack first.\n\n**Forestmaster's message (from a great and glorious being who visited days ago):** \"You must fly straight away across the Eastwall Mountains. Within two days you must be within Xak Tsaroth. There, if you prove worthy, you shall receive the greatest gift given to the world.\"\n\n**The Forestmaster knows:** A terrible force of evil will shortly destroy the beauty of his domain.\n\n**If PCs request help:** Forestmaster summons one Pegasus per PC. They circle silently overhead, land gently, allow mounting, then hurtle into the air and soar over the glade. PCs looking back see Forestmaster call after them.\n\n**Upon leaving Darken Wood:** PCs subject to confusion of leaving (cannot express what they experienced). Must also make CON check each turn or fall asleep.\n\n**If party attacks the Forestmaster:** He calls at once for magical forest creatures to defend him. Roll immediately on the Darken Wood Random Encounter table. From now on all creatures encountered attack on sight; if headed out of the woods, creatures only try to chase them out.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "map",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Forestmaster Unicorn ×1",
+          "stats": {
+            "Creature": "Forestmaster Unicorn ×1",
+            "AL": "CG",
+            "MV": "24\"",
+            "HP": "60",
+            "AC": "2",
+            "HD": "10",
+            "Attacks": "3",
+            "Damage": "1–8/1–8/1–20"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Forestmaster Unicorn ×1",
+              "AL": "CG",
+              "MV": "24\"",
+              "HP": "60",
+              "AC": "2",
+              "HD": "10",
+              "Attacks": "3",
+              "Damage": "1–8/1–8/1–20"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Forestmaster's greeting",
+          "text": "\"I am the Forestmaster. You have entered my Great Forest: I grant you passage and the aid of all creatures while you remain within our borders.\" From now until PCs leave the forest: no creature attacks unless PCs attack first."
+        },
+        {
+          "label": "Forestmaster's message (from a great and glorious being who visited days ago)",
+          "text": "\"You must fly straight away across the Eastwall Mountains. Within two days you must be within Xak Tsaroth. There, if you prove worthy, you shall receive the greatest gift given to the world.\""
+        },
+        {
+          "label": "The Forestmaster knows",
+          "text": "A terrible force of evil will shortly destroy the beauty of his domain."
+        },
+        {
+          "label": "If PCs request help",
+          "text": "Forestmaster summons one Pegasus per PC. They circle silently overhead, land gently, allow mounting, then hurtle into the air and soar over the glade. PCs looking back see Forestmaster call after them."
+        },
+        {
+          "label": "Upon leaving Darken Wood",
+          "text": "PCs subject to confusion of leaving (cannot express what they experienced). Must also make CON check each turn or fall asleep."
+        },
+        {
+          "label": "If party attacks the Forestmaster",
+          "text": "He calls at once for magical forest creatures to defend him. Roll immediately on the Darken Wood Random Encounter table. From now on all creatures encountered attack on sight; if headed out of the woods, creatures only try to chase them out."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**The Forestmaster knows:** A terrible force of evil will shortly destroy the beauty of his domain."
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "27–28",
+      "canonical_id": "DL1_27_28",
+      "name": "Gateway Pass / Gateway",
+      "heading": "AREAS 27–28: Gateway Pass / Gateway",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREAS 27–28: Gateway Pass / Gateway"
+      },
+      "summary": "",
+      "description": "**Area 27:** Gateway Pass — worn road peacefully between Sentinel Peak spires; brilliant leaves floating.\n\n**Area 28:** Gateway town — comfortable houses and shops at base of Sentinel Mountains. Buildings on the ground (unlike Solace). No ironsmithy. Citizens know nothing of danger from demons or evil armies; dismiss such talk as tall tales — \"Dragons in the night\" is their name for stories of things that don't exist.\n\n---",
+      "tags": [
+        "combat",
+        "map",
+        "rest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Area 27",
+          "text": "Gateway Pass — worn road peacefully between Sentinel Peak spires; brilliant leaves floating."
+        },
+        {
+          "label": "Area 28",
+          "text": "Gateway town — comfortable houses and shops at base of Sentinel Mountains. Buildings on the ground (unlike Solace). No ironsmithy. Citizens know nothing of danger from demons or evil armies; dismiss such talk as tall tales — \"Dragons in the night\" is their name for stories of things that don't exist."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "27",
+        "28"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "29",
+      "canonical_id": "DL1_29",
+      "name": "Westplains",
+      "heading": "AREA 29: Westplains",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 29: Westplains"
+      },
+      "summary": "Grassland plains east of Sentinel Mountains; brown grasses in suddenly cold fall wind.",
+      "description": "Grassland plains east of Sentinel Mountains; brown grasses in suddenly cold fall wind.\n\n---",
+      "tags": [
+        "hazard"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "30",
+      "canonical_id": "DL1_30",
+      "name": "Que-Teh",
+      "heading": "AREA 30: Que-Teh",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 30: Que-Teh"
+      },
+      "summary": "Chill wind through silent, abandoned village. Signs of hurried flight everywhere (half-empty food jars, half-finished meals, children's rattle-beads cast aside). Rangers: 50% chance to find villager tracks leading straight to area 38.",
+      "description": "Chill wind through silent, abandoned village. Signs of hurried flight everywhere (half-empty food jars, half-finished meals, children's rattle-beads cast aside). Rangers: 50% chance to find villager tracks leading straight to area 38.\n\n---",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "38"
+      ],
+      "checks_and_rolls": [
+        "Chill wind through silent, abandoned village. Signs of hurried flight everywhere (half-empty food jars, half-finished meals, children's rattle-beads cast aside). Rangers: 50% chance to find villager tracks leading straight to area 38."
+      ]
+    },
+    {
+      "id": "31",
+      "canonical_id": "DL1_31",
+      "name": "The Great Crossroads",
+      "heading": "AREA 31: The Great Crossroads",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 31: The Great Crossroads"
+      },
+      "summary": "Burned stubble plains. Three roads converge at stone pillar pointing to Que-Teh, Que-Kiri, and Que-Shu. Cold wind; single hawk circles. Ground heavily trampled. Ranger (who has met draconians): 30% chance to identify draconian tracks. All draconian tracks lead east toward Que-Shu (area 36).",
+      "description": "Burned stubble plains. Three roads converge at stone pillar pointing to Que-Teh, Que-Kiri, and Que-Shu. Cold wind; single hawk circles. Ground heavily trampled. Ranger (who has met draconians): 30% chance to identify draconian tracks. All draconian tracks lead east toward Que-Shu (area 36).\n\n---",
+      "tags": [
+        "combat"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [
+        "36"
+      ],
+      "checks_and_rolls": [
+        "Burned stubble plains. Three roads converge at stone pillar pointing to Que-Teh, Que-Kiri, and Que-Shu. Cold wind; single hawk circles. Ground heavily trampled. Ranger (who has met draconians): 30% chance to identify draconian tracks. All draconian tracks lead east toward Que-Shu (area 36)."
+      ]
+    },
+    {
+      "id": "32",
+      "canonical_id": "DL1_32",
+      "name": "Que-Kiri",
+      "heading": "AREA 32: Que-Kiri",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 32: Que-Kiri"
+      },
+      "summary": "City Guards escort PCs through town but do not allow them to stay. Suspicious of strangers.",
+      "description": "City Guards escort PCs through town but do not allow them to stay. Suspicious of strangers.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| City Guards ×10 | var | 12\" | 11,10,3,6,2,8×2,9,4,5 | 8 | 2 | 1 | 1–6 |\n\n**If PCs kill guards:** Entire town drives them out; no aid or information.\n\n**80% chance** a guard will speak. What he says: Unknown danger coming from the north; scouts have seen great fires; many have disappeared in the last week; 600+ defenders ready; confident they cannot be stopped.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "City Guards ×10",
+          "stats": {
+            "Creature": "City Guards ×10",
+            "AL": "var",
+            "MV": "12\"",
+            "HP": "11,10,3,6,2,8×2,9,4,5",
+            "AC": "8",
+            "HD": "2",
+            "Attacks": "1",
+            "Damage": "1–6"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "City Guards ×10",
+              "AL": "var",
+              "MV": "12\"",
+              "HP": "11,10,3,6,2,8×2,9,4,5",
+              "AC": "8",
+              "HD": "2",
+              "Attacks": "1",
+              "Damage": "1–6"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "If PCs kill guards",
+          "text": "Entire town drives them out; no aid or information."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**80% chance** a guard will speak. What he says: Unknown danger coming from the north; scouts have seen great fires; many have disappeared in the last week; 600+ defenders ready; confident they cannot be stopped."
+      ],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**80% chance** a guard will speak. What he says: Unknown danger coming from the north; scouts have seen great fires; many have disappeared in the last week; 600+ defenders ready; confident they cannot be stopped."
+      ]
+    },
+    {
+      "id": "33",
+      "canonical_id": "DL1_33",
+      "name": "Kiri Valley",
+      "heading": "AREA 33: Kiri Valley",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 33: Kiri Valley"
+      },
+      "summary": "Darkening, thickening forest beside ancient trail. Cold, dry stillness. Everything seems to watch. An evil wizard died here long ago; only his essence remains. No specific encounter stat block listed; use as atmosphere/random encounter area.",
+      "description": "Darkening, thickening forest beside ancient trail. Cold, dry stillness. Everything seems to watch. An evil wizard died here long ago; only his essence remains. No specific encounter stat block listed; use as atmosphere/random encounter area.\n\n---",
+      "tags": [
+        "encounter",
+        "rest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "34",
+      "canonical_id": "DL1_34",
+      "name": "West Que-Shu Plains",
+      "heading": "AREA 34: West Que-Shu Plains",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 34: West Que-Shu Plains"
+      },
+      "summary": "Chill, biting wind. Sharp smell of burning grass from the east.",
+      "description": "Chill, biting wind. Sharp smell of burning grass from the east.\n\n---",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "35",
+      "canonical_id": "DL1_35",
+      "name": "North Desolation",
+      "heading": "AREA 35: North Desolation",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 35: North Desolation"
+      },
+      "summary": "Ranger who has met draconians: 80% chance to identify prints as draconian. 20% chance to tell that prints first pass south then return north.",
+      "description": "Ranger who has met draconians: 80% chance to identify prints as draconian. 20% chance to tell that prints first pass south then return north.\n\n---",
+      "tags": [
+        "combat"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "Ranger who has met draconians: 80% chance to identify prints as draconian. 20% chance to tell that prints first pass south then return north."
+      ]
+    },
+    {
+      "id": "36",
+      "canonical_id": "DL1_36",
+      "name": "Que-Shu",
+      "heading": "AREA 36: Que-Shu",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 36: Que-Shu"
+      },
+      "summary": "The entire Que-Shu tribe is gone. Village abandoned. Center square has a gruesome construction: two posts driven by terrible force, crosspiece 10' up, three chains, three charred and blackened non-human (hobgoblin) corpses suspended by feet. Sign on the crosspiece:",
+      "description": "The entire Que-Shu tribe is gone. Village abandoned. Center square has a gruesome construction: two posts driven by terrible force, crosspiece 10' up, three chains, three charred and blackened non-human (hobgoblin) corpses suspended by feet. Sign on the crosspiece:\n\n**Sign text (15% base chance to read; add read languages if applicable):**\n*\"Know ye, my servants, the fate of those who take prisoners against my will. Kill or be killed. Verminaard.\"*\n\nVillager tracks lead east toward the mountains. Signs of rushed departure everywhere.\n\n---",
+      "tags": [
+        "combat",
+        "quest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Sign text (15% base chance to read; add read languages if applicable)",
+          "text": "*\"Know ye, my servants, the fate of those who take prisoners against my will. Kill or be killed. Verminaard.\"*"
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "*\"Know ye, my servants, the fate of those who take prisoners against my will. Kill or be killed. Verminaard.\"*"
+      ],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Sign text (15% base chance to read; add read languages if applicable):**"
+      ]
+    },
+    {
+      "id": "37",
+      "canonical_id": "DL1_37",
+      "name": "Sageway Broken",
+      "heading": "AREA 37: Sageway Broken",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 37: Sageway Broken"
+      },
+      "summary": "Broken ancient roadway through brown plains. Many footprints; great number of people and heavy creatures moved south along this route a few days ago.",
+      "description": "Broken ancient roadway through brown plains. Many footprints; great number of people and heavy creatures moved south along this route a few days ago.\n\n---",
+      "tags": [
+        "encounter",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "38",
+      "canonical_id": "DL1_38",
+      "name": "Refugee",
+      "heading": "AREA 38: Refugee",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 38: Refugee"
+      },
+      "summary": "A man (500' away) being chased by three draconians who are toying with him.",
+      "description": "A man (500' away) being chased by three draconians who are toying with him.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconians ×3 | LE | 6\"[15\"]/18\" | 8×2, 11 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n| Nightshade (Refugee) | LG | 12\" | 21 (6 now) | 10 | F4 | 1 | 1–2 | Human F4; STR 16, DEX 17 |\n\n**Grass height:** 3'–4' — can hide the heroes. Man can run 550' more before collapse. Draconians intent on prey; don't notice PCs until within 50' (not at all if PCs take cover). If PCs pose a real threat: draconians abandon their prey and attack heroes.\n\n**Nightshade's story (if rescued):** From village of Que-Teh; dragonmen taking everyone south as slaves; secret council while chained; he was chosen to escape while comrades created a distraction; a tremendous evil army lies to the south; second army waits to crush the Seeker Lands from the north; they hold back their armies only for fear that the crystal staff will return to Xak Tsaroth. \"Find the crystal staff, and take it to Xak Tsaroth. It is our only hope.\"\n\n**If PCs cure his wounds:** He joins the party with no equipment.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "hidden",
+        "map",
+        "quest",
+        "rest",
+        "social"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconians ×3",
+          "stats": {
+            "Creature": "Baaz Draconians ×3",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "8×2, 11",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        },
+        {
+          "name": "Nightshade (Refugee)",
+          "stats": {
+            "Creature": "Nightshade (Refugee)",
+            "AL": "LG",
+            "MV": "12\"",
+            "HP": "21 (6 now)",
+            "AC": "10",
+            "HD": "F4",
+            "Attacks": "1",
+            "Damage": "1–2",
+            "Notes": "Human F4; STR 16, DEX 17"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconians ×3",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "8×2, 11",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            },
+            {
+              "Creature": "Nightshade (Refugee)",
+              "AL": "LG",
+              "MV": "12\"",
+              "HP": "21 (6 now)",
+              "AC": "10",
+              "HD": "F4",
+              "Attacks": "1",
+              "Damage": "1–2",
+              "Notes": "Human F4; STR 16, DEX 17"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Grass height",
+          "text": "3'–4' — can hide the heroes. Man can run 550' more before collapse. Draconians intent on prey; don't notice PCs until within 50' (not at all if PCs take cover). If PCs pose a real threat: draconians abandon their prey and attack heroes."
+        },
+        {
+          "label": "Nightshade's story (if rescued)",
+          "text": "From village of Que-Teh; dragonmen taking everyone south as slaves; secret council while chained; he was chosen to escape while comrades created a distraction; a tremendous evil army lies to the south; second army waits to crush the Seeker Lands from the north; they hold back their armies only for fear that the crystal staff will return to Xak Tsaroth. \"Find the crystal staff, and take it to Xak Tsaroth. It is our only hope.\""
+        },
+        {
+          "label": "If PCs cure his wounds",
+          "text": "He joins the party with no equipment."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Nightshade's story (if rescued):** From village of Que-Teh; dragonmen taking everyone south as slaves; secret council while chained; he was chosen to escape while comrades created a distraction; a tremendous evil army lies to the south; second army waits to crush the Seeker Lands from the north; they hold back their armies only for fear that the crystal staff will return to Xak Tsaroth. \"Find the crystal staff, and take it to Xak Tsaroth. It is our only hope.\""
+      ],
+      "hidden_or_dm_facts": [
+        "**Nightshade's story (if rescued):** From village of Que-Teh; dragonmen taking everyone south as slaves; secret council while chained; he was chosen to escape while comrades created a distraction; a tremendous evil army lies to the south; second army waits to crush the Seeker Lands from the north; they hold back their armies only for fear that the crystal staff will return to Xak Tsaroth. \"Find the crystal staff, and take it to Xak Tsaroth. It is our only hope.\""
+      ],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "39",
+      "canonical_id": "DL1_39",
+      "name": "Oldroad Bridge",
+      "heading": "AREA 39: Oldroad Bridge",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 39: Oldroad Bridge"
+      },
+      "summary": "Ancient bridge spanning White-rage River. At 300': 4 draconian guards on north side, 10–20 on south side.",
+      "description": "Ancient bridge spanning White-rage River. At 300': 4 draconian guards on north side, 10–20 on south side.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Draconian Guards ×4 | LE | 6\"[15\"]/18\" | 12,6,9,9 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n| Baaz Reserves ×10–20 | LE | 6\"[15\"]/18\" | 12 each | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\n**Orders:** Kill anyone who approaches (no more prisoners per dragonlord). This is all they know about dragonarmy positions.\n\n**If PCs approach by raft:** Draconians leap onto raft from bridge, capsizing it. Use swimming rules from area 18.\n\n**Pursuit rules:** North-side guards may only pursue north of river. Reserves may only pursue south of river.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Draconian Guards ×4",
+          "stats": {
+            "Creature": "Baaz Draconian Guards ×4",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,6,9,9",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        },
+        {
+          "name": "Baaz Reserves ×10–20",
+          "stats": {
+            "Creature": "Baaz Reserves ×10–20",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12 each",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Draconian Guards ×4",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "12,6,9,9",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            },
+            {
+              "Creature": "Baaz Reserves ×10–20",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "12 each",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Orders",
+          "text": "Kill anyone who approaches (no more prisoners per dragonlord). This is all they know about dragonarmy positions."
+        },
+        {
+          "label": "If PCs approach by raft",
+          "text": "Draconians leap onto raft from bridge, capsizing it. Use swimming rules from area 18."
+        },
+        {
+          "label": "Pursuit rules",
+          "text": "North-side guards may only pursue north of river. Reserves may only pursue south of river."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [
+        "**Orders:** Kill anyone who approaches (no more prisoners per dragonlord). This is all they know about dragonarmy positions."
+      ],
+      "area_references": [
+        "18"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "40",
+      "canonical_id": "DL1_40",
+      "name": "Southway",
+      "heading": "AREA 40: Southway",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 40: Southway"
+      },
+      "summary": "Tall south-bank grasses; occasional glimpse of spear or helm. Cold overcast sky.",
+      "description": "Tall south-bank grasses; occasional glimpse of spear or helm. Cold overcast sky.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Baaz Reserves (per unit) ×10–20 | LE | 6\"[15\"]/18\" | 14 each | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | Turn to stone, crumble |\n\n**If PCs move south:** One unit per game hour; unlimited units. Orders: attack and kill anything crossing south of the river; do not pursue north of river. No further intel.\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "map"
+      ],
+      "occupants": [
+        {
+          "name": "Baaz Reserves (per unit) ×10–20",
+          "stats": {
+            "Creature": "Baaz Reserves (per unit) ×10–20",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "14 each",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Notes": "Turn to stone, crumble"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Reserves (per unit) ×10–20",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "14 each",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Notes": "Turn to stone, crumble"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "If PCs move south",
+          "text": "One unit per game hour; unlimited units. Orders: attack and kill anything crossing south of the river; do not pursue north of river. No further intel."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "41",
+      "canonical_id": "DL1_41",
+      "name": "Sageway East",
+      "heading": "AREA 41: Sageway East",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 41: Sageway East"
+      },
+      "summary": "Ancient broken roadway through Forsaken Mountains canyons; grasses and weeds between stones are trampled flat. Cold wind.",
+      "description": "Ancient broken roadway through Forsaken Mountains canyons; grasses and weeds between stones are trampled flat. Cold wind.\n\nRanger: 50% chance to note human plainsmen tracks mixed with heavier tracks. If has met draconians: 30% chance to identify their tracks here.\n\n---",
+      "tags": [
+        "combat",
+        "map"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "Ranger: 50% chance to note human plainsmen tracks mixed with heavier tracks. If has met draconians: 30% chance to identify their tracks here."
+      ]
+    },
+    {
+      "id": "42",
+      "canonical_id": "DL1_42",
+      "name": "Cursed Lands of Newsea",
+      "heading": "AREA 42: Cursed Lands of Newsea",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 42: Cursed Lands of Newsea"
+      },
+      "summary": "Forest of Ironclaw trees east to the Newsea. Spongy swamp with still black water between islands of soggy ground.",
+      "description": "Forest of Ironclaw trees east to the Newsea. Spongy swamp with still black water between islands of soggy ground.\n\n**Terrain check:** Each turn, 15% chance the ground dead-ends; party must cross 6–10 feet (1d4+5) of water to get to the next section. See random encounter table for water creatures (Appendix 4).\n\n---",
+      "tags": [
+        "encounter",
+        "hazard",
+        "rest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Terrain check",
+          "text": "Each turn, 15% chance the ground dead-ends; party must cross 6–10 feet (1d4+5) of water to get to the next section. See random encounter table for water creatures (Appendix 4)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Terrain check:** Each turn, 15% chance the ground dead-ends; party must cross 6–10 feet (1d4+5) of water to get to the next section. See random encounter table for water creatures (Appendix 4)."
+      ]
+    },
+    {
+      "id": "43",
+      "canonical_id": "DL1_43",
+      "name": "Dragonlands",
+      "heading": "AREA 43: Dragonlands",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "chapter_1_wilderness",
+      "source": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "file_key": "wilderness",
+        "heading": "AREA 43: Dragonlands"
+      },
+      "summary": "Thousand campfires on burned plains. A Bozak Draconian Guardleader holds an outpost.",
+      "description": "Thousand campfires on burned plains. A Bozak Draconian Guardleader holds an outpost.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Spells | Notes |\n|----------|----|----|----|----|----|---------|----|--------|-------|\n| Bozak Draconian Guardleader ×1 | LE | 6\"[15\"]/18\" | 23 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, shield; 2nd: invis, mirror image | Explodes 1d6 on death |\n| Baaz Guards ×2 | LE | 6\"[15\"]/18\" | 12,6 | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 | — | Turn to stone, crumble |\n| Hobgoblins ×6 | LE | 9\" | 5×4, 6, 7 | 5 | 1+1 | 1 | 1–8 | — | — |\n\n**Overheard if PC moves silently within 30':** Large draconian says, \"We can crush this human scum. So why wait until old Verminaard gets some fancy crystal staff? Why, he even has Khisanth tied up waiting for it, when we could use her help out here!\"\n\n**If PCs move past:** They meet the bulk of the draconian army, one unit per game hour, unlimited.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage |\n|----------|----|----|----|----|----|---------|----|\n| Baaz Footmen (per unit) ×11–20 | LE | 6\"[15\"]/18\" | — | 4 | 2 | 1 or 2 | 1–8 or 1–4/1–4 |",
+      "tags": [
+        "combat",
+        "encounter",
+        "quest",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Bozak Draconian Guardleader ×1",
+          "stats": {
+            "Creature": "Bozak Draconian Guardleader ×1",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "23",
+            "AC": "2",
+            "HD": "4",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+            "Notes": "Explodes 1d6 on death"
+          }
+        },
+        {
+          "name": "Baaz Guards ×2",
+          "stats": {
+            "Creature": "Baaz Guards ×2",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "12,6",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4",
+            "Spells": "—",
+            "Notes": "Turn to stone, crumble"
+          }
+        },
+        {
+          "name": "Hobgoblins ×6",
+          "stats": {
+            "Creature": "Hobgoblins ×6",
+            "AL": "LE",
+            "MV": "9\"",
+            "HP": "5×4, 6, 7",
+            "AC": "5",
+            "HD": "1+1",
+            "Attacks": "1",
+            "Damage": "1–8",
+            "Spells": "—",
+            "Notes": "—"
+          }
+        },
+        {
+          "name": "Baaz Footmen (per unit) ×11–20",
+          "stats": {
+            "Creature": "Baaz Footmen (per unit) ×11–20",
+            "AL": "LE",
+            "MV": "6\"[15\"]/18\"",
+            "HP": "—",
+            "AC": "4",
+            "HD": "2",
+            "Attacks": "1 or 2",
+            "Damage": "1–8 or 1–4/1–4"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Spells",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Bozak Draconian Guardleader ×1",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "23",
+              "AC": "2",
+              "HD": "4",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "1st: charm, MM, shield; 2nd: invis, mirror image",
+              "Notes": "Explodes 1d6 on death"
+            },
+            {
+              "Creature": "Baaz Guards ×2",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "12,6",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4",
+              "Spells": "—",
+              "Notes": "Turn to stone, crumble"
+            },
+            {
+              "Creature": "Hobgoblins ×6",
+              "AL": "LE",
+              "MV": "9\"",
+              "HP": "5×4, 6, 7",
+              "AC": "5",
+              "HD": "1+1",
+              "Attacks": "1",
+              "Damage": "1–8",
+              "Spells": "—",
+              "Notes": "—"
+            }
+          ]
+        },
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage"
+          ],
+          "rows": [
+            {
+              "Creature": "Baaz Footmen (per unit) ×11–20",
+              "AL": "LE",
+              "MV": "6\"[15\"]/18\"",
+              "HP": "—",
+              "AC": "4",
+              "HD": "2",
+              "Attacks": "1 or 2",
+              "Damage": "1–8 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Overheard if PC moves silently within 30'",
+          "text": "Large draconian says, \"We can crush this human scum. So why wait until old Verminaard gets some fancy crystal staff? Why, he even has Khisanth tied up waiting for it, when we could use her help out here!\""
+        },
+        {
+          "label": "If PCs move past",
+          "text": "They meet the bulk of the draconian army, one unit per game hour, unlimited."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Overheard if PC moves silently within 30':** Large draconian says, \"We can crush this human scum. So why wait until old Verminaard gets some fancy crystal staff? Why, he even has Khisanth tied up waiting for it, when we could use her help out here!\""
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "| Bozak Draconian Guardleader ×1 | LE | 6\"[15\"]/18\" | 23 | 2 | 4 | 1 or 2 | 1–8 or 1–4/1–4 | 1st: charm, MM, shield; 2nd: invis, mirror image | Explodes 1d6 on death |"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "treasure_items": [
+    {
+      "id": "dl1_dragons_of_despair_rules_engine_reference",
+      "name": "DL1: Dragons of Despair — Rules Engine Reference",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "DL1: Dragons of Despair — Rules Engine Reference"
+      },
+      "description": "---",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [],
+      "tags": [
+        "combat"
+      ]
+    },
+    {
+      "id": "the_blue_crystal_staff_crystal_of_mishakal",
+      "name": "THE BLUE CRYSTAL STAFF (Crystal of Mishakal)",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "THE BLUE CRYSTAL STAFF (Crystal of Mishakal)"
+      },
+      "description": "The central MacGuffin of the entire module. Carved from a single piece of blue crystal. About 5 feet long; 2-inch-diameter shaft. Ornamentally bladed head with a gem in its center.",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "The central MacGuffin of the entire module. Carved from a single piece of blue crystal. About 5 feet long; 2-inch-diameter shaft. Ornamentally bladed head with a gem in its center."
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest",
+        "treasure"
+      ]
+    },
+    {
+      "id": "origin",
+      "name": "Origin",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Origin"
+      },
+      "description": "Although Riverwind does not remember, a manifestation of the Goddess Mishakal gave him the staff in the Forsaken Lands.",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "Although Riverwind does not remember, a manifestation of the Goddess Mishakal gave him the staff in the Forsaken Lands."
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "hazard",
+        "quest"
+      ]
+    },
+    {
+      "id": "intelligence_and_alignment",
+      "name": "Intelligence and Alignment",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Intelligence and Alignment"
+      },
+      "description": "- **Intelligent artifact**\n- **Alignment:** Lawful Good\n- **Ego:** 10\n- Can only be used by Lawful Good characters\n- Non-LG characters who try to wield the staff: **take 4d6 points of electrical damage**\n- An LG person may use the staff to heal the electrical damage it has caused to others",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        " Non-LG characters who try to wield the staff: **take 4d6 points of electrical damage**",
+        " An LG person may use the staff to heal the electrical damage it has caused to others"
+      ],
+      "checks_and_rolls": [
+        " Non-LG characters who try to wield the staff: **take 4d6 points of electrical damage**"
+      ],
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "powers",
+      "name": "Powers",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Powers"
+      },
+      "description": "**1. Striking:** Acts as a staff of striking (1–3 charges per use)\n\n**2. Clerical spells** (2 charges per level of spell):\n| Spell Level | Spells Available |\n|-------------|-----------------|\n| 1st | command, cure light wounds, remove fear |\n| 3rd | continual light, cure blindness, cure disease, remove curse |\n| 5th | cure critical wounds, raise dead |\n| 7th | restoration, resurrection |\n\n**3. Teleportation:** At its own discretion (using 15 charges)\n\n**4. Dragon breath deflection:** In a 10' radius (10 charges per use)",
+      "tables": [
+        {
+          "kind": "table",
+          "headers": [
+            "Spell Level",
+            "Spells Available"
+          ],
+          "rows": [
+            {
+              "Spell Level": "1st",
+              "Spells Available": "command, cure light wounds, remove fear"
+            },
+            {
+              "Spell Level": "3rd",
+              "Spells Available": "continual light, cure blindness, cure disease, remove curse"
+            },
+            {
+              "Spell Level": "5th",
+              "Spells Available": "cure critical wounds, raise dead"
+            },
+            {
+              "Spell Level": "7th",
+              "Spells Available": "restoration, resurrection"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "1. Striking",
+          "text": "Acts as a staff of striking (1–3 charges per use)"
+        },
+        {
+          "label": "3. Teleportation",
+          "text": "At its own discretion (using 15 charges)"
+        },
+        {
+          "label": "4. Dragon breath deflection",
+          "text": "In a 10' radius (10 charges per use)"
+        }
+      ],
+      "treasure_refs": [
+        "**1. Striking:** Acts as a staff of striking (1–3 charges per use)"
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "combat",
+        "quest",
+        "rest"
+      ]
+    },
+    {
+      "id": "charges",
+      "name": "Charges",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Charges"
+      },
+      "description": "- Holds up to 20 charges at a time\n- Regains 1 charge per day from the combined influence of Krynn's three moons\n- Can be immediately and completely recharged at the statue of Mishakal (area 46b) by placing the staff in the statue's arms",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        " Can be immediately and completely recharged at the statue of Mishakal (area 46b) by placing the staff in the statue's arms"
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "the_staff_s_fate",
+      "name": "The Staff's Fate",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "The Staff's Fate"
+      },
+      "description": "Upon completion of the Quest for the Disks of Mishakal — specifically, if a PC uses the staff to strike Khisanth in area 70k — the staff **shatters on contact**. Blue light bursts from it in brilliant spherical waves. The person who broke the staff disappears in light. The blue wave shakes the earth, covers the dragon, and the dragon falls screaming into light. The cavern begins to collapse.\n\nThe person who broke the staff reappears at the statue of Mishakal (area 46b), unharmed with all HP restored. The staff becomes part of the statue. The PC who broke it now wears a **platinum Medallion of Faith** bearing the symbol of the goddess.\n\n---",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "Upon completion of the Quest for the Disks of Mishakal — specifically, if a PC uses the staff to strike Khisanth in area 70k — the staff **shatters on contact**. Blue light bursts from it in brilliant spherical waves. The person who broke the staff disappears in light. The blue wave shakes the earth, covers the dragon, and the dragon falls screaming into light. The cavern begins to collapse.",
+        "The person who broke the staff reappears at the statue of Mishakal (area 46b), unharmed with all HP restored. The staff becomes part of the statue. The PC who broke it now wears a **platinum Medallion of Faith** bearing the symbol of the goddess."
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "combat",
+        "hazard",
+        "quest",
+        "rest"
+      ]
+    },
+    {
+      "id": "the_disks_of_mishakal",
+      "name": "THE DISKS OF MISHAKAL",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "THE DISKS OF MISHAKAL"
+      },
+      "description": "The primary objective of the adventure. Located in Khisanth's hoard at area 70k.",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "The primary objective of the adventure. Located in Khisanth's hoard at area 70k."
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest",
+        "treasure"
+      ]
+    },
+    {
+      "id": "physical_description",
+      "name": "Physical Description",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Physical Description"
+      },
+      "description": "- Platinum disks, 18 inches in diameter\n- Each disk 1/16 inch thick\n- **160 plates in total**\n- A bolt passes through one side of the plates, allowing each to swivel out and be viewed while keeping the stack together\n- Each plate is engraved on both sides",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        " Platinum disks, 18 inches in diameter"
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "alignment_restriction",
+      "name": "Alignment Restriction",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Alignment Restriction"
+      },
+      "description": "- **LG or NG alignment:** May examine the plates freely\n- **Other alignments:** Take **4d6 points of electrical damage** each time they try to touch or read the disks",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        " **Other alignments:** Take **4d6 points of electrical damage** each time they try to touch or read the disks"
+      ],
+      "checks_and_rolls": [
+        " **Other alignments:** Take **4d6 points of electrical damage** each time they try to touch or read the disks"
+      ],
+      "tags": [
+        "quest",
+        "rest"
+      ]
+    },
+    {
+      "id": "what_the_disks_contain",
+      "name": "What the Disks Contain",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "What the Disks Contain"
+      },
+      "description": "Engraved knowledge about the ancient Gods of Good:\n| God | Domain |\n|-----|--------|\n| **Paladine** | Rulership |\n| **Majere** | Meditation and control |\n| **Kiri-Jolith** | War and battle |\n| **Mishakal** | Healing |\n| **Habakuk** | Seas and animals |\n| **Branchala** | Elves, forests, and music |",
+      "tables": [
+        {
+          "kind": "table",
+          "headers": [
+            "God",
+            "Domain"
+          ],
+          "rows": [
+            {
+              "God": "**Paladine**",
+              "Domain": "Rulership"
+            },
+            {
+              "God": "**Majere**",
+              "Domain": "Meditation and control"
+            },
+            {
+              "God": "**Kiri-Jolith**",
+              "Domain": "War and battle"
+            },
+            {
+              "God": "**Mishakal**",
+              "Domain": "Healing"
+            },
+            {
+              "God": "**Habakuk**",
+              "Domain": "Seas and animals"
+            },
+            {
+              "God": "**Branchala**",
+              "Domain": "Elves, forests, and music"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest",
+        "rest"
+      ]
+    },
+    {
+      "id": "effect",
+      "name": "Effect",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Effect"
+      },
+      "description": "Any cleric who reads this book and worships one of these gods may receive spells per **standard AD&D rules**. The book tells how to worship them and gain true clerical abilities. This **restores clerical spellcasting to Krynn**.\n\n---",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [],
+      "tags": [
+        "rest",
+        "social"
+      ]
+    },
+    {
+      "id": "medallion_of_faith",
+      "name": "MEDALLION OF FAITH",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "MEDALLION OF FAITH"
+      },
+      "description": "",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "creation",
+      "name": "Creation",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Creation"
+      },
+      "description": "The platinum Medallion of Faith is created when the Crystal Staff is shattered against Khisanth. It appears around the neck of the PC who broke the staff.\n\nThe medallion is the symbol of those who worship the true gods. Each medallion **magically creates another medallion of faith** for clerics of any good alignment who profess faith in the old gods of good. The created medallion bears the symbol of the god that the cleric professes, regardless of which symbol the original bears.",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "The platinum Medallion of Faith is created when the Crystal Staff is shattered against Khisanth. It appears around the neck of the PC who broke the staff.",
+        "The medallion is the symbol of those who worship the true gods. Each medallion **magically creates another medallion of faith** for clerics of any good alignment who profess faith in the old gods of good. The created medallion bears the symbol of the god that the cleric professes, regardless of which symbol the original bears."
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "powers",
+      "name": "Powers",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Powers"
+      },
+      "description": "- No powers beyond creation of additional medallions as described above\n- Serves as a symbol of faith\n- True believers wear them at all times, although never openly\n\n---",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        " No powers beyond creation of additional medallions as described above"
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "quest"
+      ]
+    },
+    {
+      "id": "area_by_area_treasure_reference",
+      "name": "AREA-BY-AREA TREASURE REFERENCE",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "AREA-BY-AREA TREASURE REFERENCE"
+      },
+      "description": "",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [],
+      "tags": [
+        "treasure"
+      ]
+    },
+    {
+      "id": "wilderness_and_surface",
+      "name": "Wilderness and Surface",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Wilderness and Surface"
+      },
+      "description": "| Area | Treasure | Notes |\n|------|---------|-------|\n| 7 | Silver bracer with 4 gems (500 gpv each) | Belongs to dead warrior Firehawk of Que-Shu; can be identified by Que-Shu Plainsmen |\n| 46d | Magic-user scroll: 10th-level lightning bolt | Left on dais by attacking draconians |\n| 47e | 5 gems, 1,000 gpv each | In small box at edge of floorless room |\n| 47g | 6 swords +1 | One per skeleton coffin in treasury room |\n\n---",
+      "tables": [
+        {
+          "kind": "table",
+          "headers": [
+            "Area",
+            "Treasure",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Area": "7",
+              "Treasure": "Silver bracer with 4 gems (500 gpv each)",
+              "Notes": "Belongs to dead warrior Firehawk of Que-Shu; can be identified by Que-Shu Plainsmen"
+            },
+            {
+              "Area": "46d",
+              "Treasure": "Magic-user scroll: 10th-level lightning bolt",
+              "Notes": "Left on dais by attacking draconians"
+            },
+            {
+              "Area": "47e",
+              "Treasure": "5 gems, 1,000 gpv each",
+              "Notes": "In small box at edge of floorless room"
+            },
+            {
+              "Area": "47g",
+              "Treasure": "6 swords +1",
+              "Notes": "One per skeleton coffin in treasury room"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "| Area | Treasure | Notes |",
+        "| 7 | Silver bracer with 4 gems (500 gpv each) | Belongs to dead warrior Firehawk of Que-Shu; can be identified by Que-Shu Plainsmen |",
+        "| 46d | Magic-user scroll: 10th-level lightning bolt | Left on dais by attacking draconians |",
+        "| 47e | 5 gems, 1,000 gpv each | In small box at edge of floorless room |"
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "combat",
+        "treasure"
+      ]
+    },
+    {
+      "id": "underground_city_treasures",
+      "name": "Underground City Treasures",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Underground City Treasures"
+      },
+      "description": "| Area | Treasure | Notes |\n|------|---------|-------|\n| 55 | Steel doors (2) | 1,500 gpw each; worth 15,000 gp each in Solace, Haven, or Gateway |\n| 57b | 500 clay Tsarothian Culli | Can pay Kathal's tax in area 57a; otherwise worthless |\n| 65b | Longswords +2 (×3), Elven bow + 12 arrows +1 | Hidden behind baskets against west wall |\n| 68k | Old map showing sewer access (69b) and route to dragon's lair (70k) | Found searching Highbulp's clothing piles |\n| 70d | Among 30,000 worthless Culli (30% chance to find): two throwing daggers +3, gauntlets of climbing, spellbook (wizard lock, knock, invisibility), shield +1 | Search required |\n| 70f | Pack with dried meats + map of the palace (areas 70a–70h) | In Bozak captain's room |\n| **70k** | **Dragon's hoard** | **See below** |\n\n---",
+      "tables": [
+        {
+          "kind": "table",
+          "headers": [
+            "Area",
+            "Treasure",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Area": "55",
+              "Treasure": "Steel doors (2)",
+              "Notes": "1,500 gpw each; worth 15,000 gp each in Solace, Haven, or Gateway"
+            },
+            {
+              "Area": "57b",
+              "Treasure": "500 clay Tsarothian Culli",
+              "Notes": "Can pay Kathal's tax in area 57a; otherwise worthless"
+            },
+            {
+              "Area": "65b",
+              "Treasure": "Longswords +2 (×3), Elven bow + 12 arrows +1",
+              "Notes": "Hidden behind baskets against west wall"
+            },
+            {
+              "Area": "68k",
+              "Treasure": "Old map showing sewer access (69b) and route to dragon's lair (70k)",
+              "Notes": "Found searching Highbulp's clothing piles"
+            },
+            {
+              "Area": "70d",
+              "Treasure": "Among 30,000 worthless Culli (30% chance to find): two throwing daggers +3, gauntlets of climbing, spellbook (wizard lock, knock, invisibility), shield +1",
+              "Notes": "Search required"
+            },
+            {
+              "Area": "70f",
+              "Treasure": "Pack with dried meats + map of the palace (areas 70a–70h)",
+              "Notes": "In Bozak captain's room"
+            },
+            {
+              "Area": "**70k**",
+              "Treasure": "**Dragon's hoard**",
+              "Notes": "**See below**"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "| Area | Treasure | Notes |",
+        "| 55 | Steel doors (2) | 1,500 gpw each; worth 15,000 gp each in Solace, Haven, or Gateway |",
+        "| 57b | 500 clay Tsarothian Culli | Can pay Kathal's tax in area 57a; otherwise worthless |",
+        "| 68k | Old map showing sewer access (69b) and route to dragon's lair (70k) | Found searching Highbulp's clothing piles |",
+        "| 70d | Among 30,000 worthless Culli (30% chance to find): two throwing daggers +3, gauntlets of climbing, spellbook (wizard lock, knock, invisibility), shield +1 | Search required |",
+        "| 70f | Pack with dried meats + map of the palace (areas 70a–70h) | In Bozak captain's room |",
+        "| **70k** | **Dragon's hoard** | **See below** |"
+      ],
+      "checks_and_rolls": [
+        "| 70d | Among 30,000 worthless Culli (30% chance to find): two throwing daggers +3, gauntlets of climbing, spellbook (wizard lock, knock, invisibility), shield +1 | Search required |"
+      ],
+      "tags": [
+        "combat",
+        "hidden",
+        "map",
+        "treasure"
+      ]
+    },
+    {
+      "id": "dragon_s_hoard_area_70k_main_treasure",
+      "name": "Dragon's Hoard (Area 70k — Main Treasure)",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Dragon's Hoard (Area 70k — Main Treasure)"
+      },
+      "description": "| Item | Quantity/Value | Notes |\n|------|---------------|-------|\n| **Disks of Mishakal** | Priceless | Primary quest objective; 160 platinum plates; see above |\n| Gems | 56 gems @ 200 gp value each | Total: 11,200 gp equivalent |\n| Cloak of invisibility | 1 | Standard magic item |\n| Platinum pieces | 1,000 pp | — |\n| Ring of darkness | 1 | Projects darkness to a **100' radius** |\n\n---",
+      "tables": [
+        {
+          "kind": "currency_or_value",
+          "headers": [
+            "Item",
+            "Quantity/Value",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Item": "**Disks of Mishakal**",
+              "Quantity/Value": "Priceless",
+              "Notes": "Primary quest objective; 160 platinum plates; see above"
+            },
+            {
+              "Item": "Gems",
+              "Quantity/Value": "56 gems @ 200 gp value each",
+              "Notes": "Total: 11,200 gp equivalent"
+            },
+            {
+              "Item": "Cloak of invisibility",
+              "Quantity/Value": "1",
+              "Notes": "Standard magic item"
+            },
+            {
+              "Item": "Platinum pieces",
+              "Quantity/Value": "1,000 pp",
+              "Notes": "—"
+            },
+            {
+              "Item": "Ring of darkness",
+              "Quantity/Value": "1",
+              "Notes": "Projects darkness to a **100' radius**"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [],
+      "treasure_refs": [
+        "| **Disks of Mishakal** | Priceless | Primary quest objective; 160 platinum plates; see above |",
+        "| Gems | 56 gems @ 200 gp value each | Total: 11,200 gp equivalent |",
+        "| Platinum pieces | 1,000 pp | — |"
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "combat",
+        "quest",
+        "treasure"
+      ]
+    },
+    {
+      "id": "other_notable_items",
+      "name": "OTHER NOTABLE ITEMS",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "OTHER NOTABLE ITEMS"
+      },
+      "description": "",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [],
+      "tags": []
+    },
+    {
+      "id": "raistlin_s_staff_of_magius",
+      "name": "Raistlin's Staff of Magius",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Raistlin's Staff of Magius"
+      },
+      "description": "- +3 protection\n- +2 to hit (1d8 damage)\n- Continual light: 1×/day\n- Feather fall: 1×/day\n- Personal item; begins with Raistlin",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [
+        " +2 to hit (1d8 damage)"
+      ],
+      "tags": [
+        "hazard",
+        "quest"
+      ]
+    },
+    {
+      "id": "riverwind_s_two_handed_sword_3",
+      "name": "Riverwind's Two-Handed Sword +3",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Riverwind's Two-Handed Sword +3"
+      },
+      "description": "- Damage: 1d10 (vs. M or smaller) / 3d6 (vs. L or larger)\n- Personal item; begins with Riverwind",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [],
+      "checks_and_rolls": [
+        " Damage: 1d10 (vs. M or smaller) / 3d6 (vs. L or larger)"
+      ],
+      "tags": [
+        "combat",
+        "hazard"
+      ]
+    },
+    {
+      "id": "goldmoon_s_longsword_2_and_hunting_knife_1",
+      "name": "Goldmoon's Longsword +2 and Hunting Knife +1",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Goldmoon's Longsword +2 and Hunting Knife +1"
+      },
+      "description": "- Personal items; begin with Goldmoon",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        " Personal items; begin with Goldmoon"
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "combat",
+        "treasure"
+      ]
+    },
+    {
+      "id": "tasslehoff_s_hoopak",
+      "name": "Tasslehoff's Hoopak",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "Tasslehoff's Hoopak"
+      },
+      "description": "- Combination weapon: bullet sling (2d2+1 / 2d3+1 damage) and jo stick (+2 to hit; 1d6+2 / 1d4+2 damage)\n- Unique Kender weapon\n\n---",
+      "tables": [],
+      "labeled_rules": [],
+      "treasure_refs": [
+        " Combination weapon: bullet sling (2d2+1 / 2d3+1 damage) and jo stick (+2 to hit; 1d6+2 / 1d4+2 damage)",
+        " Unique Kender weapon"
+      ],
+      "checks_and_rolls": [
+        " Combination weapon: bullet sling (2d2+1 / 2d3+1 damage) and jo stick (+2 to hit; 1d6+2 / 1d4+2 damage)"
+      ],
+      "tags": [
+        "treasure"
+      ]
+    },
+    {
+      "id": "currency_quick_reference_see_dl1_01_for_full_details",
+      "name": "CURRENCY QUICK REFERENCE (see DL1_01 for full details)",
+      "source": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "heading": "CURRENCY QUICK REFERENCE (see DL1_01 for full details)"
+      },
+      "description": "All treasures found in Xak Tsaroth are in **Tsarothian clay Culli** (completely worthless in the present age) or in metal items with intrinsic value. The 30,000 Culli in area 70d are worthless except as the tax payment for the Clerk Spectral Minion in area 57a.\n\n**Steel pieces = XP:** 1 steel = 1 XP for experience purposes.\n\n**Gems and metals** have gpv/gpw values as noted in the standard AD&D exchange (1 gpv = 1 gp equivalent for experience and purchasing purposes, converted at the rate of 1 steel Emas = 50 sp in Seeker Lands).",
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Steel pieces = XP",
+          "text": "1 steel = 1 XP for experience purposes."
+        }
+      ],
+      "treasure_refs": [
+        "All treasures found in Xak Tsaroth are in **Tsarothian clay Culli** (completely worthless in the present age) or in metal items with intrinsic value. The 30,000 Culli in area 70d are worthless except as the tax payment for the Clerk Spectral Minion in area 57a.",
+        "**Steel pieces = XP:** 1 steel = 1 XP for experience purposes.",
+        "**Gems and metals** have gpv/gpw values as noted in the standard AD&D exchange (1 gpv = 1 gp equivalent for experience and purchasing purposes, converted at the rate of 1 steel Emas = 50 sp in Seeker Lands)."
+      ],
+      "checks_and_rolls": [],
+      "tags": [
+        "treasure"
+      ]
+    }
+  ]
+}

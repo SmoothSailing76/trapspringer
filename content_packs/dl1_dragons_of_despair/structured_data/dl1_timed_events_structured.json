@@ -1,0 +1,562 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "events": [
+    {
+      "id": "event_1",
+      "canonical_id": "DL1_EVENT_1",
+      "name": "The Adventure Begins",
+      "heading": "EVENT 1: The Adventure Begins",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "timed_events",
+      "source": {
+        "file": "DL1_02_EVENTS.md",
+        "file_key": "events",
+        "heading": "EVENT 1: The Adventure Begins"
+      },
+      "summary": "Read-aloud describes hobgoblins emerging from both sides of the road, surrounding the party. Toede arrives on swaybacked pony, demands the blue crystal staff, then immediately orders his troops to attack and rides into the woods.",
+      "description": "**Trigger:** Start of play. Party stands at location marked X on Wilderness Map.\n\n**Setup:** Players using pre-gen characters read aloud backgrounds from backs of character cards. Players with own characters have no stories to tell.\n\n**Encounter — Fewmaster Toede's Ambush:**\nRead-aloud describes hobgoblins emerging from both sides of the road, surrounding the party. Toede arrives on swaybacked pony, demands the blue crystal staff, then immediately orders his troops to attack and rides into the woods.\n\n| Creature | AL | MV | HP | AC | HD | Attacks | Damage | Notes |\n|----------|----|----|----|----|----|---------|----|-------|\n| Fewmaster Toede (Hobgoblin Lord) | LE | 12\" | 22 | — | 4 | 1 | 1–6 | Can leap up to 30'; flees immediately |\n| Hobgoblins (Advanced Troop) ×10 | LE | 9\" | 2, 3×3, 5, 3×6, 7, 9 | 5 | 1+1 | 1 | 1–8 | Fight to the death |\n\n**Toede's behavior:** Turns his pony and gallops into woods without waiting for a reply. He has no intention of granting mercy.\n\n**Captured hobgoblins know:** Only that they were ordered to search the road at night and find a blue crystal staff.\n\n**After combat:** PCs are on the road east of Solace (area 1).\n\n---",
+      "tags": [
+        "combat",
+        "encounter",
+        "hidden",
+        "map",
+        "quest",
+        "rest"
+      ],
+      "occupants": [
+        {
+          "name": "Fewmaster Toede (Hobgoblin Lord)",
+          "stats": {
+            "Creature": "Fewmaster Toede (Hobgoblin Lord)",
+            "AL": "LE",
+            "MV": "12\"",
+            "HP": "22",
+            "AC": "—",
+            "HD": "4",
+            "Attacks": "1",
+            "Damage": "1–6",
+            "Notes": "Can leap up to 30'; flees immediately"
+          }
+        },
+        {
+          "name": "Hobgoblins (Advanced Troop) ×10",
+          "stats": {
+            "Creature": "Hobgoblins (Advanced Troop) ×10",
+            "AL": "LE",
+            "MV": "9\"",
+            "HP": "2, 3×3, 5, 3×6, 7, 9",
+            "AC": "5",
+            "HD": "1+1",
+            "Attacks": "1",
+            "Damage": "1–8",
+            "Notes": "Fight to the death"
+          }
+        }
+      ],
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Creature",
+            "AL",
+            "MV",
+            "HP",
+            "AC",
+            "HD",
+            "Attacks",
+            "Damage",
+            "Notes"
+          ],
+          "rows": [
+            {
+              "Creature": "Fewmaster Toede (Hobgoblin Lord)",
+              "AL": "LE",
+              "MV": "12\"",
+              "HP": "22",
+              "AC": "—",
+              "HD": "4",
+              "Attacks": "1",
+              "Damage": "1–6",
+              "Notes": "Can leap up to 30'; flees immediately"
+            },
+            {
+              "Creature": "Hobgoblins (Advanced Troop) ×10",
+              "AL": "LE",
+              "MV": "9\"",
+              "HP": "2, 3×3, 5, 3×6, 7, 9",
+              "AC": "5",
+              "HD": "1+1",
+              "Attacks": "1",
+              "Damage": "1–8",
+              "Notes": "Fight to the death"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Trigger",
+          "text": "Start of play. Party stands at location marked X on Wilderness Map."
+        },
+        {
+          "label": "Setup",
+          "text": "Players using pre-gen characters read aloud backgrounds from backs of character cards. Players with own characters have no stories to tell."
+        },
+        {
+          "label": "Encounter — Fewmaster Toede's Ambush",
+          "text": "Read-aloud describes hobgoblins emerging from both sides of the road, surrounding the party. Toede arrives on swaybacked pony, demands the blue crystal staff, then immediately orders his troops to attack and rides into the woods."
+        },
+        {
+          "label": "Toede's behavior",
+          "text": "Turns his pony and gallops into woods without waiting for a reply. He has no intention of granting mercy."
+        },
+        {
+          "label": "Captured hobgoblins know",
+          "text": "Only that they were ordered to search the road at night and find a blue crystal staff."
+        },
+        {
+          "label": "After combat",
+          "text": "PCs are on the road east of Solace (area 1)."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Trigger:** Start of play. Party stands at location marked X on Wilderness Map.",
+        "Read-aloud describes hobgoblins emerging from both sides of the road, surrounding the party. Toede arrives on swaybacked pony, demands the blue crystal staff, then immediately orders his troops to attack and rides into the woods.",
+        "**Captured hobgoblins know:** Only that they were ordered to search the road at night and find a blue crystal staff."
+      ],
+      "hidden_or_dm_facts": [
+        "**Encounter — Fewmaster Toede's Ambush:**"
+      ],
+      "area_references": [
+        "1"
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "event_2",
+      "canonical_id": "DL1_EVENT_2",
+      "name": "Goldmoon Found",
+      "heading": "EVENT 2: Goldmoon Found",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "timed_events",
+      "source": {
+        "file": "DL1_02_EVENTS.md",
+        "file_key": "events",
+        "heading": "EVENT 2: Goldmoon Found"
+      },
+      "summary": "",
+      "description": "**Trigger:** Roll 1d4 — result = number of encounters after game start before this event occurs.\n\n**Setup:** Soft music begins; a slim beautiful girl plays lyre while a large plainsman plays flute.\n\n**Goldmoon's appearance:** Eyes are bright sky blue, skin buttery tan, flowing white-gold hair, plush white fur trim on cape, single feather along right side of head.\n\n**If any PCs have taken damage:** Crystal staff falls from fold in Goldmoon's robe, rolls to injured PCs, heals their damage (see Crystal Staff rules in DL1_08).\n\n**If no PCs have taken damage:** Goldmoon puts lyre away and draws forth the staff.\n\n**The Song of Riverwind:** Pass the song sheet to players. If Goldmoon is a PC, that player reads lyrics aloud (or sings).\n\n**Joining the party:**\n- If Goldmoon is a PC: player takes over the character; player reads back of her card; DM reads back of Riverwind's card to players\n- If no one plays Goldmoon: she follows Riverwind (always NPC) as NPC for rest of module\n\n**If party takes no action to join:** Goldmoon and Riverwind gather belongings, bow, and leave → proceed to Event 3.\n\n---",
+      "tags": [
+        "encounter",
+        "hazard",
+        "map",
+        "quest",
+        "rest",
+        "social",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Trigger",
+          "text": "Roll 1d4 — result = number of encounters after game start before this event occurs."
+        },
+        {
+          "label": "Setup",
+          "text": "Soft music begins; a slim beautiful girl plays lyre while a large plainsman plays flute."
+        },
+        {
+          "label": "Goldmoon's appearance",
+          "text": "Eyes are bright sky blue, skin buttery tan, flowing white-gold hair, plush white fur trim on cape, single feather along right side of head."
+        },
+        {
+          "label": "If any PCs have taken damage",
+          "text": "Crystal staff falls from fold in Goldmoon's robe, rolls to injured PCs, heals their damage (see Crystal Staff rules in DL1_08)."
+        },
+        {
+          "label": "If no PCs have taken damage",
+          "text": "Goldmoon puts lyre away and draws forth the staff."
+        },
+        {
+          "label": "The Song of Riverwind",
+          "text": "Pass the song sheet to players. If Goldmoon is a PC, that player reads lyrics aloud (or sings)."
+        },
+        {
+          "label": "Joining the party",
+          "text": "- If Goldmoon is a PC: player takes over the character; player reads back of her card; DM reads back of Riverwind's card to players"
+        },
+        {
+          "label": "If party takes no action to join",
+          "text": "Goldmoon and Riverwind gather belongings, bow, and leave → proceed to Event 3."
+        }
+      ],
+      "bullets": [
+        "If Goldmoon is a PC: player takes over the character; player reads back of her card; DM reads back of Riverwind's card to players",
+        "If no one plays Goldmoon: she follows Riverwind (always NPC) as NPC for rest of module"
+      ],
+      "treasure_refs": [
+        "**Goldmoon's appearance:** Eyes are bright sky blue, skin buttery tan, flowing white-gold hair, plush white fur trim on cape, single feather along right side of head.",
+        "**If any PCs have taken damage:** Crystal staff falls from fold in Goldmoon's robe, rolls to injured PCs, heals their damage (see Crystal Staff rules in DL1_08).",
+        "**If no PCs have taken damage:** Goldmoon puts lyre away and draws forth the staff.",
+        "**The Song of Riverwind:** Pass the song sheet to players. If Goldmoon is a PC, that player reads lyrics aloud (or sings).",
+        " If Goldmoon is a PC: player takes over the character; player reads back of her card; DM reads back of Riverwind's card to players",
+        " If no one plays Goldmoon: she follows Riverwind (always NPC) as NPC for rest of module",
+        "**If party takes no action to join:** Goldmoon and Riverwind gather belongings, bow, and leave → proceed to Event 3."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Trigger:** Roll 1d4 — result = number of encounters after game start before this event occurs."
+      ]
+    },
+    {
+      "id": "event_3",
+      "canonical_id": "DL1_EVENT_3",
+      "name": "Goldmoon Seen Again",
+      "heading": "EVENT 3: Goldmoon Seen Again",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "timed_events",
+      "source": {
+        "file": "DL1_02_EVENTS.md",
+        "file_key": "events",
+        "heading": "EVENT 3: Goldmoon Seen Again"
+      },
+      "summary": "",
+      "description": "**Trigger:** Roll 1d6 every game day, adding +1 for each day Goldmoon has not met the heroes. When result is **6 or more**, PCs glimpse Goldmoon and Riverwind in the distance during the day.\n\n**Purpose:** Second chance to meet Goldmoon if Event 2 was missed or party avoided them.\n\n**If PCs take no action again:** They may meet again at the next Event 3 roll.\n\n---",
+      "tags": [
+        "hazard",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Trigger",
+          "text": "Roll 1d6 every game day, adding +1 for each day Goldmoon has not met the heroes. When result is **6 or more**, PCs glimpse Goldmoon and Riverwind in the distance during the day."
+        },
+        {
+          "label": "Purpose",
+          "text": "Second chance to meet Goldmoon if Event 2 was missed or party avoided them."
+        },
+        {
+          "label": "If PCs take no action again",
+          "text": "They may meet again at the next Event 3 roll."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "**Trigger:** Roll 1d6 every game day, adding +1 for each day Goldmoon has not met the heroes. When result is **6 or more**, PCs glimpse Goldmoon and Riverwind in the distance during the day.",
+        "**Purpose:** Second chance to meet Goldmoon if Event 2 was missed or party avoided them."
+      ],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": [
+        "**Trigger:** Roll 1d6 every game day, adding +1 for each day Goldmoon has not met the heroes. When result is **6 or more**, PCs glimpse Goldmoon and Riverwind in the distance during the day."
+      ]
+    },
+    {
+      "id": "event_4",
+      "canonical_id": "DL1_EVENT_4",
+      "name": "Reading of the Canticle",
+      "heading": "EVENT 4: Reading of the Canticle",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "timed_events",
+      "source": {
+        "file": "DL1_02_EVENTS.md",
+        "file_key": "events",
+        "heading": "EVENT 4: Reading of the Canticle"
+      },
+      "summary": "",
+      "description": "**Trigger:** On one of the nights the party is camped — DM's choice of timing.\n\n**Procedure:** Pass around the Canticle of the Dragon (Appendix 5). Each player reads one verse aloud, first verse to last, as though gathered around a campfire, until poem is complete.\n\n**Purpose:** World-building; thematic setup for the entire Dragonlance campaign arc.\n\n---",
+      "tags": [
+        "combat",
+        "rest"
+      ],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Trigger",
+          "text": "On one of the nights the party is camped — DM's choice of timing."
+        },
+        {
+          "label": "Procedure",
+          "text": "Pass around the Canticle of the Dragon (Appendix 5). Each player reads one verse aloud, first verse to last, as though gathered around a campfire, until poem is complete."
+        },
+        {
+          "label": "Purpose",
+          "text": "World-building; thematic setup for the entire Dragonlance campaign arc."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "event_5",
+      "canonical_id": "DL1_EVENT_5",
+      "name": "All Winds Turn Cold",
+      "heading": "EVENT 5: All Winds Turn Cold",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "timed_events",
+      "source": {
+        "file": "DL1_02_EVENTS.md",
+        "file_key": "events",
+        "heading": "EVENT 5: All Winds Turn Cold"
+      },
+      "summary": "",
+      "description": "**Trigger:** Fourth morning after the adventure begins.\n\n**Effect:** A chill breeze begins to blow from the north. No mechanical effect stated; atmosphere/foreshadowing.\n\n---",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Trigger",
+          "text": "Fourth morning after the adventure begins."
+        },
+        {
+          "label": "Effect",
+          "text": "A chill breeze begins to blow from the north. No mechanical effect stated; atmosphere/foreshadowing."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "event_6",
+      "canonical_id": "DL1_EVENT_6",
+      "name": "Thunderclouds",
+      "heading": "EVENT 6: Thunderclouds",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "timed_events",
+      "source": {
+        "file": "DL1_02_EVENTS.md",
+        "file_key": "events",
+        "heading": "EVENT 6: Thunderclouds"
+      },
+      "summary": "",
+      "description": "**Trigger:** During the fifth game day.\n\n**Effect:** Thunderclouds hover angrily to the west, south, and north of the party. No mechanical effect stated; atmosphere/foreshadowing.\n\n---",
+      "tags": [],
+      "occupants": [],
+      "tables": [],
+      "labeled_rules": [
+        {
+          "label": "Trigger",
+          "text": "During the fifth game day."
+        },
+        {
+          "label": "Effect",
+          "text": "Thunderclouds hover angrily to the west, south, and north of the party. No mechanical effect stated; atmosphere/foreshadowing."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [],
+      "hidden_or_dm_facts": [],
+      "area_references": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "event_7",
+      "canonical_id": "DL1_EVENT_7",
+      "name": "The Dragonarmies March",
+      "heading": "EVENT 7: The Dragonarmies March",
+      "heading_level": 2,
+      "parent_id": null,
+      "chapter": "timed_events",
+      "source": {
+        "file": "DL1_02_EVENTS.md",
+        "file_key": "events",
+        "heading": "EVENT 7: The Dragonarmies March"
+      },
+      "summary": "1. **Qualinesti Elflands (area 19)** — their story is told in future modules 2. **Darken Wood (areas 22–26)** — their story is told in future modules",
+      "description": "**Trigger:** Just after dusk on the fifth game night.\n\n**What happens:** The dragonarmies begin to march and conquer all lands to the south.\n\n**Rate of conquest:** Every 4 hours, one encounter area falls into draconian hands. Treat fallen areas as Dragonlands (same as area 43).\n\n**Which areas can fall:** Any area that borders area 43 or has already been captured in the previous 4 hours. General trend of captured areas should direct PCs toward Xak Tsaroth (area 44).\n\n**If PCs are in a captured area:** They see the front lines of the draconian army approaching at movement rate 9. They have a chance to flee toward Xak Tsaroth.\n\n**Two regions that CANNOT be captured:**\n1. **Qualinesti Elflands (area 19)** — their story is told in future modules\n2. **Darken Wood (areas 22–26)** — their story is told in future modules\n\n**Purpose:** Creates urgency; funnels PCs toward Xak Tsaroth if they haven't gone there already.\n\n---\n\n## Event Timing Summary\n\n| Event | Trigger | Effect |\n|-------|---------|--------|\n| 1 | Game start | Toede ambush; Goldmoon not yet present |\n| 2 | 1d4 encounters after start | Goldmoon joins (or departs) |\n| 3 | 1d6+days die ≥ 6 (if Event 2 missed) | Second chance to meet Goldmoon |\n| 4 | Any camp night (DM choice) | Read Canticle of the Dragon aloud |\n| 5 | Day 4 morning | Cold wind from north (atmosphere) |\n| 6 | Day 5 | Thunderclouds to W/S/N (atmosphere) |\n| 7 | Day 5 dusk | Dragonarmies march; areas fall every 4 hours |",
+      "tags": [
+        "combat",
+        "encounter",
+        "hazard",
+        "hidden",
+        "rest",
+        "treasure"
+      ],
+      "occupants": [],
+      "tables": [
+        {
+          "kind": "table",
+          "headers": [
+            "Event",
+            "Trigger",
+            "Effect"
+          ],
+          "rows": [
+            {
+              "Event": "1",
+              "Trigger": "Game start",
+              "Effect": "Toede ambush; Goldmoon not yet present"
+            },
+            {
+              "Event": "2",
+              "Trigger": "1d4 encounters after start",
+              "Effect": "Goldmoon joins (or departs)"
+            },
+            {
+              "Event": "3",
+              "Trigger": "1d6+days die ≥ 6 (if Event 2 missed)",
+              "Effect": "Second chance to meet Goldmoon"
+            },
+            {
+              "Event": "4",
+              "Trigger": "Any camp night (DM choice)",
+              "Effect": "Read Canticle of the Dragon aloud"
+            },
+            {
+              "Event": "5",
+              "Trigger": "Day 4 morning",
+              "Effect": "Cold wind from north (atmosphere)"
+            },
+            {
+              "Event": "6",
+              "Trigger": "Day 5",
+              "Effect": "Thunderclouds to W/S/N (atmosphere)"
+            },
+            {
+              "Event": "7",
+              "Trigger": "Day 5 dusk",
+              "Effect": "Dragonarmies march; areas fall every 4 hours"
+            }
+          ]
+        }
+      ],
+      "labeled_rules": [
+        {
+          "label": "Trigger",
+          "text": "Just after dusk on the fifth game night."
+        },
+        {
+          "label": "What happens",
+          "text": "The dragonarmies begin to march and conquer all lands to the south."
+        },
+        {
+          "label": "Rate of conquest",
+          "text": "Every 4 hours, one encounter area falls into draconian hands. Treat fallen areas as Dragonlands (same as area 43)."
+        },
+        {
+          "label": "Which areas can fall",
+          "text": "Any area that borders area 43 or has already been captured in the previous 4 hours. General trend of captured areas should direct PCs toward Xak Tsaroth (area 44)."
+        },
+        {
+          "label": "If PCs are in a captured area",
+          "text": "They see the front lines of the draconian army approaching at movement rate 9. They have a chance to flee toward Xak Tsaroth."
+        },
+        {
+          "label": "Two regions that CANNOT be captured",
+          "text": "1. **Qualinesti Elflands (area 19)** — their story is told in future modules"
+        },
+        {
+          "label": "Purpose",
+          "text": "Creates urgency; funnels PCs toward Xak Tsaroth if they haven't gone there already."
+        }
+      ],
+      "bullets": [],
+      "treasure_refs": [
+        "| 1 | Game start | Toede ambush; Goldmoon not yet present |",
+        "| 2 | 1d4 encounters after start | Goldmoon joins (or departs) |",
+        "| 3 | 1d6+days die ≥ 6 (if Event 2 missed) | Second chance to meet Goldmoon |"
+      ],
+      "hidden_or_dm_facts": [
+        "| 1 | Game start | Toede ambush; Goldmoon not yet present |"
+      ],
+      "area_references": [
+        "19",
+        "22–26",
+        "43",
+        "44"
+      ],
+      "checks_and_rolls": [
+        "| 2 | 1d4 encounters after start | Goldmoon joins (or departs) |",
+        "| 3 | 1d6+days die ≥ 6 (if Event 2 missed) | Second chance to meet Goldmoon |"
+      ]
+    }
+  ]
+}

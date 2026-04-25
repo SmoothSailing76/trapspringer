@@ -1,0 +1,2782 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-04-25T01:26:49.224748+00:00",
+    "module_id": "DL1_DRAGONS_OF_DESPAIR",
+    "content_pack_id": "dl1_dragons_of_despair",
+    "source_files": {
+      "events": {
+        "file": "DL1_02_EVENTS.md",
+        "sha256": "3d062abc8e23db139a5be2d8d435107628edf25414ead1b63f9cc5f7b96efb0f",
+        "bytes": 5285
+      },
+      "wilderness": {
+        "file": "DL1_03_WILDERNESS_ENCOUNTERS.md",
+        "sha256": "4bd7e51a483c012fc6130a3ad0e53cddc6f447060b826630ecd1233a16d867db",
+        "bytes": 25429
+      },
+      "xak_surface": {
+        "file": "DL1_04_XAK_TSAROTH_SURFACE.md",
+        "sha256": "d49163402a8f8a77e0b7078fcbfd0423b01b6e2e373c142b4e2873dddff79baa",
+        "bytes": 8194
+      },
+      "temple_descent": {
+        "file": "DL1_05_TEMPLE_AND_DESCENT.md",
+        "sha256": "9c6684330a92029d7b167662d2e237131383f8e3c8a2a3c17d5514ab553af359",
+        "bytes": 10235
+      },
+      "cavern_city": {
+        "file": "DL1_06_CAVERN_CITY.md",
+        "sha256": "923bc3719a89bf9a6f2e6db969192ef57f791cdc75da9b37b9ec1060c71932c8",
+        "bytes": 32204
+      },
+      "monsters_npcs": {
+        "file": "DL1_07_MONSTERS_AND_NPCs.md",
+        "sha256": "4839f46015125a1102570bf1004d76bf7dbd3329b38008b513d908024b727e15",
+        "bytes": 16806
+      },
+      "treasure_items": {
+        "file": "DL1_08_TREASURE_AND_ITEMS.md",
+        "sha256": "8f48bc54378028a1a437e8965e6299d6aca25edad6c41819c15bdccf3aea3a71",
+        "bytes": 7021
+      },
+      "random_encounters": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "sha256": "996c8eaa08c41cdf802f52b836a025119a6e997c4bde27e41056a888a3f50440",
+        "bytes": 10633
+      },
+      "krynn_rules": {
+        "file": "DL1_01_KRYNN_RULES.md",
+        "sha256": "133243189d58c1ef3e8f8bf1ddaff7c2a00c3ec5f8aa773ef84a4111faf7b316",
+        "bytes": 5635
+      }
+    },
+    "counts": {
+      "keyed_area_entries": 147,
+      "events": 7,
+      "random_encounter_sections": 36,
+      "monster_npc_sections": 25,
+      "treasure_item_sections": 25,
+      "encounter_area_records": 55,
+      "treasure_records": 43,
+      "hidden_fact_records": 33,
+      "transition_candidate_records": 37,
+      "source_assets": 8
+    },
+    "notes": [
+      "Structured data preserves full source text in description fields and extracts engine-facing indices heuristically.",
+      "Transitions are candidates unless marked in manual_transitions; map-derived geometry should supersede candidate inference when available.",
+      "Public narration must continue to route hidden_or_dm_facts through Layer 2 before reveal."
+    ]
+  },
+  "random_encounters": [
+    {
+      "id": "dl1_dragons_of_despair_rules_engine_reference",
+      "name": "DL1: Dragons of Despair — Rules Engine Reference",
+      "heading": "DL1: Dragons of Despair — Rules Engine Reference",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "DL1: Dragons of Despair — Rules Engine Reference"
+      },
+      "description": "---",
+      "tables": [],
+      "occupants": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "table_1",
+      "name": "Encounter Type and Frequency",
+      "heading": "TABLE 1: Encounter Type and Frequency",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "TABLE 1: Encounter Type and Frequency"
+      },
+      "description": "Random encounters occur on a **roll of 1 on 1d10**, at the frequency noted below according to terrain. If an encounter is indicated, determine distance according to the table (1 = 10 yards), then roll to generate a number in the Monster Range for that terrain. Use Table 2 for all encounters except the Darken Wood; use Table 3 for Darken Wood.\n\n| Terrain | Check Frequency | Distance Roll | Monster Range |\n|---------|----------------|--------------|--------------|\n| **Towns** | Once every 3 turns | 1d6 | 1–6 (1d6) |\n| **Plains** | 4 times per day | 1d100 | 3–14 (1d12+2) |\n| **Forest** | 6 times per day | 1d10 | 4–15 (1d12+3) |\n| **Hills/Mountains** | 4 times per day | 1d20 | 7–18 (1d12+6) |\n| **Marsh** | 8 times per day | 1d4 | 13–24 (1d12+12) |\n| **Ruins** | Once every 3 turns | 1d6 | 11–22 (1d12+10) |\n\n**Note:** Use Table 3 for all encounters in the **Darken Wood** (areas 22–26). The Darken Wood has a special encounter frequency — see Table 3.\n\n---",
+      "tables": [
+        {
+          "kind": "encounter_frequency",
+          "headers": [
+            "Terrain",
+            "Check Frequency",
+            "Distance Roll",
+            "Monster Range"
+          ],
+          "rows": [
+            {
+              "Terrain": "**Towns**",
+              "Check Frequency": "Once every 3 turns",
+              "Distance Roll": "1d6",
+              "Monster Range": "1–6 (1d6)"
+            },
+            {
+              "Terrain": "**Plains**",
+              "Check Frequency": "4 times per day",
+              "Distance Roll": "1d100",
+              "Monster Range": "3–14 (1d12+2)"
+            },
+            {
+              "Terrain": "**Forest**",
+              "Check Frequency": "6 times per day",
+              "Distance Roll": "1d10",
+              "Monster Range": "4–15 (1d12+3)"
+            },
+            {
+              "Terrain": "**Hills/Mountains**",
+              "Check Frequency": "4 times per day",
+              "Distance Roll": "1d20",
+              "Monster Range": "7–18 (1d12+6)"
+            },
+            {
+              "Terrain": "**Marsh**",
+              "Check Frequency": "8 times per day",
+              "Distance Roll": "1d4",
+              "Monster Range": "13–24 (1d12+12)"
+            },
+            {
+              "Terrain": "**Ruins**",
+              "Check Frequency": "Once every 3 turns",
+              "Distance Roll": "1d6",
+              "Monster Range": "11–22 (1d12+10)"
+            }
+          ]
+        }
+      ],
+      "occupants": [],
+      "checks_and_rolls": [
+        "Random encounters occur on a **roll of 1 on 1d10**, at the frequency noted below according to terrain. If an encounter is indicated, determine distance according to the table (1 = 10 yards), then roll to generate a number in the Monster Range for that terrain. Use Table 2 for all encounters except the Darken Wood; use Table 3 for Darken Wood.",
+        "| **Towns** | Once every 3 turns | 1d6 | 1–6 (1d6) |",
+        "| **Plains** | 4 times per day | 1d100 | 3–14 (1d12+2) |",
+        "| **Forest** | 6 times per day | 1d10 | 4–15 (1d12+3) |",
+        "| **Hills/Mountains** | 4 times per day | 1d20 | 7–18 (1d12+6) |",
+        "| **Marsh** | 8 times per day | 1d4 | 13–24 (1d12+12) |",
+        "| **Ruins** | Once every 3 turns | 1d6 | 11–22 (1d12+10) |"
+      ]
+    },
+    {
+      "id": "table_2",
+      "name": "Random Encounter Listing",
+      "heading": "TABLE 2: Random Encounter Listing",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "TABLE 2: Random Encounter Listing"
+      },
+      "description": "",
+      "tables": [],
+      "occupants": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "1_townsmen",
+      "name": "1 — Townsmen",
+      "heading": "1 — Townsmen",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "1 — Townsmen"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | var |\n| MV | 12\" |\n| AC | 8 |\n| HD | 1 |\n| #AT | 1 |\n| Dmg | 1–4 |\n\n3–30 townspeople simply going about their business in town.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "var"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "8"
+            },
+            {
+              "Stat": "HD",
+              "Value": "1"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–4"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "var"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "8"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–4"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "2_baaz_draconians_disguised_searchers",
+      "name": "2 — Baaz Draconians (Disguised Searchers)",
+      "heading": "2 — Baaz Draconians (Disguised Searchers)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "2 — Baaz Draconians (Disguised Searchers)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | LE |\n| MV | 6\"[15\"]/18\" |\n| AC | 4 |\n| HD | 3 |\n| #AT | 1 or 2 |\n| Dmg | 1–8 or 1–4/1–4 |\n\n6–12 Baaz Draconians wearing robes, claiming to be the Brotherhood of Tsaroth from whom the staff was stolen a few weeks ago. If a fight begins, Baaz fight to the death.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "LE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "6\"[15\"]/18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "4"
+            },
+            {
+              "Stat": "HD",
+              "Value": "3"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1 or 2"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–8 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "LE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "6\"[15\"]/18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1 or 2"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–8 or 1–4/1–4"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "3_plainsmen",
+      "name": "3 — Plainsmen",
+      "heading": "3 — Plainsmen",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "3 — Plainsmen"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CG |\n| MV | 12\" |\n| AC | 7 |\n| HD | 2 |\n| #AT | 1 |\n| Dmg | 1–6 |\n\n1–10 Que-Shu or Que-Teh plainsmen moving south and west, away from the dragonarmies. Quiet people.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CG"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "7"
+            },
+            {
+              "Stat": "HD",
+              "Value": "2"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–6"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CG"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "7"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "2"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–6"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "4_elves_trading_party",
+      "name": "4 — Elves (Trading Party)",
+      "heading": "4 — Elves (Trading Party)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "4 — Elves (Trading Party)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CG |\n| MV | 12\" |\n| AC | 5 |\n| HD | 2+1 |\n| #AT | 1 |\n| Dmg | 1–10 |\n\n1–4 Qualinesti Elves on a trading mission. Cool and aloof to the PCs.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CG"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "5"
+            },
+            {
+              "Stat": "HD",
+              "Value": "2+1"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–10"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CG"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "5"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "2+1"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–10"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "5_townsmen_variety",
+      "name": "5 — Townsmen (Variety)",
+      "heading": "5 — Townsmen (Variety)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "5 — Townsmen (Variety)"
+      },
+      "description": "2–20 townspeople; same stats as #1. Simply going about their business.\n\n---",
+      "tables": [],
+      "occupants": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "6_seeker_guards",
+      "name": "6 — Seeker Guards",
+      "heading": "6 — Seeker Guards",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "6 — Seeker Guards"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CG |\n| MV | 12\" |\n| AC | 4 |\n| HD | 4 |\n| #AT | 1 |\n| Dmg | 1–8 |\n\n1–6 Seeker Guards under orders to take anyone who knows anything about the Blue Crystal Staff to Haven and the Highseeker himself. If in a fight, they struggle bravely until losing half their number, then retreat to seek reinforcements.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CG"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "4"
+            },
+            {
+              "Stat": "HD",
+              "Value": "4"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–8"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CG"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–8"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "7_white_stag",
+      "name": "7 — White Stag",
+      "heading": "7 — White Stag",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "7 — White Stag"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | LG |\n| MV | 24\" |\n| AC | –5 |\n| HD | 10 |\n| HP | 77 |\n| #AT | 3 |\n| Dmg | 1–12/1–6/1–6 |\n\n1 White Stag. Stays just ahead of the PCs, leading them toward the **best possible path**. Disappears completely after traveling 3–6 hexes (1d4+2) on the wilderness map.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "LG"
+            },
+            {
+              "Stat": "MV",
+              "Value": "24\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "–5"
+            },
+            {
+              "Stat": "HD",
+              "Value": "10"
+            },
+            {
+              "Stat": "HP",
+              "Value": "77"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "3"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–12/1–6/1–6"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "LG"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "24\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "–5"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "10"
+          }
+        },
+        {
+          "name": "HP",
+          "stats": {
+            "Stat": "HP",
+            "Value": "77"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–12/1–6/1–6"
+          }
+        }
+      ],
+      "checks_and_rolls": [
+        "1 White Stag. Stays just ahead of the PCs, leading them toward the **best possible path**. Disappears completely after traveling 3–6 hexes (1d4+2) on the wilderness map."
+      ]
+    },
+    {
+      "id": "8_giant_eagles",
+      "name": "8 — Giant Eagles",
+      "heading": "8 — Giant Eagles",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "8 — Giant Eagles"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 3\"/48\" |\n| AC | 7 |\n| HD | 4 |\n| #AT | 3 |\n| Dmg | 1–6/1–6/2–12 |\n\n2–8 Giant Eagles. Wheel high overhead, then fly off toward the **worst possible direction** for the party to take.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "3\"/48\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "7"
+            },
+            {
+              "Stat": "HD",
+              "Value": "4"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "3"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–6/1–6/2–12"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "3\"/48\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "7"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–6/1–6/2–12"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "9_giant_boars",
+      "name": "9 — Giant Boars",
+      "heading": "9 — Giant Boars",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "9 — Giant Boars"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 12\" |\n| AC | 6 |\n| HD | 7 |\n| #AT | 1 |\n| Dmg | 3–18 |\n\n1–4 Giant Boars.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "6"
+            },
+            {
+              "Stat": "HD",
+              "Value": "7"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "3–18"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "6"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "7"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "3–18"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "10_wild_dogs",
+      "name": "10 — Wild Dogs",
+      "heading": "10 — Wild Dogs",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "10 — Wild Dogs"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 15\" |\n| AC | 7 |\n| HD | 1+1 |\n| #AT | 1 |\n| Dmg | 1–4 |\n\n4–16 Wild Dogs. Attack 40% of the time, or if attacked. After half the pack is killed, the rest run away.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "15\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "7"
+            },
+            {
+              "Stat": "HD",
+              "Value": "1+1"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–4"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "15\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "7"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "1+1"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–4"
+          }
+        }
+      ],
+      "checks_and_rolls": [
+        "4–16 Wild Dogs. Attack 40% of the time, or if attacked. After half the pack is killed, the rest run away."
+      ]
+    },
+    {
+      "id": "11_baaz_draconians_combat_patrol",
+      "name": "11 — Baaz Draconians (Combat Patrol)",
+      "heading": "11 — Baaz Draconians (Combat Patrol)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "11 — Baaz Draconians (Combat Patrol)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | LE |\n| MV | 6\"[15\"]/18\" |\n| AC | 4 |\n| HD | 3 |\n| #AT | 1 or 2 |\n| Dmg | 1–8 or 1–4/1–4 |\n\n1–10 Baaz Draconians on patrol.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "LE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "6\"[15\"]/18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "4"
+            },
+            {
+              "Stat": "HD",
+              "Value": "3"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1 or 2"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–8 or 1–4/1–4"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "LE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "6\"[15\"]/18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1 or 2"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–8 or 1–4/1–4"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "12_bozak_draconians",
+      "name": "12 — Bozak Draconians",
+      "heading": "12 — Bozak Draconians",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "12 — Bozak Draconians"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | LE |\n| MV | 6\"[15\"]/18\" |\n| AC | 2 |\n| HD | 4 |\n| #AT | 1 or 2 |\n| Dmg | 1–8 or 1–4/1–4 |\n| Spells | 1st: magic missile, shield, sleep; 2nd: darkness 15', web |\n\n1–8 Bozak Draconians. When they take **50% losses, they retreat**.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "LE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "6\"[15\"]/18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "2"
+            },
+            {
+              "Stat": "HD",
+              "Value": "4"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1 or 2"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–8 or 1–4/1–4"
+            },
+            {
+              "Stat": "Spells",
+              "Value": "1st: magic missile, shield, sleep; 2nd: darkness 15', web"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "LE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "6\"[15\"]/18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "2"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1 or 2"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–8 or 1–4/1–4"
+          }
+        },
+        {
+          "name": "Spells",
+          "stats": {
+            "Stat": "Spells",
+            "Value": "1st: magic missile, shield, sleep; 2nd: darkness 15', web"
+          }
+        }
+      ],
+      "checks_and_rolls": [
+        "1–8 Bozak Draconians. When they take **50% losses, they retreat**."
+      ]
+    },
+    {
+      "id": "13_huge_spiders",
+      "name": "13 — Huge Spiders",
+      "heading": "13 — Huge Spiders",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "13 — Huge Spiders"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 3\"/×12\" |\n| AC | 4 |\n| HD | 2+2 |\n| #AT | 1 |\n| Dmg | 1–6 + poison |\n\n1–12 Huge Spiders. Standard huge spider rules from Monster Manual apply.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "3\"/×12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "4"
+            },
+            {
+              "Stat": "HD",
+              "Value": "2+2"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–6 + poison"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "3\"/×12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "2+2"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–6 + poison"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "14_ogres_dragonlord_troops",
+      "name": "14 — Ogres (Dragonlord Troops)",
+      "heading": "14 — Ogres (Dragonlord Troops)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "14 — Ogres (Dragonlord Troops)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CE |\n| MV | 9\" |\n| AC | 5 |\n| HD | 4+1 |\n| #AT | 1 |\n| Dmg | 1–10 |\n\n2–12 Ogres in the service of the Dragonlords, guarding a path. Their orders: ask about the crystal staff AND prevent passing down the path at all costs.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "9\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "5"
+            },
+            {
+              "Stat": "HD",
+              "Value": "4+1"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–10"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "9\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "5"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "4+1"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–10"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "15_wraiths_cataclysm_spirits",
+      "name": "15 — Wraiths (Cataclysm Spirits)",
+      "heading": "15 — Wraiths (Cataclysm Spirits)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "15 — Wraiths (Cataclysm Spirits)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | LE |\n| MV | 12\"/24\" |\n| AC | 4 |\n| HD | 5+3 |\n| #AT | 1 |\n| Dmg | 1–6 + one level drain |\n\n2–12 Wraiths. These are the spirits of evil persons who died at the time of the Cataclysm ~300 years ago.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "LE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\"/24\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "4"
+            },
+            {
+              "Stat": "HD",
+              "Value": "5+3"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–6 + one level drain"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "LE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\"/24\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "5+3"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–6 + one level drain"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "16_trolls_draconian_army_service",
+      "name": "16 — Trolls (Draconian Army Service)",
+      "heading": "16 — Trolls (Draconian Army Service)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "16 — Trolls (Draconian Army Service)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CE |\n| MV | 12\" |\n| AC | 4 |\n| HD | 6+6 |\n| #AT | 3 |\n| Dmg | 5–8/5–8/2–12 |\n\n2–8 Trolls in the service of the draconian army. Their mission: kill whatever they see. Use standard troll rules (regeneration; must burn or acid to kill).\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "4"
+            },
+            {
+              "Stat": "HD",
+              "Value": "6+6"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "3"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "5–8/5–8/2–12"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "6+6"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "5–8/5–8/2–12"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "17_will_o_wisps_cataclysm_spawn",
+      "name": "17 — Will-o-Wisps (Cataclysm Spawn)",
+      "heading": "17 — Will-o-Wisps (Cataclysm Spawn)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "17 — Will-o-Wisps (Cataclysm Spawn)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CE |\n| MV | 18\" |\n| AC | –8 |\n| HD | 9 |\n| #AT | 1 |\n| Dmg | 2–16 |\n\n1–3 Will-o-Wisps. Spawned at the time of the Cataclysm. These creatures try to **lead the PCs in the worst possible direction** and then attack. Standard will-o-wisp rules apply.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "–8"
+            },
+            {
+              "Stat": "HD",
+              "Value": "9"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "2–16"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "–8"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "9"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "2–16"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "18_poisonous_snakes",
+      "name": "18 — Poisonous Snakes",
+      "heading": "18 — Poisonous Snakes",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "18 — Poisonous Snakes"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 15\" |\n| AC | 5 |\n| HD | 4+2 |\n| #AT | 1 |\n| Dmg | 1–3 + poison |\n\n1–6 Poisonous Snakes. Standard giant poisonous snake rules apply.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "15\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "5"
+            },
+            {
+              "Stat": "HD",
+              "Value": "4+2"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–3 + poison"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "15\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "5"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "4+2"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–3 + poison"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "19_khisanth_huge_ancient_black_dragon",
+      "name": "19 — Khisanth (Huge Ancient Black Dragon)",
+      "heading": "19 — Khisanth (Huge Ancient Black Dragon)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "19 — Khisanth (Huge Ancient Black Dragon)"
+      },
+      "description": "See complete stat block in DL1_07_MONSTERS_AND_NPCs.md.\n\n**In random encounters:** Khisanth stays in flight. She attacks only **20% of the time** (100% if the PCs attack her). She uses her natural fear ability, then uses one breath weapon if forced into combat. She swoops away before taking any significant damage.\n\n*If rolled as a Newsea/Marsh encounter near area 69b: treat as no encounter — she's not in the tunnels.*\n\n---",
+      "tables": [],
+      "occupants": [],
+      "checks_and_rolls": [
+        "**In random encounters:** Khisanth stays in flight. She attacks only **20% of the time** (100% if the PCs attack her). She uses her natural fear ability, then uses one breath weapon if forced into combat. She swoops away before taking any significant damage."
+      ]
+    },
+    {
+      "id": "20_bozak_draconians_charm_illusion_equipped",
+      "name": "20 — Bozak Draconians (Charm/Illusion Equipped)",
+      "heading": "20 — Bozak Draconians (Charm/Illusion Equipped)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "20 — Bozak Draconians (Charm/Illusion Equipped)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | LE |\n| MV | 6\"[15\"]/18\" |\n| AC | 2 |\n| HD | 4 |\n| #AT | 1 or 2 |\n| Dmg | 1–8 or 1–4/1–4 |\n| Spells | 1st: charm person, magic missile, shield; 2nd: invisibility, mirror image |\n\n1–10 Bozak Draconians with deception-oriented spells.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "LE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "6\"[15\"]/18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "2"
+            },
+            {
+              "Stat": "HD",
+              "Value": "4"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1 or 2"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–8 or 1–4/1–4"
+            },
+            {
+              "Stat": "Spells",
+              "Value": "1st: charm person, magic missile, shield; 2nd: invisibility, mirror image"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "LE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "6\"[15\"]/18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "2"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1 or 2"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–8 or 1–4/1–4"
+          }
+        },
+        {
+          "name": "Spells",
+          "stats": {
+            "Stat": "Spells",
+            "Value": "1st: charm person, magic missile, shield; 2nd: invisibility, mirror image"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "21_catoblepas",
+      "name": "21 — Catoblepas",
+      "heading": "21 — Catoblepas",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "21 — Catoblepas"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 6\" |\n| AC | 7 |\n| HD | 6+2 |\n| #AT | 1 |\n| Dmg | 1–6 + stun |\n| Special | Gaze causes death |\n\n1 Catoblepas. Standard Monster Manual rules. The death gaze is the main threat. Only encountered in marshy terrain.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "6\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "7"
+            },
+            {
+              "Stat": "HD",
+              "Value": "6+2"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–6 + stun"
+            },
+            {
+              "Stat": "Special",
+              "Value": "Gaze causes death"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "6\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "7"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "6+2"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–6 + stun"
+          }
+        },
+        {
+          "name": "Special",
+          "stats": {
+            "Stat": "Special",
+            "Value": "Gaze causes death"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "22_hatchling_black_dragons",
+      "name": "22 — Hatchling Black Dragons",
+      "heading": "22 — Hatchling Black Dragons",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "22 — Hatchling Black Dragons"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CE |\n| MV | 12\"/24\" |\n| HP | 6 each |\n| AC | 3 |\n| HD | 6 |\n| #AT | 3 |\n| Dmg | 1–4/1–4/3–18 |\n\n1–10 Hatchling Black Dragons. Young offspring of Khisanth. Acid breath attacks for 6 hp each. Encountered near the breeding pool (area 44h) or in marsh/ruins terrain.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CE"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\"/24\""
+            },
+            {
+              "Stat": "HP",
+              "Value": "6 each"
+            },
+            {
+              "Stat": "AC",
+              "Value": "3"
+            },
+            {
+              "Stat": "HD",
+              "Value": "6"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "3"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–4/1–4/3–18"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CE"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\"/24\""
+          }
+        },
+        {
+          "name": "HP",
+          "stats": {
+            "Stat": "HP",
+            "Value": "6 each"
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "6"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–4/1–4/3–18"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "23_poisonous_snakes_same_as_18",
+      "name": "23 — Poisonous Snakes (same as #18)",
+      "heading": "23 — Poisonous Snakes (same as #18)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "23 — Poisonous Snakes (same as #18)"
+      },
+      "description": "1–6 Poisonous Snakes (same stats as #18).\n\n---",
+      "tables": [],
+      "occupants": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "24_wraiths_same_as_15",
+      "name": "24 — Wraiths (same as #15)",
+      "heading": "24 — Wraiths (same as #15)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "24 — Wraiths (same as #15)"
+      },
+      "description": "2–12 Wraiths (same stats as #15). Spirits of evil persons from the time of the Cataclysm.\n\n---",
+      "tables": [],
+      "occupants": [],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "table_3",
+      "name": "The Darken Wood Random Encounters",
+      "heading": "TABLE 3: The Darken Wood Random Encounters",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "TABLE 3: The Darken Wood Random Encounters"
+      },
+      "description": "**Encounter frequency:** Roll of **1–2 on 1d6**. Check every **4 game hours** (6 times per game day). If one takes place, roll 2d4 and consult the table below.\n\n**Behavior rule:** Unless otherwise noted, creatures question the PCs. If the PCs give their **true names** or show the **crystal staff**, the creatures escort them to the Forestmaster Unicorn (area 26).",
+      "tables": [],
+      "occupants": [],
+      "checks_and_rolls": [
+        "**Encounter frequency:** Roll of **1–2 on 1d6**. Check every **4 game hours** (6 times per game day). If one takes place, roll 2d4 and consult the table below."
+      ]
+    },
+    {
+      "id": "roll_2_griffons",
+      "name": "Roll 2 — Griffons",
+      "heading": "Roll 2 — Griffons",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Roll 2 — Griffons"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 12\"/30\" |\n| AC | 3 |\n| HD | 7 |\n| #AT | 3 |\n| Dmg | 1–4/1–4/2–16 |\n\n1–12 Griffons. Attack and fight to the death **20% of the time** (increases to **70% if the party is on horseback**).\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\"/30\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "3"
+            },
+            {
+              "Stat": "HD",
+              "Value": "7"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "3"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–4/1–4/2–16"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\"/30\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "7"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–4/1–4/2–16"
+          }
+        }
+      ],
+      "checks_and_rolls": [
+        "1–12 Griffons. Attack and fight to the death **20% of the time** (increases to **70% if the party is on horseback**)."
+      ]
+    },
+    {
+      "id": "roll_3_treants",
+      "name": "Roll 3 — Treants",
+      "heading": "Roll 3 — Treants",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Roll 3 — Treants"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CG |\n| MV | 12\" |\n| AC | 0 |\n| HD | 12 |\n| #AT | 2 |\n| Dmg | 4–24/4–24 |\n\n1–20 Treants. Standard Treant rules. Will guide PCs to Forestmaster if given true names.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CG"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "0"
+            },
+            {
+              "Stat": "HD",
+              "Value": "12"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "2"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "4–24/4–24"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CG"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "0"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "12"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "2"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "4–24/4–24"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "roll_4_satyrs_practical_jokers",
+      "name": "Roll 4 — Satyrs (Practical Jokers)",
+      "heading": "Roll 4 — Satyrs (Practical Jokers)",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Roll 4 — Satyrs (Practical Jokers)"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N |\n| MV | 18\" |\n| AC | 5 |\n| HD | 5 |\n| #AT | 1 |\n| Dmg | 2–8 |\n\n2–8 Satyrs. These are **practical jokers** — they try to lure the PCs into net traps, drop water on them from branches above, taunt them from across a covered pit. DM is encouraged to invent other tricks.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N"
+            },
+            {
+              "Stat": "MV",
+              "Value": "18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "5"
+            },
+            {
+              "Stat": "HD",
+              "Value": "5"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "2–8"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "5"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "5"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "2–8"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "roll_5_centaurs",
+      "name": "Roll 5 — Centaurs",
+      "heading": "Roll 5 — Centaurs",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Roll 5 — Centaurs"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | CG |\n| MV | 18\" |\n| AC | 5(4) |\n| HD | 4 |\n| #AT | 1 or 2 |\n| Dmg | 1–10 or 1–6/1–6 |\n\n1–12 Centaurs. Will take PCs to the Forestmaster if given true names or shown crystal staff.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "CG"
+            },
+            {
+              "Stat": "MV",
+              "Value": "18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "5(4)"
+            },
+            {
+              "Stat": "HD",
+              "Value": "4"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1 or 2"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–10 or 1–6/1–6"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "CG"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "5(4)"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "4"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1 or 2"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–10 or 1–6/1–6"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "roll_6_brownie",
+      "name": "Roll 6 — Brownie",
+      "heading": "Roll 6 — Brownie",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Roll 6 — Brownie"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | LG |\n| MV | 12\" |\n| AC | 3 |\n| HD | ½ |\n| #AT | 1 |\n| Dmg | 1–3 |\n\n1 Brownie. This creature tries to **steal the crystal staff** and take it to the Unicorn. If successful, the Forestmaster returns the stolen item.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "LG"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "3"
+            },
+            {
+              "Stat": "HD",
+              "Value": "½"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–3"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "LG"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "½"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–3"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "roll_7_sprites",
+      "name": "Roll 7 — Sprites",
+      "heading": "Roll 7 — Sprites",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Roll 7 — Sprites"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N(G) |\n| MV | 9\"/18\" |\n| AC | 6 |\n| HD | 1 |\n| #AT | 1 |\n| Dmg | 1–4 |\n\n10–100 Sprites. **Try to sleep the party with their arrows.** If they succeed, a party of centaurs passes by shortly and takes the PCs to the Forestmaster.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N(G)"
+            },
+            {
+              "Stat": "MV",
+              "Value": "9\"/18\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "6"
+            },
+            {
+              "Stat": "HD",
+              "Value": "1"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "1"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "1–4"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N(G)"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "9\"/18\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "6"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "1"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "1–4"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "roll_8_sylph",
+      "name": "Roll 8 — Sylph",
+      "heading": "Roll 8 — Sylph",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Roll 8 — Sylph"
+      },
+      "description": "| Stat | Value |\n|------|-------|\n| AL | N(G) |\n| MV | 12\"/36\" |\n| AC | 9 |\n| HD | 3 |\n| #AT | 0 |\n| Dmg | Nil |\n\n1 Sylph. Will **not appear before the party**. Tries to lead them by **voice only** to the Forestmaster.\n\n---",
+      "tables": [
+        {
+          "kind": "stat_block",
+          "headers": [
+            "Stat",
+            "Value"
+          ],
+          "rows": [
+            {
+              "Stat": "AL",
+              "Value": "N(G)"
+            },
+            {
+              "Stat": "MV",
+              "Value": "12\"/36\""
+            },
+            {
+              "Stat": "AC",
+              "Value": "9"
+            },
+            {
+              "Stat": "HD",
+              "Value": "3"
+            },
+            {
+              "Stat": "#AT",
+              "Value": "0"
+            },
+            {
+              "Stat": "Dmg",
+              "Value": "Nil"
+            }
+          ]
+        }
+      ],
+      "occupants": [
+        {
+          "name": "AL",
+          "stats": {
+            "Stat": "AL",
+            "Value": "N(G)"
+          }
+        },
+        {
+          "name": "MV",
+          "stats": {
+            "Stat": "MV",
+            "Value": "12\"/36\""
+          }
+        },
+        {
+          "name": "AC",
+          "stats": {
+            "Stat": "AC",
+            "Value": "9"
+          }
+        },
+        {
+          "name": "HD",
+          "stats": {
+            "Stat": "HD",
+            "Value": "3"
+          }
+        },
+        {
+          "name": "#AT",
+          "stats": {
+            "Stat": "#AT",
+            "Value": "0"
+          }
+        },
+        {
+          "name": "Dmg",
+          "stats": {
+            "Stat": "Dmg",
+            "Value": "Nil"
+          }
+        }
+      ],
+      "checks_and_rolls": []
+    },
+    {
+      "id": "encounter_area_summary",
+      "name": "Encounter Area Summary",
+      "heading": "Encounter Area Summary",
+      "source": {
+        "file": "DL1_09_RANDOM_ENCOUNTERS.md",
+        "heading": "Encounter Area Summary"
+      },
+      "description": "| Terrain Type | Random Encounters Include |\n|-------------|--------------------------|\n| Towns | Townspeople, disguised draconians, Seeker Guards |\n| Plains | Plainsmen, elves, wolves, draconians, trolls, ogres |\n| Forest | Satyrs, sprites, spiders, draconians, will-o-wisps |\n| Hills/Mountains | Draconians, trolls, giants (if in range), wraiths, will-o-wisps |\n| Marsh | Snakes, catoblepas, hatchling dragons, water creatures (from area 44b rules) |\n| Ruins | Draconians (all types), wraiths, undead, spectral minions |\n| Darken Wood | Forest creatures; guided to Forestmaster unless PCs are enemies |",
+      "tables": [
+        {
+          "kind": "table",
+          "headers": [
+            "Terrain Type",
+            "Random Encounters Include"
+          ],
+          "rows": [
+            {
+              "Terrain Type": "Towns",
+              "Random Encounters Include": "Townspeople, disguised draconians, Seeker Guards"
+            },
+            {
+              "Terrain Type": "Plains",
+              "Random Encounters Include": "Plainsmen, elves, wolves, draconians, trolls, ogres"
+            },
+            {
+              "Terrain Type": "Forest",
+              "Random Encounters Include": "Satyrs, sprites, spiders, draconians, will-o-wisps"
+            },
+            {
+              "Terrain Type": "Hills/Mountains",
+              "Random Encounters Include": "Draconians, trolls, giants (if in range), wraiths, will-o-wisps"
+            },
+            {
+              "Terrain Type": "Marsh",
+              "Random Encounters Include": "Snakes, catoblepas, hatchling dragons, water creatures (from area 44b rules)"
+            },
+            {
+              "Terrain Type": "Ruins",
+              "Random Encounters Include": "Draconians (all types), wraiths, undead, spectral minions"
+            },
+            {
+              "Terrain Type": "Darken Wood",
+              "Random Encounters Include": "Forest creatures; guided to Forestmaster unless PCs are enemies"
+            }
+          ]
+        }
+      ],
+      "occupants": [],
+      "checks_and_rolls": []
+    }
+  ]
+}

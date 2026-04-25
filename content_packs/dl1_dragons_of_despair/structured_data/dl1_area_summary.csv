@@ -1,0 +1,148 @@
+id,name,chapter,parent_id,tags,occupants,treasure_refs,hidden_facts,area_refs,source_file
+1,Solace Township,chapter_1_wilderness,,map;treasure,0,2,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+1a,Inn of the Last Home,chapter_1_wilderness,1,combat;encounter;map;quest;social,3,5,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+2,Crystalmir Lake,chapter_1_wilderness,,encounter,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+3,Solace East Woods,chapter_1_wilderness,,encounter;map;rest,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+4,New Haven Road,chapter_1_wilderness,,combat;encounter;hidden;quest,1,1,2,6,DL1_03_WILDERNESS_ENCOUNTERS.md
+5,Prayer's Eye Peak,chapter_1_wilderness,,combat;encounter,1,1,0,24,DL1_03_WILDERNESS_ENCOUNTERS.md
+6,Twin Flat,chapter_1_wilderness,,combat;encounter;hazard;hidden;map;quest;social;treasure,2,2,3,4;5,DL1_03_WILDERNESS_ENCOUNTERS.md
+7,Jakanth Vale,chapter_1_wilderness,,combat;encounter;rest;treasure,0,1,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+8,Northfields,chapter_1_wilderness,,combat,0,0,0,35,DL1_03_WILDERNESS_ENCOUNTERS.md
+9,Nearfields,chapter_1_wilderness,,combat;encounter;rest;social,1,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+10–11,Sentinel Gap / Twin Peaks Vale,chapter_1_wilderness,,encounter;map,0,0,0,10;11,DL1_03_WILDERNESS_ENCOUNTERS.md
+12,Shadow Canyon,chapter_1_wilderness,,encounter,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+13–15,North Seeker Reaches,chapter_1_wilderness,,combat;encounter;map,1,0,0,13;14;15,DL1_03_WILDERNESS_ENCOUNTERS.md
+16,Haven's Vale,chapter_1_wilderness,,combat;encounter;map;quest;social,3,2,0,17b,DL1_03_WILDERNESS_ENCOUNTERS.md
+17,Lordcity of Haven,chapter_1_wilderness,,encounter;quest;social;treasure,0,3,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+17a,Steel Tankard Tavern,chapter_1_wilderness,17,hazard;map;quest;rest;treasure,0,1,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+17b,Councilhall of Highseekers,chapter_1_wilderness,17,combat;encounter;quest;social;treasure,2,6,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+18,River White-rage,chapter_1_wilderness,,hazard,0,0,0,20,DL1_03_WILDERNESS_ENCOUNTERS.md
+19,Qualinesti Elflands,chapter_1_wilderness,,combat;encounter;rest;social,1,0,1,23,DL1_03_WILDERNESS_ENCOUNTERS.md
+20,The White-rage Cut,chapter_1_wilderness,,hazard;map,0,0,0,18;22,DL1_03_WILDERNESS_ENCOUNTERS.md
+21,Magic Mountains,chapter_1_wilderness,,,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+22,Spirit Forest (Entry to Darken Wood),chapter_1_wilderness,,combat;encounter;quest;rest,1,1,0,22–26;26,DL1_03_WILDERNESS_ENCOUNTERS.md
+23,Centaur Reaches,chapter_1_wilderness,,combat;encounter;rest;treasure,1,1,0,26,DL1_03_WILDERNESS_ENCOUNTERS.md
+24,Dryad Forests,chapter_1_wilderness,,combat;encounter;rest,1,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+25,Starnight Canyon,chapter_1_wilderness,,combat;encounter;hazard;rest,1,0,0,26,DL1_03_WILDERNESS_ENCOUNTERS.md
+26,Unicorn Grove,chapter_1_wilderness,,combat;encounter;hazard;map;rest,1,0,1,,DL1_03_WILDERNESS_ENCOUNTERS.md
+27–28,Gateway Pass / Gateway,chapter_1_wilderness,,combat;map;rest,0,0,0,27;28,DL1_03_WILDERNESS_ENCOUNTERS.md
+29,Westplains,chapter_1_wilderness,,hazard,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+30,Que-Teh,chapter_1_wilderness,,,0,0,0,38,DL1_03_WILDERNESS_ENCOUNTERS.md
+31,The Great Crossroads,chapter_1_wilderness,,combat,0,0,0,36,DL1_03_WILDERNESS_ENCOUNTERS.md
+32,Que-Kiri,chapter_1_wilderness,,combat;encounter;social,1,0,1,,DL1_03_WILDERNESS_ENCOUNTERS.md
+33,Kiri Valley,chapter_1_wilderness,,encounter;rest,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+34,West Que-Shu Plains,chapter_1_wilderness,,,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+35,North Desolation,chapter_1_wilderness,,combat,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+36,Que-Shu,chapter_1_wilderness,,combat;quest,0,0,1,,DL1_03_WILDERNESS_ENCOUNTERS.md
+37,Sageway Broken,chapter_1_wilderness,,encounter;map,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+38,Refugee,chapter_1_wilderness,,combat;encounter;hazard;hidden;map;quest;rest;social,2,1,1,,DL1_03_WILDERNESS_ENCOUNTERS.md
+39,Oldroad Bridge,chapter_1_wilderness,,combat;encounter;hazard,2,0,1,18,DL1_03_WILDERNESS_ENCOUNTERS.md
+40,Southway,chapter_1_wilderness,,combat;encounter;hazard;map,1,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+41,Sageway East,chapter_1_wilderness,,combat;map,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+42,Cursed Lands of Newsea,chapter_1_wilderness,,encounter;hazard;rest,0,0,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+43,Dragonlands,chapter_1_wilderness,,combat;encounter;quest;rest,4,1,0,,DL1_03_WILDERNESS_ENCOUNTERS.md
+44a,Swamp Ruins,chapter_2_xak_surface,,combat;encounter;hazard,0,0,0,,DL1_04_XAK_TSAROTH_SURFACE.md
+44b,Waters of the Swamp,chapter_2_xak_surface,,combat;encounter;hazard,0,0,0,,DL1_04_XAK_TSAROTH_SURFACE.md
+44c,Vine Bridges,chapter_2_xak_surface,,encounter;hazard,0,0,0,44b,DL1_04_XAK_TSAROTH_SURFACE.md
+44d,Battle of the Fallen Ironclaw,chapter_2_xak_surface,,combat;encounter;hazard;map;quest;rest,1,1,2,,DL1_04_XAK_TSAROTH_SURFACE.md
+44e,Broken Bridge,chapter_2_xak_surface,,combat;encounter,1,0,0,,DL1_04_XAK_TSAROTH_SURFACE.md
+44f,Temple of Baaz (Draconian Camp),chapter_2_xak_surface,,combat;encounter;hazard;hidden;map;quest;rest;social,2,1,5,,DL1_04_XAK_TSAROTH_SURFACE.md
+44g,Tower of Truth,chapter_2_xak_surface,,hazard;map,0,0,0,,DL1_04_XAK_TSAROTH_SURFACE.md
+44h,Breeding Pool,chapter_2_xak_surface,,combat;encounter;hazard,1,0,0,,DL1_04_XAK_TSAROTH_SURFACE.md
+44i,Swamp Falls,chapter_2_xak_surface,,hazard,0,0,0,,DL1_04_XAK_TSAROTH_SURFACE.md
+44j,Fallen Obelisk,chapter_2_xak_surface,,hazard;social,0,0,0,,DL1_04_XAK_TSAROTH_SURFACE.md
+44k,Plaza of Death,chapter_2_xak_surface,,combat;encounter;map;quest;rest;treasure,1,4,1,45;46;46a,DL1_04_XAK_TSAROTH_SURFACE.md
+45,The Great Well,chapter_3_temple_descent,,,0,0,0,67,DL1_05_TEMPLE_AND_DESCENT.md
+46,Temple of Mishakal,chapter_3_temple_descent,,map;quest;treasure,0,1,0,,DL1_05_TEMPLE_AND_DESCENT.md
+46a,Temple Entrance,chapter_3_temple_descent,46,map;treasure,0,2,0,,DL1_05_TEMPLE_AND_DESCENT.md
+46b,Mishakal's Form,chapter_3_temple_descent,46,combat;map;quest;social,1,3,1,,DL1_05_TEMPLE_AND_DESCENT.md
+46c,South Worship Room,chapter_3_temple_descent,46,encounter,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+46d,North Worship Room,chapter_3_temple_descent,46,combat;encounter;map;treasure,1,1,2,,DL1_05_TEMPLE_AND_DESCENT.md
+46e,Southern Holy Circle,chapter_3_temple_descent,46,combat;encounter;map,1,1,0,,DL1_05_TEMPLE_AND_DESCENT.md
+46f,Northern Holy Circle,chapter_3_temple_descent,46,encounter,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+46g,Paths of the Dead,chapter_3_temple_descent,46,map,0,0,0,47,DL1_05_TEMPLE_AND_DESCENT.md
+47,Hall of the Ancestors and Adjacent Rooms,chapter_3_temple_descent,,,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47a,Hall of the Ancestors,chapter_3_temple_descent,47,hazard;map;treasure,0,1,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47b,Southern Crypts,chapter_3_temple_descent,47,combat;encounter;map,1,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47c,Going Down (The Gully Dwarf Elevator),chapter_3_temple_descent,47,combat;encounter;hazard;map,1,0,0,66,DL1_05_TEMPLE_AND_DESCENT.md
+47d,Northern Crypts,chapter_3_temple_descent,47,encounter,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47e,Floorless Room,chapter_3_temple_descent,47,map;treasure,0,1,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47f,Watch Room,chapter_3_temple_descent,47,combat;encounter,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47g,Treasury,chapter_3_temple_descent,47,combat;encounter;social;treasure,1,1,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47h,South Temple,chapter_3_temple_descent,47,encounter,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47i,Temple of the Dead,chapter_3_temple_descent,47,encounter;quest,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+47j,North Temple,chapter_3_temple_descent,47,combat;hazard,0,0,0,48,DL1_05_TEMPLE_AND_DESCENT.md
+48,Sewer Entrance,chapter_3_temple_descent,,combat;encounter;hazard;map,1,0,0,49,DL1_05_TEMPLE_AND_DESCENT.md
+49,Sewer Junction,chapter_3_temple_descent,,,0,0,0,50,DL1_05_TEMPLE_AND_DESCENT.md
+50,Sewer Branch,chapter_3_temple_descent,,hazard,0,0,0,51,DL1_05_TEMPLE_AND_DESCENT.md
+51,Series: Inverted Inn Complex,chapter_3_temple_descent,,,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+51a,Cellar Above,chapter_3_temple_descent,51,combat;encounter;hazard;map,1,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+51b,Tipped Hallway,chapter_3_temple_descent,51,encounter;map,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+51c,Ceiling Cooks,chapter_3_temple_descent,51,combat;encounter,1,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+51d,Bottoms Down,chapter_3_temple_descent,51,combat;encounter;hazard,1,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+51e,Sleeping Inn,chapter_3_temple_descent,51,encounter;hazard;rest,0,0,0,,DL1_05_TEMPLE_AND_DESCENT.md
+52,Chimney Down,chapter_3_temple_descent,,hazard,0,0,0,53,DL1_05_TEMPLE_AND_DESCENT.md
+53–54,Upper Underground City,chapter_4_cavern_city,,,0,0,0,,DL1_06_CAVERN_CITY.md
+53a,Bakery,chapter_4_cavern_city,53–54,hazard;map;social,0,0,0,,DL1_06_CAVERN_CITY.md
+53b,Sidestreet,chapter_4_cavern_city,53–54,encounter;map,0,0,0,,DL1_06_CAVERN_CITY.md
+54a,Sage Front,chapter_4_cavern_city,53–54,combat;hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+54b,Sage's Court,chapter_4_cavern_city,53–54,combat;encounter;quest;social;treasure,1,2,1,70k,DL1_06_CAVERN_CITY.md
+55,Treasury Court,chapter_4_cavern_city,,hazard;map;treasure,0,2,0,56,DL1_06_CAVERN_CITY.md
+56,View from the Falls,chapter_4_cavern_city,,combat;encounter;hazard,1,0,0,,DL1_06_CAVERN_CITY.md
+57–59,Treasury Complex,chapter_4_cavern_city,,,0,0,0,,DL1_06_CAVERN_CITY.md
+57a,Outer Treasury,chapter_4_cavern_city,57–59,combat;encounter;treasure,2,3,1,,DL1_06_CAVERN_CITY.md
+57b,Vault,chapter_4_cavern_city,57–59,map,0,0,0,62,DL1_06_CAVERN_CITY.md
+58a,North Cavern,chapter_4_cavern_city,57–59,hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+58b,Drain,chapter_4_cavern_city,57–59,hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+58c,Down the Sink,chapter_4_cavern_city,57–59,hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+59a,Windows Below,chapter_4_cavern_city,57–59,hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+59b,Dance on the Wall,chapter_4_cavern_city,57–59,combat;encounter;hazard,1,0,0,,DL1_06_CAVERN_CITY.md
+60,Entrance to the Hall of Justice,chapter_4_cavern_city,,hazard;map,0,0,0,,DL1_06_CAVERN_CITY.md
+61,North Cavern Falls,chapter_4_cavern_city,,hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+62,Treasury Tower,chapter_4_cavern_city,,hazard;map,0,0,0,,DL1_06_CAVERN_CITY.md
+63,North Mall,chapter_4_cavern_city,,hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+64,Palace Guard Hall,chapter_4_cavern_city,,hazard;map,0,0,0,,DL1_06_CAVERN_CITY.md
+64a,Entry,chapter_4_cavern_city,64,map,0,1,0,,DL1_06_CAVERN_CITY.md
+64b,North Cell,chapter_4_cavern_city,64,encounter;map,0,0,0,,DL1_06_CAVERN_CITY.md
+64c,North Armory,chapter_4_cavern_city,64,combat;encounter;treasure,1,1,0,,DL1_06_CAVERN_CITY.md
+64d,Assembly,chapter_4_cavern_city,64,combat;encounter;rest,1,0,0,,DL1_06_CAVERN_CITY.md
+64e,South Cell,chapter_4_cavern_city,64,encounter,0,0,0,,DL1_06_CAVERN_CITY.md
+64f,South Armory,chapter_4_cavern_city,64,encounter;treasure,0,1,0,,DL1_06_CAVERN_CITY.md
+64g,Quarters,chapter_4_cavern_city,64,combat;encounter;rest,1,0,0,,DL1_06_CAVERN_CITY.md
+64h,Mess Hall,chapter_4_cavern_city,64,combat;encounter;quest;social,1,2,1,,DL1_06_CAVERN_CITY.md
+65,Larder Complex,chapter_4_cavern_city,,,0,0,0,,DL1_06_CAVERN_CITY.md
+65a,Larder Office,chapter_4_cavern_city,65,combat;encounter;rest,2,0,2,,DL1_06_CAVERN_CITY.md
+65b,Larder,chapter_4_cavern_city,65,combat;hidden,0,0,2,,DL1_06_CAVERN_CITY.md
+66,Court of Reception,chapter_4_cavern_city,,combat;encounter;hazard;hidden,1,0,1,59b,DL1_06_CAVERN_CITY.md
+67,Great Plaza,chapter_4_cavern_city,,combat;encounter;hazard;quest;rest;social,3,0,2,67b;70a,DL1_06_CAVERN_CITY.md
+67a,East Falls,chapter_4_cavern_city,67,hazard;map,0,0,0,56,DL1_06_CAVERN_CITY.md
+67b,West Falls,chapter_4_cavern_city,67,combat;encounter;hazard;hidden;social,1,0,2,,DL1_06_CAVERN_CITY.md
+68,Aghar Guildhall,chapter_4_cavern_city,,,0,0,0,,DL1_06_CAVERN_CITY.md
+68a,Alley,chapter_4_cavern_city,68,map,0,0,0,,DL1_06_CAVERN_CITY.md
+68b,Scum Entrance,chapter_4_cavern_city,68,encounter;social,0,0,0,,DL1_06_CAVERN_CITY.md
+68c,Slud Clan Rooms,chapter_4_cavern_city,68,combat;encounter;map;rest,1,0,0,,DL1_06_CAVERN_CITY.md
+68d,Glup Clan Rooms,chapter_4_cavern_city,68,hazard,0,0,0,,DL1_06_CAVERN_CITY.md
+68e,Welcome Room,chapter_4_cavern_city,68,,0,0,0,,DL1_06_CAVERN_CITY.md
+68f,Guards Post,chapter_4_cavern_city,68,combat;encounter;map;rest,1,0,0,,DL1_06_CAVERN_CITY.md
+68g,Waiting Place,chapter_4_cavern_city,68,hidden;map;treasure,0,1,1,,DL1_06_CAVERN_CITY.md
+68h,Treasury,chapter_4_cavern_city,68,combat;encounter;hidden;quest;rest;treasure,2,1,1,,DL1_06_CAVERN_CITY.md
+68i,Messy Mess,chapter_4_cavern_city,68,combat;map,0,0,0,,DL1_06_CAVERN_CITY.md
+68j,Bulp Clan Rooms,chapter_4_cavern_city,68,combat;encounter;map,1,0,1,,DL1_06_CAVERN_CITY.md
+68k,Highbulp Quarters,chapter_4_cavern_city,68,combat;hidden;map;treasure,0,1,2,,DL1_06_CAVERN_CITY.md
+68l,Secret Exit,chapter_4_cavern_city,68,encounter;hidden;map,0,0,1,,DL1_06_CAVERN_CITY.md
+68m,Court of the Aghar,chapter_4_cavern_city,68,combat;encounter;map;quest;social;treasure,2,2,1,,DL1_06_CAVERN_CITY.md
+69,The Secret Way,chapter_4_cavern_city,,hidden;map,0,0,0,,DL1_06_CAVERN_CITY.md
+69a,Delvers Welcome,chapter_4_cavern_city,69,hazard;map,0,0,1,,DL1_06_CAVERN_CITY.md
+69b,The Secret Way,chapter_4_cavern_city,69,encounter;hazard;hidden;map;quest,0,0,3,,DL1_06_CAVERN_CITY.md
+70,Hall of Justice and Dragon's Lair,chapter_4_cavern_city,,combat,0,0,0,,DL1_06_CAVERN_CITY.md
+70a,Pillars of the Palace,chapter_4_cavern_city,70,map;treasure,0,1,0,,DL1_06_CAVERN_CITY.md
+70b,Honored Dead,chapter_4_cavern_city,70,encounter,0,0,0,,DL1_06_CAVERN_CITY.md
+70c,First Hall,chapter_4_cavern_city,70,combat;encounter;rest,1,0,0,,DL1_06_CAVERN_CITY.md
+70d,Palace Treasury,chapter_4_cavern_city,70,,0,2,0,,DL1_06_CAVERN_CITY.md
+70e,Bozak Quarters,chapter_4_cavern_city,70,encounter,0,0,0,,DL1_06_CAVERN_CITY.md
+70f,Bozak Captain,chapter_4_cavern_city,70,map,0,1,0,70a–70h,DL1_06_CAVERN_CITY.md
+70g,Prisoner Cell,chapter_4_cavern_city,70,combat;encounter;map;social,1,0,1,,DL1_06_CAVERN_CITY.md
+70h,Bozak Commander,chapter_4_cavern_city,70,combat;encounter;hazard;hidden;map;social,1,1,1,70j,DL1_06_CAVERN_CITY.md
+70i,Long Hall,chapter_4_cavern_city,70,hazard;map;treasure,0,1,0,70k,DL1_06_CAVERN_CITY.md
+70j,Hall of Sound,chapter_4_cavern_city,70,combat;hazard;map;treasure,0,1,1,,DL1_06_CAVERN_CITY.md
+70k,Court of the Balance — DRAGON'S LAIR,chapter_4_cavern_city,70,combat;encounter;hazard;map;quest;rest;treasure,1,14,2,46b,DL1_06_CAVERN_CITY.md

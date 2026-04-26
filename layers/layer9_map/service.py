@@ -12,6 +12,8 @@ from trapspringer.layers.layer9_map.los import query_los
 from trapspringer.layers.layer9_map.dl1_spatial import DL1SpatialRegistry
 from trapspringer.layers.layer9_map.fog_of_war import FogOfWarStore
 from trapspringer.layers.layer9_map.grid_visibility import LightSource, trace_visibility
+from trapspringer.layers.layer9_map.path_planner import PathPlanner
+from trapspringer.schemas.paths import PathPlotRequest
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[2]
 
@@ -37,6 +39,7 @@ class MapVisibilityService:
         self.dl1_spatial = DL1SpatialRegistry()
         self.fog = FogOfWarStore()
         self.light_sources: dict[str, list[LightSource]] = {}
+        self.path_planner = PathPlanner()
 
     def load_scene_template(self, template_id: str) -> dict:
         filename = _TEMPLATE_FILES.get(template_id)
@@ -122,13 +125,40 @@ class MapVisibilityService:
         self.light_sources.setdefault(scene_id, []).append(src)
         return {"type": "light_source_added", "scene_id": scene_id, "source_id": source_id, "zone": zone}
 
+    def plot_path(self, request: dict | PathPlotRequest | None = None) -> SpatialQueryResult:
+        request = request or {}
+        scene_id = str(request.scene_id if hasattr(request, "scene_id") else request.get("scene_id", "DL1_EVENT_1_AMBUSH"))
+        graph = self.scene_graphs.get(scene_id)
+        result = self.path_planner.plot_path(graph, request)
+        return SpatialQueryResult(status="ok" if result.ok else "blocked", payload=result.as_dict())
+
+    def get_path(self, path_id: str):
+        return self.path_planner.get(path_id)
+
+    def move_along_path(self, scene_id: str, actor_id: str, path_id: str | None) -> dict[str, object]:
+        path = self.path_planner.get(str(path_id)) if path_id else None
+        if path is None:
+            raise ValueError("movement requires a stored path_id")
+        graph = self.scene_graphs.get(scene_id)
+        if graph is None:
+            raise ValueError(f"unknown scene graph {scene_id}")
+        graph.move_along_path(actor_id, path.waypoints)
+        return {"type": "movement_along_path", "actor_id": actor_id, "path_id": path.path_id, "destination": path.waypoints[-1]}
+
     def query_reachability(self, request: dict | None = None) -> SpatialQueryResult:
         request = request or {}
         scene_id = str(request.get("scene_id", "DL1_EVENT_1_AMBUSH"))
-        graph = self.scene_graphs.get(scene_id)
-        reachable = False if graph is None else graph.reachable(str(request.get("actor")), str(request.get("target_zone")))
-        reason = "reachable" if reachable else "not_connected"
-        return SpatialQueryResult(status="ok", payload={"reachable": reachable, "reason": reason})
+        dest = request.get("target_zone") or request.get("destination_square") or request.get("destination")
+        plot = self.plot_path({
+            "scene_id": scene_id,
+            "actor_id": str(request.get("actor") or request.get("actor_id")),
+            "destination_square": str(dest) if dest else None,
+            "rules": dict(request.get("rules", {})),
+        })
+        payload = dict(plot.payload)
+        payload["reachable"] = bool(payload.get("ok"))
+        payload["reason"] = "reachable" if payload.get("ok") else payload.get("reason", "not_connected")
+        return SpatialQueryResult(status=plot.status, payload=payload)
 
     def reveal_feature(self, scene_id: str, feature_id: str):
         self.public_maps.annotate(scene_id, f"revealed:{feature_id}")

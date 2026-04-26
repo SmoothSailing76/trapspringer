@@ -35,8 +35,17 @@ def check_fictional_legality(action: Action, context: dict) -> tuple[bool, str |
         dest = action.target.id if action.target else None
         if not dest:
             return False, "No destination was declared."
-        if map_service and not map_service.query_reachability({"scene_id": action.context.scene_id or "DL1_EVENT_1_AMBUSH", "actor": action.actor_id, "target_zone": dest}).payload.get("reachable"):
-            return False, f"{actor.name} cannot reach {dest} from here this round."
+        if map_service:
+            plot = map_service.plot_path({
+                "scene_id": action.context.scene_id or "DL1_EVENT_1_AMBUSH",
+                "actor_id": action.actor_id,
+                "destination_square": dest,
+                "rules": context.get("path_rules", {}),
+            }).payload
+            if not plot.get("ok"):
+                return False, f"No valid path can be plotted to {dest}; choose another action."
+            action.extra["path_id"] = plot["path"]["path_id"]
+            action.extra["path"] = plot["path"]
         return True, None
 
     if action.action_type == "melee_attack":

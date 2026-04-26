@@ -1,1 +1,1 @@
-{"actor_id": "PC_CARAMON", "name": "Caramon", "actor_type": "pc", "class": "fighter", "level": 6, "alignment": "LG", "ac": 6, "max_hp": 36, "current_hp": 36, "movement": 12, "equipment": ["sword", "armor"], "spells": [], "inventory_weight_gp": 510}
+{"actor_id":"PC_CARAMON","name":"Caramon","actor_type":"pc","class":"fighter","level":6,"alignment":"LG","ac":6,"max_hp":36,"current_hp":36,"movement":12,"equipment":["sword","armor"],"spells":[]}

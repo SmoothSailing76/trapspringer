@@ -1,1 +1,1 @@
-{"actor_id": "PC_TASSLEHOFF", "name": "Tasslehoff", "actor_type": "pc", "class": "thief", "level": 4, "alignment": "N", "ac": 5, "max_hp": 15, "current_hp": 15, "movement": 9, "equipment": ["hoopak", "dagger", "ring_mail", "small_shield"], "spells": [], "inventory_weight_gp": 450}
+{"actor_id":"PC_TASSLEHOFF","name":"Tasslehoff","actor_type":"pc","class":"thief","level":4,"alignment":"N","ac":5,"max_hp":15,"current_hp":15,"movement":9,"equipment":["hoopak","dagger","ring_mail","small_shield"],"spells":[]}

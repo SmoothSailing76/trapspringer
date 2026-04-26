@@ -1,1 +1,1 @@
-{"actor_id":"PC_GOLDMOON","name":"Goldmoon","actor_type":"pc","class":"cleric","level":5,"alignment":"LG","ac":6,"max_hp":19,"current_hp":19,"movement":12,"equipment":["leather_armor","small_shield","longsword_plus_2","crystal_staff"],"inventory_weight_gp":300,"spells":[]}
+{"actor_id":"PC_GOLDMOON","name":"Goldmoon","actor_type":"pc","class":"cleric","level":5,"alignment":"LG","ac":6,"max_hp":19,"current_hp":19,"movement":12,"equipment":["leather_armor","small_shield","longsword_plus_2","crystal_staff"],"spells":[]}

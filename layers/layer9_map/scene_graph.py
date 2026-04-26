@@ -81,3 +81,30 @@ class RuntimeSceneGraph:
     def reveal_zone(self, zone: str) -> None:
         if zone in self.zones:
             self.discovered_zones.add(zone)
+
+# v1.0.2 Hourglass movement helpers. Bound as methods below so older
+# serialized scene graph objects remain compatible.
+def _move_along_path(self, entity_id: str, waypoints: list[str]) -> None:
+    if not waypoints:
+        raise ValueError("Path has no waypoints")
+    for zone in waypoints:
+        if zone not in self.zones:
+            raise ValueError(f"Unknown path waypoint: {zone}")
+    self.positions[entity_id] = waypoints[-1]
+
+
+def _connected_neighbors(self, zone: str, include_secret: bool = False) -> list[str]:
+    out: list[str] = []
+    for conn in self.connections:
+        if conn.get("passable", True) is False or conn.get("blocked", False):
+            continue
+        if conn.get("connection_type") == "secret_door" and not (include_secret or conn.get("revealed") or conn.get("open")):
+            continue
+        if conn.get("from") == zone:
+            out.append(str(conn.get("to")))
+        elif conn.get("to") == zone:
+            out.append(str(conn.get("from")))
+    return out
+
+RuntimeSceneGraph.move_along_path = _move_along_path
+RuntimeSceneGraph.connected_neighbors = _connected_neighbors

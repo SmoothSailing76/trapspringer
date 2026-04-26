@@ -131,21 +131,8 @@ class Orchestrator:
         self.layer4.open_combat("DL1_EVENT_1_AMBUSH", [d.actor_id for d in valid_decls])
         self.layer4.lock_declarations(DeclarationSet(valid_decls))
 
-        # Track damage dealt this round per actor so spell-casters can be interrupted.
-        damage_taken_this_round: dict[str, int] = {}
-
         results: list[ResolutionResult] = [toede_result]
         for decl in valid_decls:
-            # Spell interruption: if the caster already took damage before their spell resolves, cancel it.
-            if decl.action.action_type == "cast_spell":
-                dmg_before = damage_taken_this_round.get(decl.actor_id, 0)
-                if dmg_before > 0:
-                    from trapspringer.layers.layer6_resolution.spells import spell_interrupted
-                    spell_name = decl.action.extra.get("spell") or decl.action.method or "spell"
-                    interrupt_info = spell_interrupted(decl.actor_id, dmg_before, spell_name)
-                    self._append("spell_interrupt_event", "layer6", interrupt_info, visibility="public_table")
-                    results.append(ResolutionResult(f"RES-INTERRUPT-{decl.actor_id}", "interrupted", PrivateOutcome(interrupt_info), PublicOutcome(f"{state['characters'][decl.actor_id].name}'s {spell_name.replace('_', ' ')} is disrupted by the blow.")))
-                    continue
             req = ResolutionRequest(self.ids.next("RES"), decl.action.action_id, decl.actor_id, "DL1_EVENT_1_AMBUSH", "combat", {"action": decl.action, "state": state, "map_service": self.layer9})
             result = self.layer6.resolve(req)
             commit = self.layer3.commit_mutations(result.state_mutations)
@@ -154,9 +141,6 @@ class Orchestrator:
             self._log_roll_events_from_resolution(result)
             if result.state_mutations:
                 self._append("state_mutation_event", "layer3", {"commit": commit}, visibility="dm_private")
-            if result.resource_changes:
-                audit = self.layer3.commit_resource_changes(result.resource_changes)
-                self._append("resource_event", "layer3", {"audit": audit}, visibility="dm_private")
 
         active_enemies = self.layer3.active_enemies()
         # Toede is fled, so active enemies list should not include him after status mutation.
@@ -176,9 +160,6 @@ class Orchestrator:
         self._append("resolution_event", source_layer, {"resolution": result}, visibility="dm_private")
         if result.state_mutations:
             self._append("state_mutation_event", "layer3", {"commit": commit}, visibility="dm_private")
-        if result.resource_changes:
-            audit = self.layer3.commit_resource_changes(result.resource_changes)
-            self._append("resource_event", "layer3", {"audit": audit}, visibility="dm_private")
         for effect in result.knowledge_effects:
             diff = self.layer2.apply_discovery(effect)
             self._append("knowledge_event", "layer2", {"effect": effect, "diff": diff}, visibility="dm_private")
@@ -388,35 +369,3 @@ def _v050_run_open_ended_demo(self, session: RuntimeSession) -> list[EngineTurnR
 
 Orchestrator.handle_open_ended_action = _v050_handle_open_ended_action
 Orchestrator.run_v050_open_ended_demo = _v050_run_open_ended_demo
-
-
-# ---- Optional branch: Road East of Solace ---------------------------------
-def _run_road_east_branch(self) -> list[EngineTurnResult]:
-    """Play through the optional Road East of Solace detour before Xak Tsaroth."""
-    outputs: list[EngineTurnResult] = []
-    state = self.layer3.read_state()
-
-    scouts = self.layer6.resolve_road_east_goblin_scouts(state)
-    self._commit_resolution_result(scouts)
-    narr = self.layer7.narrate_resolution(scouts, prompt="The road stretches east. What do you do?")
-    self._append("narration_event", "layer7", {"spoken_text": narr.spoken_text, "prompt": narr.prompt})
-    outputs.append(EngineTurnResult(narration=narr.spoken_text, prompt=narr.prompt, events=self.layer10.event_log.events))
-
-    state = self.layer3.read_state()
-    camp = self.layer6.resolve_road_east_nomad_camp(state)
-    self._commit_resolution_result(camp)
-    narr = self.layer7.narrate_resolution(camp, prompt="The camp is behind you. Head south toward Xak Tsaroth?")
-    self._append("narration_event", "layer7", {"spoken_text": narr.spoken_text, "prompt": narr.prompt})
-    outputs.append(EngineTurnResult(narration=narr.spoken_text, prompt=narr.prompt, events=self.layer10.event_log.events))
-
-    state = self.layer3.read_state()
-    rejoin = self.layer6.resolve_road_east_rejoin_main_path(state)
-    self._commit_resolution_result(rejoin)
-    narr = self.layer7.narrate_resolution(rejoin, prompt="Xak Tsaroth is ahead.")
-    self._append("narration_event", "layer7", {"spoken_text": narr.spoken_text, "prompt": narr.prompt})
-    outputs.append(EngineTurnResult(narration=narr.spoken_text, prompt=narr.prompt, events=self.layer10.event_log.events))
-    self.layer10.create_snapshot("road_east_branch_complete", state=self.layer3.read_state())
-    return outputs
-
-
-Orchestrator.run_road_east_branch = _run_road_east_branch

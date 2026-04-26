@@ -1,42 +1,20 @@
 {
-  "schema_version": "0.2",
-  "notes": "Authoritative AD&D 1e source PDFs. Files are gitignored — bring your own copies and place them at the paths below.",
   "sources": [
     {
       "source_id": "PHB",
-      "title": "Players Handbook (1st Edition, OCR'd)",
-      "publisher_code": "TSR02010A",
-      "path": "../phb",
-      "file": "TSR02010A - Player's Handbook (Original Idol Cover - OCR'd).pdf",
-      "format": "pdf",
-      "ocr": true
+      "path": "phb/"
     },
     {
       "source_id": "DMG",
-      "title": "Dungeon Master's Guide (1st Edition, Original Cover)",
-      "publisher_code": "TSR02011A",
-      "path": "../dmg",
-      "file": "TSR02011A - Dungeon Master's Guide (Original Cover).pdf",
-      "format": "pdf",
-      "ocr": false
+      "path": "dmg/"
     },
     {
       "source_id": "MM",
-      "title": "Monster Manual (1st Edition)",
-      "publisher_code": "tsr02009",
-      "path": "../mm",
-      "file": "tsr02009 - AD&D Monster Manual.pdf",
-      "format": "pdf",
-      "ocr": false
+      "path": "mm/"
     },
     {
       "source_id": "DL1",
-      "title": "DL1: Dragons of Despair",
-      "publisher_code": "TSR-9130",
-      "path": "../dl1",
-      "file": "TSR-9130-DL1-Dragons-of-Despair.pdf",
-      "format": "pdf",
-      "ocr": false
+      "path": "dl1/"
     }
   ]
 }

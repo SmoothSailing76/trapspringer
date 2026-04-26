@@ -3,9 +3,9 @@ from __future__ import annotations
 from trapspringer.schemas.resolution import ResolutionRequest, ResolutionResult, PublicOutcome, PrivateOutcome
 from trapspringer.services.random_service import RandomService
 from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait, resolve_missile_attack, resolve_initiative, resolve_surprise
-from trapspringer.layers.layer6_resolution.search import resolve_search
 from trapspringer.layers.layer6_resolution.spells import resolve_spell
 from trapspringer.layers.layer6_resolution import module_scripts as scripts
+from trapspringer.layers.layer6_resolution.path_movement import resolve_move_along_path
 from trapspringer.layers.layer6_resolution.open_ended import resolve_open_ended_intent
 
 
@@ -26,11 +26,12 @@ class ResolutionService:
         if action.action_type == "cast_spell":
             return resolve_spell({"actor_id": action.actor_id, "target_id": action.target.id if action.target else None, "spell": action.extra.get("spell") or action.method}, state, self.rng)
         if action.action_type == "move":
-            return resolve_move(action, state, map_service, self.rng)
+            path = action.extra.get("path")
+            if path is None and map_service is not None and action.extra.get("path_id"):
+                path = map_service.get_path(str(action.extra.get("path_id")))
+            return resolve_move_along_path(action, state, map_service, path)
         if action.action_type == "wait":
             return resolve_wait(action, state, self.rng)
-        if action.action_type == "search":
-            return resolve_search(action, state, request.payload.get("knowledge_service"), self.rng)
         return ResolutionResult(request.resolution_id, "no_effect", PrivateOutcome({"unknown_action": action.action_type}))
 
     def resolve_initiative(self) -> dict:
@@ -68,33 +69,6 @@ class ResolutionService:
 
     def resolve_collapse_escape_and_epilogue(self, state: dict, breaker: str = "PC_GOLDMOON") -> ResolutionResult:
         return scripts.resolve_collapse_escape_and_epilogue(state, breaker=breaker)
-
-    def resolve_road_east_goblin_scouts(self, state: dict) -> ResolutionResult:
-        return scripts.resolve_road_east_goblin_scouts(state, self.rng)
-
-    def resolve_road_east_nomad_camp(self, state: dict) -> ResolutionResult:
-        return scripts.resolve_road_east_nomad_camp(state, self.rng)
-
-    def resolve_road_east_rejoin_main_path(self, state: dict) -> ResolutionResult:
-        return scripts.resolve_road_east_rejoin_main_path(state)
-
-    def resolve_dragon_breath(self, dragon, targets: list, state: dict) -> list[ResolutionResult]:
-        return resolve_dragon_breath(dragon, targets, state, self.rng)
-
-    def resolve_dragon_fear(self, actor, dragon_hd: int) -> ResolutionResult:
-        return resolve_dragon_fear(actor, dragon_hd, self.rng)
-
-    def resolve_item_saves_from_breath(self, dragon, targets: list, state: dict) -> list[dict]:
-        return resolve_item_saves_from_breath(dragon, targets, state, self.rng)
-
-    def resolve_ghoul_paralysis(self, ghoul, target) -> ResolutionResult:
-        return resolve_ghoul_paralysis(ghoul, target, self.rng)
-
-    def resolve_wight_level_drain(self, wight, target) -> ResolutionResult:
-        return resolve_wight_level_drain(wight, target, self.rng)
-
-    def resolve_spider_web_attack(self, spider, target) -> ResolutionResult:
-        return resolve_spider_web_attack(spider, target, self.rng)
 
 # v0.5 facade extension: bind as an instance method without disturbing the
 # existing v0.4 class body above.

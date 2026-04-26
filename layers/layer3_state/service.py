@@ -1,32 +1,22 @@
+import json
 from pathlib import Path
-from trapspringer.content_packs import ContentPackManifest, default_pack
-from trapspringer.schemas.loaders import (
-    load_encounter,
-    load_module_manifest,
-    load_npc,
-    load_pregen,
-    load_scene,
-)
 from trapspringer.schemas.maps import Position
 from trapspringer.schemas.state import CampaignState, CharacterState, PartyState, SceneState, TimeState
 from trapspringer.layers.layer3_state.campaign_store import CampaignStore
 from trapspringer.layers.layer3_state.module_flags import initial_dl1_module_state
 from trapspringer.layers.layer3_state.mutator import apply_mutations
-from trapspringer.layers.layer3_state.resources import apply_resource_changes
+
+PACKAGE_ROOT = Path(__file__).resolve().parents[2]
 
 ACTIVE_EVENT1_PARTY = ["tanis", "tasslehoff", "sturm", "caramon", "raistlin", "flint"]
 OPTIONAL_DL1_ACTORS = ["goldmoon", "riverwind"]
 
 class StateService:
-    def __init__(self, content_pack: ContentPackManifest | None = None) -> None:
+    def __init__(self) -> None:
         self.store = CampaignStore()
-        self.pack = content_pack or default_pack()
 
-    def _pack_dir(self, resource_id: str) -> Path:
-        return self.pack.resource_path(resource_id)
-
-    def _pack_file(self, resource_id: str) -> Path:
-        return self.pack.resource_path(resource_id)
+    def _load_json(self, rel_path: str) -> dict:
+        return json.loads((PACKAGE_ROOT / rel_path).read_text())
 
     def _char_from_data(self, data: dict, actor_id: str | None = None, hp: int | None = None, team: str = "party") -> CharacterState:
         aid = actor_id or data["actor_id"]
@@ -50,15 +40,15 @@ class StateService:
         )
 
     def load_pregen(self, pregen_id: str, team: str = "party") -> CharacterState:
-        return self._char_from_data(load_pregen(self._pack_dir("pregens_dir") / f"{pregen_id}.json"), team=team)
+        return self._char_from_data(self._load_json(f"data/dl1/pregens/{pregen_id}.json"), team=team)
 
     def load_toede(self) -> CharacterState:
-        c = self._char_from_data(load_npc(self._pack_dir("npcs_dir") / "toede.json"), team="enemy")
+        c = self._char_from_data(self._load_json("data/dl1/npcs/toede.json"), team="enemy")
         c.location = Position(area_id="EVENT_1_START", zone="toede_front")
         return c
 
     def load_event1_hobgoblins(self) -> dict[str, CharacterState]:
-        data = load_encounter(self._pack_dir("encounters_dir") / "hobgoblin_event1_group.json")
+        data = self._load_json("data/dl1/encounters/hobgoblin_event1_group.json")
         out: dict[str, CharacterState] = {}
         for i, hp in enumerate(data["max_hp_values"], start=1):
             aid = f"HOBGOBLIN_EVENT1_{i}"
@@ -85,7 +75,7 @@ class StateService:
 
     def create_initial_state(self, config: dict | None = None) -> CampaignState:
         config = config or {}
-        scene_content = load_scene(self._pack_file("event_1_scene"))
+        scene_content = self._load_json("data/dl1/scenes/event_1_ambush.json")
         campaign = CampaignState(config.get("campaign_id", "DL1-CAMPAIGN-001"), "ADND_1E", "DL1_DRAGONS_OF_DESPAIR", "active", "DL1_EVENT_1_AMBUSH")
         time = TimeState(day=1, hour=20, mode="setup")
         characters = self.create_character_states_from_pregens(ACTIVE_EVENT1_PARTY)
@@ -114,14 +104,11 @@ class StateService:
         return campaign
 
     def load_scene_content(self, scene_id: str) -> dict:
-        manifest = load_module_manifest(self._pack_file("module_manifest"))
-        rel = manifest["scene_files"].get(scene_id)
+        manifest = self._load_json("data/manifests/module_manifest_dl1.json")
+        rel = manifest.get("scene_files", {}).get(scene_id)
         if not rel:
             raise KeyError(scene_id)
-        # Manifest scene_files paths are relative to the package root, since the
-        # manifest predates content-pack-anchored paths. Resolve via the pack's
-        # scenes_dir using basename — keeps a single resolution authority.
-        return load_scene(self._pack_dir("scenes_dir") / Path(rel).name)
+        return self._load_json(rel)
 
     def transition_to_scene(self, scene_id: str) -> SceneState:
         content = self.load_scene_content(scene_id)
@@ -156,9 +143,6 @@ class StateService:
 
     def commit_mutations(self, mutation_set: list[dict[str, object]]):
         return apply_mutations(self.store.state, mutation_set)
-
-    def commit_resource_changes(self, changes):
-        return apply_resource_changes(self.store.state, changes)
 
     def active_enemies(self) -> list[str]:
         chars = self.store.state.get("characters", {})

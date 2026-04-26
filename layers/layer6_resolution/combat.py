@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from dataclasses import asdict
-from typing import Any
 
 from trapspringer.schemas.actions import Action
 from trapspringer.schemas.resolution import PrivateOutcome, PublicOutcome, ResolutionResult, ResourceChange
@@ -106,130 +105,12 @@ def resolve_missile_attack(action: Action, state: dict, rng: RandomService) -> R
     return result
 
 
-def resolve_initiative(rng: RandomService, party_dex: int = 10, enemy_dex: int = 10) -> dict:
-    party = adnd1e_v04.initiative_with_dex(rng, "party", dex_score=party_dex)
-    enemies = adnd1e_v04.initiative_with_dex(rng, "enemies", dex_score=enemy_dex)
-    party_roll = int(party.result or 0)
-    enemy_roll = int(enemies.result or 0)
-    if party_roll != enemy_roll:
-        winner = "party" if party_roll > enemy_roll else "enemies"
-    else:
-        winner = "party" if party_dex >= enemy_dex else "enemies"
-    return {"party": party, "enemies": enemies, "winner": winner, "tiebreak": party_roll == enemy_roll}
+def resolve_initiative(rng: RandomService) -> dict:
+    party = adnd1e_v04.initiative(rng, "party")
+    enemies = adnd1e_v04.initiative(rng, "enemies")
+    winner = "party" if int(party.result or 0) >= int(enemies.result or 0) else "enemies"
+    return {"party": party, "enemies": enemies, "winner": winner}
 
 
 def resolve_surprise(side: str, rng: RandomService, threshold: int = 2) -> adnd1e_v04.RuleCheck:
     return adnd1e_v04.surprise(rng, side, threshold=threshold)
-
-
-def resolve_dragon_fear(actor: Any, dragon_hd: int, rng: RandomService) -> ResolutionResult:
-    check = adnd1e_v04.dragon_fear_save(actor, dragon_hd, rng)
-    actor_id = getattr(actor, "actor_id", "actor")
-    mutations: list[dict] = []
-    if not check.success:
-        conditions = list(set(getattr(actor, "conditions", []) + ["fleeing"]))
-        mutations.append({"path": f"characters.{actor_id}.conditions", "value": conditions})
-    private = {"dragon_fear_check": asdict(check), "dragon_hd": dragon_hd}
-    narration = check.notes or (f"{getattr(actor, 'name', actor_id)} holds steady against the dragon's terror." if check.success else f"{getattr(actor, 'name', actor_id)} flees in terror from the dragon.")
-    return ResolutionResult(f"RES-DRAGON-FEAR-{actor_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)
-
-
-def resolve_dragon_breath(dragon: Any, targets: list, state: dict, rng: RandomService) -> list[ResolutionResult]:
-    """Resolve a dragon breath weapon attack against one or more targets.
-
-    Per AD&D 1e MM: breath damage = dragon's current HP; save vs breath for half.
-    """
-    dragon_hp = int(getattr(dragon, "current_hp", 1))
-    breath_type = getattr(dragon, "breath_type", "acid")
-    results = []
-    chars = state.get("characters", {})
-    for target_id in targets:
-        target = chars.get(target_id)
-        if target is None or not getattr(target, "is_active", True):
-            continue
-        check = adnd1e_v04.dragon_breath_damage(dragon_hp, target, rng, breath_type)
-        damage = int(check.result.split(":")[-1]) if ":" in str(check.result) else dragon_hp
-        new_hp = max(0, target.current_hp - damage)
-        mutations = [{"path": f"characters.{target_id}.current_hp", "value": new_hp}]
-        if new_hp <= 0:
-            mutations.append({"path": f"characters.{target_id}.status", "value": "defeated"})
-        saved_text = " (half damage from save)" if check.metadata.get("save_result") == "saved" else ""
-        narration = f"{getattr(dragon, 'name', 'The dragon')} breathes {breath_type} at {getattr(target, 'name', target_id)} for {damage} damage{saved_text}."
-        results.append(ResolutionResult(f"RES-BREATH-{target_id}", "resolved", PrivateOutcome({"breath_check": asdict(check)}), PublicOutcome(narration), mutations))
-    return results
-
-
-def resolve_item_saves_from_breath(dragon: Any, targets: list, state: dict, rng: RandomService) -> list[dict]:
-    """Auto-trigger item saves for equipment carried by breath targets.
-
-    Returns a list of item-save result dicts (informational; no HP mutations).
-    """
-    breath_type = getattr(dragon, "breath_type", "acid")
-    attack_form = {"acid": "acid", "fire": "fire", "cold": "crushing", "lightning": "lightning"}.get(breath_type, "fire")
-    results = []
-    chars = state.get("characters", {})
-    for target_id in targets:
-        target = chars.get(target_id)
-        if target is None:
-            continue
-        for item in getattr(target, "inventory", []) or getattr(target, "equipment", []):
-            material = "metal" if any(k in str(item) for k in ("sword", "armor", "axe", "plate", "shield")) else "wood" if any(k in str(item) for k in ("staff", "bow", "hoopak")) else "paper" if "scroll" in str(item) else "leather"
-            save = adnd1e_v04.item_save(material, attack_form, rng)
-            results.append({"item": item, "owner": target_id, "material": material, "attack_form": attack_form, "result": save.result, "roll": save.roll})
-    return results
-
-
-def resolve_ghoul_paralysis(ghoul: Any, target: Any, rng: RandomService) -> ResolutionResult:
-    """Ghoul touch attack: on hit, target saves vs paralysis or is paralyzed for 3d6 rounds (MM)."""
-    target_id = getattr(target, "actor_id", "target")
-    attack = adnd1e_v04.roll_attack(ghoul, target, rng, purpose="ghoul_touch")
-    private: dict[str, Any] = {"attack_check": asdict(attack)}
-    if not attack.success:
-        return ResolutionResult(f"RES-GHOUL-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(f"{getattr(ghoul, 'name', 'The ghoul')} claws at {getattr(target, 'name', target_id)} but misses."))
-    save = adnd1e_v04.roll_saving_throw(target, "paralysis", rng)
-    private["paralysis_save"] = asdict(save)
-    mutations: list[dict] = []
-    if not save.success:
-        dur_roll = rng.roll_dice("3d6", f"ghoul_paralysis_dur:{target_id}")
-        conditions = list(set(getattr(target, "conditions", []) + ["paralyzed"]))
-        mutations.append({"path": f"characters.{target_id}.conditions", "value": conditions})
-        private["duration_rounds"] = dur_roll.total
-        narration = f"{getattr(ghoul, 'name', 'The ghoul')} touches {getattr(target, 'name', target_id)}; they are paralyzed for {dur_roll.total} rounds!"
-    else:
-        narration = f"{getattr(ghoul, 'name', 'The ghoul')} touches {getattr(target, 'name', target_id)}, who shudders but resists paralysis."
-    return ResolutionResult(f"RES-GHOUL-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)
-
-
-def resolve_wight_level_drain(wight: Any, target: Any, rng: RandomService) -> ResolutionResult:
-    """Wight attack: on hit, drains 1 experience level (MM); no save."""
-    target_id = getattr(target, "actor_id", "target")
-    attack = adnd1e_v04.roll_attack(wight, target, rng, purpose="wight_drain")
-    private: dict[str, Any] = {"attack_check": asdict(attack)}
-    if not attack.success:
-        return ResolutionResult(f"RES-WIGHT-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(f"{getattr(wight, 'name', 'The wight')} reaches for {getattr(target, 'name', target_id)} but misses."))
-    current_level = int(getattr(target, "level", 1) or 1)
-    new_level = max(0, current_level - 1)
-    mutations: list[dict] = [{"path": f"characters.{target_id}.level", "value": new_level}]
-    private["level_before"] = current_level
-    private["level_after"] = new_level
-    if new_level <= 0:
-        mutations.append({"path": f"characters.{target_id}.status", "value": "defeated"})
-        narration = f"{getattr(wight, 'name', 'The wight')}'s touch drains {getattr(target, 'name', target_id)}'s last level — they crumple, lifeless."
-    else:
-        narration = f"{getattr(wight, 'name', 'The wight')}'s icy touch drains {getattr(target, 'name', target_id)}'s life energy. They drop to level {new_level}."
-    return ResolutionResult(f"RES-WIGHT-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)
-
-
-def resolve_spider_web_attack(spider: Any, target: Any, rng: RandomService) -> ResolutionResult:
-    """Giant spider web attack: target saves vs spell or is webbed (MM: paralyzed, 1 turn)."""
-    target_id = getattr(target, "actor_id", "target")
-    save = adnd1e_v04.roll_saving_throw(target, "spell", rng)
-    private: dict[str, Any] = {"web_save": asdict(save)}
-    mutations: list[dict] = []
-    if not save.success:
-        conditions = list(set(getattr(target, "conditions", []) + ["webbed"]))
-        mutations.append({"path": f"characters.{target_id}.conditions", "value": conditions})
-        narration = f"{getattr(spider, 'name', 'The giant spider')} sprays web at {getattr(target, 'name', target_id)}, who is caught fast!"
-    else:
-        narration = f"{getattr(spider, 'name', 'The giant spider')} sprays web at {getattr(target, 'name', target_id)}, who twists free."
-    return ResolutionResult(f"RES-SPIDER-WEB-{target_id}", "resolved", PrivateOutcome(private), PublicOutcome(narration), mutations)

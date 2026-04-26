@@ -51,26 +51,6 @@
         "opening"
       ]
     },
-    "pregens_dir": {
-      "kind": "directory",
-      "path": "../../data/dl1/pregens",
-      "tags": ["pregens"]
-    },
-    "npcs_dir": {
-      "kind": "directory",
-      "path": "../../data/dl1/npcs",
-      "tags": ["npcs"]
-    },
-    "encounters_dir": {
-      "kind": "directory",
-      "path": "../../data/dl1/encounters",
-      "tags": ["encounters"]
-    },
-    "scenes_dir": {
-      "kind": "directory",
-      "path": "../../data/dl1/scenes",
-      "tags": ["scenes"]
-    },
     "event_1_map": {
       "kind": "map_template",
       "path": "../../data/maps/scene_templates/event_1_ambush_map.json",
@@ -111,6 +91,7 @@
     "encounter_index": "structured_data/dl1_encounter_index.json",
     "treasure_index": "structured_data/dl1_treasure_index.json",
     "hidden_facts": "structured_data/dl1_hidden_facts_index.json",
-    "transition_candidates": "structured_data/dl1_transition_candidates.json"
+    "transition_candidates": "structured_data/dl1_transition_candidates.json",
+    "validation_report": "structured_data/dl1_structured_data_validation_report.json"
   }
 }

@@ -2,6 +2,12 @@
 
 Generated for Trapspringer v1.x full DL1 content coverage.
 
+> **Status (2026-04-25):** No Python in this repo currently loads these files.
+> They are derived from `source_markdown/` and ship as a forward-looking index
+> for Layer 2/9 work. A regenerator-aware `*_validation_report.json` is no
+> longer kept in source — regenerate with the (future) build script and let it
+> output to a build directory. If a consumer is added, document it here.
+
 ## Contents
 
 - `dl1_keyed_areas_complete.json` — consolidated keyed areas from wilderness, Xak Tsaroth surface, Temple/descent, and cavern city.
@@ -19,7 +25,6 @@ Generated for Trapspringer v1.x full DL1 content coverage.
 - `dl1_transition_candidates.json` — extracted area references plus curated high-value transitions.
 - `dl1_area_summary.csv` — compact spreadsheet-style summary.
 - `dl1_source_asset_provenance.json` — uploaded map/source asset hashes.
-- `dl1_structured_data_validation_report.json` — generation counts and review notes.
 
 ## Counts
 

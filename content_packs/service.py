@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -8,6 +9,7 @@ from .models import ContentPackManifest, ContentPackResource
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PACKS_ROOT = PACKAGE_ROOT / "content_packs"
+DEFAULT_PACK_ID = "dl1_dragons_of_despair"
 
 class ContentPackService:
     """Registry/loader for data-driven adventure content packs.
@@ -76,3 +78,14 @@ class ContentPackService:
         if kind is not None:
             resources = [r for r in resources if r.kind == kind]
         return resources
+
+
+@lru_cache(maxsize=1)
+def default_pack() -> ContentPackManifest:
+    """Manifest for the active content pack.
+
+    Used by service-layer code that needs to resolve data paths through the
+    pack rather than hardcoding relative file locations. Cached for the
+    process lifetime; tests that swap packs should call .cache_clear().
+    """
+    return ContentPackService().get(DEFAULT_PACK_ID)

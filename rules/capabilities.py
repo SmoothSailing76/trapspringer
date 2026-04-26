@@ -6,8 +6,11 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
-PACKAGE_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_CAPABILITY_PATH = PACKAGE_ROOT / "data/manifests/rules_capabilities.json"
+from trapspringer.content_packs import default_pack
+
+
+def _default_capability_path() -> Path:
+    return default_pack().resource_path("rules_capabilities")
 
 VALID_STATUSES = {"implemented", "partial", "stubbed", "unsupported"}
 
@@ -76,7 +79,7 @@ class RulesCapabilityRegistry:
 
 
 def load_rules_capability_registry(path: str | Path | None = None) -> RulesCapabilityRegistry:
-    p = Path(path) if path is not None else DEFAULT_CAPABILITY_PATH
+    p = Path(path) if path is not None else _default_capability_path()
     raw = json.loads(p.read_text())
     caps = {}
     for capability_id, data in raw.get("capabilities", {}).items():

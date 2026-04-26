@@ -69,6 +69,33 @@ class ResolutionService:
     def resolve_collapse_escape_and_epilogue(self, state: dict, breaker: str = "PC_GOLDMOON") -> ResolutionResult:
         return scripts.resolve_collapse_escape_and_epilogue(state, breaker=breaker)
 
+    def resolve_road_east_goblin_scouts(self, state: dict) -> ResolutionResult:
+        return scripts.resolve_road_east_goblin_scouts(state, self.rng)
+
+    def resolve_road_east_nomad_camp(self, state: dict) -> ResolutionResult:
+        return scripts.resolve_road_east_nomad_camp(state, self.rng)
+
+    def resolve_road_east_rejoin_main_path(self, state: dict) -> ResolutionResult:
+        return scripts.resolve_road_east_rejoin_main_path(state)
+
+    def resolve_dragon_breath(self, dragon, targets: list, state: dict) -> list[ResolutionResult]:
+        return resolve_dragon_breath(dragon, targets, state, self.rng)
+
+    def resolve_dragon_fear(self, actor, dragon_hd: int) -> ResolutionResult:
+        return resolve_dragon_fear(actor, dragon_hd, self.rng)
+
+    def resolve_item_saves_from_breath(self, dragon, targets: list, state: dict) -> list[dict]:
+        return resolve_item_saves_from_breath(dragon, targets, state, self.rng)
+
+    def resolve_ghoul_paralysis(self, ghoul, target) -> ResolutionResult:
+        return resolve_ghoul_paralysis(ghoul, target, self.rng)
+
+    def resolve_wight_level_drain(self, wight, target) -> ResolutionResult:
+        return resolve_wight_level_drain(wight, target, self.rng)
+
+    def resolve_spider_web_attack(self, spider, target) -> ResolutionResult:
+        return resolve_spider_web_attack(spider, target, self.rng)
+
 # v0.5 facade extension: bind as an instance method without disturbing the
 # existing v0.4 class body above.
 def _v050_resolve_open_ended_intent(self, intent, state: dict) -> ResolutionResult:

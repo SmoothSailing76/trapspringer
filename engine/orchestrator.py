@@ -141,6 +141,9 @@ class Orchestrator:
             self._log_roll_events_from_resolution(result)
             if result.state_mutations:
                 self._append("state_mutation_event", "layer3", {"commit": commit}, visibility="dm_private")
+            if result.resource_changes:
+                audit = self.layer3.commit_resource_changes(result.resource_changes)
+                self._append("resource_event", "layer3", {"audit": audit}, visibility="dm_private")
 
         active_enemies = self.layer3.active_enemies()
         # Toede is fled, so active enemies list should not include him after status mutation.
@@ -160,6 +163,9 @@ class Orchestrator:
         self._append("resolution_event", source_layer, {"resolution": result}, visibility="dm_private")
         if result.state_mutations:
             self._append("state_mutation_event", "layer3", {"commit": commit}, visibility="dm_private")
+        if result.resource_changes:
+            audit = self.layer3.commit_resource_changes(result.resource_changes)
+            self._append("resource_event", "layer3", {"audit": audit}, visibility="dm_private")
         for effect in result.knowledge_effects:
             diff = self.layer2.apply_discovery(effect)
             self._append("knowledge_event", "layer2", {"effect": effect, "diff": diff}, visibility="dm_private")

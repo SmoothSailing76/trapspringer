@@ -5,6 +5,7 @@ from trapspringer.schemas.state import CampaignState, CharacterState, PartyState
 from trapspringer.layers.layer3_state.campaign_store import CampaignStore
 from trapspringer.layers.layer3_state.module_flags import initial_dl1_module_state
 from trapspringer.layers.layer3_state.mutator import apply_mutations
+from trapspringer.layers.layer3_state.resources import apply_resource_changes
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[2]
 
@@ -143,6 +144,9 @@ class StateService:
 
     def commit_mutations(self, mutation_set: list[dict[str, object]]):
         return apply_mutations(self.store.state, mutation_set)
+
+    def commit_resource_changes(self, changes):
+        return apply_resource_changes(self.store.state, changes)
 
     def active_enemies(self) -> list[str]:
         chars = self.store.state.get("characters", {})

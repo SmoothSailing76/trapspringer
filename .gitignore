@@ -22,3 +22,10 @@ Thumbs.db
 saves/
 exports/
 tmp/
+
+# Commercial rulebook PDFs — personal copies, not redistributable.
+# The source_manifest.json points at these directories; bring your own copies.
+data/phb/*.pdf
+data/dmg/*.pdf
+data/mm/*.pdf
+data/dl1/*.pdf

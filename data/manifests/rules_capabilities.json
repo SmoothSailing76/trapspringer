@@ -127,6 +127,12 @@
       "layer": "rules.adnd1e_v04",
       "public_name": "XP and treasure awards",
       "notes": "Per-share XP calculation from monster kills and treasure gp; class bonus XP remains future work."
+    },
+    "search_hidden_facts": {
+      "status": "partial",
+      "layer": "layer6_resolution.search",
+      "public_name": "Searching for hidden facts",
+      "notes": "d6 search resolver against KnowledgeFacts gated on discovery_conditions. Default 1-in-6 per round; racial bonuses for elves/half-elves (secret/concealed doors), dwarves (stonework, sliding walls), gnomes (unsafe structure) per PHB pp. 16-17. Race field on CharacterState not yet populated, so racial bonuses are dormant until pregens carry race."
     }
   }
 }

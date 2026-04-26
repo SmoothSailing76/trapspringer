@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where pdftoppm *)",
+      "Bash(where scoop *)",
+      "Bash(where choco *)",
+      "Bash(where winget *)",
+      "Bash(winget search *)",
+      "Bash(winget install *)",
+      "Bash(export PATH=\"$PATH:/c/Users/chips/AppData/Local/Microsoft/WinGet/Packages/oschwartz10612.Poppler_Microsoft.Winget.Source_8wekyb3d8bbwe/poppler-25.07.0/Library/bin\")",
+      "Bash(pdftoppm -v)",
+      "Bash(xargs wc *)",
+      "Bash(python -m pytest --deselect tests/architecture/test_scenario_dsl.py::test_mishakal_scenario_script_sets_flags_when_staff_present -q)",
+      "Bash(python -m pytest tests/unit/test_snapshot_roundtrip.py)",
+      "Bash(python -c ' *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(rm layers/layer4_procedure/conversation.py layers/layer4_procedure/escape.py layers/layer4_procedure/exploration.py layers/layer4_procedure/rest.py layers/layer4_procedure/travel.py)",
+      "Bash(git checkout *)",
+      "Bash(git push *)",
+      "Bash(gh pr create --title 'Cleanup orphan stubs, ship one real resolver, wire spell slots, source authority' --body ' *)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

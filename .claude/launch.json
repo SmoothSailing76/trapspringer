@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "trapspringer-web-ui",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["run_server.py"],
+      "port": 5000
+    }
+  ]
+}

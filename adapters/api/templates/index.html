@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trapspringer — DL1: Dragons of Despair</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #12100e;
+    --panel:     #1e1a14;
+    --panel2:    #252018;
+    --border:    #4a3c22;
+    --gold:      #c9a84c;
+    --gold-dim:  #7a6030;
+    --text:      #d4c4a0;
+    --text-dim:  #8a7a60;
+    --hp-fill:   #8b1a1a;
+    --hp-bg:     #2a1010;
+    --party-tok: #4477cc;
+    --enemy-tok: #cc3333;
+    --npc-tok:   #cc8833;
+    --zone-fill: #2a2218;
+    --zone-str:  #6a5530;
+    --conn-str:  #4a3c22;
+    --font-body: Georgia, 'Times New Roman', serif;
+    --font-mono: 'Courier New', monospace;
+  }
+
+  html, body { height: 100%; overflow: hidden; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Header ─────────────────────────────────────────────── */
+  #header {
+    background: var(--panel2);
+    border-bottom: 2px solid var(--gold-dim);
+    padding: 6px 14px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-shrink: 0;
+  }
+  #header h1 {
+    font-size: 16px;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  #header .subtitle { color: var(--text-dim); font-size: 11px; }
+  #btn-new-game {
+    margin-left: auto;
+    background: #3a2c10;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    padding: 4px 14px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    border-radius: 2px;
+    transition: background 0.15s;
+  }
+  #btn-new-game:hover { background: #5a4420; }
+
+  /* ── Main layout ─────────────────────────────────────────── */
+  #main {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    flex: 1;
+    min-height: 0;
+    gap: 0;
+  }
+
+  /* ── Character sheet (left column) ───────────────────────── */
+  #char-panel {
+    background: var(--panel);
+    border-right: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .panel-title {
+    color: var(--gold);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+  }
+
+  #char-name { font-size: 17px; color: var(--gold); font-weight: bold; }
+  #char-subline { color: var(--text-dim); font-size: 11px; margin-bottom: 4px; }
+
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 0;
+    font-size: 12px;
+  }
+  .stat-label { color: var(--text-dim); }
+  .stat-val { color: var(--text); font-weight: bold; }
+
+  .hp-bar-wrap {
+    margin: 4px 0;
+  }
+  .hp-bar-track {
+    background: var(--hp-bg);
+    border: 1px solid var(--border);
+    height: 10px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 2px;
+  }
+  #hp-fill {
+    height: 100%;
+    background: var(--hp-fill);
+    transition: width 0.4s;
+    border-radius: 2px;
+  }
+  #hp-text { font-size: 11px; color: var(--text-dim); margin-top: 1px; text-align: right; }
+
+  .item-list {
+    font-size: 11px;
+    color: var(--text-dim);
+    line-height: 1.5;
+    max-height: 80px;
+    overflow-y: auto;
+  }
+  .item-list li { list-style: none; padding-left: 8px; position: relative; }
+  .item-list li::before { content: "·"; position: absolute; left: 0; color: var(--gold-dim); }
+
+  .zone-badge {
+    font-size: 10px;
+    background: var(--panel2);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 1px 5px;
+    color: var(--text-dim);
+    font-family: var(--font-mono);
+    word-break: break-all;
+  }
+
+  /* Party roster */
+  .party-member {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+    font-size: 11px;
+    border-bottom: 1px solid #2a2010;
+  }
+  .party-member:last-child { border-bottom: none; }
+  .party-name { color: var(--text); }
+  .party-hp { color: var(--text-dim); font-family: var(--font-mono); font-size: 10px; }
+  .party-hp.low { color: #cc4444; }
+  .party-hp.dead { color: #666; text-decoration: line-through; }
+
+  /* ── Right column ────────────────────────────────────────── */
+  #right-col {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  /* ── Map panel ───────────────────────────────────────────── */
+  #map-panel {
+    background: #0e0c0a;
+    border-bottom: 2px solid var(--border);
+    padding: 8px;
+    flex: 0 0 260px;
+    display: flex;
+    flex-direction: column;
+  }
+  #map-panel .panel-title { margin-bottom: 4px; }
+  #map-svg-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #map-svg {
+    width: 100%;
+    height: 220px;
+    overflow: visible;
+  }
+
+  /* ── Narration panel ─────────────────────────────────────── */
+  #narration-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 8px 10px;
+    background: var(--panel);
+  }
+  #narration-log {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 4px;
+  }
+  .narration-entry {
+    border-left: 3px solid var(--gold-dim);
+    padding-left: 10px;
+  }
+  .narration-entry .narr-text {
+    color: var(--text);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    font-size: 13px;
+  }
+  .narration-entry .narr-prompt {
+    color: var(--gold);
+    font-style: italic;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  #splash {
+    color: var(--text-dim);
+    font-style: italic;
+    text-align: center;
+    margin-top: 40px;
+    line-height: 2;
+  }
+  #splash strong { color: var(--gold); font-style: normal; }
+
+  /* ── Status bar ──────────────────────────────────────────── */
+  #status-bar {
+    background: var(--panel2);
+    border-top: 2px solid var(--border);
+    padding: 4px 12px;
+    display: flex;
+    gap: 20px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .status-item { display: flex; gap: 5px; align-items: center; font-size: 11px; }
+  .status-key { color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px; font-size: 10px; }
+  .status-val { color: var(--text); font-family: var(--font-mono); font-size: 11px; }
+
+  /* ── Input bar ───────────────────────────────────────────── */
+  #input-bar {
+    background: var(--panel2);
+    border-top: 1px solid var(--border);
+    padding: 6px 10px;
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: center;
+  }
+  #input-bar label { color: var(--gold-dim); font-size: 11px; white-space: nowrap; }
+  #decl-input {
+    flex: 1;
+    background: #0e0c08;
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 13px;
+    padding: 5px 8px;
+    border-radius: 2px;
+    outline: none;
+  }
+  #decl-input:focus { border-color: var(--gold-dim); }
+  #decl-input:disabled { opacity: 0.4; }
+  #btn-declare {
+    background: #3a2c10;
+    border: 1px solid var(--gold-dim);
+    color: var(--gold);
+    padding: 5px 16px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 12px;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: background 0.15s;
+  }
+  #btn-declare:hover:not(:disabled) { background: #5a4420; }
+  #btn-declare:disabled { opacity: 0.4; cursor: default; }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<div id="header">
+  <div>
+    <h1>Trapspringer</h1>
+    <div class="subtitle">DL1: Dragons of Despair &mdash; AD&amp;D 1st Edition</div>
+  </div>
+  <button id="btn-new-game" onclick="newGame()">&#9654; New Game</button>
+</div>
+
+<!-- Main area -->
+<div id="main">
+
+  <!-- Left: Character sheet -->
+  <div id="char-panel">
+    <div class="panel-title">Character</div>
+    <div id="char-name">—</div>
+    <div id="char-subline">—</div>
+
+    <div class="hp-bar-wrap">
+      <div class="stat-row">
+        <span class="stat-label">Hit Points</span>
+        <span class="stat-val" id="hp-numbers">—</span>
+      </div>
+      <div class="hp-bar-track"><div id="hp-fill" style="width:100%"></div></div>
+    </div>
+
+    <div class="stat-row"><span class="stat-label">Armour Class</span><span class="stat-val" id="char-ac">—</span></div>
+    <div class="stat-row"><span class="stat-label">Movement</span><span class="stat-val" id="char-mv">—</span></div>
+    <div class="stat-row"><span class="stat-label">Alignment</span><span class="stat-val" id="char-align">—</span></div>
+    <div class="stat-row"><span class="stat-label">Damage</span><span class="stat-val" id="char-dmg">—</span></div>
+
+    <div>
+      <div class="stat-label" style="margin-bottom:3px">Location</div>
+      <div class="zone-badge" id="char-zone">—</div>
+    </div>
+
+    <div id="conditions-wrap" style="display:none">
+      <div class="stat-label" style="margin-bottom:2px">Conditions</div>
+      <ul class="item-list" id="char-conditions"></ul>
+    </div>
+
+    <div>
+      <div class="stat-label" style="margin-bottom:2px">Equipment</div>
+      <ul class="item-list" id="char-inventory"></ul>
+    </div>
+
+    <div id="spells-wrap" style="display:none">
+      <div class="stat-label" style="margin-bottom:2px">Spells</div>
+      <ul class="item-list" id="char-spells"></ul>
+    </div>
+
+    <div>
+      <div class="panel-title">Party</div>
+      <div id="party-roster"></div>
+    </div>
+  </div>
+
+  <!-- Right column -->
+  <div id="right-col">
+
+    <!-- Map -->
+    <div id="map-panel">
+      <div class="panel-title" id="map-title">Map — —</div>
+      <div id="map-svg-wrap">
+        <svg id="map-svg" viewBox="0 0 500 220" preserveAspectRatio="xMidYMid meet">
+          <text x="250" y="110" text-anchor="middle" fill="#4a3c22" font-size="13" font-family="Georgia">
+            Start a game to reveal the map.
+          </text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Narration -->
+    <div id="narration-panel">
+      <div class="panel-title">Chronicle</div>
+      <div id="narration-log">
+        <div id="splash">
+          <strong>Trapspringer</strong><br>
+          DL1: Dragons of Despair<br><br>
+          Click <strong>New Game</strong> to begin your adventure<br>
+          on the road east of Solace.
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /right-col -->
+</div><!-- /main -->
+
+<!-- Status bar -->
+<div id="status-bar">
+  <div class="status-item"><span class="status-key">Milestone</span><span class="status-val" id="st-milestone">—</span></div>
+  <div class="status-item"><span class="status-key">Scene</span><span class="status-val" id="st-scene">—</span></div>
+  <div class="status-item"><span class="status-key">Staff</span><span class="status-val" id="st-staff">—</span></div>
+  <div class="status-item"><span class="status-key">Khisanth</span><span class="status-val" id="st-khisanth">—</span></div>
+  <div class="status-item"><span class="status-key">Party</span><span class="status-val" id="st-party">—</span></div>
+</div>
+
+<!-- Input bar -->
+<div id="input-bar">
+  <label for="decl-input">&#9658; Declare:</label>
+  <input id="decl-input" type="text" placeholder="What do you do?" disabled
+         onkeydown="if(event.key==='Enter') declare()">
+  <button id="btn-declare" onclick="declare()" disabled>Declare</button>
+</div>
+
+<script>
+// ── State ────────────────────────────────────────────────────────────────────
+let busy = false;
+
+// ── Helpers ──────────────────────────────────────────────────────────────────
+function setInputEnabled(on) {
+  document.getElementById('decl-input').disabled = !on;
+  document.getElementById('btn-declare').disabled = !on;
+  if (on) document.getElementById('decl-input').focus();
+}
+
+function setCharSheet(c) {
+  if (!c || !c.actor_id) return;
+  document.getElementById('char-name').textContent = c.name || '—';
+  document.getElementById('char-subline').textContent =
+    (c.character_class || '?') + ' · Level ' + (c.level || '?');
+  const cur = c.current_hp ?? 0, max = c.max_hp ?? 1;
+  document.getElementById('hp-numbers').textContent = cur + ' / ' + max;
+  document.getElementById('hp-fill').style.width = Math.max(0, Math.round(cur / max * 100)) + '%';
+  document.getElementById('hp-fill').style.background =
+    cur <= 0 ? '#555' : cur < max * 0.25 ? '#993333' : cur < max * 0.5 ? '#aa5500' : '#8b1a1a';
+  document.getElementById('char-ac').textContent   = c.ac ?? '—';
+  document.getElementById('char-mv').textContent   = (c.movement ?? '—') + '"';
+  document.getElementById('char-align').textContent = c.alignment || '—';
+  document.getElementById('char-dmg').textContent  = c.damage || '—';
+  document.getElementById('char-zone').textContent = c.zone || c.area || '—';
+
+  const conds = c.conditions || [];
+  document.getElementById('conditions-wrap').style.display = conds.length ? '' : 'none';
+  setList('char-conditions', conds);
+
+  setList('char-inventory', c.inventory || []);
+
+  const spells = c.spells || [];
+  document.getElementById('spells-wrap').style.display = spells.length ? '' : 'none';
+  setList('char-spells', spells);
+}
+
+function setList(id, items) {
+  const el = document.getElementById(id);
+  el.innerHTML = items.length
+    ? items.map(i => `<li>${esc(i)}</li>`).join('')
+    : '<li style="color:#4a3c22;font-style:italic">none</li>';
+}
+
+function setParty(members) {
+  const el = document.getElementById('party-roster');
+  if (!members || !members.length) { el.innerHTML = ''; return; }
+  el.innerHTML = members.map(m => {
+    const pct = m.max_hp > 0 ? m.current_hp / m.max_hp : 0;
+    const cls = m.current_hp <= 0 ? 'dead' : pct < 0.25 ? 'low' : '';
+    return `<div class="party-member">
+      <span class="party-name">${esc(m.name)}</span>
+      <span class="party-hp ${cls}">${m.current_hp}/${m.max_hp}</span>
+    </div>`;
+  }).join('');
+}
+
+function setStatus(st) {
+  if (!st) return;
+  document.getElementById('st-milestone').textContent = st.milestone_label || '—';
+  document.getElementById('st-scene').textContent     = st.scene_id || '—';
+  document.getElementById('st-staff').textContent     = st.staff || '—';
+  document.getElementById('st-khisanth').textContent  = st.khisanth || '—';
+  document.getElementById('st-party').textContent     = (st.party_active ?? '—') + ' active';
+}
+
+function addNarrationEntry(narration, prompt) {
+  const log = document.getElementById('narration-log');
+  const splash = document.getElementById('splash');
+  if (splash) splash.remove();
+
+  const div = document.createElement('div');
+  div.className = 'narration-entry';
+  div.innerHTML =
+    (narration ? `<div class="narr-text">${esc(narration)}</div>` : '') +
+    (prompt    ? `<div class="narr-prompt">${esc(prompt)}</div>` : '');
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+function rebuildLog(history) {
+  const log = document.getElementById('narration-log');
+  log.innerHTML = '';
+  (history || []).forEach(h => addNarrationEntry(h.narration, h.prompt));
+}
+
+function esc(s) {
+  return (s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ── Map rendering ─────────────────────────────────────────────────────────────
+function renderMap(mapData) {
+  const svg = document.getElementById('map-svg');
+  const titleEl = document.getElementById('map-title');
+  if (!mapData || !mapData.zones || !mapData.zones.length) {
+    svg.innerHTML = `<text x="250" y="110" text-anchor="middle" fill="#4a3c22"
+      font-size="13" font-family="Georgia">No map data.</text>`;
+    return;
+  }
+
+  const sceneLabel = (mapData.scene_id || '').replace(/_/g,' ');
+  titleEl.textContent = 'Map — ' + sceneLabel;
+
+  const W = 500, H = 220;
+  const cx = W / 2, cy = H / 2;
+  const zones = mapData.zones;
+  const n = zones.length;
+
+  // Lay zones out in a circle, tilted so first zone is at top
+  const R = Math.min(cx, cy) - 40;
+  const zonePos = {};
+  zones.forEach((z, i) => {
+    const angle = (i / n) * 2 * Math.PI - Math.PI / 2;
+    zonePos[z] = { x: cx + R * Math.cos(angle), y: cy + R * Math.sin(angle) };
+  });
+
+  // Group entities by zone
+  const byZone = {};
+  Object.entries(mapData.positions || {}).forEach(([eid, zone]) => {
+    (byZone[zone] = byZone[zone] || []).push(eid);
+  });
+
+  let html = '';
+
+  // Connections
+  (mapData.connections || []).forEach(c => {
+    const a = zonePos[c.from], b = zonePos[c.to];
+    if (!a || !b) return;
+    html += `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"
+      stroke="#4a3c22" stroke-width="1.5" stroke-dasharray="4,3"/>`;
+    // Distance label at midpoint
+    const mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    if (c.distance_ft) {
+      html += `<text x="${mx}" y="${my - 3}" text-anchor="middle" font-size="8"
+        fill="#5a4828" font-family="Courier New">${c.distance_ft}ft</text>`;
+    }
+  });
+
+  // Zone circles + labels
+  zones.forEach(z => {
+    const p = zonePos[z];
+    if (!p) return;
+    const actors = byZone[z] || [];
+    const hasParty  = actors.some(e => (mapData.teams||{})[e] === 'party');
+    const hasEnemy  = actors.some(e => (mapData.teams||{})[e] === 'enemy');
+    const stroke = hasParty ? '#3355aa' : hasEnemy ? '#993322' : '#4a3c22';
+    html += `<circle cx="${p.x}" cy="${p.y}" r="22" fill="#1a1410" stroke="${stroke}" stroke-width="1.5"/>`;
+
+    // Zone name — split on underscores, show abbreviated
+    const label = z.replace(/_/g,' ');
+    const words = label.split(' ');
+    if (words.length <= 2) {
+      html += `<text x="${p.x}" y="${p.y + 3}" text-anchor="middle" font-size="7"
+        fill="#8a7a60" font-family="Courier New">${esc(label)}</text>`;
+    } else {
+      const l1 = words.slice(0, Math.ceil(words.length/2)).join(' ');
+      const l2 = words.slice(Math.ceil(words.length/2)).join(' ');
+      html += `<text x="${p.x}" y="${p.y - 2}" text-anchor="middle" font-size="7"
+        fill="#8a7a60" font-family="Courier New">${esc(l1)}</text>`;
+      html += `<text x="${p.x}" y="${p.y + 7}" text-anchor="middle" font-size="7"
+        fill="#8a7a60" font-family="Courier New">${esc(l2)}</text>`;
+    }
+
+    // Actor tokens (small coloured dots around the zone circle)
+    actors.forEach((eid, idx) => {
+      const team  = (mapData.teams||{})[eid] || 'unknown';
+      const color = team === 'party' ? '#4477cc' : team === 'enemy' ? '#cc3333' : '#cc8833';
+      const angle = (idx / Math.max(actors.length,1)) * 2 * Math.PI;
+      const tx = p.x + 27 * Math.cos(angle);
+      const ty = p.y + 27 * Math.sin(angle);
+      const name = (mapData.names||{})[eid] || eid;
+      html += `<circle cx="${tx}" cy="${ty}" r="5" fill="${color}" stroke="#111" stroke-width="1">
+        <title>${esc(name)}</title></circle>`;
+      // Short name label
+      const short = name.split(' ')[0].substring(0, 3);
+      html += `<text x="${tx}" y="${ty + 10}" text-anchor="middle" font-size="6"
+        fill="${color}" font-family="Courier New">${esc(short)}</text>`;
+    });
+  });
+
+  // Legend
+  html += `<circle cx="10" cy="208" r="4" fill="#4477cc"/><text x="17" y="212" font-size="7" fill="#8a7a60" font-family="Courier New">party</text>`;
+  html += `<circle cx="50" cy="208" r="4" fill="#cc3333"/><text x="57" y="212" font-size="7" fill="#8a7a60" font-family="Courier New">enemy</text>`;
+  html += `<circle cx="90" cy="208" r="4" fill="#cc8833"/><text x="97" y="212" font-size="7" fill="#8a7a60" font-family="Courier New">npc</text>`;
+
+  svg.innerHTML = html;
+}
+
+// ── API calls ─────────────────────────────────────────────────────────────────
+function applyResponse(data) {
+  if (data.error) { alert(data.error); return; }
+  setCharSheet(data.character);
+  setParty(data.party);
+  setStatus(data.status);
+  renderMap(data.map);
+}
+
+async function newGame() {
+  if (busy) return;
+  busy = true;
+  setInputEnabled(false);
+  try {
+    const r = await fetch('/api/start', { method: 'POST' });
+    const data = await r.json();
+    applyResponse(data);
+    rebuildLog(data.history);
+    setInputEnabled(true);
+  } catch (e) {
+    alert('Error starting game: ' + e.message);
+  } finally {
+    busy = false;
+  }
+}
+
+async function declare() {
+  if (busy) return;
+  const input = document.getElementById('decl-input');
+  const text = input.value.trim();
+  if (!text) return;
+  input.value = '';
+  busy = true;
+  setInputEnabled(false);
+  try {
+    const r = await fetch('/api/step', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ declaration: text }),
+    });
+    const data = await r.json();
+    if (data.error) { alert(data.error); return; }
+    applyResponse(data);
+    // Only add latest entry (history already rebuilt on start; here we just append)
+    const hist = data.history || [];
+    const last = hist[hist.length - 1];
+    if (last) addNarrationEntry(last.narration, last.prompt);
+    setInputEnabled(true);
+  } catch (e) {
+    alert('Error: ' + e.message);
+    setInputEnabled(true);
+  } finally {
+    busy = false;
+  }
+}
+
+// Restore state on page reload
+(async () => {
+  try {
+    const r = await fetch('/api/state');
+    const data = await r.json();
+    if (data.started) {
+      applyResponse(data);
+      rebuildLog(data.history);
+      setInputEnabled(true);
+    }
+  } catch (_) {}
+})();
+</script>
+</body>
+</html>

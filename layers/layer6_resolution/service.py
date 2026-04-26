@@ -2,7 +2,8 @@ from __future__ import annotations
 
 from trapspringer.schemas.resolution import ResolutionRequest, ResolutionResult, PublicOutcome, PrivateOutcome
 from trapspringer.services.random_service import RandomService
-from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait, resolve_missile_attack, resolve_initiative, resolve_surprise, resolve_dragon_breath, resolve_dragon_fear, resolve_ghoul_paralysis, resolve_wight_level_drain, resolve_spider_web_attack, resolve_item_saves_from_breath
+from trapspringer.layers.layer6_resolution.combat import resolve_melee_attack, resolve_move, resolve_wait, resolve_missile_attack, resolve_initiative, resolve_surprise
+from trapspringer.layers.layer6_resolution.search import resolve_search
 from trapspringer.layers.layer6_resolution.spells import resolve_spell
 from trapspringer.layers.layer6_resolution import module_scripts as scripts
 from trapspringer.layers.layer6_resolution.open_ended import resolve_open_ended_intent
@@ -28,6 +29,8 @@ class ResolutionService:
             return resolve_move(action, state, map_service, self.rng)
         if action.action_type == "wait":
             return resolve_wait(action, state, self.rng)
+        if action.action_type == "search":
+            return resolve_search(action, state, request.payload.get("knowledge_service"), self.rng)
         return ResolutionResult(request.resolution_id, "no_effect", PrivateOutcome({"unknown_action": action.action_type}))
 
     def resolve_initiative(self) -> dict:

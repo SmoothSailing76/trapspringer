@@ -133,6 +133,18 @@
       "layer": "rules.adnd1e_v04",
       "public_name": "XP and treasure awards",
       "notes": "Per-share XP calculation from monster kills and treasure gp; class bonus XP remains future work."
+    },
+    "search_hidden_facts": {
+      "status": "partial",
+      "layer": "layer6_resolution.search",
+      "public_name": "Searching for hidden facts",
+      "notes": "d6 search resolver against KnowledgeFacts gated on discovery_conditions. Default 1-in-6 per round; racial bonuses for elves/half-elves (secret/concealed doors), dwarves (stonework, sliding walls), gnomes (unsafe structure) per PHB pp. 16-17. Race field on CharacterState not yet populated, so racial bonuses are dormant until pregens carry race."
+    },
+    "resource_consumption": {
+      "status": "partial",
+      "layer": "layer3_state.resources",
+      "public_name": "Resource consumption (spell slots, ammunition)",
+      "notes": "ResourceChange records emitted by spell and missile resolvers are now applied through StateService.commit_resource_changes. Vancian spell_slot decrement is implemented (removes spell from actor.spells). Ammunition is recorded as intent only — CharacterState.inventory has no per-item counts, so wiring requires an inventory-count schema first."
     }
   }
 }

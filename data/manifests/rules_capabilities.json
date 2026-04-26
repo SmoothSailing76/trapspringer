@@ -69,10 +69,16 @@
       "notes": "Event 1 through Epilogue main spine is implemented."
     },
     "dl1_optional_branches": {
-      "status": "partial",
-      "layer": "content_pack.dl1_dragons_of_despair",
+      "status": "implemented",
+      "layer": "layer6_resolution.module_scripts",
       "public_name": "DL1 optional branches",
-      "notes": "Several scenes have content stubs, but full open-ended branch play remains future work."
+      "notes": "Road East of Solace branch scripted: goblin scouts (reaction-based), Que-Shu nomad camp (reaction + Goldmoon CHA bonus), and main-path rejoin. Accessible via Orchestrator.run_road_east_branch()."
+    },
+    "monster_special_attacks": {
+      "status": "implemented",
+      "layer": "layer6_resolution.combat",
+      "public_name": "Monster special attacks",
+      "notes": "Ghoul paralysis (save vs paralysis, 3d6 rounds on fail), wight level drain (1 level, no save), giant spider web (save vs spell or webbed) implemented per MM."
     },
     "psionics": {
       "status": "unsupported",

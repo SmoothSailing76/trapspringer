@@ -4,10 +4,35 @@ import json
 from dataclasses import asdict, is_dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 SAVE_SCHEMA_VERSION = "0.2"
 ENGINE_VERSION = "0.2.0"
+
+# Save bundles are versioned so older formats can be migrated forward at load
+# time. Each migrator takes a bundle at version N and returns a bundle at the
+# next version. Add new entries keyed by the *source* version when introducing
+# 0.3, 0.4, etc.
+_MIGRATIONS: dict[str, Callable[[dict[str, Any]], dict[str, Any]]] = {}
+
+
+def _migrate_bundle(bundle: dict[str, Any]) -> dict[str, Any]:
+    version = str(bundle.get("save_schema_version", "0.0"))
+    while version != SAVE_SCHEMA_VERSION:
+        migrator = _MIGRATIONS.get(version)
+        if migrator is None:
+            raise SaveLoadError(
+                f"Cannot migrate save bundle from version {version!r} to {SAVE_SCHEMA_VERSION!r}: "
+                f"no migration registered"
+            )
+        bundle = migrator(bundle)
+        new_version = str(bundle.get("save_schema_version", ""))
+        if new_version == version:
+            raise SaveLoadError(
+                f"Migration for {version!r} did not advance save_schema_version"
+            )
+        version = new_version
+    return bundle
 
 
 def to_plain(value: Any) -> Any:
@@ -117,7 +142,7 @@ class SessionPersistenceService:
             raise SaveLoadError(f"Could not load save file {path}: {exc}") from exc
         if "state" not in bundle or "events" not in bundle:
             raise SaveLoadError(f"Save file is missing required session fields: {path}")
-        return bundle
+        return _migrate_bundle(bundle)
 
     def export_session(self, save_id: str, target_path: str | Path) -> Path:
         bundle = self.load_bundle(save_id)

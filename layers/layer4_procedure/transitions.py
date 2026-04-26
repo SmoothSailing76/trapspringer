@@ -5,7 +5,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-PACKAGE_ROOT = Path(__file__).resolve().parents[2]
+from trapspringer.content_packs import default_pack
+
+
+def _default_registry_path() -> Path:
+    return default_pack().resource_path("dl1_main_path_registry")
 
 
 def switch_mode(frame, new_mode: str, reason: str | None = None):
@@ -26,7 +30,7 @@ class MainPathMilestone:
 
 
 def load_main_path_registry(path: str | Path | None = None) -> dict[str, MainPathMilestone]:
-    registry_path = Path(path) if path is not None else PACKAGE_ROOT / "data/dl1/main_path_registry.json"
+    registry_path = Path(path) if path is not None else _default_registry_path()
     raw = json.loads(registry_path.read_text())
     out: dict[str, MainPathMilestone] = {}
     for item in raw.get("milestones", []):
@@ -44,7 +48,7 @@ def load_main_path_registry(path: str | Path | None = None) -> dict[str, MainPat
 
 
 def milestone_order(path: str | Path | None = None) -> list[str]:
-    registry_path = Path(path) if path is not None else PACKAGE_ROOT / "data/dl1/main_path_registry.json"
+    registry_path = Path(path) if path is not None else _default_registry_path()
     raw = json.loads(registry_path.read_text())
     return [str(item["id"]) for item in raw.get("milestones", [])]
 
